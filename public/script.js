@@ -1,4 +1,6 @@
-// Alternador de tema diurno / nocturno (Light / Dark Mode)
+// ==========================================
+// 1. Alternador de tema diurno / nocturno (Light / Dark Mode)
+// ==========================================
 const themeToggle = document.getElementById('theme-toggle');
 const htmlEl = document.documentElement;
 
@@ -27,7 +29,146 @@ if (themeToggle) {
   });
 }
 
-// Navegación móvil
+// ==========================================
+// 2. Sistema de Internacionalización (i18n ES / EN)
+// ==========================================
+function getNestedTranslation(obj, keyPath) {
+  if (!obj) return null;
+  const parts = keyPath.split('.');
+  let cur = obj;
+  for (const part of parts) {
+    if (!cur || cur[part] === undefined) return null;
+    cur = cur[part];
+  }
+  return cur;
+}
+
+function setLanguage(lang) {
+  if (!window.I18N || !window.I18N[lang]) {
+    lang = 'es';
+  }
+
+  const dict = window.I18N[lang];
+  htmlEl.lang = lang;
+  localStorage.setItem('portfolio-lang', lang);
+
+  // Meta & Page Title
+  if (dict.meta) {
+    if (dict.meta.title) document.title = dict.meta.title;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && dict.meta.desc) metaDesc.setAttribute('content', dict.meta.desc);
+  }
+
+  // Text translations
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const val = getNestedTranslation(dict, key);
+    if (val !== null) el.textContent = val;
+  });
+
+  // HTML markup translations (preserve <strong>, <code>, <br>)
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    const val = getNestedTranslation(dict, key);
+    if (val !== null) el.innerHTML = val;
+  });
+
+  // Title and Aria attributes
+  document.querySelectorAll('[data-i18n-title]').forEach(el => {
+    const key = el.getAttribute('data-i18n-title');
+    const val = getNestedTranslation(dict, key);
+    if (val !== null) el.setAttribute('title', val);
+  });
+
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+    const key = el.getAttribute('data-i18n-aria');
+    const val = getNestedTranslation(dict, key);
+    if (val !== null) el.setAttribute('aria-label', val);
+  });
+
+  // Dynamic CV Links & Previews (ES vs EN)
+  const heroCvBtn = document.getElementById('hero-cv-btn');
+  const cvPdfBtn = document.getElementById('cv-pdf-btn');
+  const cvDocxBtn = document.getElementById('cv-docx-btn');
+  const cvPreviewImg = document.getElementById('cv-preview-img');
+  const cvPreviewWrapper = document.getElementById('cv-preview-wrapper');
+
+  if (lang === 'en') {
+    if (heroCvBtn) heroCvBtn.setAttribute('href', 'docs/Carlos_Juarez_CV_EN.pdf');
+    if (cvPdfBtn) cvPdfBtn.setAttribute('href', 'docs/Carlos_Juarez_CV_EN.pdf');
+    if (cvDocxBtn) cvDocxBtn.setAttribute('href', 'docs/Carlos_Juarez_CV_EN.docx');
+    if (cvPreviewImg) {
+      cvPreviewImg.setAttribute('src', 'images/cv-preview-en.png');
+      cvPreviewImg.setAttribute('alt', 'Curriculum Vitae Carlos Juárez (English)');
+    }
+    if (cvPreviewWrapper) {
+      cvPreviewWrapper.setAttribute('onclick', "openLightbox('images/cv-preview-en.png', 'Professional Curriculum Vitae - Carlos Juárez')");
+    }
+  } else {
+    if (heroCvBtn) heroCvBtn.setAttribute('href', 'docs/Carlos_Juarez_CV.pdf');
+    if (cvPdfBtn) cvPdfBtn.setAttribute('href', 'docs/Carlos_Juarez_CV.pdf');
+    if (cvDocxBtn) cvDocxBtn.setAttribute('href', 'docs/Carlos_Juarez_CV.docx');
+    if (cvPreviewImg) {
+      cvPreviewImg.setAttribute('src', 'images/cv-preview.png');
+      cvPreviewImg.setAttribute('alt', 'Curriculum Vitae Carlos Juárez (Español)');
+    }
+    if (cvPreviewWrapper) {
+      cvPreviewWrapper.setAttribute('onclick', "openLightbox('images/cv-preview.png', 'Curriculum Vitae Profesional - Carlos Juárez')");
+    }
+  }
+
+  // Update Navbar Language Toggle Pill UI
+  const esCode = document.querySelector('.lang-code.es');
+  const enCode = document.querySelector('.lang-code.en');
+  if (esCode && enCode) {
+    if (lang === 'en') {
+      esCode.classList.remove('active');
+      enCode.classList.add('active');
+    } else {
+      esCode.classList.add('active');
+      enCode.classList.remove('active');
+    }
+  }
+
+  const langToggleBtn = document.getElementById('lang-toggle');
+  if (langToggleBtn && dict.nav) {
+    langToggleBtn.setAttribute('title', dict.nav.langTitle);
+    langToggleBtn.setAttribute('aria-label', dict.nav.langAria);
+  }
+
+  // Sync URL cleanly without full page refresh
+  const currentPath = window.location.pathname.toLowerCase();
+  if (lang === 'en' && currentPath !== '/en' && currentPath === '/') {
+    window.history.replaceState({ lang: 'en' }, '', '/en' + window.location.search + window.location.hash);
+  } else if (lang === 'es' && currentPath === '/en') {
+    window.history.replaceState({ lang: 'es' }, '', '/' + window.location.search + window.location.hash);
+  }
+}
+
+// Inicializar idioma (URL /en, localStorage o por defecto 'es')
+const pathIsEn = window.location.pathname.toLowerCase().startsWith('/en');
+const urlParams = new URLSearchParams(window.location.search);
+const savedLang = localStorage.getItem('portfolio-lang');
+const initialLang = urlParams.get('lang') || (pathIsEn ? 'en' : (savedLang || 'es'));
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => setLanguage(initialLang));
+} else {
+  setLanguage(initialLang);
+}
+
+const langToggle = document.getElementById('lang-toggle');
+if (langToggle) {
+  langToggle.addEventListener('click', () => {
+    const cur = htmlEl.lang === 'en' ? 'en' : 'es';
+    const target = cur === 'en' ? 'es' : 'en';
+    setLanguage(target);
+  });
+}
+
+// ==========================================
+// 3. Navegación móvil
+// ==========================================
 const navToggle = document.getElementById('nav-toggle');
 const navLinks = document.getElementById('nav-links');
 
@@ -43,7 +184,9 @@ if (navToggle && navLinks) {
   });
 }
 
-// Filtro de proyectos
+// ==========================================
+// 4. Filtro de proyectos
+// ==========================================
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectItems = document.querySelectorAll('.project-item');
 
@@ -65,7 +208,9 @@ filterBtns.forEach(btn => {
   });
 });
 
-// Modal Lightbox para visualización de infografías y arquitecturas
+// ==========================================
+// 5. Modal Lightbox para infografías y CV
+// ==========================================
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxTitle = document.getElementById('lightbox-title');
@@ -73,8 +218,13 @@ const lightboxDownload = document.getElementById('lightbox-download');
 
 function openLightbox(imgSrc, title) {
   if (!lightbox) return;
+  const currentLang = htmlEl.lang === 'en' ? 'en' : 'es';
+  const defaultTitle = window.I18N && window.I18N[currentLang] && window.I18N[currentLang].lightbox 
+    ? window.I18N[currentLang].lightbox.defaultTitle 
+    : 'Infografía de Arquitectura Técnica';
+
   lightboxImg.src = imgSrc;
-  lightboxTitle.textContent = title || 'Infografía de Arquitectura Técnica';
+  lightboxTitle.textContent = title || defaultTitle;
   lightboxDownload.href = imgSrc;
   lightbox.classList.add('active');
   document.body.style.overflow = 'hidden';

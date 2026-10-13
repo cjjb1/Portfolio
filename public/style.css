@@ -180,6 +180,50 @@ code {
   color: #818cf8;
 }
 
+/* Alternador de Idioma (Language Toggle) */
+.lang-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  height: 38px;
+  padding: 0 11px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: var(--transition);
+  user-select: none;
+}
+
+.lang-toggle-btn:hover {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.lang-code {
+  color: var(--text-muted);
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+.lang-code.active {
+  color: #818cf8;
+  font-weight: 800;
+}
+
+.lang-divider {
+  color: var(--border-subtle);
+  font-size: 0.72rem;
+  opacity: 0.7;
+}
+
 .nav-toggle {
   display: none;
   background: none;
@@ -1419,6 +1463,22 @@ code {
 [data-theme="light"] .theme-toggle-btn:hover {
   background: rgba(79, 70, 229, 0.1);
   border-color: #4f46e5;
+}
+
+[data-theme="light"] .lang-toggle-btn {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #475569;
+}
+
+[data-theme="light"] .lang-toggle-btn:hover {
+  background: rgba(79, 70, 229, 0.1);
+  border-color: #4f46e5;
+  color: #0f172a;
+}
+
+[data-theme="light"] .lang-code.active {
+  color: #4f46e5;
 }
 
 [data-theme="light"] .hero-section {
