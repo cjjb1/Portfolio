@@ -1160,14 +1160,37 @@ code {
   align-items: center;
 }
 
+.footer-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
 .footer-links a {
   color: var(--text-secondary);
   text-decoration: none;
   font-weight: 600;
+  transition: var(--transition);
 }
 
 .footer-links a:hover {
   color: var(--text-primary);
+}
+
+.btn-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-linkedin:hover {
+  border-color: #0a66c2;
+  color: #38bdf8;
+}
+
+[data-theme="light"] .btn-linkedin:hover {
+  border-color: #0a66c2;
+  color: #0a66c2;
 }
 
 /* Modal Lightbox */
