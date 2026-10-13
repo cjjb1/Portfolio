@@ -267,6 +267,25 @@ code {
   font-size: 1.05rem;
 }
 
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  border-radius: 8px;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #a5b4fc;
+  border: 1px dashed rgba(99, 102, 241, 0.4);
+}
+
+.btn-ghost:hover {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: #818cf8;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
 /* Banner de Métricas */
 .metrics-banner {
   padding: 30px 0;
@@ -465,6 +484,200 @@ code {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   margin-bottom: 2px;
+}
+
+/* Sección CV & Certificación Master IA */
+.section-credentials {
+  background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 70%), var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.credential-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: var(--transition);
+}
+
+.credential-card:hover {
+  border-color: var(--border-focus);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.credential-badge-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: rgba(14, 19, 31, 0.85);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cert-year, .cv-status {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #818cf8;
+}
+
+.cert-verified, .cv-role {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--success-color);
+  background: rgba(16, 185, 129, 0.1);
+  padding: 3px 10px;
+  border-radius: 9999px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.cert-preview-wrapper, .cv-preview-wrapper {
+  position: relative;
+  background: #030508;
+  height: 250px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cert-img, .cv-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.cert-preview-wrapper:hover .cert-img,
+.cv-preview-wrapper:hover .cv-img {
+  transform: scale(1.04);
+}
+
+.cert-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(9, 13, 22, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.cert-preview-wrapper:hover .cert-overlay,
+.cv-preview-wrapper:hover .cert-overlay {
+  opacity: 1;
+}
+
+.credential-content {
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cert-school {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.school-logo {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.credential-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.school-name {
+  font-size: 0.85rem;
+  color: #818cf8;
+  font-weight: 600;
+}
+
+.cert-description {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.cert-meta {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+}
+
+.hash-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.hash-code {
+  font-size: 0.75rem;
+  word-break: break-all;
+  color: #a5b4fc;
+}
+
+.cv-highlights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.cv-h-item {
+  font-size: 0.82rem;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-subtle);
+}
+
+.cv-h-item strong {
+  color: var(--text-primary);
+  display: block;
+  font-size: 0.85rem;
+}
+
+.cv-h-item span {
+  color: var(--text-secondary);
+}
+
+.credential-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
 }
 
 /* Filtros de Proyectos */
@@ -1017,6 +1230,9 @@ code {
     max-height: 380px;
   }
   .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .credentials-grid {
     grid-template-columns: 1fr;
   }
   .metrics-grid {
