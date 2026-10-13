@@ -1,0 +1,18 @@
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <title>Antigravity</title>
+  <defs>
+    <linearGradient id="agGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="50%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <linearGradient id="agRing" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="12" cy="12" rx="10.5" ry="4.5" fill="none" stroke="url(#agRing)" stroke-width="1.6" transform="rotate(-25 12 12)"/>
+  <path d="M12 2.5L20 17.5H4L12 2.5Z" fill="url(#agGrad)"/>
+  <polygon points="12,7 16,15.5 8,15.5" fill="#0A0E1A" opacity="0.85"/>
+  <circle cx="12" cy="12.5" r="2.2" fill="#38BDF8"/>
+</svg>

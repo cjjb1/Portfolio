@@ -1728,7 +1728,7 @@ code {
   display: flex;
   width: max-content;
   gap: 1.25rem;
-  animation: tech-marquee 40s linear infinite;
+  animation: tech-marquee 65s linear infinite;
   will-change: transform;
 }
 
@@ -1803,7 +1803,7 @@ code {
   }
   .tech-carousel-track {
     gap: 0.95rem;
-    animation-duration: 34s;
+    animation-duration: 50s;
   }
   .tech-carousel-item {
     min-width: 96px;
@@ -1853,8 +1853,10 @@ code {
   color: #0f172a;
 }
 
-[data-theme="light"] .carousel-logo[src*="express.svg"] {
+[data-theme="light"] .carousel-logo[src*="express.svg"],
+[data-theme="light"] .carousel-logo[src*="github.svg"] {
   filter: invert(1);
 }
+
 
 
