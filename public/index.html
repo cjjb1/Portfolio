@@ -611,23 +611,65 @@
 
           <!-- PROYECTO 6: WEBWEDDING -->
           <article class="project-item" data-category="web">
-            <div class="project-info project-info-full">
+            <div class="project-visual">
+              <div class="img-wrapper" onclick="openLightbox('images/projects/webwedding.jpg', 'WebWedding: Plataforma Full Stack en Producción')">
+                <img src="images/projects/webwedding.jpg" alt="WebWedding Plataforma Web" loading="lazy" />
+                <div class="img-overlay">
+                  <span class="zoom-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    Ampliar Imagen
+                  </span>
+                </div>
+              </div>
+              <div class="visual-footer">
+                <a href="https://webwedding.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn-visual-expand text-center" style="display: block; text-decoration: none;">
+                  Abrir WebWedding en Vivo ↗
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
               <div class="project-top">
                 <span class="badge-cat">Web App Full Stack &middot; Eventos</span>
                 <span class="status-indicator">● En Producción (Render)</span>
               </div>
               <h3 class="project-name">WebWedding &middot; Gestión Colaborativa de Eventos</h3>
               <p class="project-pitch">
-                Plataforma interactiva para gestión integral de eventos y bodas: confirmaciones RSVP en tiempo real, catálogo de mesas, galería fotográfica colaborativa con procesamiento de imágenes y panel privado de administración.
+                Plataforma web completa y pública para la gestión integral de eventos y bodas: confirmaciones RSVP interactivas en tiempo real, mapa de mesas, control de alérgenos, galería fotográfica colaborativa en directo y panel privado de administración.
               </p>
+
+              <div class="project-kpis">
+                <div class="kpi-box">
+                  <span class="kpi-num">100% Live</span>
+                  <span class="kpi-lbl">Desplegado en Render Cloud</span>
+                </div>
+                <div class="kpi-box">
+                  <span class="kpi-num">PostgreSQL</span>
+                  <span class="kpi-lbl">Persistencia relacional</span>
+                </div>
+                <div class="kpi-box">
+                  <span class="kpi-num">En tiempo real</span>
+                  <span class="kpi-lbl">RSVP & Galería multimedia</span>
+                </div>
+              </div>
               
               <div class="project-bullets">
                 <h4>Aspectos Técnicos Clave:</h4>
                 <ul>
-                  <li><strong>Backend Express & PostgreSQL:</strong> Base de datos relacional para el control granular de invitados, mesas, alérgenos y confirmaciones.</li>
-                  <li><strong>Galería colaborativa en tiempo real:</strong> Ingesta controlada de fotos desde dispositivos móviles con validación de tipos MIME y redimensionamiento.</li>
+                  <li><strong>Backend Express & PostgreSQL:</strong> Base de datos relacional para el control granular de invitados, mesas, alérgenos y confirmaciones automáticas.</li>
+                  <li><strong>Galería colaborativa en tiempo real:</strong> Ingesta controlada de fotos desde dispositivos móviles con validación de tipos MIME y almacenamiento optimizado.</li>
                   <li><strong>Despliegue automatizado en la nube:</strong> CI/CD continuo en Render con Node.js y monitorización activa.</li>
                 </ul>
+              </div>
+
+              <div class="project-actions-live">
+                <a href="https://webwedding.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  <span>Visitar WebWedding en Vivo</span>
+                </a>
+                <a href="https://github.com/cjjb1/webwedding" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  <img src="images/logos/render.svg" alt="GitHub" style="width: 14px; height: 14px; filter: grayscale(1);" />
+                  <span>Repo GitHub</span>
+                </a>
               </div>
 
               <div class="tech-tags">
