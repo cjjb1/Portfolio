@@ -1853,10 +1853,10 @@ code {
   color: #0f172a;
 }
 
-[data-theme="light"] .carousel-logo[src*="express.svg"],
-[data-theme="light"] .carousel-logo[src*="github.svg"] {
+[data-theme="light"] .carousel-logo[src*="express.svg"] {
   filter: invert(1);
 }
+
 
 
 
