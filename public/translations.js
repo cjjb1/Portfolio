@@ -41,6 +41,9 @@ window.I18N = {
       m4Val: "100%",
       m4Desc: "Soberanía de datos, Paperless y procesos 24/7"
     },
+    carousel: {
+      tag: "Ecosistema Tecnológico · Herramientas & Protocolos"
+    },
     about: {
       tag: "Enfoque e Ingeniería",
       title: "Ingeniería orientada a resultados tangibles",
@@ -290,6 +293,9 @@ window.I18N = {
       m3Desc: "Manual handling & phone call hours eliminated per year",
       m4Val: "100%",
       m4Desc: "Data sovereignty, Paperless & 24/7 autonomous workflows"
+    },
+    carousel: {
+      tag: "Technology Ecosystem · Core Tools & Protocols"
     },
     about: {
       tag: "Engineering & Focus",
