@@ -1,3 +1,32 @@
+// Alternador de tema diurno / nocturno (Light / Dark Mode)
+const themeToggle = document.getElementById('theme-toggle');
+const htmlEl = document.documentElement;
+
+function applyTheme(theme) {
+  if (theme === 'light') {
+    htmlEl.setAttribute('data-theme', 'light');
+    localStorage.setItem('portfolio-theme', 'light');
+  } else {
+    htmlEl.removeAttribute('data-theme');
+    localStorage.setItem('portfolio-theme', 'dark');
+  }
+}
+
+// Inicializar tema respetando guardado o preferencia del sistema
+const savedTheme = localStorage.getItem('portfolio-theme');
+if (savedTheme) {
+  applyTheme(savedTheme);
+} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+  applyTheme('light');
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const isLight = htmlEl.getAttribute('data-theme') === 'light';
+    applyTheme(isLight ? 'dark' : 'light');
+  });
+}
+
 // Navegación móvil
 const navToggle = document.getElementById('nav-toggle');
 const navLinks = document.getElementById('nav-links');
