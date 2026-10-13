@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlos Juárez | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navegación -->
+  <header class="header">
+    <nav class="nav-container">
+      <a href="#hero" class="logo">CJ<span>.dev</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact" class="btn-nav">Contacto</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <span class="badge">🚀 Disponible para nuevos proyectos</span>
+        <h1 class="hero-title">
+          Desarrollador <span class="gradient-text">Full Stack</span> & Soluciones Web
+        </h1>
+        <p class="hero-subtitle">
+          Especializado en arquitecturas Node.js, bases de datos y despliegues en la nube. Creando aplicaciones rápidas, escalables y orientadas a resultados.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+          <a href="#contact" class="btn btn-secondary">Contactar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">Sobre Mí</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              ¡Hola! Soy desarrollador con pasión por la tecnología, la automatización y el desarrollo web con tecnologías modernas.
+            </p>
+            <p>
+              Me enfoco en construir sistemas sólidos combinando backend en <strong>Node.js / Express</strong>, bases de datos relacionales como <strong>PostgreSQL</strong> y frontends interactivos de alto rendimiento.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number">Node.js</span>
+              <span class="stat-label">Backend principal</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">Cloud</span>
+              <span class="stat-label">Render & Git CI/CD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="skills" class="section section-dark">
+      <div class="container">
+        <h2 class="section-title">Habilidades & Tecnologías</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">⚡</div>
+            <h3>Backend</h3>
+            <p>Node.js, Express, REST APIs, Autenticación, Middleware, Manejo de Archivos (Multer).</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🎨</div>
+            <h3>Frontend</h3>
+            <p>HTML5 Semántico, CSS3 Moderno, JavaScript ES6+, Flexbox, Grid, Responsive Design.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🗄️</div>
+            <h3>Bases de Datos</h3>
+            <p>PostgreSQL, Pool Connections, Modelado de Datos relacional, Migraciones y optimización.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">☁️</div>
+            <h3>Cloud & DevOps</h3>
+            <p>Git, GitHub, Render (Web Services & Static Sites), Despliegues automatizados y CI/CD.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Proyectos Destacados</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-type">Web App Full Stack</span>
+              <span class="status-live">● En producción</span>
+            </div>
+            <h3 class="project-title">WebWedding</h3>
+            <p class="project-description">
+              Plataforma web integral para bodas. Incluye gestión de invitados, confirmaciones RSVP interactivas, galería fotográfica colaborativa en tiempo real y panel de administración privado.
+            </p>
+            <div class="project-tags">
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>PostgreSQL</span>
+              <span>Render</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-type">Web Service</span>
+              <span class="status-live">● Este Sitio</span>
+            </div>
+            <h3 class="project-title">Portfolio Personal</h3>
+            <p class="project-description">
+              Sitio web profesional optimizado para alto rendimiento, sirviendo contenido estático sobre servidor Node.js y desplegado automáticamente con Render y GitHub.
+            </p>
+            <div class="project-tags">
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>HTML5 / CSS3</span>
+              <span>GitHub CI/CD</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="section section-dark">
+      <div class="container contact-container">
+        <h2 class="section-title">Hablemos</h2>
+        <p class="contact-subtitle">¿Tienes un proyecto en mente o quieres ponerte en contacto?</p>
+        <div class="contact-links">
+          <a href="https://github.com/cjjb1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            GitHub (cjjb1)
+          </a>
+          <a href="mailto:cjuarez.rotocobrhi@gmail.com" class="btn btn-primary">
+            Enviar Email
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Carlos Juárez — Desplegado en Render con Node.js & GitHub</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
