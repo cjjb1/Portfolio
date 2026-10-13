@@ -1853,7 +1853,8 @@ code {
   color: #0f172a;
 }
 
-[data-theme="light"] .carousel-logo[src*="express.svg"] {
+[data-theme="light"] .carousel-logo[src*="express.svg"],
+[data-theme="light"] .carousel-logo[src*="mcp.svg"] {
   filter: invert(1);
 }
 
