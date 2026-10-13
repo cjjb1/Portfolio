@@ -15,6 +15,7 @@ app.use(express.static(path.join(__dirname, 'public'), {
 
 // Ruta comodín para redirigir a index.html
 app.get('*', (req, res) => {
+  res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
