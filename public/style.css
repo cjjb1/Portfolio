@@ -911,6 +911,81 @@ code {
   color: #ffffff;
 }
 
+.visual-footer-dual {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-visual-dashboard {
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  color: #c7d2fe;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-visual-dashboard:hover {
+  background: rgba(99, 102, 241, 0.22);
+  border-color: #818cf8;
+  color: #ffffff;
+}
+
+/* Background del Proyecto Reclamaciones */
+.project-item.project-reclamaciones {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-item.project-reclamaciones .project-info {
+  position: relative;
+  z-index: 1;
+}
+
+.project-item.project-reclamaciones::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 58%;
+  background-image: url('images/projects/fondo-reclamaciones.png');
+  background-size: cover;
+  background-position: right top;
+  background-repeat: no-repeat;
+  opacity: 0.12;
+  z-index: 0;
+  pointer-events: none;
+  filter: saturate(1.15) contrast(1.05);
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 60%, transparent 100%);
+  transition: opacity 0.35s ease, transform 0.45s ease;
+}
+
+.project-item.project-reclamaciones:hover::before {
+  opacity: 0.20;
+  transform: scale(1.02);
+}
+
+.project-item.project-reclamaciones .kpi-box {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(15, 23, 42, 0.7);
+}
+
+@media (max-width: 1024px) {
+  .project-item.project-reclamaciones::before {
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    height: 60%;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 65%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 65%, transparent 100%);
+  }
+}
+
 /* Project Info */
 .project-info {
   padding: 36px 36px;
@@ -1632,6 +1707,30 @@ code {
   background: rgba(79, 70, 229, 0.08);
   border-color: #4f46e5;
   color: #3730a3;
+}
+
+[data-theme="light"] .btn-visual-dashboard {
+  background: rgba(79, 70, 229, 0.07);
+  border-color: rgba(79, 70, 229, 0.25);
+  color: #4f46e5;
+}
+
+[data-theme="light"] .btn-visual-dashboard:hover {
+  background: rgba(79, 70, 229, 0.14);
+  color: #3730a3;
+  border-color: #4f46e5;
+}
+
+[data-theme="light"] .project-item.project-reclamaciones::before {
+  opacity: 0.15;
+}
+
+[data-theme="light"] .project-item.project-reclamaciones:hover::before {
+  opacity: 0.24;
+}
+
+[data-theme="light"] .project-item.project-reclamaciones .kpi-box {
+  background: rgba(255, 255, 255, 0.88);
 }
 
 [data-theme="light"] .kpi-box {
