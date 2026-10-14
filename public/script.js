@@ -86,6 +86,18 @@ function setLanguage(lang) {
     if (val !== null) el.setAttribute('aria-label', val);
   });
 
+  // Update open/closed state of drawer toggle buttons on language switch
+  document.querySelectorAll('.btn-drawer-toggle').forEach(btn => {
+    const textSpan = btn.querySelector('.btn-drawer-text');
+    if (!textSpan) return;
+    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+    if (dict && dict.projects) {
+      textSpan.textContent = isExpanded 
+        ? (dict.projects.drawerCollapse || 'Plegar Ficha Técnica')
+        : (dict.projects.drawerExpand || 'Desplegar Arquitectura, Módulos & Pipeline');
+    }
+  });
+
   // Dynamic CV Links & Previews (ES vs EN)
   const heroCvBtn = document.getElementById('hero-cv-btn');
   const cvPdfBtn = document.getElementById('cv-pdf-btn');
@@ -243,3 +255,36 @@ document.addEventListener('keydown', (e) => {
     closeLightbox();
   }
 });
+
+// ==========================================
+// 6. Cajón Desplegable de Ficha Técnica & Arquitectura
+// ==========================================
+function toggleTechDrawer(drawerId, btn) {
+  const drawer = document.getElementById(drawerId);
+  if (!drawer) return;
+
+  const isOpen = drawer.classList.contains('is-open');
+  const currentLang = htmlEl.lang === 'en' ? 'en' : 'es';
+  const dict = window.I18N && window.I18N[currentLang] ? window.I18N[currentLang].projects : null;
+  const expandText = dict && dict.drawerExpand ? dict.drawerExpand : 'Desplegar Arquitectura, Módulos & Pipeline';
+  const collapseText = dict && dict.drawerCollapse ? dict.drawerCollapse : 'Plegar Ficha Técnica';
+
+  if (isOpen) {
+    drawer.classList.remove('is-open');
+    if (btn) {
+      btn.setAttribute('aria-expanded', 'false');
+      btn.classList.remove('active');
+      const textSpan = btn.querySelector('.btn-drawer-text');
+      if (textSpan) textSpan.textContent = expandText;
+    }
+  } else {
+    drawer.classList.add('is-open');
+    if (btn) {
+      btn.setAttribute('aria-expanded', 'true');
+      btn.classList.add('active');
+      const textSpan = btn.querySelector('.btn-drawer-text');
+      if (textSpan) textSpan.textContent = collapseText;
+    }
+  }
+}
+

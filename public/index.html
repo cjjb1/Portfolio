@@ -474,31 +474,6 @@
               </div>
             </div>
           </div>
-          <div class="about-aside">
-            <div class="profile-card">
-              <div class="profile-header">
-                <div class="profile-avatar">CJ</div>
-                <div>
-                  <h3 data-i18n="about.cardName">Carlos Juárez</h3>
-                  <p data-i18n="about.cardRole">Lead Developer & Software Architect</p>
-                </div>
-              </div>
-              <hr class="profile-divider" />
-              <ul class="profile-list">
-                <li><span data-i18n="about.locLabel">Ubicación:</span> <span data-i18n="about.locVal">España</span></li>
-                <li><span data-i18n="about.specLabel">Especialidad:</span> <span data-i18n="about.specVal">Node.js, Express, Mainframe AS400, RPA, SQL</span></li>
-                <li><span data-i18n="about.infraLabel">Infraestructura:</span> <span data-i18n="about.infraVal">Synology NAS, Windows Services, Cloud (Render)</span></li>
-                <li><span data-i18n="about.philLabel">Filosofía:</span> <span data-i18n="about.philVal">Robustez, Trazabilidad & Cero Deuda Técnica</span></li>
-              </ul>
-              <div class="profile-actions" style="display: flex; flex-direction: column; gap: 10px;">
-                <a href="#contact" class="btn btn-primary btn-full" data-i18n="about.contactBtn">Contactar</a>
-                <a href="https://www.linkedin.com/in/carlosj-juarez/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full btn-linkedin" style="justify-content: center;">
-                  <img src="images/logos/linkedin.svg" alt="LinkedIn" style="width: 16px; height: 16px; border-radius: 2px;" />
-                  <span data-i18n="about.linkedinBtn">Perfil en LinkedIn</span>
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -743,6 +718,117 @@
                 <span class="tech-badge"><img src="images/logos/multer.svg" alt="Multer" class="tech-icon" /><span>Multer</span></span>
                 <span class="tech-badge"><img src="images/logos/paperless.svg" alt="Paperless" class="tech-icon" /><span>Paperless</span></span>
               </div>
+            
+              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-reclamaciones', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Arquitectura, Módulos & Pipeline</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
+            <div class="project-tech-drawer" id="drawer-reclamaciones">
+              <div class="drawer-inner">
+                
+                <!-- 1. Pipeline Operativo / Ciclo de Vida -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <h5 data-i18n="projects.pipelineTitle">Pipeline Operativo & Ciclo de Vida</h5>
+                  </div>
+                  <div class="pipeline-track">
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">1</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p1Pipe1"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p1Pipe1Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">2</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p1Pipe2"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p1Pipe2Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">3</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p1Pipe3"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p1Pipe3Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">4</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p1Pipe4"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p1Pipe4Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">5</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p1Pipe5"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p1Pipe5Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">6</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p1Pipe6"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p1Pipe6Sub"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Módulos Funcionales Nucleares -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <h5 data-i18n="projects.modulesTitle">Módulos Funcionales Nucleares</h5>
+                  </div>
+                  <div class="drawer-modules-grid">
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p1Mod1Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p1Mod1Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p1Mod2Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p1Mod2Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p1Mod3Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p1Mod3Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p1Mod4Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p1Mod4Desc"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Arquitectura de Datos & Protocolos -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    <h5 data-i18n="projects.dataArchTitle">Arquitectura de Datos, Protocolos & Integración</h5>
+                  </div>
+                  <div class="drawer-data-grid">
+                    <div class="data-spec-card" data-i18n-html="projects.p1DataMainframe"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p1DataLocal"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p1DataProtocols"></div>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </article>
 
@@ -847,6 +933,127 @@
                 <span class="tech-badge"><img src="images/logos/mysql.svg" alt="MySQL" class="tech-icon" /><span>MySQL</span></span>
                 <span class="tech-badge"><img src="images/logos/odbc.svg" alt="ODBC" class="tech-icon" /><span>ODBC DAPEK</span></span>
                 <span class="tech-badge"><img src="images/logos/paperless.svg" alt="FSC" class="tech-icon" /><span>Albaranes FSC/PEFC</span></span>
+              </div>
+            
+              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-osid', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Arquitectura, Módulos & Pipeline</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
+            <div class="project-tech-drawer" id="drawer-osid">
+              <div class="drawer-inner">
+                
+                <!-- 1. Pipeline Operativo / Ciclo de Vida -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <h5 data-i18n="projects.pipelineTitle">Pipeline Operativo & Ciclo de Vida</h5>
+                  </div>
+                  <div class="pipeline-track">
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">1</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe1"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe1Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">2</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe2"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe2Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">3</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe3"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe3Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">4</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe4"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe4Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">5</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe5"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe5Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">6</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe6"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe6Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">7</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe7"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe7Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">8</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe8"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe8Sub"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Módulos Funcionales Nucleares -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <h5 data-i18n="projects.modulesTitle">Módulos Funcionales Nucleares</h5>
+                  </div>
+                  <div class="drawer-modules-grid">
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p2Mod1Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p2Mod1Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p2Mod2Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p2Mod2Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p2Mod3Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p2Mod3Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p2Mod4Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p2Mod4Desc"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Arquitectura de Datos & Protocolos -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    <h5 data-i18n="projects.dataArchTitle">Arquitectura de Datos, Protocolos & Integración</h5>
+                  </div>
+                  <div class="drawer-data-grid">
+                    <div class="data-spec-card" data-i18n-html="projects.p2DataMainframe"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p2DataLocal"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p2DataProtocols"></div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </article>
@@ -954,6 +1161,127 @@
                 <span class="tech-badge"><img src="images/logos/synology.svg" alt="Synology" class="tech-icon" /><span>Synology DSM NAS</span></span>
                 <span class="tech-badge"><img src="images/logos/paperless.svg" alt="2FA" class="tech-icon" /><span>2FA & Smart Zipping</span></span>
               </div>
+            
+              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-witrans', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Arquitectura, Módulos & Pipeline</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
+            <div class="project-tech-drawer" id="drawer-witrans">
+              <div class="drawer-inner">
+                
+                <!-- 1. Pipeline Operativo / Ciclo de Vida -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <h5 data-i18n="projects.pipelineTitle">Pipeline Operativo & Ciclo de Vida</h5>
+                  </div>
+                  <div class="pipeline-track">
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">1</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p3Pipe1"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p3Pipe1Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">2</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p3Pipe2"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p3Pipe2Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">3</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p3Pipe3"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p3Pipe3Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">4</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p3Pipe4"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p3Pipe4Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">5</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p3Pipe5"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p3Pipe5Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">6</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p3Pipe6"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p3Pipe6Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">7</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p3Pipe7"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p3Pipe7Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">8</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p3Pipe8"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p3Pipe8Sub"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Módulos Funcionales Nucleares -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <h5 data-i18n="projects.modulesTitle">Módulos Funcionales Nucleares</h5>
+                  </div>
+                  <div class="drawer-modules-grid">
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p3Mod1Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p3Mod1Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p3Mod2Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p3Mod2Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p3Mod3Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p3Mod3Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p3Mod4Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p3Mod4Desc"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Arquitectura de Datos & Protocolos -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    <h5 data-i18n="projects.dataArchTitle">Arquitectura de Datos, Protocolos & Integración</h5>
+                  </div>
+                  <div class="drawer-data-grid">
+                    <div class="data-spec-card" data-i18n-html="projects.p3DataMainframe"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p3DataLocal"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p3DataProtocols"></div>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </article>
 
@@ -1058,6 +1386,127 @@
                 <span class="tech-badge"><img src="images/logos/terminal.svg" alt="HLLAPI" class="tech-icon" /><span>HLLAPI 32-bit</span></span>
                 <span class="tech-badge"><img src="images/logos/outlook.svg" alt="Outlook" class="tech-icon" /><span>Outlook MAPI</span></span>
                 <span class="tech-badge"><img src="images/logos/microsoft.svg" alt="Windows DPAPI" class="tech-icon" /><span>Windows DPAPI</span></span>
+              </div>
+            
+              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-agente-borrar-ots', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Arquitectura, Módulos & Pipeline</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
+            <div class="project-tech-drawer" id="drawer-agente-borrar-ots">
+              <div class="drawer-inner">
+                
+                <!-- 1. Pipeline Operativo / Ciclo de Vida -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <h5 data-i18n="projects.pipelineTitle">Pipeline Operativo & Ciclo de Vida</h5>
+                  </div>
+                  <div class="pipeline-track">
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">1</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p4Pipe1"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p4Pipe1Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">2</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p4Pipe2"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p4Pipe2Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">3</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p4Pipe3"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p4Pipe3Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">4</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p4Pipe4"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p4Pipe4Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">5</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p4Pipe5"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p4Pipe5Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">6</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p4Pipe6"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p4Pipe6Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">7</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p4Pipe7"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p4Pipe7Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">8</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p4Pipe8"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p4Pipe8Sub"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Módulos Funcionales Nucleares -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <h5 data-i18n="projects.modulesTitle">Módulos Funcionales Nucleares</h5>
+                  </div>
+                  <div class="drawer-modules-grid">
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p4Mod1Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p4Mod1Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p4Mod2Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p4Mod2Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p4Mod3Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p4Mod3Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p4Mod4Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p4Mod4Desc"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Arquitectura de Datos & Protocolos -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    <h5 data-i18n="projects.dataArchTitle">Arquitectura de Datos, Protocolos & Integración</h5>
+                  </div>
+                  <div class="drawer-data-grid">
+                    <div class="data-spec-card" data-i18n-html="projects.p4DataMainframe"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p4DataLocal"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p4DataProtocols"></div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </article>
@@ -1164,6 +1613,127 @@
                 <span class="tech-badge"><img src="images/logos/sqlserver.svg" alt="MSSQL" class="tech-icon" /><span>MSSQL (DIGITEK)</span></span>
                 <span class="tech-badge"><img src="images/logos/microsoft.svg" alt="Active Directory" class="tech-icon" /><span>Active Directory SSO</span></span>
                 <span class="tech-badge"><img src="images/logos/paperless.svg" alt="Windows Service" class="tech-icon" /><span>Windows Service</span></span>
+              </div>
+            
+              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-vigilancia', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Arquitectura, Módulos & Pipeline</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
+            <div class="project-tech-drawer" id="drawer-vigilancia">
+              <div class="drawer-inner">
+                
+                <!-- 1. Pipeline Operativo / Ciclo de Vida -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <h5 data-i18n="projects.pipelineTitle">Pipeline Operativo & Ciclo de Vida</h5>
+                  </div>
+                  <div class="pipeline-track">
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">1</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p5Pipe1"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p5Pipe1Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">2</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p5Pipe2"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p5Pipe2Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">3</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p5Pipe3"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p5Pipe3Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">4</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p5Pipe4"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p5Pipe4Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">5</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p5Pipe5"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p5Pipe5Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">6</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p5Pipe6"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p5Pipe6Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">7</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p5Pipe7"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p5Pipe7Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">8</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p5Pipe8"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p5Pipe8Sub"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Módulos Funcionales Nucleares -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <h5 data-i18n="projects.modulesTitle">Módulos Funcionales Nucleares</h5>
+                  </div>
+                  <div class="drawer-modules-grid">
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p5Mod1Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p5Mod1Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p5Mod2Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p5Mod2Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p5Mod3Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p5Mod3Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p5Mod4Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p5Mod4Desc"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Arquitectura de Datos & Protocolos -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    <h5 data-i18n="projects.dataArchTitle">Arquitectura de Datos, Protocolos & Integración</h5>
+                  </div>
+                  <div class="drawer-data-grid">
+                    <div class="data-spec-card" data-i18n-html="projects.p5DataMainframe"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p5DataLocal"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p5DataProtocols"></div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </article>
@@ -1278,9 +1848,119 @@
                 <span class="tech-badge"><img src="images/logos/multer.svg" alt="Multer" class="tech-icon" /><span>Multer</span></span>
                 <span class="tech-badge"><img src="images/logos/render.svg" alt="Render" class="tech-icon" /><span>Render Cloud</span></span>
               </div>
+            
+              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-webwedding', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Arquitectura, Módulos & Pipeline</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
+            <div class="project-tech-drawer" id="drawer-webwedding">
+              <div class="drawer-inner">
+                
+                <!-- 1. Pipeline Operativo / Ciclo de Vida -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <h5 data-i18n="projects.pipelineTitle">Pipeline Operativo & Ciclo de Vida</h5>
+                  </div>
+                  <div class="pipeline-track">
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">1</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p6Pipe1"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p6Pipe1Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">2</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p6Pipe2"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p6Pipe2Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">3</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p6Pipe3"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p6Pipe3Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">4</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p6Pipe4"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p6Pipe4Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">5</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p6Pipe5"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p6Pipe5Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">6</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p6Pipe6"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p6Pipe6Sub"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Módulos Funcionales Nucleares -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <h5 data-i18n="projects.modulesTitle">Módulos Funcionales Nucleares</h5>
+                  </div>
+                  <div class="drawer-modules-grid">
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p6Mod1Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p6Mod1Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p6Mod2Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p6Mod2Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p6Mod3Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p6Mod3Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p6Mod4Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p6Mod4Desc"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Arquitectura de Datos & Protocolos -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    <h5 data-i18n="projects.dataArchTitle">Arquitectura de Datos, Protocolos & Integración</h5>
+                  </div>
+                  <div class="drawer-data-grid">
+                    <div class="data-spec-card" data-i18n-html="projects.p6DataMainframe"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p6DataLocal"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p6DataProtocols"></div>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </article>
-
         </div>
       </div>
     </section>
