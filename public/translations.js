@@ -232,7 +232,7 @@ window.I18N = {
       c2Item4: "<strong>MAPI Outlook:</strong> Triaje robótico de buzones corporativos y respuestas desatendidas.",
 
       c3Title: "Bases de Datos & Persistencia",
-      c3Item1: "<strong>MySQL & PostgreSQL:</strong> Modelado relacional, índices, transacciones y pools.",
+      c3Item1: "<strong>MySQL, MariaDB & PostgreSQL:</strong> Modelado relacional, índices, transacciones y pools.",
       c3Item2: "<strong>Microsoft SQL Server:</strong> Conexión a sistemas externos de RRHH y marcajes (DIGITEK).",
       c3Item3: "<strong>Almacenamiento Atómico:</strong> Persistencia ultraligera en JSON con <code>proper-lockfile</code>.",
       c3Item4: "<strong>ODBC Driver Architecture:</strong> Puentes de integración heterogénea entre SOs.",
@@ -494,7 +494,7 @@ window.I18N = {
       c2Item4: "<strong>MAPI Outlook:</strong> Automated email triage bots and unattended notification delivery.",
 
       c3Title: "Databases & Persistence",
-      c3Item1: "<strong>MySQL & PostgreSQL:</strong> Relational schema design, indexes, transactional integrity, and connection pools.",
+      c3Item1: "<strong>MySQL, MariaDB & PostgreSQL:</strong> Relational schema design, indexes, transactional integrity, and connection pools.",
       c3Item2: "<strong>Microsoft SQL Server:</strong> Integration with external HR systems, clock-in, and badge terminals (DIGITEK).",
       c3Item3: "<strong>Atomic Storage:</strong> High-performance atomic JSON persistence utilizing <code>proper-lockfile</code>.",
       c3Item4: "<strong>ODBC Driver Architecture:</strong> Heterogeneous cross-platform bridges linking legacy OS environments.",
