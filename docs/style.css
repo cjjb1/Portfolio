@@ -314,8 +314,9 @@ code {
   font-size: 1.15rem;
   color: var(--text-secondary);
   line-height: 1.7;
-  max-width: 760px;
+  max-width: 1040px;
   margin: 0 auto 36px;
+  text-wrap: balance;
 }
 
 .hero-subtitle strong {
