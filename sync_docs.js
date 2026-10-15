@@ -12,7 +12,14 @@ function copyDir(src, dest) {
     if (entry.isDirectory()) {
       copyDir(srcPath, destPath);
     } else {
-      fs.copyFileSync(srcPath, destPath);
+      try {
+        if (fs.existsSync(destPath)) {
+          fs.chmodSync(destPath, 0o666);
+        }
+        fs.copyFileSync(srcPath, destPath);
+      } catch (err) {
+        console.warn(`Warning copying ${srcPath} -> ${destPath}:`, err.message);
+      }
     }
   }
 }
