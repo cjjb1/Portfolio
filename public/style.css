@@ -2912,12 +2912,22 @@ code {
 }
 
 .doc-module-file {
-  font-size: 0.72rem;
-  font-family: monospace;
-  color: #cbd5e1;
-  background: rgba(0, 0, 0, 0.25);
-  padding: 2px 6px;
-  border-radius: 4px;
+  font-size: 0.76rem;
+  font-family: var(--font-mono, monospace);
+  font-weight: 600;
+  color: #c7d2fe;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.28);
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: -0.01em;
+  transition: all 0.2s ease;
+}
+
+.doc-module-card:hover .doc-module-file {
+  background: rgba(99, 102, 241, 0.25);
+  border-color: rgba(99, 102, 241, 0.45);
+  color: #e0e7ff;
 }
 
 .doc-module-name {
@@ -3155,6 +3165,28 @@ code {
 
 [data-theme="light"] .doc-rule-desc {
   color: #475569;
+}
+
+[data-theme="light"] .doc-module-file {
+  background: #ede9fe;
+  color: #4338ca;
+  border: 1px solid rgba(79, 70, 229, 0.22);
+}
+
+[data-theme="light"] .doc-module-card:hover .doc-module-file {
+  background: #e0e7ff;
+  border-color: rgba(79, 70, 229, 0.4);
+  color: #312e81;
+}
+
+[data-theme="light"] .doc-module-num {
+  color: #4338ca;
+  background: #ede9fe;
+}
+
+[data-theme="light"] .doc-step-badge {
+  background: rgba(14, 165, 233, 0.12);
+  color: #0284c7;
 }
 
 [data-theme="light"] .drawer-doc-callout {
