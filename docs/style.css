@@ -610,42 +610,60 @@ code {
   background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 70%), var(--bg-surface);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
+  padding: 48px 0;
+}
+
+.section-credentials .section-header {
+  margin: 0 auto 28px;
+}
+
+.section-credentials .section-title {
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+}
+
+.section-credentials .section-subtitle {
+  font-size: 0.88rem;
+  max-width: 680px;
+  line-height: 1.5;
 }
 
 .credentials-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
+  gap: 20px;
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 .credential-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: 20px;
+  border-radius: 12px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
   transition: var(--transition);
 }
 
 .credential-card:hover {
   border-color: var(--border-focus);
-  transform: translateY(-3px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
 }
 
 .credential-badge-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 20px;
+  padding: 8px 14px;
   background: rgba(14, 19, 31, 0.85);
   border-bottom: 1px solid var(--border-subtle);
 }
 
 .cert-year, .cv-status {
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -653,11 +671,11 @@ code {
 }
 
 .cert-verified, .cv-role {
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: var(--success-color);
   background: rgba(16, 185, 129, 0.1);
-  padding: 3px 10px;
+  padding: 2px 8px;
   border-radius: 9999px;
   border: 1px solid rgba(16, 185, 129, 0.25);
 }
@@ -665,7 +683,7 @@ code {
 .cert-preview-wrapper, .cv-preview-wrapper {
   position: relative;
   background: #030508;
-  height: 250px;
+  height: 135px;
   overflow: hidden;
   cursor: pointer;
   display: flex;
@@ -704,8 +722,19 @@ code {
   opacity: 1;
 }
 
+.cert-overlay .zoom-btn {
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  gap: 6px;
+}
+
+.cert-overlay .zoom-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
 .credential-content {
-  padding: 28px 24px;
+  padding: 14px 16px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -714,89 +743,50 @@ code {
 .cert-school {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .school-logo {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   line-height: 1;
 }
 
 .credential-title {
-  font-size: 1.35rem;
-  font-weight: 800;
+  font-size: 1.02rem;
+  font-weight: 700;
   letter-spacing: -0.01em;
   color: var(--text-primary);
+  line-height: 1.25;
 }
 
 .school-name {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: #818cf8;
   font-weight: 600;
-}
-
-.cert-description {
-  font-size: 0.92rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 18px;
-}
-
-.cert-meta {
-  background: rgba(0, 0, 0, 0.25);
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  padding: 10px 14px;
-  margin-bottom: 20px;
-}
-
-.hash-label {
-  display: block;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  letter-spacing: 0.04em;
-  margin-bottom: 4px;
-}
-
-.hash-code {
-  font-size: 0.75rem;
-  word-break: break-all;
-  color: #a5b4fc;
-}
-
-.cv-highlights-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.cv-h-item {
-  font-size: 0.82rem;
-  background: rgba(255, 255, 255, 0.02);
-  padding: 8px 12px;
-  border-radius: 6px;
-  border: 1px solid var(--border-subtle);
-}
-
-.cv-h-item strong {
-  color: var(--text-primary);
-  display: block;
-  font-size: 0.85rem;
-}
-
-.cv-h-item span {
-  color: var(--text-secondary);
+  margin-top: 1px;
 }
 
 .credential-actions {
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
   margin-top: auto;
-  padding-top: 16px;
+  padding-top: 10px;
   border-top: 1px solid var(--border-subtle);
+}
+
+.credential-actions .btn-sm {
+  padding: 6px 11px;
+  font-size: 0.76rem;
+  border-radius: 6px;
+  gap: 5px;
+}
+
+.credential-actions .btn-sm svg {
+  width: 13px;
+  height: 13px;
 }
 
 /* Filtros de Proyectos */
@@ -1640,6 +1630,7 @@ code {
   }
   .credentials-grid {
     grid-template-columns: 1fr;
+    max-width: 440px;
   }
   .metrics-grid {
     grid-template-columns: repeat(2, 1fr);
