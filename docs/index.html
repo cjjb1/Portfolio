@@ -812,7 +812,7 @@
                 <div class="project-bullets" style="margin-bottom: 0;">
                   <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
                 <ul>
-                  <li data-i18n-html="projects.p1Bullet1"><strong>Conexión ODBC en tiempo real con AS400 / IBM i (DB2):</strong> Consulta directa al esquema operacional <code>LDATA2</code> (tablas <code>DMPTL00</code>, <code>DSLAD00</code>, <code>DMPLF00</code>) para validar pedidos, albaranes y bobinas al instante.</li>
+                  <li data-i18n-html="projects.p1Bullet1"><strong>Conexión ODBC en tiempo real con AS400 / IBM i (DB2):</strong> Consulta directa al esquema operacional del ERP para validar pedidos, albaranes y bobinas al instante.</li>
                   <li data-i18n-html="projects.p1Bullet2"><strong>Modelo de datos relacional 1..N:</strong> Un único expediente unifica múltiples máquinas de planta, bobinas afectadas y defectos tipificados con deducción automática de encargos.</li>
                   <li data-i18n-html="projects.p1Bullet3"><strong>Pipeline multimedia y peritaje:</strong> Generación automática de miniaturas para fotografías y transcodificación con minutaje de vídeos MP4 para sustentar las pruebas frente al proveedor papelero.</li>
                   <li data-i18n-html="projects.p1Bullet4"><strong>Generador documental en un clic:</strong> Emisión automática de cartas formales de reclamación con anexos referenciados y registro de auditoría.</li>
@@ -897,7 +897,7 @@
               <div class="project-tech-specs">
                 <!-- Resumen Ejecutivo / Hero Quote -->
                 <div class="doc-hero-quote" data-i18n-html="projects.docHeroQuote">
-                  <strong>iViDo</strong> (<em>Interfaz WEB para MyDoc</em>) es el servicio documental corporativo en <strong>Node.js (ESM + Express 5)</strong> diseñado para reemplazar progresivamente el sistema legacy <strong>MyDoc / DQ (PHP)</strong> en <code>RCSERVER03</code>, proporcionando contingencia total y servicio de documentos nativos desde <code>RCSERVER13</code>.
+                  <strong>iViDo</strong> (<em>Interfaz WEB para MyDoc</em>) es el servicio documental corporativo en <strong>Node.js (ESM + Express 5)</strong> diseñado para reemplazar progresivamente el sistema legacy <strong>MyDoc / DQ (PHP)</strong> en <code>Server A</code>, proporcionando contingencia total y servicio de documentos nativos desde <code>Server B</code>.
                 </div>
 
                 <!-- 1. Lámina Visual de Arquitectura (Handwritten Notes) -->
@@ -943,12 +943,12 @@
                   </div>
                   <div class="doc-server-grid">
                     <div class="doc-server-card">
-                      <div class="doc-server-name">🖥️ <span data-i18n="projects.docSrv1Name">RCSERVER13 (Producción iViDo)</span></div>
+                      <div class="doc-server-name">🖥️ <span data-i18n="projects.docSrv1Name">Server B (Producción iViDo)</span></div>
                       <div class="doc-server-role" data-i18n="projects.docSrv1Role">Master HTTP :3000, SOAP Worker :5001, Cache Workers :5002+</div>
                       <div class="doc-server-desc" data-i18n-html="projects.docSrv1Desc">Caché compartida en disco de PDFs, persistencia MariaDB (esquemas <code>ivido</code> y espejo de permisos <code>diso</code>).</div>
                     </div>
                     <div class="doc-server-card">
-                      <div class="doc-server-name">🖥️ <span data-i18n="projects.docSrv2Name">RCSERVER03 (Servidor Legacy)</span></div>
+                      <div class="doc-server-name">🖥️ <span data-i18n="projects.docSrv2Name">Server A (Servidor Legacy)</span></div>
                       <div class="doc-server-role" data-i18n="projects.docSrv2Role">MSSQL DQDB + Servicio SOAP MyDoc :8000</div>
                       <div class="doc-server-desc" data-i18n-html="projects.docSrv2Desc">Sistema documental heredado (WcfDllAPI) y base de datos relacional con cola serializada Tedious.</div>
                     </div>
@@ -1371,7 +1371,7 @@
                 <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express</span></span>
                 <span class="tech-badge"><img src="images/logos/ibm.svg" alt="IBM i" class="tech-icon" /><span>AS400 / IBM i</span></span>
                 <span class="tech-badge"><img src="images/logos/mysql.svg" alt="MySQL" class="tech-icon" /><span>MySQL</span></span>
-                <span class="tech-badge"><img src="images/logos/odbc.svg" alt="ODBC" class="tech-icon" /><span>ODBC DAPEK</span></span>
+                <span class="tech-badge"><img src="images/logos/odbc.svg" alt="ODBC" class="tech-icon" /><span>ODBC AS/400</span></span>
                 <span class="tech-badge"><img src="images/logos/paperless.svg" alt="FSC" class="tech-icon" /><span>Albaranes FSC/PEFC</span></span>
               </div>
             
@@ -1395,7 +1395,7 @@
                 <div class="project-bullets" style="margin-bottom: 0;">
                   <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
                 <ul>
-                  <li data-i18n-html="projects.p2Bullet1"><strong>Sincronización bidireccional AS400 / DB2 y MySQL:</strong> Sincroniza órdenes de trabajo, proveedores, imputaciones analíticas (DAPEK) y asientos contables en EVA sin desajustes.</li>
+                  <li data-i18n-html="projects.p2Bullet1"><strong>Sincronización bidireccional AS400 / DB2 y MySQL:</strong> Sincroniza órdenes de trabajo, proveedores, imputaciones analíticas de costes y asientos contables en EVA sin desajustes.</li>
                   <li data-i18n-html="projects.p2Bullet2"><strong>Planificación visual con Drag & Drop:</strong> Tablón dinámico de muelles de carga con cálculo algorítmico de palets teóricos, cubicaje y tarificación en vivo por peso o bulto.</li>
                   <li data-i18n-html="projects.p2Bullet3"><strong>Auditoría y conformación de fletes en bloque:</strong> Conciliación automática de facturas de transportistas contra tarifas contractuales pactadas, bloqueando cargos no autorizados.</li>
                   <li data-i18n-html="projects.p2Bullet4"><strong>Control de bobinas y "el bote":</strong> Reconcilia consumos reales vs teóricos en rotativas, recuperando más de 2.000 picos de bobina al año que antes se extraviaban.</li>
