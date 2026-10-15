@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1203.2956666666664 530.8000000000001" width="1203.2956666666664" height="530.8000000000001" style="--bg:#1F1F1F;--fg:#CCCCCC;--line:#CCCCCC;--accent:#0078D4;--muted:#CCCCCCCC;--surface:#181818;--border:#CCCCCC;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<g class="subgraph" data-id="Cluster_Workers" data-label="Cluster Workers">
+  <rect x="555.5869999999999" y="272.1000000000001" width="432.1489999999999" height="113.80000000000001" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="555.5869999999999" y="272.1000000000001" width="432.1489999999999" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="567.5869999999999" y="286.1000000000001" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Cluster Workers</text>
+</g>
+<polyline class="edge" data-from="Cliente" data-to="Master" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="387.96608333333324,76.9 387.9660833333333,124.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Master" data-to="AD" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="NTLM Auth (Active Directory)" points="319.3614833333333,161.8 319.3614833333333,173.8 148.04249999999996,173.8 148.04249999999996,254.10000000000002" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Master" data-to="ValKey" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="X-API-Key (Bypass NTLM)" points="365.0978833333333,161.8 365.0978833333333,250.7000000000001 405.8359999999999,250.7000000000001 405.8359999999999,323.55000000000007" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Master" data-to="SoapWorker" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Documento NO cacheado (SOAP)" points="410.83428333333325,161.8 410.83428333333325,185.80000000000007 649.2484999999998,185.80000000000007 649.2484999999999,323.55000000000007" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Master" data-to="CacheWorkers" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Documento cacheado / APIs / UI" points="456.57068333333325,161.8 456.57068333333325,173.80000000000007 842.2837499999998,173.80000000000007 842.2837499999998,254.10000000000008 863.3229999999999,254.10000000000008 863.3229999999999,323.55000000000007" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SoapWorker" data-to="SOAPService" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="649.2484999999999,377.3500000000001 649.2484999999999,402.6250000000001 402.28516666666656,402.6250000000001 402.28516666666656,427.9000000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SoapWorker" data-to="DiscoCache" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="649.2484999999999,377.3500000000001 649.2484999999999,402.6250000000001 635.9961666666666,402.6250000000001 635.9961666666666,427.9000000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CacheWorkers" data-to="DiscoCache" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="863.3229999999999,377.3500000000001 863.3229999999999,402.6250000000001 635.9961666666666,402.6250000000001 635.9961666666666,427.9000000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CacheWorkers" data-to="MariaDB" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="863.3229999999999,377.3500000000001 863.3229999999999,402.6250000000001 843.7721666666665,402.6250000000001 843.7721666666665,427.9000000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CacheWorkers" data-to="MSSQL" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="863.3229999999999,377.3500000000001 863.3229999999999,402.6250000000001 1057.1056666666666,402.6250000000001 1057.1056666666666,427.9000000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="edge-label" data-from="Master" data-to="AD" data-label="NTLM Auth (Active Directory)">
+  <rect x="70.04249999999995" y="180.8" width="155.458" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="147.77149999999995" y="195.95000000000002" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">NTLM Auth (Active Directory)</text>
+</g>
+<g class="edge-label" data-from="Master" data-to="ValKey" data-label="X-API-Key (Bypass NTLM)">
+  <rect x="334.3359999999999" y="257.7000000000001" width="142.98399999999998" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="405.82799999999986" y="272.8500000000001" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">X-API-Key (Bypass NTLM)</text>
+</g>
+<g class="edge-label" data-from="Master" data-to="SoapWorker" data-label="Documento NO cacheado (SOAP)">
+  <rect x="563.2484999999998" y="192.80000000000007" width="171.496" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="648.9964999999999" y="207.95000000000007" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Documento NO cacheado (SOAP)</text>
+</g>
+<g class="edge-label" data-from="Master" data-to="CacheWorkers" data-label="Documento cacheado / APIs / UI">
+  <rect x="759.7837499999998" y="192.80000000000007" width="164.368" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="841.9677499999998" y="207.95000000000007" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Documento cacheado / APIs / UI</text>
+</g>
+<g class="node" data-id="Cliente" data-label="Navegador / App Externa" data-shape="stadium">
+  <rect x="292.89108333333326" y="40" width="190.14999999999998" height="36.900000000000006" rx="18.450000000000003" ry="18.450000000000003" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="387.96608333333324" y="58.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Navegador / App Externa</text>
+</g>
+<g class="node" data-id="Master" data-label="cluster.mjs - Master HTTP :3000" data-shape="rectangle">
+  <rect x="273.6250833333333" y="124.9" width="228.682" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="387.9660833333333" y="143.35000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">cluster.mjs - Master HTTP :3000</text>
+</g>
+<g class="node" data-id="AD" data-label="Controlador de Dominio LDAP" data-shape="rectangle">
+  <rect x="40" y="254.10000000000002" width="216.08499999999995" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="148.04249999999996" y="272.55" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Controlador de Dominio LDAP</text>
+</g>
+<g class="node" data-id="ValKey" data-label="Hash SHA-256 en ivido.api_claves" data-shape="rectangle">
+  <rect x="284.0849999999999" y="323.55000000000007" width="243.50199999999995" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="405.8359999999999" y="342.00000000000006" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Hash SHA-256 en ivido.api_claves</text>
+</g>
+<g class="node" data-id="SOAPService" data-label="SOAP MyDoc RCSERVER03" data-shape="rectangle">
+  <rect x="297.2066666666666" y="427.9000000000001" width="210.15699999999995" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="402.28516666666656" y="446.3500000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">SOAP MyDoc RCSERVER03</text>
+</g>
+<g class="node" data-id="DiscoCache" data-label="Caché compartida en Disco" data-shape="rectangle">
+  <rect x="535.3636666666665" y="427.9000000000001" width="201.265" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="635.9961666666666" y="446.3500000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Caché compartida en Disco</text>
+</g>
+<g class="node" data-id="MariaDB" data-label="MariaDB ivido / diso" data-shape="cylinder">
+  <rect x="764.6286666666665" y="434.9000000000001" width="158.287" height="36.900000000000006" fill="var(--_node-fill)" stroke="none" />
+  <line x1="764.6286666666665" y1="434.9000000000001" x2="764.6286666666665" y2="471.80000000000007" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <line x1="922.9156666666665" y1="434.9000000000001" x2="922.9156666666665" y2="471.80000000000007" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <ellipse cx="843.7721666666665" cy="471.80000000000007" rx="79.1435" ry="7" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <ellipse cx="843.7721666666665" cy="434.9000000000001" rx="79.1435" ry="7" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="843.7721666666665" y="453.3500000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">MariaDB ivido / diso</text>
+</g>
+<g class="node" data-id="MSSQL" data-label="MSSQL DQDB - Cola Tedious" data-shape="cylinder">
+  <rect x="950.9156666666665" y="434.9000000000001" width="212.37999999999997" height="36.900000000000006" fill="var(--_node-fill)" stroke="none" />
+  <line x1="950.9156666666665" y1="434.9000000000001" x2="950.9156666666665" y2="471.80000000000007" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <line x1="1163.2956666666664" y1="434.9000000000001" x2="1163.2956666666664" y2="471.80000000000007" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <ellipse cx="1057.1056666666666" cy="471.80000000000007" rx="106.18999999999998" ry="7" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <ellipse cx="1057.1056666666666" cy="434.9000000000001" rx="106.18999999999998" ry="7" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1057.1056666666666" y="453.3500000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">MSSQL DQDB - Cola Tedious</text>
+</g>
+<g class="node" data-id="SoapWorker" data-label="Worker SOAP :5001
+1 único ticket activo" data-shape="rectangle">
+  <rect x="571.5869999999999" y="323.55000000000007" width="155.32299999999998" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="649.2484999999999" y="350.45000000000005" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="649.2484999999999" dy="-3.9000000000000012">Worker SOAP :5001</tspan><tspan x="649.2484999999999" dy="16.900000000000002">1 único ticket activo</tspan></text>
+</g>
+<g class="node" data-id="CacheWorkers" data-label="Cache Workers :5002, :5003...
+Round-Robin" data-shape="rectangle">
+  <rect x="754.9099999999999" y="323.55000000000007" width="216.82599999999994" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="863.3229999999999" y="350.45000000000005" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="863.3229999999999" dy="-3.9000000000000012">Cache Workers :5002, :5003...</tspan><tspan x="863.3229999999999" dy="16.900000000000002">Round-Robin</tspan></text>
+</g>
+</svg>
