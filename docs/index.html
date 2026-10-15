@@ -688,44 +688,8 @@
                 </div>
               </div>
 
-              <div class="project-bullets">
-                <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
-                <ul>
-                  <li data-i18n-html="projects.p1Bullet1"><strong>Conexión ODBC en tiempo real con AS400 / IBM i (DB2):</strong> Consulta directa al esquema operacional <code>LDATA2</code> (tablas <code>DMPTL00</code>, <code>DSLAD00</code>, <code>DMPLF00</code>) para validar pedidos, albaranes y bobinas al instante.</li>
-                  <li data-i18n-html="projects.p1Bullet2"><strong>Modelo de datos relacional 1..N:</strong> Un único expediente unifica múltiples máquinas de planta, bobinas afectadas y defectos tipificados con deducción automática de encargos.</li>
-                  <li data-i18n-html="projects.p1Bullet3"><strong>Pipeline multimedia y peritaje:</strong> Generación automática de miniaturas para fotografías y transcodificación con minutaje de vídeos MP4 para sustentar las pruebas frente al proveedor papelero.</li>
-                  <li data-i18n-html="projects.p1Bullet4"><strong>Generador documental en un clic:</strong> Emisión automática de cartas formales de reclamación con anexos referenciados y registro de auditoría.</li>
-                </ul>
-              </div>
-
-              <div class="tech-tags">
-                <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="Node.js" class="tech-icon" /><span>Node.js</span></span>
-                <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express</span></span>
-                <span class="tech-badge"><img src="images/logos/ibm.svg" alt="IBM i" class="tech-icon" /><span>AS400 / IBM i DB2</span></span>
-                <span class="tech-badge"><img src="images/logos/odbc.svg" alt="ODBC" class="tech-icon" /><span>ODBC</span></span>
-                <span class="tech-badge"><img src="images/logos/mysql.svg" alt="MySQL" class="tech-icon" /><span>MySQL</span></span>
-                <span class="tech-badge"><img src="images/logos/multer.svg" alt="Multer" class="tech-icon" /><span>Multer</span></span>
-                <span class="tech-badge"><img src="images/logos/paperless.svg" alt="Paperless" class="tech-icon" /><span>Paperless</span></span>
-              </div>
-            
-              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
-              <div class="project-drawer-action">
-                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-reclamaciones', this)" aria-expanded="false">
-                  <span class="btn-drawer-left">
-                    <span class="btn-drawer-icon">
-                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                    </span>
-                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Arquitectura, Módulos & Pipeline</span>
-                  </span>
-                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </button>
-              </div>
-            </div>
-
-            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
-            <div class="project-tech-drawer" id="drawer-reclamaciones">
-              <div class="drawer-inner">
-                
+                            <!-- Ficha Técnica Directa -->
+              <div class="project-tech-specs">
                 <!-- 1. Pipeline Operativo / Ciclo de Vida -->
                 <div class="drawer-section">
                   <div class="drawer-sec-header">
@@ -762,8 +726,47 @@
                       <span class="pipeline-step-badge">6</span>
                       <span class="pipeline-step-title" data-i18n="projects.p1Pipe6"></span>
                       <span class="pipeline-step-desc" data-i18n="projects.p1Pipe6Sub"></span>
-                    </div>
-                  </div>
+              </div>
+
+              <div class="tech-tags">
+                <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="Node.js" class="tech-icon" /><span>Node.js</span></span>
+                <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express</span></span>
+                <span class="tech-badge"><img src="images/logos/ibm.svg" alt="IBM i" class="tech-icon" /><span>AS400 / IBM i DB2</span></span>
+                <span class="tech-badge"><img src="images/logos/odbc.svg" alt="ODBC" class="tech-icon" /><span>ODBC</span></span>
+                <span class="tech-badge"><img src="images/logos/mysql.svg" alt="MySQL" class="tech-icon" /><span>MySQL</span></span>
+                <span class="tech-badge"><img src="images/logos/multer.svg" alt="Multer" class="tech-icon" /><span>Multer</span></span>
+                <span class="tech-badge"><img src="images/logos/paperless.svg" alt="Paperless" class="tech-icon" /><span>Paperless</span></span>
+              </div>
+            
+              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-reclamaciones', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Aspectos Técnicos Clave</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
+                        <!-- Cajón Desplegable con Aspectos Técnicos Clave -->
+            <div class="project-tech-drawer" id="drawer-reclamaciones">
+              <div class="drawer-inner">
+                <div class="project-bullets" style="margin-bottom: 0;">
+                <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
+                <ul>
+                  <li data-i18n-html="projects.p1Bullet1"><strong>Conexión ODBC en tiempo real con AS400 / IBM i (DB2):</strong> Consulta directa al esquema operacional <code>LDATA2</code> (tablas <code>DMPTL00</code>, <code>DSLAD00</code>, <code>DMPLF00</code>) para validar pedidos, albaranes y bobinas al instante.</li>
+                  <li data-i18n-html="projects.p1Bullet2"><strong>Modelo de datos relacional 1..N:</strong> Un único expediente unifica múltiples máquinas de planta, bobinas afectadas y defectos tipificados con deducción automática de encargos.</li>
+                  <li data-i18n-html="projects.p1Bullet3"><strong>Pipeline multimedia y peritaje:</strong> Generación automática de miniaturas para fotografías y transcodificación con minutaje de vídeos MP4 para sustentar las pruebas frente al proveedor papelero.</li>
+                  <li data-i18n-html="projects.p1Bullet4"><strong>Generador documental en un clic:</strong> Emisión automática de cartas formales de reclamación con anexos referenciados y registro de auditoría.</li>
+                </ul>
+              </div>
+              </div>
+            </div>
                 </div>
 
                 <!-- 2. Módulos Funcionales Nucleares -->
@@ -829,12 +832,8 @@
                 <span class="status-indicator" data-i18n="projects.statusProd">● En Producción</span>
               </div>
               <h3 class="project-name" data-i18n="projects.pIvidoName">iViDo &middot; Gestión Documental & Contingencia Híbrida</h3>
-              <p class="project-pitch">
-                <span data-i18n="projects.pIvidoPitch">Servicio documental corporativo de alta concurrencia en Node.js (Express 5 + ESM) y cluster multi-worker, diseñado para el reemplazo progresivo y contingencia total del sistema legacy MyDoc (PHP/IIS/MSSQL). Integra estampado dinámico de sellos y códigos de barras al vuelo, caché compartida en disco y resolución de metadatos en tiempo real con el ERP corporativo.</span>
-                <button type="button" class="pitch-read-more" id="pitch-btn-ivido" onclick="toggleTechDrawer('drawer-ivido', this)">
-                  <span data-i18n="projects.readMorePitch">Memoria Técnica</span>
-                  <svg class="pitch-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </button>
+              <p class="project-pitch" data-i18n="projects.pIvidoPitch">
+                Servicio documental corporativo de alta concurrencia en Node.js (Express 5 + ESM) y cluster multi-worker, diseñado para el reemplazo progresivo y contingencia total del sistema legacy MyDoc (PHP/IIS/MSSQL). Integra estampado dinámico de sellos y códigos de barras al vuelo, caché compartida en disco y resolución de metadatos en tiempo real con el ERP corporativo.
               </p>
 
               <!-- Miniaturas Interfaz en Vivo & Lámina Arquitectura -->
@@ -897,46 +896,8 @@
                 </div>
               </div>
 
-              <div class="project-bullets">
-                <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
-                <ul>
-                  <li data-i18n-html="projects.pIvidoBullet1"><strong>Arquitectura Master/Cluster Multi-Worker (cluster.mjs):</strong> Master HTTP centralizado con autenticación NTLM Active Directory y bypass con <code>X-API-Key</code>. Enrutamiento inteligente: 1 único SOAP Worker aislado (evitando colisión de tickets concurrentes con el sistema legacy) y N Cache Workers en Round-Robin para lectura, APIs y UI.</li>
-                  <li data-i18n-html="projects.pIvidoBullet2"><strong>Estampado al vuelo y manipulación PDF (pdf-lib & bwip-js):</strong> Inyección dinámica sobre el documento de sellos según estado (<code>EST_XX.pdf</code>), códigos de barras Code 128, fechas de previsión, comentarios y pie de página de auditoría forense (usuario AD solicitante, workstation y timestamp).</li>
-                  <li data-i18n-html="projects.pIvidoBullet3"><strong>Conector ERP AS/400 e ingesta desatendida EDM (conectorEdm.mjs):</strong> Cliente ODBC persistente en UTF-8 (<code>CCSID=1208</code>) con reconexión automática y mutex serializado. Resuelve en tiempo real pedidos de compras, proveedores y materiales tras el escaneo de albaranes de entrada de material.</li>
-                  <li data-i18n-html="projects.pIvidoBullet4"><strong>Resiliencia, réplica y cola serializada Tedious (server.mjs):</strong> Doble persistencia relacional con catálogo y permisos en MariaDB (<code>ivido</code>/<code>diso</code>) para contingencia offline y cola asíncrona serializada <code>adQueryQueue</code> para garantizar la integridad en consultas MSSQL.</li>
-                  <li data-i18n-html="projects.pIvidoBullet5"><strong>Bucle de fondo con backoff y retención documental:</strong> Tareas asíncronas de precarga en goteo y limpieza que se pausan de forma reactiva ante tráfico web de usuarios, integrando motor de expiración y retención documental por plazos auditados.</li>
-                </ul>
-              </div>
-
-              <div class="tech-tags">
-                <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="Node.js" class="tech-icon" /><span>Node.js Cluster</span></span>
-                <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express 5</span></span>
-                <span class="tech-badge"><img src="images/logos/mariadb.svg" alt="MariaDB" class="tech-icon" /><span>MariaDB</span></span>
-                <span class="tech-badge"><img src="images/logos/sqlserver.svg" alt="MSSQL" class="tech-icon" /><span>MSSQL Tedious</span></span>
-                <span class="tech-badge"><img src="images/logos/ibm.svg" alt="IBM i" class="tech-icon" /><span>AS/400 DB2</span></span>
-                <span class="tech-badge"><img src="images/logos/odbc.svg" alt="ODBC" class="tech-icon" /><span>ODBC UTF-8</span></span>
-                <span class="tech-badge"><img src="images/logos/microsoft.svg" alt="Active Directory" class="tech-icon" /><span>NTLM SSO</span></span>
-                <span class="tech-badge"><img src="images/logos/paperless.svg" alt="PDF-Lib" class="tech-icon" /><span>pdf-lib & bwip-js</span></span>
-              </div>
-            
-              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
-              <div class="project-drawer-action">
-                <button type="button" class="btn-drawer-toggle" id="btn-drawer-ivido" onclick="toggleTechDrawer('drawer-ivido', this)" aria-expanded="false">
-                  <span class="btn-drawer-left">
-                    <span class="btn-drawer-icon">
-                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                    </span>
-                    <span class="btn-drawer-text" data-i18n="projects.pIvidoDrawerBtn">Desplegar Memoria Técnica & Arquitectura</span>
-                  </span>
-                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </button>
-              </div>
-            </div>
-
-            <!-- Cajón Desplegable con Memoria Técnica Completa & Arquitectura -->
-            <div class="project-tech-drawer" id="drawer-ivido">
-              <div class="drawer-inner">
-                
+                            <!-- Ficha Técnica Directa -->
+              <div class="project-tech-specs">
                 <!-- Resumen Ejecutivo / Hero Quote -->
                 <div class="doc-hero-quote" data-i18n-html="projects.docHeroQuote">
                   <strong>iViDo</strong> (<em>Interfaz WEB para MyDoc</em>) es el servicio documental corporativo en <strong>Node.js (ESM + Express 5)</strong> diseñado para reemplazar progresivamente el sistema legacy <strong>MyDoc / DQ (PHP)</strong> en <code>RCSERVER03</code>, proporcionando contingencia total y servicio de documentos nativos desde <code>RCSERVER13</code>.
@@ -958,8 +919,49 @@
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
                         <span data-i18n="projects.docSec1Zoom">Ampliar lámina a resolución completa</span>
                       </span>
-                    </div>
-                  </div>
+              </div>
+
+              <div class="tech-tags">
+                <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="Node.js" class="tech-icon" /><span>Node.js Cluster</span></span>
+                <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express 5</span></span>
+                <span class="tech-badge"><img src="images/logos/mariadb.svg" alt="MariaDB" class="tech-icon" /><span>MariaDB</span></span>
+                <span class="tech-badge"><img src="images/logos/sqlserver.svg" alt="MSSQL" class="tech-icon" /><span>MSSQL Tedious</span></span>
+                <span class="tech-badge"><img src="images/logos/ibm.svg" alt="IBM i" class="tech-icon" /><span>AS/400 DB2</span></span>
+                <span class="tech-badge"><img src="images/logos/odbc.svg" alt="ODBC" class="tech-icon" /><span>ODBC UTF-8</span></span>
+                <span class="tech-badge"><img src="images/logos/microsoft.svg" alt="Active Directory" class="tech-icon" /><span>NTLM SSO</span></span>
+                <span class="tech-badge"><img src="images/logos/paperless.svg" alt="PDF-Lib" class="tech-icon" /><span>pdf-lib & bwip-js</span></span>
+              </div>
+            
+              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" id="btn-drawer-ivido" onclick="toggleTechDrawer('drawer-ivido', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Aspectos Técnicos Clave</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con Memoria Técnica Completa & Arquitectura -->
+                        <!-- Cajón Desplegable con Aspectos Técnicos Clave -->
+            <div class="project-tech-drawer" id="drawer-ivido">
+              <div class="drawer-inner">
+                <div class="project-bullets" style="margin-bottom: 0;">
+                <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
+                <ul>
+                  <li data-i18n-html="projects.pIvidoBullet1"><strong>Arquitectura Master/Cluster Multi-Worker (cluster.mjs):</strong> Master HTTP centralizado con autenticación NTLM Active Directory y bypass con <code>X-API-Key</code>. Enrutamiento inteligente: 1 único SOAP Worker aislado (evitando colisión de tickets concurrentes con el sistema legacy) y N Cache Workers en Round-Robin para lectura, APIs y UI.</li>
+                  <li data-i18n-html="projects.pIvidoBullet2"><strong>Estampado al vuelo y manipulación PDF (pdf-lib & bwip-js):</strong> Inyección dinámica sobre el documento de sellos según estado (<code>EST_XX.pdf</code>), códigos de barras Code 128, fechas de previsión, comentarios y pie de página de auditoría forense (usuario AD solicitante, workstation y timestamp).</li>
+                  <li data-i18n-html="projects.pIvidoBullet3"><strong>Conector ERP AS/400 e ingesta desatendida EDM (conectorEdm.mjs):</strong> Cliente ODBC persistente en UTF-8 (<code>CCSID=1208</code>) con reconexión automática y mutex serializado. Resuelve en tiempo real pedidos de compras, proveedores y materiales tras el escaneo de albaranes de entrada de material.</li>
+                  <li data-i18n-html="projects.pIvidoBullet4"><strong>Resiliencia, réplica y cola serializada Tedious (server.mjs):</strong> Doble persistencia relacional con catálogo y permisos en MariaDB (<code>ivido</code>/<code>diso</code>) para contingencia offline y cola asíncrona serializada <code>adQueryQueue</code> para garantizar la integridad en consultas MSSQL.</li>
+                  <li data-i18n-html="projects.pIvidoBullet5"><strong>Bucle de fondo con backoff y retención documental:</strong> Tareas asíncronas de precarga en goteo y limpieza que se pausan de forma reactiva ante tráfico web de usuarios, integrando motor de expiración y retención documental por plazos auditados.</li>
+                </ul>
+              </div>
+              </div>
+            </div>
                   <p style="font-size: 0.82rem; color: #94a3b8; margin: 0;" data-i18n="projects.docSec1Desc">
                     Representación visual de la arquitectura técnica, pipeline y topología híbrida.
                   </p>
@@ -1270,43 +1272,8 @@
                 </div>
               </div>
 
-              <div class="project-bullets">
-                <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
-                <ul>
-                  <li data-i18n-html="projects.p2Bullet1"><strong>Sincronización bidireccional AS400 / DB2 y MySQL:</strong> Sincroniza órdenes de trabajo, proveedores, imputaciones analíticas (DAPEK) y asientos contables en EVA sin desajustes.</li>
-                  <li data-i18n-html="projects.p2Bullet2"><strong>Planificación visual con Drag & Drop:</strong> Tablón dinámico de muelles de carga con cálculo algorítmico de palets teóricos, cubicaje y tarificación en vivo por peso o bulto.</li>
-                  <li data-i18n-html="projects.p2Bullet3"><strong>Auditoría y conformación de fletes en bloque:</strong> Conciliación automática de facturas de transportistas contra tarifas contractuales pactadas, bloqueando cargos no autorizados.</li>
-                  <li data-i18n-html="projects.p2Bullet4"><strong>Control de bobinas y "el bote":</strong> Reconcilia consumos reales vs teóricos en rotativas, recuperando más de 2.000 picos de bobina al año que antes se extraviaban.</li>
-                </ul>
-              </div>
-
-              <div class="tech-tags">
-                <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="Node.js" class="tech-icon" /><span>Node.js</span></span>
-                <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express</span></span>
-                <span class="tech-badge"><img src="images/logos/ibm.svg" alt="IBM i" class="tech-icon" /><span>AS400 / IBM i</span></span>
-                <span class="tech-badge"><img src="images/logos/mysql.svg" alt="MySQL" class="tech-icon" /><span>MySQL</span></span>
-                <span class="tech-badge"><img src="images/logos/odbc.svg" alt="ODBC" class="tech-icon" /><span>ODBC DAPEK</span></span>
-                <span class="tech-badge"><img src="images/logos/paperless.svg" alt="FSC" class="tech-icon" /><span>Albaranes FSC/PEFC</span></span>
-              </div>
-            
-              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
-              <div class="project-drawer-action">
-                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-osid', this)" aria-expanded="false">
-                  <span class="btn-drawer-left">
-                    <span class="btn-drawer-icon">
-                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                    </span>
-                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Arquitectura, Módulos & Pipeline</span>
-                  </span>
-                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </button>
-              </div>
-            </div>
-
-            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
-            <div class="project-tech-drawer" id="drawer-osid">
-              <div class="drawer-inner">
-                
+                            <!-- Ficha Técnica Directa -->
+              <div class="project-tech-specs">
                 <!-- 1. Pipeline Operativo / Ciclo de Vida -->
                 <div class="drawer-section">
                   <div class="drawer-sec-header">
@@ -1353,8 +1320,46 @@
                       <span class="pipeline-step-badge">8</span>
                       <span class="pipeline-step-title" data-i18n="projects.p2Pipe8"></span>
                       <span class="pipeline-step-desc" data-i18n="projects.p2Pipe8Sub"></span>
-                    </div>
-                  </div>
+              </div>
+
+              <div class="tech-tags">
+                <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="Node.js" class="tech-icon" /><span>Node.js</span></span>
+                <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express</span></span>
+                <span class="tech-badge"><img src="images/logos/ibm.svg" alt="IBM i" class="tech-icon" /><span>AS400 / IBM i</span></span>
+                <span class="tech-badge"><img src="images/logos/mysql.svg" alt="MySQL" class="tech-icon" /><span>MySQL</span></span>
+                <span class="tech-badge"><img src="images/logos/odbc.svg" alt="ODBC" class="tech-icon" /><span>ODBC DAPEK</span></span>
+                <span class="tech-badge"><img src="images/logos/paperless.svg" alt="FSC" class="tech-icon" /><span>Albaranes FSC/PEFC</span></span>
+              </div>
+            
+              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-osid', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Aspectos Técnicos Clave</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
+                        <!-- Cajón Desplegable con Aspectos Técnicos Clave -->
+            <div class="project-tech-drawer" id="drawer-osid">
+              <div class="drawer-inner">
+                <div class="project-bullets" style="margin-bottom: 0;">
+                <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
+                <ul>
+                  <li data-i18n-html="projects.p2Bullet1"><strong>Sincronización bidireccional AS400 / DB2 y MySQL:</strong> Sincroniza órdenes de trabajo, proveedores, imputaciones analíticas (DAPEK) y asientos contables en EVA sin desajustes.</li>
+                  <li data-i18n-html="projects.p2Bullet2"><strong>Planificación visual con Drag & Drop:</strong> Tablón dinámico de muelles de carga con cálculo algorítmico de palets teóricos, cubicaje y tarificación en vivo por peso o bulto.</li>
+                  <li data-i18n-html="projects.p2Bullet3"><strong>Auditoría y conformación de fletes en bloque:</strong> Conciliación automática de facturas de transportistas contra tarifas contractuales pactadas, bloqueando cargos no autorizados.</li>
+                  <li data-i18n-html="projects.p2Bullet4"><strong>Control de bobinas y "el bote":</strong> Reconcilia consumos reales vs teóricos en rotativas, recuperando más de 2.000 picos de bobina al año que antes se extraviaban.</li>
+                </ul>
+              </div>
+              </div>
+            </div>
                 </div>
 
                 <!-- 2. Módulos Funcionales Nucleares -->
@@ -1484,44 +1489,8 @@
                 </div>
               </div>
 
-              <div class="project-bullets">
-                <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
-                <ul>
-                  <li data-i18n-html="projects.p3Bullet1"><strong>Despliegue On-Premise en Synology NAS:</strong> Control absoluto de ficheros en red interna sin dependencia de nubes públicas, aprovechando redes locales 1Gbps/10Gbps (reducción del 75% en tiempos de subida).</li>
-                  <li data-i18n-html="projects.p3Bullet2"><strong>Persistencia atómica JSON con file locking:</strong> Concurrencia blindada con <code>proper-lockfile</code> a nivel de sistema operativo y respaldos <code>.bak</code> inmediatos sin sobrecoste de motores SQL.</li>
-                  <li data-i18n-html="projects.p3Bullet3"><strong>Seguridad integral:</strong> Autenticación con doble factor (2FA por correo), contraseñas con cifrado AES-256 y enlaces temporales protegidos con UUIDv4.</li>
-                  <li data-i18n-html="projects.p3Bullet4"><strong>Trazabilidad y telemetría GeoIP:</strong> Píxel de tracking en correos, registro instantáneo de IP, Reverse DNS corporativo, país/ciudad y velocidad de descarga.</li>
-                  <li data-i18n-html="projects.p3Bullet5"><strong>Cliente WIDroplet (Go/Wails):</strong> Aplicación nativa y ligera de escritorio con arrastrar y soltar carpetas completas y modo CLI para automatizaciones.</li>
-                </ul>
-              </div>
-
-              <div class="tech-tags">
-                <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="Node.js" class="tech-icon" /><span>Node.js</span></span>
-                <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express</span></span>
-                <span class="tech-badge"><img src="images/logos/go.svg" alt="Go" class="tech-icon" /><span>Go (Golang)</span></span>
-                <span class="tech-badge"><img src="images/logos/wails.svg" alt="Wails" class="tech-icon" /><span>Wails GUI</span></span>
-                <span class="tech-badge"><img src="images/logos/synology.svg" alt="Synology" class="tech-icon" /><span>Synology DSM NAS</span></span>
-                <span class="tech-badge"><img src="images/logos/paperless.svg" alt="2FA" class="tech-icon" /><span>2FA & Smart Zipping</span></span>
-              </div>
-            
-              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
-              <div class="project-drawer-action">
-                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-witrans', this)" aria-expanded="false">
-                  <span class="btn-drawer-left">
-                    <span class="btn-drawer-icon">
-                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                    </span>
-                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Arquitectura, Módulos & Pipeline</span>
-                  </span>
-                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </button>
-              </div>
-            </div>
-
-            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
-            <div class="project-tech-drawer" id="drawer-witrans">
-              <div class="drawer-inner">
-                
+                            <!-- Ficha Técnica Directa -->
+              <div class="project-tech-specs">
                 <!-- 1. Pipeline Operativo / Ciclo de Vida -->
                 <div class="drawer-section">
                   <div class="drawer-sec-header">
@@ -1568,8 +1537,47 @@
                       <span class="pipeline-step-badge">8</span>
                       <span class="pipeline-step-title" data-i18n="projects.p3Pipe8"></span>
                       <span class="pipeline-step-desc" data-i18n="projects.p3Pipe8Sub"></span>
-                    </div>
-                  </div>
+              </div>
+
+              <div class="tech-tags">
+                <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="Node.js" class="tech-icon" /><span>Node.js</span></span>
+                <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express</span></span>
+                <span class="tech-badge"><img src="images/logos/go.svg" alt="Go" class="tech-icon" /><span>Go (Golang)</span></span>
+                <span class="tech-badge"><img src="images/logos/wails.svg" alt="Wails" class="tech-icon" /><span>Wails GUI</span></span>
+                <span class="tech-badge"><img src="images/logos/synology.svg" alt="Synology" class="tech-icon" /><span>Synology DSM NAS</span></span>
+                <span class="tech-badge"><img src="images/logos/paperless.svg" alt="2FA" class="tech-icon" /><span>2FA & Smart Zipping</span></span>
+              </div>
+            
+              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-witrans', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Aspectos Técnicos Clave</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
+                        <!-- Cajón Desplegable con Aspectos Técnicos Clave -->
+            <div class="project-tech-drawer" id="drawer-witrans">
+              <div class="drawer-inner">
+                <div class="project-bullets" style="margin-bottom: 0;">
+                <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
+                <ul>
+                  <li data-i18n-html="projects.p3Bullet1"><strong>Despliegue On-Premise en Synology NAS:</strong> Control absoluto de ficheros en red interna sin dependencia de nubes públicas, aprovechando redes locales 1Gbps/10Gbps (reducción del 75% en tiempos de subida).</li>
+                  <li data-i18n-html="projects.p3Bullet2"><strong>Persistencia atómica JSON con file locking:</strong> Concurrencia blindada con <code>proper-lockfile</code> a nivel de sistema operativo y respaldos <code>.bak</code> inmediatos sin sobrecoste de motores SQL.</li>
+                  <li data-i18n-html="projects.p3Bullet3"><strong>Seguridad integral:</strong> Autenticación con doble factor (2FA por correo), contraseñas con cifrado AES-256 y enlaces temporales protegidos con UUIDv4.</li>
+                  <li data-i18n-html="projects.p3Bullet4"><strong>Trazabilidad y telemetría GeoIP:</strong> Píxel de tracking en correos, registro instantáneo de IP, Reverse DNS corporativo, país/ciudad y velocidad de descarga.</li>
+                  <li data-i18n-html="projects.p3Bullet5"><strong>Cliente WIDroplet (Go/Wails):</strong> Aplicación nativa y ligera de escritorio con arrastrar y soltar carpetas completas y modo CLI para automatizaciones.</li>
+                </ul>
+              </div>
+              </div>
+            </div>
                 </div>
 
                 <!-- 2. Módulos Funcionales Nucleares -->
@@ -1699,43 +1707,8 @@
                 </div>
               </div>
 
-              <div class="project-bullets">
-                <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
-                <ul>
-                  <li data-i18n-html="projects.p4Bullet1"><strong>Interacción nativa 5250 vía HLLAPI (pcshll32.dll):</strong> Automatiza la pantalla verde de IBM i emulada con máxima velocidad, gestionando credenciales cifradas con Windows DPAPI.</li>
-                  <li data-i18n-html="projects.p4Bullet2"><strong>Triaje inteligente de correo (Outlook MAPI):</strong> Escaneo continuo cada 60s con regex de OTs y lógica anti-duplicidad para detectar si un técnico de IT ya intervino.</li>
-                  <li data-i18n-html="projects.p4Bullet3"><strong>Sesión aislada multi-pantalla:</strong> Localiza letras de sesión libres (B a H) y opera en segundo plano minimizado sin interferir en los emuladores abiertos de los operarios.</li>
-                  <li data-i18n-html="projects.p4Bullet4"><strong>Borrado inverso y seguro de pliegos:</strong> Verifica el estado 'Activo' de los encargos y realiza la purga en orden inverso con confirmación controlada ('J') antes de anular la OT principal.</li>
-                  <li data-i18n-html="projects.p4Bullet5"><strong>Cierre higiénico y auditoría:</strong> Notificación automática vía ReplyAll manteniendo el hilo y liberando la sesión (6xF3 + Opción 24) para no consumir licencias del mainframe.</li>
-                </ul>
-              </div>
-
-              <div class="tech-tags">
-                <span class="tech-badge"><img src="images/logos/powershell.svg" alt="PowerShell" class="tech-icon" /><span>PowerShell 5.1</span></span>
-                <span class="tech-badge"><img src="images/logos/ibm.svg" alt="IBM i" class="tech-icon" /><span>IBM i PC5250</span></span>
-                <span class="tech-badge"><img src="images/logos/terminal.svg" alt="HLLAPI" class="tech-icon" /><span>HLLAPI 32-bit</span></span>
-                <span class="tech-badge"><img src="images/logos/outlook.svg" alt="Outlook" class="tech-icon" /><span>Outlook MAPI</span></span>
-                <span class="tech-badge"><img src="images/logos/microsoft.svg" alt="Windows DPAPI" class="tech-icon" /><span>Windows DPAPI</span></span>
-              </div>
-            
-              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
-              <div class="project-drawer-action">
-                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-agente-borrar-ots', this)" aria-expanded="false">
-                  <span class="btn-drawer-left">
-                    <span class="btn-drawer-icon">
-                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                    </span>
-                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Arquitectura, Módulos & Pipeline</span>
-                  </span>
-                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </button>
-              </div>
-            </div>
-
-            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
-            <div class="project-tech-drawer" id="drawer-agente-borrar-ots">
-              <div class="drawer-inner">
-                
+                            <!-- Ficha Técnica Directa -->
+              <div class="project-tech-specs">
                 <!-- 1. Pipeline Operativo / Ciclo de Vida -->
                 <div class="drawer-section">
                   <div class="drawer-sec-header">
@@ -1782,8 +1755,46 @@
                       <span class="pipeline-step-badge">8</span>
                       <span class="pipeline-step-title" data-i18n="projects.p4Pipe8"></span>
                       <span class="pipeline-step-desc" data-i18n="projects.p4Pipe8Sub"></span>
-                    </div>
-                  </div>
+              </div>
+
+              <div class="tech-tags">
+                <span class="tech-badge"><img src="images/logos/powershell.svg" alt="PowerShell" class="tech-icon" /><span>PowerShell 5.1</span></span>
+                <span class="tech-badge"><img src="images/logos/ibm.svg" alt="IBM i" class="tech-icon" /><span>IBM i PC5250</span></span>
+                <span class="tech-badge"><img src="images/logos/terminal.svg" alt="HLLAPI" class="tech-icon" /><span>HLLAPI 32-bit</span></span>
+                <span class="tech-badge"><img src="images/logos/outlook.svg" alt="Outlook" class="tech-icon" /><span>Outlook MAPI</span></span>
+                <span class="tech-badge"><img src="images/logos/microsoft.svg" alt="Windows DPAPI" class="tech-icon" /><span>Windows DPAPI</span></span>
+              </div>
+            
+              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-agente-borrar-ots', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Aspectos Técnicos Clave</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
+                        <!-- Cajón Desplegable con Aspectos Técnicos Clave -->
+            <div class="project-tech-drawer" id="drawer-agente-borrar-ots">
+              <div class="drawer-inner">
+                <div class="project-bullets" style="margin-bottom: 0;">
+                <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
+                <ul>
+                  <li data-i18n-html="projects.p4Bullet1"><strong>Interacción nativa 5250 vía HLLAPI (pcshll32.dll):</strong> Automatiza la pantalla verde de IBM i emulada con máxima velocidad, gestionando credenciales cifradas con Windows DPAPI.</li>
+                  <li data-i18n-html="projects.p4Bullet2"><strong>Triaje inteligente de correo (Outlook MAPI):</strong> Escaneo continuo cada 60s con regex de OTs y lógica anti-duplicidad para detectar si un técnico de IT ya intervino.</li>
+                  <li data-i18n-html="projects.p4Bullet3"><strong>Sesión aislada multi-pantalla:</strong> Localiza letras de sesión libres (B a H) y opera en segundo plano minimizado sin interferir en los emuladores abiertos de los operarios.</li>
+                  <li data-i18n-html="projects.p4Bullet4"><strong>Borrado inverso y seguro de pliegos:</strong> Verifica el estado 'Activo' de los encargos y realiza la purga en orden inverso con confirmación controlada ('J') antes de anular la OT principal.</li>
+                  <li data-i18n-html="projects.p4Bullet5"><strong>Cierre higiénico y auditoría:</strong> Notificación automática vía ReplyAll manteniendo el hilo y liberando la sesión (6xF3 + Opción 24) para no consumir licencias del mainframe.</li>
+                </ul>
+              </div>
+              </div>
+            </div>
                 </div>
 
                 <!-- 2. Módulos Funcionales Nucleares -->
@@ -1913,44 +1924,8 @@
                 </div>
               </div>
 
-              <div class="project-bullets">
-                <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
-                <ul>
-                  <li data-i18n-html="projects.p5Bullet1"><strong>Sustitución de cliente VB6 obsoleto:</strong> Migración a aplicación web ejecutada como servicio Windows resiliente, accesible desde cualquier navegador sin instalación.</li>
-                  <li data-i18n-html="projects.p5Bullet2"><strong>Control en tiempo real de presencia (Dentro/Fuera):</strong> Monitorización instantánea de contratistas y visitantes para cumplimiento estricto de planes de emergencia y evacuación.</li>
-                  <li data-i18n-html="projects.p5Bullet3"><strong>Avisos automáticos a anfitriones:</strong> Notificación instantánea vía correo/SMS al anfitrión en el momento exacto en que su visita se acredita en portería.</li>
-                  <li data-i18n-html="projects.p5Bullet4"><strong>Integración con DIGITEK (MSSQL):</strong> Consulta directa a los cuadrantes laborales de personal de planta y visualización inmediata de la foto corporativa.</li>
-                  <li data-i18n-html="projects.p5Bullet5"><strong>Gestión de centralita, taxis y calidad del dato:</strong> Imputación de costes de transporte por departamento y herramientas de saneamiento y fusión masiva de empresas duplicadas.</li>
-                </ul>
-              </div>
-
-              <div class="tech-tags">
-                <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="Node.js" class="tech-icon" /><span>Node.js</span></span>
-                <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express</span></span>
-                <span class="tech-badge"><img src="images/logos/mysql.svg" alt="MySQL" class="tech-icon" /><span>MySQL</span></span>
-                <span class="tech-badge"><img src="images/logos/sqlserver.svg" alt="MSSQL" class="tech-icon" /><span>MSSQL (DIGITEK)</span></span>
-                <span class="tech-badge"><img src="images/logos/microsoft.svg" alt="Active Directory" class="tech-icon" /><span>Active Directory SSO</span></span>
-                <span class="tech-badge"><img src="images/logos/paperless.svg" alt="Windows Service" class="tech-icon" /><span>Windows Service</span></span>
-              </div>
-            
-              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
-              <div class="project-drawer-action">
-                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-vigilancia', this)" aria-expanded="false">
-                  <span class="btn-drawer-left">
-                    <span class="btn-drawer-icon">
-                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                    </span>
-                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Arquitectura, Módulos & Pipeline</span>
-                  </span>
-                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </button>
-              </div>
-            </div>
-
-            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
-            <div class="project-tech-drawer" id="drawer-vigilancia">
-              <div class="drawer-inner">
-                
+                            <!-- Ficha Técnica Directa -->
+              <div class="project-tech-specs">
                 <!-- 1. Pipeline Operativo / Ciclo de Vida -->
                 <div class="drawer-section">
                   <div class="drawer-sec-header">
@@ -1997,8 +1972,47 @@
                       <span class="pipeline-step-badge">8</span>
                       <span class="pipeline-step-title" data-i18n="projects.p5Pipe8"></span>
                       <span class="pipeline-step-desc" data-i18n="projects.p5Pipe8Sub"></span>
-                    </div>
-                  </div>
+              </div>
+
+              <div class="tech-tags">
+                <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="Node.js" class="tech-icon" /><span>Node.js</span></span>
+                <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express</span></span>
+                <span class="tech-badge"><img src="images/logos/mysql.svg" alt="MySQL" class="tech-icon" /><span>MySQL</span></span>
+                <span class="tech-badge"><img src="images/logos/sqlserver.svg" alt="MSSQL" class="tech-icon" /><span>MSSQL (DIGITEK)</span></span>
+                <span class="tech-badge"><img src="images/logos/microsoft.svg" alt="Active Directory" class="tech-icon" /><span>Active Directory SSO</span></span>
+                <span class="tech-badge"><img src="images/logos/paperless.svg" alt="Windows Service" class="tech-icon" /><span>Windows Service</span></span>
+              </div>
+            
+              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-vigilancia', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Aspectos Técnicos Clave</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
+                        <!-- Cajón Desplegable con Aspectos Técnicos Clave -->
+            <div class="project-tech-drawer" id="drawer-vigilancia">
+              <div class="drawer-inner">
+                <div class="project-bullets" style="margin-bottom: 0;">
+                <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
+                <ul>
+                  <li data-i18n-html="projects.p5Bullet1"><strong>Sustitución de cliente VB6 obsoleto:</strong> Migración a aplicación web ejecutada como servicio Windows resiliente, accesible desde cualquier navegador sin instalación.</li>
+                  <li data-i18n-html="projects.p5Bullet2"><strong>Control en tiempo real de presencia (Dentro/Fuera):</strong> Monitorización instantánea de contratistas y visitantes para cumplimiento estricto de planes de emergencia y evacuación.</li>
+                  <li data-i18n-html="projects.p5Bullet3"><strong>Avisos automáticos a anfitriones:</strong> Notificación instantánea vía correo/SMS al anfitrión en el momento exacto en que su visita se acredita en portería.</li>
+                  <li data-i18n-html="projects.p5Bullet4"><strong>Integración con DIGITEK (MSSQL):</strong> Consulta directa a los cuadrantes laborales de personal de planta y visualización inmediata de la foto corporativa.</li>
+                  <li data-i18n-html="projects.p5Bullet5"><strong>Gestión de centralita, taxis y calidad del dato:</strong> Imputación de costes de transporte por departamento y herramientas de saneamiento y fusión masiva de empresas duplicadas.</li>
+                </ul>
+              </div>
+              </div>
+            </div>
                 </div>
 
                 <!-- 2. Módulos Funcionales Nucleares -->

@@ -91,17 +91,10 @@ function setLanguage(lang) {
     const textSpan = btn.querySelector('.btn-drawer-text');
     if (!textSpan) return;
     const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-    const isIvido = btn.id === 'btn-drawer-ivido' || (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes('ivido'));
     if (dict && dict.projects) {
-      if (isIvido) {
-        textSpan.textContent = isExpanded 
-          ? (dict.projects.pIvidoDrawerCollapse || 'Plegar Memoria Técnica')
-          : (dict.projects.pIvidoDrawerBtn || 'Desplegar Memoria Técnica & Arquitectura');
-      } else {
-        textSpan.textContent = isExpanded 
-          ? (dict.projects.drawerCollapse || 'Plegar Ficha Técnica')
-          : (dict.projects.drawerExpand || 'Desplegar Arquitectura, Módulos & Pipeline');
-      }
+      textSpan.textContent = isExpanded 
+        ? (dict.projects.drawerCollapse || 'Plegar Aspectos Técnicos Clave')
+        : (dict.projects.drawerExpand || 'Desplegar Aspectos Técnicos Clave');
     }
   });
 
@@ -271,7 +264,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ==========================================
-// 6. Cajón Desplegable de Ficha Técnica & Arquitectura
+// 6. Cajón Desplegable de Aspectos Técnicos Clave
 // ==========================================
 function toggleTechDrawer(drawerId, btn) {
   const drawer = document.getElementById(drawerId);
@@ -280,14 +273,9 @@ function toggleTechDrawer(drawerId, btn) {
   const isOpen = drawer.classList.contains('is-open');
   const currentLang = htmlEl.lang === 'en' ? 'en' : 'es';
   const dict = window.I18N && window.I18N[currentLang] ? window.I18N[currentLang].projects : null;
-  const isIvido = drawerId === 'drawer-ivido';
 
-  const defaultExpand = isIvido && dict && dict.pIvidoDrawerBtn 
-    ? dict.pIvidoDrawerBtn 
-    : (dict && dict.drawerExpand ? dict.drawerExpand : 'Desplegar Arquitectura, Módulos & Pipeline');
-  const defaultCollapse = isIvido && dict && dict.pIvidoDrawerCollapse 
-    ? dict.pIvidoDrawerCollapse 
-    : (dict && dict.drawerCollapse ? dict.drawerCollapse : 'Plegar Ficha Técnica');
+  const defaultExpand = dict && dict.drawerExpand ? dict.drawerExpand : 'Desplegar Aspectos Técnicos Clave';
+  const defaultCollapse = dict && dict.drawerCollapse ? dict.drawerCollapse : 'Plegar Aspectos Técnicos Clave';
 
   // Encontrar botones relacionados con este drawer
   const toggleButtons = document.querySelectorAll(`button[onclick*="'${drawerId}'"], button[onclick*='"${drawerId}"']`);
@@ -308,13 +296,6 @@ function toggleTechDrawer(drawerId, btn) {
       const textSpan = b.querySelector('.btn-drawer-text');
       if (textSpan) textSpan.textContent = defaultCollapse;
     });
-
-    // Si se activa desde el botón del pitch, scroll suave hacia el inicio del cajón
-    if (btn && btn.classList.contains('pitch-read-more')) {
-      setTimeout(() => {
-        drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 100);
-    }
   }
 }
 

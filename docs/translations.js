@@ -134,8 +134,8 @@ window.I18N = {
       statusRender: "● En Producción (Render)",
 
       // Global Drawer Controls
-      drawerExpand: "Desplegar Arquitectura, Módulos & Pipeline",
-      drawerCollapse: "Plegar Ficha Técnica",
+      drawerExpand: "Desplegar Aspectos Técnicos Clave",
+      drawerCollapse: "Plegar Aspectos Técnicos Clave",
       pipelineTitle: "Pipeline Operativo & Ciclo de Vida",
       modulesTitle: "Módulos Funcionales Nucleares",
       dataArchTitle: "Arquitectura de Datos, Protocolos & Integración",
@@ -326,8 +326,8 @@ window.I18N = {
       // iViDo Handwritten Notes / Memoria Técnica
       readMorePitch: "Memoria Técnica",
       pIvidoReadMoreBtn: "Memoria Técnica & Arquitectura",
-      pIvidoDrawerBtn: "Desplegar Memoria Técnica & Arquitectura",
-      pIvidoDrawerCollapse: "Plegar Memoria Técnica",
+      pIvidoDrawerBtn: "Desplegar Aspectos Técnicos Clave",
+      pIvidoDrawerCollapse: "Plegar Aspectos Técnicos Clave",
       docCalloutTitle: "Memoria Técnica & Handwritten Notes",
       docCalloutDesc: "Consulta la especificación arquitectónica detallada, topología multi-servidor y reglas de concurrencia.",
       docCalloutBtn: "Abrir Memoria Completa",
@@ -577,8 +577,8 @@ window.I18N = {
       statusRender: "● In Production (Render)",
 
       // Global Drawer Controls
-      drawerExpand: "Expand Architecture, Modules & Pipeline",
-      drawerCollapse: "Collapse Technical Specs",
+      drawerExpand: "Expand Key Technical Aspects",
+      drawerCollapse: "Collapse Key Technical Aspects",
       pipelineTitle: "Operational Pipeline & Lifecycle",
       modulesTitle: "Core Functional Modules",
       dataArchTitle: "Data Architecture, Protocols & Integration",
@@ -769,8 +769,8 @@ window.I18N = {
       // iViDo Handwritten Notes / Technical Dossier
       readMorePitch: "Technical Dossier",
       pIvidoReadMoreBtn: "Technical Dossier & Architecture",
-      pIvidoDrawerBtn: "Expand Technical Dossier & Architecture",
-      pIvidoDrawerCollapse: "Collapse Technical Dossier",
+      pIvidoDrawerBtn: "Expand Key Technical Aspects",
+      pIvidoDrawerCollapse: "Collapse Key Technical Aspects",
       docCalloutTitle: "Technical Dossier & Handwritten Notes",
       docCalloutDesc: "Explore the comprehensive architectural specification, multi-server topology, and concurrency rules.",
       docCalloutBtn: "Open Full Dossier",
