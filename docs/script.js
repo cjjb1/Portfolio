@@ -256,10 +256,39 @@ function closeLightbox() {
   document.body.style.overflow = '';
 }
 
-// Cerrar con la tecla ESC
+// 5.1 Modal de Memoria Técnica / Documentación (Leer más...)
+function openDocModal(id) {
+  const modal = document.getElementById(`doc-modal-${id}`);
+  if (!modal) return;
+  modal.classList.add('is-active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDocModal(id) {
+  const modal = typeof id === 'string' ? document.getElementById(`doc-modal-${id}`) : id;
+  if (!modal) return;
+  modal.classList.remove('is-active');
+  document.body.style.overflow = '';
+}
+
+// Cerrar con la tecla ESC (Lightbox y Doc Modals)
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && lightbox && lightbox.classList.contains('active')) {
-    closeLightbox();
+  if (e.key === 'Escape') {
+    if (lightbox && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
+    document.querySelectorAll('.doc-modal.is-active').forEach(modal => {
+      modal.classList.remove('is-active');
+      document.body.style.overflow = '';
+    });
+  }
+});
+
+// Cerrar Doc Modal al hacer click en el backdrop
+document.addEventListener('click', (e) => {
+  if (e.target && e.target.classList && e.target.classList.contains('doc-modal')) {
+    e.target.classList.remove('is-active');
+    document.body.style.overflow = '';
   }
 });
 

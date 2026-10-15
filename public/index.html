@@ -829,8 +829,12 @@
                 <span class="status-indicator" data-i18n="projects.statusProd">● En Producción</span>
               </div>
               <h3 class="project-name" data-i18n="projects.pIvidoName">iViDo &middot; Gestión Documental & Contingencia Híbrida</h3>
-              <p class="project-pitch" data-i18n="projects.pIvidoPitch">
-                Servicio documental corporativo de alta concurrencia en Node.js (Express 5 + ESM) y cluster multi-worker, diseñado para el reemplazo progresivo y contingencia total del sistema legacy MyDoc (PHP/IIS/MSSQL). Integra estampado dinámico de sellos y códigos de barras al vuelo, caché compartida en disco y resolución de metadatos en tiempo real con el ERP corporativo.
+              <p class="project-pitch">
+                <span data-i18n="projects.pIvidoPitch">Servicio documental corporativo de alta concurrencia en Node.js (Express 5 + ESM) y cluster multi-worker, diseñado para el reemplazo progresivo y contingencia total del sistema legacy MyDoc (PHP/IIS/MSSQL). Integra estampado dinámico de sellos y códigos de barras al vuelo, caché compartida en disco y resolución de metadatos en tiempo real con el ERP corporativo.</span>
+                <button type="button" class="pitch-read-more" onclick="openDocModal('ivido')">
+                  <span data-i18n="projects.readMorePitch">Leer más...</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
               </p>
 
               <!-- Miniaturas Interfaz en Vivo & Lámina Arquitectura -->
@@ -915,6 +919,14 @@
                 <span class="tech-badge"><img src="images/logos/paperless.svg" alt="PDF-Lib" class="tech-icon" /><span>pdf-lib & bwip-js</span></span>
               </div>
             
+              <!-- Acceso a Memoria Técnica / Leer más -->
+              <div class="project-actions-live" style="margin-top: 14px; margin-bottom: 4px;">
+                <button type="button" class="btn btn-secondary btn-sm" onclick="openDocModal('ivido')">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  <span data-i18n="projects.pIvidoReadMoreBtn">Leer más: Memoria Técnica & Arquitectura</span>
+                </button>
+              </div>
+
               <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
               <div class="project-drawer-action">
                 <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-ivido', this)" aria-expanded="false">
@@ -1032,6 +1044,21 @@
                     <div class="data-spec-card" data-i18n-html="projects.pIvidoDataLocal"></div>
                     <div class="data-spec-card" data-i18n-html="projects.pIvidoDataProtocols"></div>
                   </div>
+                </div>
+
+                <!-- 4. Acceso Directo a Memoria Completa / Handwritten Notes -->
+                <div class="drawer-doc-callout">
+                  <div class="drawer-doc-callout-left">
+                    <div class="drawer-doc-callout-icon">📋</div>
+                    <div>
+                      <h6 data-i18n="projects.docCalloutTitle">Memoria Técnica & Handwritten Notes</h6>
+                      <p data-i18n="projects.docCalloutDesc">Consulta la especificación arquitectónica detallada, topología multi-servidor y reglas de concurrencia.</p>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary btn-sm" onclick="openDocModal('ivido')">
+                    <span data-i18n="projects.docCalloutBtn">Abrir Memoria Completa</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
                 </div>
 
               </div>
@@ -2021,6 +2048,285 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal Memoria Técnica & Handwritten Notes: iViDo -->
+  <div class="doc-modal" id="doc-modal-ivido" role="dialog" aria-modal="true" aria-labelledby="doc-modal-title-ivido">
+    <div class="doc-modal-dialog">
+      <!-- Cabecera -->
+      <div class="doc-modal-header">
+        <div class="doc-modal-header-left">
+          <div class="doc-modal-header-icon">📋</div>
+          <div>
+            <h3 class="doc-modal-title" id="doc-modal-title-ivido" data-i18n="projects.docModalTitle">iViDo · Memoria Técnica & Arquitectura</h3>
+            <div class="doc-modal-subtitle" data-i18n="projects.docModalSubtitle">Lámina de Arquitectura, Topología de Servidores & Reglas de Concurrencia</div>
+          </div>
+        </div>
+        <button class="doc-modal-close" onclick="closeDocModal('ivido')" aria-label="Cerrar modal">&times;</button>
+      </div>
+
+      <!-- Contenido de la Memoria -->
+      <div class="doc-modal-body">
+        
+        <!-- Resumen Ejecutivo -->
+        <div class="doc-hero-quote" data-i18n-html="projects.docHeroQuote">
+          <strong>iViDo</strong> (<em>Interfaz WEB para MyDoc</em>) es el servicio documental corporativo en <strong>Node.js (ESM + Express 5)</strong> diseñado para reemplazar progresivamente el sistema legacy <strong>MyDoc / DQ (PHP)</strong> en <code>RCSERVER03</code>, proporcionando contingencia total y servicio de documentos nativos desde <code>RCSERVER13</code>.
+        </div>
+
+        <!-- 1. Lámina Visual de Arquitectura (Handwritten Notes) -->
+        <div class="doc-section-card">
+          <div class="doc-section-header">
+            <div class="doc-section-title-wrap">
+              <span style="font-size: 1.2rem;">🎨</span>
+              <h4 class="doc-section-title" data-i18n="projects.docSec1Title">Lámina Visual de Arquitectura (Handwritten Notes)</h4>
+            </div>
+            <span class="doc-section-tag" data-i18n="projects.docSec1Tag">Sketchnote Técnico</span>
+          </div>
+          <div class="doc-media-wrap" onclick="openLightbox('images/projects/ivido.jpg', 'iViDo: Lámina de Arquitectura Sketchnote')">
+            <img src="images/projects/ivido.jpg" alt="Lámina de Arquitectura Sketchnote de iViDo" loading="lazy" />
+            <div class="doc-media-overlay">
+              <span class="doc-media-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span data-i18n="projects.docSec1Zoom">Ampliar lámina a resolución completa</span>
+              </span>
+            </div>
+          </div>
+          <p style="font-size: 0.82rem; color: #94a3b8; margin: 0;" data-i18n="projects.docSec1Desc">
+            Representación visual de la arquitectura técnica, pipeline y topología híbrida.
+          </p>
+        </div>
+
+        <!-- 2. Topología de Infraestructura y Servidores -->
+        <div class="doc-section-card">
+          <div class="doc-section-header">
+            <div class="doc-section-title-wrap">
+              <span style="font-size: 1.2rem;">🏛️</span>
+              <h4 class="doc-section-title" data-i18n="projects.docSec2Title">Topología de Infraestructura & Servidores</h4>
+            </div>
+            <span class="doc-section-tag" data-i18n="projects.docSec2Tag">Topología de Red</span>
+          </div>
+          <div class="doc-media-wrap" onclick="openLightbox('images/projects/mermaid-diagram-ivido.svg', 'iViDo: Topología de Infraestructura & Servidores')">
+            <img src="images/projects/mermaid-diagram-ivido.svg" alt="Topología de Servidores iViDo" loading="lazy" />
+            <div class="doc-media-overlay">
+              <span class="doc-media-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span data-i18n="projects.docSec2Zoom">Ampliar diagrama de topología</span>
+              </span>
+            </div>
+          </div>
+          
+          <div class="doc-server-grid">
+            <div class="doc-server-card">
+              <div class="doc-server-name">🖥️ <span data-i18n="projects.docSrv1Name">RCSERVER13 (Producción iViDo)</span></div>
+              <div class="doc-server-role" data-i18n="projects.docSrv1Role">Master HTTP :3000, SOAP Worker :5001, Cache Workers :5002+</div>
+              <div class="doc-server-desc" data-i18n-html="projects.docSrv1Desc">Caché compartida en disco de PDFs, persistencia MariaDB (esquemas <code>ivido</code> y espejo de permisos <code>diso</code>).</div>
+            </div>
+            <div class="doc-server-card">
+              <div class="doc-server-name">💾 <span data-i18n="projects.docSrv2Name">RCSERVER03 (Servidor Legacy)</span></div>
+              <div class="doc-server-role" data-i18n="projects.docSrv2Role">MSSQL DQDB + Servicio SOAP MyDoc :8000</div>
+              <div class="doc-server-desc" data-i18n="projects.docSrv2Desc">Sistema documental heredado (WcfDllAPI) y base de datos relacional con cola serializada Tedious.</div>
+            </div>
+            <div class="doc-server-card">
+              <div class="doc-server-name">🏭 <span data-i18n="projects.docSrv3Name">AS/400 (IBM i DB2)</span></div>
+              <div class="doc-server-role" data-i18n="projects.docSrv3Role">ERP Corporativo & DB2 for i</div>
+              <div class="doc-server-desc" data-i18n="projects.docSrv3Desc">Conector persistente ODBC de solo lectura con codificación UTF-8 (CCSID 1208) y mutex para albaranes EDM.</div>
+            </div>
+            <div class="doc-server-card">
+              <div class="doc-server-name">✉️ <span data-i18n="projects.docSrv4Name">RCSERVER12 (Infraestructura)</span></div>
+              <div class="doc-server-role" data-i18n="projects.docSrv4Role">Relay SMTP Corporativo</div>
+              <div class="doc-server-desc" data-i18n="projects.docSrv4Desc">Servicio de alertas, notificaciones automáticas y avisos desatendidos ante incidencias o contingencias.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Módulos Funcionales Clave (8 Módulos) -->
+        <div class="doc-section-card">
+          <div class="doc-section-header">
+            <div class="doc-section-title-wrap">
+              <span style="font-size: 1.2rem;">📦</span>
+              <h4 class="doc-section-title" data-i18n="projects.docSec3Title">Módulos Funcionales Clave (8 Módulos Nucleares)</h4>
+            </div>
+            <span class="doc-section-tag" data-i18n="projects.docSec3Tag">Arquitectura de Software</span>
+          </div>
+          <div class="doc-modules-grid">
+            <div class="doc-module-card">
+              <div class="doc-module-top">
+                <span class="doc-module-num">1</span>
+                <span class="doc-module-file" data-i18n="projects.docMod1File">core/dashboard.mjs</span>
+              </div>
+              <div class="doc-module-name" data-i18n="projects.docMod1Title">Dashboard</div>
+              <p class="doc-module-desc" data-i18n-html="projects.docMod1Desc">Landing page interactiva (<code>/</code>). Tarjetas a módulos accesibles y sección <strong>Últimos Documentos</strong> (30 más recientes con auto-refresco cada 60 s).</p>
+            </div>
+            <div class="doc-module-card">
+              <div class="doc-module-top">
+                <span class="doc-module-num">2</span>
+                <span class="doc-module-file" data-i18n="projects.docMod2File">core/paginaPrincipal.mjs</span>
+              </div>
+              <div class="doc-module-name" data-i18n="projects.docMod2Title">Workflow</div>
+              <p class="doc-module-desc" data-i18n-html="projects.docMod2Desc">Buscador avanzado con filtros por tipo, fecha, personal y columnas dinámicas (<code>f_*</code>). Visor modal y cambio de estados con trazabilidad.</p>
+            </div>
+            <div class="doc-module-card">
+              <div class="doc-module-top">
+                <span class="doc-module-num">3</span>
+                <span class="doc-module-file" data-i18n="projects.docMod3File">core/expedientes.mjs</span>
+              </div>
+              <div class="doc-module-name" data-i18n="projects.docMod3Title">Expedientes Comerciales</div>
+              <p class="doc-module-desc" data-i18n-html="projects.docMod3Desc">Gestión de carpetas de expedientes, vinculación por <code>IDEXP</code>, autocompletado reactivo de clientes y cálculo de márgenes y previsiones.</p>
+            </div>
+            <div class="doc-module-card">
+              <div class="doc-module-top">
+                <span class="doc-module-num">4</span>
+                <span class="doc-module-file" data-i18n="projects.docMod4File">core/archivar.mjs</span>
+              </div>
+              <div class="doc-module-name" data-i18n="projects.docMod4Title">Archivar & Ingesta</div>
+              <p class="doc-module-desc" data-i18n-html="projects.docMod4Desc">Subida manual de PDFs, generación opcional de código de barras Code 128 y depósito en carpetas calientes (<code>_BD_00025</code> o nativas).</p>
+            </div>
+            <div class="doc-module-card">
+              <div class="doc-module-top">
+                <span class="doc-module-num">5</span>
+                <span class="doc-module-file" data-i18n="projects.docMod5File">core/retencion.mjs</span>
+              </div>
+              <div class="doc-module-name" data-i18n="projects.docMod5Title">Retenciones Documentales</div>
+              <p class="doc-module-desc" data-i18n-html="projects.docMod5Desc">Mantenimiento para administradores de políticas de caducidad documental (<code>expedientes_tablas_retencion</code>) con conteos en tiempo real.</p>
+            </div>
+            <div class="doc-module-card">
+              <div class="doc-module-top">
+                <span class="doc-module-num">6</span>
+                <span class="doc-module-file" data-i18n="projects.docMod6File">core/basesDatos.mjs</span>
+              </div>
+              <div class="doc-module-name" data-i18n="projects.docMod6Title">Bases de Datos Nativas</div>
+              <p class="doc-module-desc" data-i18n-html="projects.docMod6Desc">Asistentes para crear agrupaciones 100% iViDo (<code>idTabla >= 100</code>), hibridación de tablas MyDoc y editor de mapeos lógicos→físicos.</p>
+            </div>
+            <div class="doc-module-card">
+              <div class="doc-module-top">
+                <span class="doc-module-num">7</span>
+                <span class="doc-module-file" data-i18n="projects.docMod7File">conectores/conectorEdm.mjs</span>
+              </div>
+              <div class="doc-module-name" data-i18n="projects.docMod7Title">Conector EDM (DB2)</div>
+              <p class="doc-module-desc" data-i18n-html="projects.docMod7Desc">Resuelve en tiempo real metadatos de pedidos de compra en el ERP AS/400 tras el escaneo de albaranes de entrada de material.</p>
+            </div>
+            <div class="doc-module-card">
+              <div class="doc-module-top">
+                <span class="doc-module-num">8</span>
+                <span class="doc-module-file" data-i18n="projects.docMod8File">docs/API_ARCHIVO.md</span>
+              </div>
+              <div class="doc-module-name" data-i18n="projects.docMod8Title">API de Archivo Externa</div>
+              <p class="doc-module-desc" data-i18n-html="projects.docMod8Desc">Endpoints REST (<code>/api/archivo/existe</code>, <code>/api/archivo/subir</code>) con autenticación machine-to-machine vía <code>X-API-Key</code> (hash SHA-256).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Flujo de Vida de una Petición Documental (pdfDoc) -->
+        <div class="doc-section-card">
+          <div class="doc-section-header">
+            <div class="doc-section-title-wrap">
+              <span style="font-size: 1.2rem;">⚡</span>
+              <h4 class="doc-section-title" data-i18n="projects.docSec4Title">Flujo de Vida de una Petición Documental (pdfDoc)</h4>
+            </div>
+            <span class="doc-section-tag" data-i18n="projects.docSec4Tag">Secuencia & Pipeline</span>
+          </div>
+          <div class="doc-lifecycle-steps">
+            <div class="doc-step-item">
+              <div class="doc-step-num">1</div>
+              <div class="doc-step-content">
+                <div class="doc-step-title">
+                  <span data-i18n="projects.docStep1Title">1. Petición Entrante</span>
+                  <span class="doc-step-badge" data-i18n="projects.docStep1Badge">NTLM / API Key</span>
+                </div>
+                <div class="doc-step-desc" data-i18n-html="projects.docStep1Desc">Validación de identidad en Active Directory o mediante token SHA-256 en cabecera <code>X-API-Key</code> hacia Master HTTP (:3000).</div>
+              </div>
+            </div>
+            <div class="doc-step-item">
+              <div class="doc-step-num">2</div>
+              <div class="doc-step-content">
+                <div class="doc-step-title">
+                  <span data-i18n="projects.docStep2Title">2. Smart Proxy & Enrutamiento</span>
+                  <span class="doc-step-badge" data-i18n="projects.docStep2Badge">Hit / Miss</span>
+                </div>
+                <div class="doc-step-desc" data-i18n-html="projects.docStep2Desc">Inspección de disco: si el PDF ya está cacheado, deriva en Round-Robin a Cache Workers (:5002+). Si no, enruta a SOAP Worker (:5001).</div>
+              </div>
+            </div>
+            <div class="doc-step-item">
+              <div class="doc-step-num">3</div>
+              <div class="doc-step-content">
+                <div class="doc-step-title">
+                  <span data-i18n="projects.docStep3Title">3. Adquisición Buffer SOAP</span>
+                  <span class="doc-step-badge" data-i18n="projects.docStep3Badge">DownloadFileAsync</span>
+                </div>
+                <div class="doc-step-desc" data-i18n-html="projects.docStep3Desc">Descarga asíncrona con ticket único desde MyDoc legacy (RC03), guardando el PDF en disco local y los metadatos en MariaDB.</div>
+              </div>
+            </div>
+            <div class="doc-step-item">
+              <div class="doc-step-num">4</div>
+              <div class="doc-step-content">
+                <div class="doc-step-title">
+                  <span data-i18n="projects.docStep4Title">4. Comprobación SYSESTADO</span>
+                  <span class="doc-step-badge" data-i18n="projects.docStep4Badge">Cola Tedious</span>
+                </div>
+                <div class="doc-step-desc" data-i18n-html="projects.docStep4Desc">Consulta serializada en MSSQL. Si el documento no está activo (<code>SYSESTADO != 1</code>), busca automáticamente sustituto con el mismo código de barras.</div>
+              </div>
+            </div>
+            <div class="doc-step-item">
+              <div class="doc-step-num">5</div>
+              <div class="doc-step-content">
+                <div class="doc-step-title">
+                  <span data-i18n="projects.docStep5Title">5. Estampado al Vuelo</span>
+                  <span class="doc-step-badge" data-i18n="projects.docStep5Badge">pdf-lib & bwip-js</span>
+                </div>
+                <div class="doc-step-desc" data-i18n-html="projects.docStep5Desc">Inyección dinámica sobre el buffer: sellos/overlays según estado (<code>EST_XX.pdf</code>), código de barras Code 128, fechas, comentarios y pie pericial AD.</div>
+              </div>
+            </div>
+            <div class="doc-step-item">
+              <div class="doc-step-num">6</div>
+              <div class="doc-step-content">
+                <div class="doc-step-title">
+                  <span data-i18n="projects.docStep6Title">6. Entrega Streaming & Auditoría</span>
+                  <span class="doc-step-badge" data-i18n="projects.docStep6Badge">HTTP 200</span>
+                </div>
+                <div class="doc-step-desc" data-i18n-html="projects.docStep6Desc">Streaming directo del PDF estampado hacia el navegador y registro del evento en la tabla <code>expedientes_visualizacion</code>.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Reglas Críticas de Concurrencia y Resiliencia -->
+        <div class="doc-section-card">
+          <div class="doc-section-header">
+            <div class="doc-section-title-wrap">
+              <span style="font-size: 1.2rem;">🛡️</span>
+              <h4 class="doc-section-title" data-i18n="projects.docSec5Title">Reglas Críticas de Concurrencia & Resiliencia Operativa</h4>
+            </div>
+            <span class="doc-section-tag" data-i18n="projects.docSec5Tag">Alta Disponibilidad</span>
+          </div>
+          <div class="doc-rules-grid">
+            <div class="doc-rule-card rule-soap">
+              <div class="doc-rule-header">🎫 <span data-i18n="projects.docRule1Title">Ticket SOAP Único</span></div>
+              <p class="doc-rule-desc" data-i18n="projects.docRule1Desc">Solo 1 worker atiende peticiones SOAP para evitar colisiones de sesión y tickets concurrentes con el servicio legacy MyDoc.</p>
+            </div>
+            <div class="doc-rule-card rule-mssql">
+              <div class="doc-rule-header">🚦 <span data-i18n="projects.docRule2Title">Cola Serializada Tedious</span></div>
+              <p class="doc-rule-desc" data-i18n-html="projects.docRule2Desc">SQL Server no admite peticiones concurrentes por el mismo socket; la cola <code>adQueryQueue</code> serializa todas las consultas garantizando integridad.</p>
+            </div>
+            <div class="doc-rule-card rule-backoff">
+              <div class="doc-rule-header">⏸️ <span data-i18n="projects.docRule3Title">Trabajador de Fondo con Backoff</span></div>
+              <p class="doc-rule-desc" data-i18n="projects.docRule3Desc">El bucle asíncrono alterna precarga y limpieza solo cuando hay inactividad de usuario, pausándose inmediatamente ante tráfico web.</p>
+            </div>
+            <div class="doc-rule-card rule-logs">
+              <div class="doc-rule-header">🪵 <span data-i18n="projects.docRule4Title">Logs Pino sin Colisión</span></div>
+              <p class="doc-rule-desc" data-i18n="projects.docRule4Desc">Registro unificado con Pino mediante rotación por fecha directa (append) y compresión semanal desatendida centralizada en el Master.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pie de Modal -->
+      <div class="doc-modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" onclick="closeDocModal('ivido')">
+          <span data-i18n="projects.docCloseBtn">Cerrar Memoria Técnica</span>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- Modal / Lightbox para ver diagramas e infografías a pantalla completa -->
   <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
