@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlos Juárez | Portfolio</title>
+  <script>
+    (function() {
+      // Redirige rutas desconocidas o /en al punto de entrada preservando parámetros y hash
+      var path = window.location.pathname.toLowerCase();
+      var isEn = path.includes('/en');
+      var repo = '/Portfolio';
+      var target = (window.location.pathname.startsWith('/Portfolio') ? repo + '/' : '/') + 
+                   (isEn ? '?lang=en' : '') + 
+                   window.location.hash;
+      window.location.replace(target);
+    })();
+  </script>
+</head>
+<body style="font-family: sans-serif; background: #0b0f19; color: #fff; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
+  <p>Redirigiendo al Portfolio...</p>
+</body>
+</html>

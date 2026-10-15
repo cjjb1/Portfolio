@@ -1,0 +1,2114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlos Juárez | Senior AI Full Stack Developer | GenAI & AI Agents</title>
+  <meta name="description" content="Portfolio profesional de Carlos Juárez - Senior AI Full Stack Developer especializado en GenAI, Agentes Inteligentes, integraciones On-Premise con AS/400 (IBM i) y Cloud." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('portfolio-theme');
+      if (savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+      const pathLower = window.location.pathname.toLowerCase();
+      const pathIsEn = pathLower.includes('/en') || window.location.search.includes('lang=en');
+      const savedLang = localStorage.getItem('portfolio-lang');
+      if (pathIsEn || savedLang === 'en') {
+        document.documentElement.lang = 'en';
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Navegación -->
+  <header class="header">
+    <nav class="nav-container">
+      <a href="#hero" class="logo">
+        <span class="logo-mark">&lt;CJ/&gt;</span>
+        <span class="logo-text">Carlos Juárez</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" data-i18n="nav.about">Perfil</a></li>
+        <li><a href="#credentials" data-i18n="nav.credentials">CV & Máster IA</a></li>
+        <li><a href="#metrics" data-i18n="nav.metrics">Impacto</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
+        <li><a href="#skills" data-i18n="nav.stack">Stack</a></li>
+        <li><a href="#contact" class="btn-nav" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button id="lang-toggle" class="lang-toggle-btn" aria-label="Cambiar idioma a Inglés / Switch to English" title="Alternar idioma (ES / EN)">
+          <span class="lang-code es active" data-lang="es">ES</span>
+          <span class="lang-divider">/</span>
+          <span class="lang-code en" data-lang="en">EN</span>
+        </button>
+        <a href="https://www.linkedin.com/in/carlosj-juarez/" target="_blank" rel="noopener noreferrer" class="theme-toggle-btn" aria-label="Perfil de LinkedIn" title="Ver perfil en LinkedIn">
+          <img src="images/logos/linkedin.svg" alt="LinkedIn" style="width: 18px; height: 18px; display: block;" />
+        </a>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar a modo diurno o nocturno" title="Alternar modo diurno / nocturno">
+          <svg class="theme-icon theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span data-i18n="hero.badge">Node.js &middot; TypeScript &middot; Go &middot; Python &middot; AS/400 DB2 &middot; GenAI & MCP</span>
+        </div>
+        <h1 class="hero-title">
+          <span data-i18n="hero.titleLine1">Senior AI Full Stack Developer</span><br />
+          <span class="gradient-text" data-i18n="hero.titleLine2">GenAI & AI Agents</span>
+        </h1>
+        <p class="hero-subtitle" data-i18n-html="hero.subtitle">
+          Diseño e implemento soluciones <strong>end-to-end</strong> que combinan la soberanía de datos <strong>On-Premise</strong> (Synology NAS, Windows Services) con la agilidad <strong>Cloud</strong>, consultas en tiempo real a mainframes <strong>IBM i (AS/400)</strong> y orquestación de <strong>Agentes de IA</strong>. Soluciones desarrolladas bajo estándares <strong>Spec-Driven</strong>, garantizando cero deuda técnica y máxima seguridad operativa.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <span data-i18n="hero.viewProjects">Ver Arquitecturas</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+          <a id="hero-cv-btn" href="docs/Carlos_Juarez_CV.pdf" target="_blank" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="12" y2="18"/><line x1="15" y1="15" x2="12" y2="18"/></svg>
+            <span data-i18n="hero.downloadCv">Descargar CV (PDF)</span>
+          </a>
+          <a href="#credentials" class="btn btn-ghost">
+            <span data-i18n="hero.masterBtn">Máster en IA</span>
+          </a>
+          <a href="https://www.linkedin.com/in/carlosj-juarez/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-linkedin" title="Ver perfil en LinkedIn">
+            <img src="images/logos/linkedin.svg" alt="LinkedIn" style="width: 16px; height: 16px; border-radius: 2px;" />
+            <span data-i18n="hero.linkedin">LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Barra de Métricas Globales / Impacto -->
+    <section id="metrics" class="metrics-banner">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-val" data-i18n="metrics.m1Val">+3,6 M€</span>
+            <span class="metric-desc" data-i18n="metrics.m1Desc">Costes logísticos y operativos auditados anualmente</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-val" data-i18n="metrics.m2Val">+200.000 €</span>
+            <span class="metric-desc" data-i18n="metrics.m2Desc">Ahorros directos anuales recuperados y mermas evitadas</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-val" data-i18n="metrics.m3Val">+1.100 h</span>
+            <span class="metric-desc" data-i18n="metrics.m3Desc">Horas de gestión manual y llamadas eliminadas al año</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-val" data-i18n="metrics.m4Val">100%</span>
+            <span class="metric-desc" data-i18n="metrics.m4Desc">Soberanía de datos, Paperless y procesos 24/7</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carrusel de Tecnologías / Tech Logos Infinite Carousel -->
+    <section id="tech-carousel" class="tech-carousel-section">
+      <div class="tech-carousel-header">
+        <span class="section-tag" data-i18n="carousel.tag">Ecosistema Tecnológico · Herramientas &amp; Protocolos</span>
+      </div>
+      <div class="tech-carousel-wrapper">
+        <div class="tech-carousel-track">
+          <!-- Set 1 (Original - 33 Technologies) -->
+          <div class="tech-carousel-item">
+            <img src="images/logos/javascript.svg" alt="JavaScript" class="carousel-logo" />
+            <span class="carousel-name">JavaScript</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/typescript.svg" alt="TypeScript" class="carousel-logo" />
+            <span class="carousel-name">TypeScript</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/nodejs.svg" alt="Node.js" class="carousel-logo" />
+            <span class="carousel-name">Node.js</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/python.svg" alt="Python" class="carousel-logo" />
+            <span class="carousel-name">Python</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/anthropic.svg" alt="Claude" class="carousel-logo" />
+            <span class="carousel-name">Claude</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/antigravity.png" alt="Antigravity" class="carousel-logo" />
+            <span class="carousel-name">Antigravity</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/mcp.svg" alt="MCP" class="carousel-logo" />
+            <span class="carousel-name">MCP</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/copilot.png" alt="Copilot" class="carousel-logo" />
+            <span class="carousel-name">Copilot</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/codex.png" alt="Codex" class="carousel-logo" />
+            <span class="carousel-name">Codex</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/react.svg" alt="React" class="carousel-logo" />
+            <span class="carousel-name">React</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/nextjs.svg" alt="Next.js" class="carousel-logo" />
+            <span class="carousel-name">Next.js</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/vue.svg" alt="Vue.js" class="carousel-logo" />
+            <span class="carousel-name">Vue.js</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/angular.svg" alt="Angular" class="carousel-logo" />
+            <span class="carousel-name">Angular</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/express.svg" alt="Express.js" class="carousel-logo" />
+            <span class="carousel-name">Express.js</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/django.svg" alt="Django" class="carousel-logo" />
+            <span class="carousel-name">Django</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/laravel.svg" alt="Laravel" class="carousel-logo" />
+            <span class="carousel-name">Laravel</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/php.svg" alt="PHP" class="carousel-logo" />
+            <span class="carousel-name">PHP</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/go.svg" alt="Go" class="carousel-logo" />
+            <span class="carousel-name">Go (Golang)</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/restapi.svg" alt="APIs REST" class="carousel-logo" />
+            <span class="carousel-name">APIs REST</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/specdriven.svg" alt="Spec-Driven Development" class="carousel-logo" />
+            <span class="carousel-name">Spec-Driven Dev</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/postgresql.svg" alt="PostgreSQL" class="carousel-logo" />
+            <span class="carousel-name">PostgreSQL</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/mysql.svg" alt="MySQL" class="carousel-logo" />
+            <span class="carousel-name">MySQL</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/mariadb.svg" alt="MariaDB" class="carousel-logo" />
+            <span class="carousel-name">MariaDB</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/mongodb.svg" alt="MongoDB" class="carousel-logo" />
+            <span class="carousel-name">MongoDB</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/sqlserver.svg" alt="SQL Server" class="carousel-logo" />
+            <span class="carousel-name">SQL Server</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/ibm.svg" alt="IBM i AS/400" class="carousel-logo" />
+            <span class="carousel-name">IBM i (AS/400)</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/odbc.svg" alt="ODBC DB2" class="carousel-logo" />
+            <span class="carousel-name">ODBC DB2</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/terminal.svg" alt="IBM HLLAPI" class="carousel-logo" />
+            <span class="carousel-name">IBM HLLAPI</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/docker.svg" alt="Docker" class="carousel-logo" />
+            <span class="carousel-name">Docker</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/git.svg" alt="Git" class="carousel-logo" />
+            <span class="carousel-name">Git</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/github.svg" alt="GitHub" class="carousel-logo" />
+            <span class="carousel-name">GitHub</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/synology.svg" alt="Synology NAS" class="carousel-logo" />
+            <span class="carousel-name">Synology NAS</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/render.svg" alt="Render Cloud" class="carousel-logo" />
+            <span class="carousel-name">Render Cloud</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/powershell.svg" alt="PowerShell 7" class="carousel-logo" />
+            <span class="carousel-name">PowerShell 7</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/wails.svg" alt="Wails" class="carousel-logo" />
+            <span class="carousel-name">Wails (Go + Web)</span>
+          </div>
+          <div class="tech-carousel-item">
+            <img src="images/logos/outlook.svg" alt="Outlook MAPI" class="carousel-logo" />
+            <span class="carousel-name">Outlook MAPI</span>
+          </div>
+
+          <!-- Set 2 (Duplicate for Seamless Infinite Marquee Loop) -->
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/javascript.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">JavaScript</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/typescript.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">TypeScript</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/nodejs.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">Node.js</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/python.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">Python</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/anthropic.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">Claude</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/antigravity.png" alt="" class="carousel-logo" />
+            <span class="carousel-name">Antigravity</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/mcp.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">MCP</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/copilot.png" alt="" class="carousel-logo" />
+            <span class="carousel-name">Copilot</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/codex.png" alt="" class="carousel-logo" />
+            <span class="carousel-name">Codex</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/react.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">React</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/nextjs.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">Next.js</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/vue.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">Vue.js</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/angular.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">Angular</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/express.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">Express.js</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/django.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">Django</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/laravel.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">Laravel</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/php.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">PHP</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/go.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">Go (Golang)</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/restapi.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">APIs REST</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/specdriven.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">Spec-Driven Dev</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/postgresql.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">PostgreSQL</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/mysql.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">MySQL</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/mariadb.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">MariaDB</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/mongodb.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">MongoDB</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/sqlserver.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">SQL Server</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/ibm.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">IBM i (AS/400)</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/odbc.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">ODBC DB2</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/terminal.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">IBM HLLAPI</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/docker.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">Docker</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/git.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">Git</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/github.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">GitHub</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/synology.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">Synology NAS</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/render.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">Render Cloud</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/powershell.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">PowerShell 7</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/wails.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">Wails (Go + Web)</span>
+          </div>
+          <div class="tech-carousel-item" aria-hidden="true">
+            <img src="images/logos/outlook.svg" alt="" class="carousel-logo" />
+            <span class="carousel-name">Outlook MAPI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Mí / Perfil Profesional -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="about.tag">Enfoque e Ingeniería</span>
+          <h2 class="section-title" data-i18n="about.title">Ingeniería orientada a resultados tangibles</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p data-i18n="about.p1">
+              Cuento con una amplia trayectoria resolviendo cuellos de botella operativos en entornos industriales y corporativos de alta exigencia (rotativas, muelles de carga, seguridad física y departamentos de compras).
+            </p>
+            <p data-i18n-html="about.p2">
+              Mi especialidad radica en <strong>desbloquear el valor de sistemas legados como AS/400 (IBM i)</strong> y ERPs propietarios, reemplazando hojas de cálculo frágiles (Excel/VBA) y aplicaciones obsoletas (VB6, WinForms) por <strong>arquitecturas web modernas, seguras y accesibles</strong> que empoderan a los equipos y ahorran cientos de miles de euros a la organización.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">⚡</span>
+                <div>
+                  <strong data-i18n="about.h1Title">Integración profunda con Mainframe</strong>
+                  <p data-i18n="about.h1Desc">Consultas y transacciones vía ODBC/DB2 y automatización desatendida 5250 mediante HLLAPI.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">🛡️</span>
+                <div>
+                  <strong data-i18n="about.h2Title">Soberanía, Seguridad y RGPD</strong>
+                  <p data-i18n="about.h2Desc">Plataformas on-premise, cifrado AES, autenticación 2FA y Single Sign-On (NTLM / Active Directory).</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">📈</span>
+                <div>
+                  <strong data-i18n="about.h3Title">Retorno de inversión medible</strong>
+                  <p data-i18n="about.h3Desc">Cada desarrollo cuenta con trazabilidad pericial, métricas auditables y ahorro directo de costes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección CV & Certificación Master IA -->
+    <section id="credentials" class="section section-credentials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="credentials.tag">Acreditaciones & Trayectoria</span>
+          <h2 class="section-title" data-i18n="credentials.title">Curriculum Vitae & Certificación Oficial en IA</h2>
+          <p class="section-subtitle" data-i18n="credentials.subtitle">
+            Especialización de vanguardia en Inteligencia Artificial Generativa y más de 20 años de experiencia técnica liderando proyectos de misión crítica, infraestructura y desarrollo de software.
+          </p>
+        </div>
+
+        <div class="credentials-grid">
+
+          <!-- Tarjeta 1: Master en IA e Innovación -->
+          <div class="credential-card cert-card">
+            <div class="credential-badge-top">
+              <span class="cert-year" data-i18n="credentials.masterYear">Promoción 2024</span>
+              <span class="cert-verified" data-i18n="credentials.masterVerified">✓ Título Oficial Verificado</span>
+            </div>
+            <div class="cert-preview-wrapper" onclick="openLightbox('images/certificate-master-ia.png', 'Certificado Oficial: Máster Online en IA e Innovación 2024 - Founderz & Microsoft')">
+              <img src="images/certificate-master-ia.png" alt="Certificado Máster IA e Innovación 2024" loading="lazy" class="cert-img" />
+              <div class="cert-overlay">
+                <span class="zoom-btn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  <span data-i18n="credentials.masterZoom">Ver Certificado Oficial Ampliado</span>
+                </span>
+              </div>
+            </div>
+            <div class="credential-content">
+              <div class="cert-school">
+                <span class="school-logo">🎓</span>
+                <div>
+                  <h3 class="credential-title" data-i18n="credentials.masterTitle">Máster en IA e Innovación</h3>
+                  <p class="school-name" data-i18n="credentials.masterSchool">Founderz Business School &middot; Microsoft</p>
+                </div>
+              </div>
+              <p class="cert-description" data-i18n-html="credentials.masterDesc">
+                Acredita la superación con éxito de los requisitos académicos y prácticos en <strong>Inteligencia Artificial Generativa, Agentes Autónomos (Claude, Antigravity, Codex), Model Context Protocol (MCP)</strong>, Prompt Engineering avanzado y automatización de flujos con modelos de última generación.
+              </p>
+              <div class="cert-meta">
+                <span class="hash-label" data-i18n="credentials.masterHashLabel">Hash Criptográfico de Verificación:</span>
+                <code class="hash-code">C1CB7837A8BD4843D91D6697BDA92FDB2B3DD6FF</code>
+              </div>
+              <div class="credential-actions">
+                <a href="docs/certificate-master-ia-innovacion-2024.pdf" target="_blank" class="btn btn-primary btn-sm">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  <span data-i18n="credentials.masterPdfBtn">Ver Título Original (PDF)</span>
+                </a>
+                <button class="btn btn-secondary btn-sm" onclick="openLightbox('images/certificate-master-ia.png', 'Certificado Oficial: Máster Online en IA e Innovación 2024')" data-i18n="credentials.masterInspectBtn">
+                  Inspeccionar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2: Curriculum Vitae -->
+          <div class="credential-card cv-card">
+            <div class="credential-badge-top">
+              <span class="cv-status" data-i18n="credentials.cvStatus">Actualizado 2026</span>
+              <span class="cv-role" data-i18n="credentials.cvRole">Senior AI Full Stack Dev</span>
+            </div>
+            <div class="cv-preview-wrapper" id="cv-preview-wrapper" onclick="openLightbox('images/cv-preview.png', 'Curriculum Vitae Profesional - Carlos Juárez')">
+              <img id="cv-preview-img" src="images/cv-preview.png" alt="Curriculum Vitae Carlos Juárez" loading="lazy" class="cv-img" />
+              <div class="cert-overlay">
+                <span class="zoom-btn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  <span data-i18n="credentials.cvZoom">Inspeccionar CV Completo</span>
+                </span>
+              </div>
+            </div>
+            <div class="credential-content">
+              <div class="cert-school">
+                <span class="school-logo">📋</span>
+                <div>
+                  <h3 class="credential-title" data-i18n="credentials.cvTitle">Curriculum Vitae Profesional</h3>
+                  <p class="school-name" data-i18n="credentials.cvSchool">Carlos Juárez &middot; Trayectoria & Experiencia</p>
+                </div>
+              </div>
+              <p class="cert-description" data-i18n="credentials.cvDesc">
+                Resumen consolidado de experiencia liderando desarrollo full stack, diseño de arquitecturas de software, infraestructura de red corporativa y gobierno de seguridad técnica:
+              </p>
+              <div class="cv-highlights-list">
+                <div class="cv-h-item">
+                  <strong data-i18n="credentials.cvH1Label">Walstead Iberia (2025 - Actualidad):</strong>
+                  <span data-i18n="credentials.cvH1Desc">Senior AI Full Stack Dev & GenAI (Agentes IA, MCP, Node.js, Go)</span>
+                </div>
+                <div class="cv-h-item">
+                  <strong data-i18n="credentials.cvH2Label">Vapemarkt & Web Virtual Design (2008 - 2025):</strong>
+                  <span data-i18n="credentials.cvH2Desc">Full Stack & Web Manager (PHP, Node, React, SEO, BBDD)</span>
+                </div>
+                <div class="cv-h-item">
+                  <strong data-i18n="credentials.cvH3Label">AVIS Budget Group & Indra Sistemas (1998 - 2008):</strong>
+                  <span data-i18n="credentials.cvH3Desc">IT Infrastructure & Cybersecurity Manager (Grandes cuentas, OTAN)</span>
+                </div>
+              </div>
+              <div class="credential-actions">
+                <a id="cv-pdf-btn" href="docs/Carlos_Juarez_CV.pdf" target="_blank" class="btn btn-primary btn-sm">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="12" y2="18"/><line x1="15" y1="15" x2="12" y2="18"/></svg>
+                  <span data-i18n="credentials.cvDownloadPdf">Descargar CV (PDF)</span>
+                </a>
+                <a id="cv-docx-btn" href="docs/Carlos_Juarez_CV.docx" download class="btn btn-secondary btn-sm">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  <span data-i18n="credentials.cvDownloadDocx">Descargar (DOCX)</span>
+                </a>
+                <a href="https://www.linkedin.com/in/carlosj-juarez/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm btn-linkedin" title="Ver perfil en LinkedIn">
+                  <img src="images/logos/linkedin.svg" alt="LinkedIn" style="width: 14px; height: 14px; border-radius: 2px;" />
+                  <span data-i18n="credentials.cvLinkedin">LinkedIn</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos Principales -->
+    <section id="projects" class="section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="projects.tag">Casos de Éxito Reales</span>
+          <h2 class="section-title" data-i18n="projects.title">Proyectos Corporativos & de Producción</h2>
+          <p class="section-subtitle" data-i18n="projects.subtitle">
+            Sistemas en producción activa diseñados para resolver problemáticas críticas de negocio, con auditorías técnicas, diagramas de arquitectura e infografías completas.
+          </p>
+        </div>
+
+        <!-- Filtros de Categoría -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all" data-i18n="projects.filterAll">Todos los Proyectos</button>
+          <button class="filter-btn" data-filter="as400" data-i18n="projects.filterAs400">Integración AS/400 & ERP</button>
+          <button class="filter-btn" data-filter="web" data-i18n="projects.filterWeb">Webs Corporativas</button>
+          <button class="filter-btn" data-filter="rpa" data-i18n="projects.filterRpa">RPA & Automatización</button>
+        </div>
+
+        <div class="projects-list">
+
+          <!-- PROYECTO 1: RECLAMACIONES -->
+          <article class="project-item" data-category="as400 web" id="project-reclamaciones">
+            <div class="project-visual">
+              <div class="imac-wrapper">
+                <div class="imac-device" onclick="openLightbox('images/projects/reclamaciones-ui.png', 'Reclamaciones-app: Interfaz de Producción en Vivo')">
+                  <div class="imac-frame">
+                    <div class="imac-bezel-top">
+                      <div class="imac-camera"></div>
+                    </div>
+                    <div class="imac-screen">
+                      <img src="images/projects/reclamaciones-ui.png" alt="Reclamaciones-app en iMac" loading="lazy" />
+                      <div class="imac-screen-overlay">
+                        <span class="imac-zoom-pill">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                          <span data-i18n="projects.imacZoom">Ver Pantalla Completa</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="imac-chin">
+                      <div class="imac-chin-badge">
+                        <span class="imac-indicator-dot"></span>
+                        <span class="imac-chin-text" data-i18n="projects.imacStatus">Producción Activa</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="imac-stand"></div>
+                  <div class="imac-base"></div>
+                </div>
+              </div>
+              <div class="imac-caption">
+                <span class="imac-caption-label" data-i18n="projects.imacCaption">🖥️ Interfaz operativa del sistema real</span>
+                <button class="imac-expand-btn" onclick="openLightbox('images/projects/reclamaciones-ui.png', 'Reclamaciones-app: Interfaz de Producción en Vivo')">
+                  <span data-i18n="projects.imacExpand">Ampliar UI</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-top">
+                <span class="badge-cat" data-i18n="projects.p1Cat">Sistemas Críticos &middot; Calidad Industrial</span>
+                <span class="status-indicator" data-i18n="projects.statusProd">● En Producción</span>
+              </div>
+              <h3 class="project-name" data-i18n="projects.p1Name">Reclamaciones-app &middot; Bobinas de Papel</h3>
+              <p class="project-pitch" data-i18n="projects.p1Pitch">
+                Plataforma web integral que digitaliza y centraliza el ciclo de vida completo de no conformidades sobre materia prima en rotativas, sustituyendo un sistema manual disperso en hojas Excel y macros VBA.
+              </p>
+
+              <!-- Miniatura Infografía Arquitectura -->
+              <div class="project-arch-preview" onclick="openLightbox('images/projects/reclamaciones.jpg', 'Reclamaciones-app: Arquitectura Técnica e Integración con AS/400')">
+                <div class="arch-thumb-wrap">
+                  <img src="images/projects/reclamaciones.jpg" alt="Lámina de Arquitectura Reclamaciones-app" loading="lazy" />
+                  <div class="arch-thumb-overlay">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  </div>
+                </div>
+                <div class="arch-thumb-info">
+                  <div class="arch-thumb-tag">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    <span data-i18n="projects.archBadge">Lámina de Arquitectura Técnica</span>
+                  </div>
+                  <h4 class="arch-thumb-title" data-i18n="projects.archTitle">Esquema Técnico & Integración</h4>
+                  <p class="arch-thumb-desc" data-i18n="projects.archDesc">Flujos de datos, modelos DB2 de AS/400, lógica de negocio y componentes.</p>
+                  <span class="arch-thumb-link">
+                    <span data-i18n="projects.archExpand">Ampliar esquema técnico</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </div>
+              </div>
+              
+              <div class="project-kpis">
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p1Kpi1Num">280–300 t/año</span>
+                  <span class="kpi-lbl" data-i18n="projects.p1Kpi1Lbl">Papel defectuoso gestionado</span>
+                </div>
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p1Kpi2Num">+45k–65k €/año</span>
+                  <span class="kpi-lbl" data-i18n="projects.p1Kpi2Lbl">Abonos netos recuperados</span>
+                </div>
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p1Kpi3Num">-60%</span>
+                  <span class="kpi-lbl" data-i18n="projects.p1Kpi3Lbl">Tiempo medio por expediente</span>
+                </div>
+              </div>
+
+              <div class="project-bullets">
+                <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
+                <ul>
+                  <li data-i18n-html="projects.p1Bullet1"><strong>Conexión ODBC en tiempo real con AS400 / IBM i (DB2):</strong> Consulta directa al esquema operacional <code>LDATA2</code> (tablas <code>DMPTL00</code>, <code>DSLAD00</code>, <code>DMPLF00</code>) para validar pedidos, albaranes y bobinas al instante.</li>
+                  <li data-i18n-html="projects.p1Bullet2"><strong>Modelo de datos relacional 1..N:</strong> Un único expediente unifica múltiples máquinas de planta, bobinas afectadas y defectos tipificados con deducción automática de encargos.</li>
+                  <li data-i18n-html="projects.p1Bullet3"><strong>Pipeline multimedia y peritaje:</strong> Generación automática de miniaturas para fotografías y transcodificación con minutaje de vídeos MP4 para sustentar las pruebas frente al proveedor papelero.</li>
+                  <li data-i18n-html="projects.p1Bullet4"><strong>Generador documental en un clic:</strong> Emisión automática de cartas formales de reclamación con anexos referenciados y registro de auditoría.</li>
+                </ul>
+              </div>
+
+              <div class="tech-tags">
+                <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="Node.js" class="tech-icon" /><span>Node.js</span></span>
+                <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express</span></span>
+                <span class="tech-badge"><img src="images/logos/ibm.svg" alt="IBM i" class="tech-icon" /><span>AS400 / IBM i DB2</span></span>
+                <span class="tech-badge"><img src="images/logos/odbc.svg" alt="ODBC" class="tech-icon" /><span>ODBC</span></span>
+                <span class="tech-badge"><img src="images/logos/mysql.svg" alt="MySQL" class="tech-icon" /><span>MySQL</span></span>
+                <span class="tech-badge"><img src="images/logos/multer.svg" alt="Multer" class="tech-icon" /><span>Multer</span></span>
+                <span class="tech-badge"><img src="images/logos/paperless.svg" alt="Paperless" class="tech-icon" /><span>Paperless</span></span>
+              </div>
+            
+              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-reclamaciones', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Arquitectura, Módulos & Pipeline</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
+            <div class="project-tech-drawer" id="drawer-reclamaciones">
+              <div class="drawer-inner">
+                
+                <!-- 1. Pipeline Operativo / Ciclo de Vida -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <h5 data-i18n="projects.pipelineTitle">Pipeline Operativo & Ciclo de Vida</h5>
+                  </div>
+                  <div class="pipeline-track">
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">1</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p1Pipe1"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p1Pipe1Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">2</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p1Pipe2"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p1Pipe2Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">3</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p1Pipe3"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p1Pipe3Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">4</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p1Pipe4"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p1Pipe4Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">5</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p1Pipe5"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p1Pipe5Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">6</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p1Pipe6"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p1Pipe6Sub"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Módulos Funcionales Nucleares -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <h5 data-i18n="projects.modulesTitle">Módulos Funcionales Nucleares</h5>
+                  </div>
+                  <div class="drawer-modules-grid">
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p1Mod1Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p1Mod1Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p1Mod2Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p1Mod2Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p1Mod3Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p1Mod3Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p1Mod4Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p1Mod4Desc"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Arquitectura de Datos & Protocolos -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    <h5 data-i18n="projects.dataArchTitle">Arquitectura de Datos, Protocolos & Integración</h5>
+                  </div>
+                  <div class="drawer-data-grid">
+                    <div class="data-spec-card" data-i18n-html="projects.p1DataMainframe"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p1DataLocal"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p1DataProtocols"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+          <!-- PROYECTO 2: OSID -->
+          <article class="project-item" data-category="as400 web">
+            <div class="project-visual">
+              <div class="imac-wrapper">
+                <div class="imac-device" onclick="openLightbox('images/projects/osid-ui.png', 'OSID: Interfaz de Gestión Logística en Producción')">
+                  <div class="imac-frame">
+                    <div class="imac-bezel-top">
+                      <div class="imac-camera"></div>
+                    </div>
+                    <div class="imac-screen">
+                      <img src="images/projects/osid-ui.png" alt="OSID en iMac" loading="lazy" />
+                      <div class="imac-screen-overlay">
+                        <span class="imac-zoom-pill">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                          <span data-i18n="projects.imacZoom">Ver Pantalla Completa</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="imac-chin">
+                      <div class="imac-chin-badge">
+                        <span class="imac-indicator-dot"></span>
+                        <span class="imac-chin-text" data-i18n="projects.imacStatus">Producción Activa</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="imac-stand"></div>
+                  <div class="imac-base"></div>
+                </div>
+              </div>
+              <div class="imac-caption">
+                <span class="imac-caption-label" data-i18n="projects.imacCaption">🖥️ Interfaz operativa del sistema real</span>
+                <button class="imac-expand-btn" onclick="openLightbox('images/projects/osid-ui.png', 'OSID: Interfaz de Gestión Logística en Producción')">
+                  <span data-i18n="projects.imacExpand">Ampliar UI</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-top">
+                <span class="badge-cat" data-i18n="projects.p2Cat">Logística &middot; Gestión de Transporte &middot; ERP</span>
+                <span class="status-indicator" data-i18n="projects.statusProd">● En Producción</span>
+              </div>
+              <h3 class="project-name" data-i18n="projects.p2Name">OSID &middot; Orquestación Logística & Muelles</h3>
+              <p class="project-pitch" data-i18n="projects.p2Pitch">
+                Plataforma web corporativa que centraliza la logística integral de transportes, expediciones y reconciliación de papel en planta, reemplazando la obsoleta aplicación de escritorio WinForms (OSID.exe).
+              </p>
+
+              <!-- Miniatura Infografía Arquitectura -->
+              <div class="project-arch-preview" onclick="openLightbox('images/projects/osid.jpg', 'OSID: Orquestación Logística, Conexión AS400 y Control de Expediciones')">
+                <div class="arch-thumb-wrap">
+                  <img src="images/projects/osid.jpg" alt="Lámina de Arquitectura OSID" loading="lazy" />
+                  <div class="arch-thumb-overlay">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  </div>
+                </div>
+                <div class="arch-thumb-info">
+                  <div class="arch-thumb-tag">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    <span data-i18n="projects.archBadge">Lámina de Arquitectura Técnica</span>
+                  </div>
+                  <h4 class="arch-thumb-title" data-i18n="projects.archTitle">Esquema Técnico & Integración</h4>
+                  <p class="arch-thumb-desc" data-i18n="projects.archDesc">Flujos de datos, modelos DB2 de AS/400, lógica de negocio y componentes.</p>
+                  <span class="arch-thumb-link">
+                    <span data-i18n="projects.archExpand">Ampliar esquema técnico</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </div>
+              </div>
+              
+              <div class="project-kpis">
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p2Kpi1Num">2,4 – 3,6 M€/año</span>
+                  <span class="kpi-lbl" data-i18n="projects.p2Kpi1Lbl">Costes de transporte auditados</span>
+                </div>
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p2Kpi2Num">+85k–120k €/año</span>
+                  <span class="kpi-lbl" data-i18n="projects.p2Kpi2Lbl">Ahorro por bloqueo de sobrecostes</span>
+                </div>
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p2Kpi3Num">~680 h/año</span>
+                  <span class="kpi-lbl" data-i18n="projects.p2Kpi3Lbl">Horas administrativas liberadas</span>
+                </div>
+              </div>
+
+              <div class="project-bullets">
+                <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
+                <ul>
+                  <li data-i18n-html="projects.p2Bullet1"><strong>Sincronización bidireccional AS400 / DB2 y MySQL:</strong> Sincroniza órdenes de trabajo, proveedores, imputaciones analíticas (DAPEK) y asientos contables en EVA sin desajustes.</li>
+                  <li data-i18n-html="projects.p2Bullet2"><strong>Planificación visual con Drag & Drop:</strong> Tablón dinámico de muelles de carga con cálculo algorítmico de palets teóricos, cubicaje y tarificación en vivo por peso o bulto.</li>
+                  <li data-i18n-html="projects.p2Bullet3"><strong>Auditoría y conformación de fletes en bloque:</strong> Conciliación automática de facturas de transportistas contra tarifas contractuales pactadas, bloqueando cargos no autorizados.</li>
+                  <li data-i18n-html="projects.p2Bullet4"><strong>Control de bobinas y "el bote":</strong> Reconcilia consumos reales vs teóricos en rotativas, recuperando más de 2.000 picos de bobina al año que antes se extraviaban.</li>
+                </ul>
+              </div>
+
+              <div class="tech-tags">
+                <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="Node.js" class="tech-icon" /><span>Node.js</span></span>
+                <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express</span></span>
+                <span class="tech-badge"><img src="images/logos/ibm.svg" alt="IBM i" class="tech-icon" /><span>AS400 / IBM i</span></span>
+                <span class="tech-badge"><img src="images/logos/mysql.svg" alt="MySQL" class="tech-icon" /><span>MySQL</span></span>
+                <span class="tech-badge"><img src="images/logos/odbc.svg" alt="ODBC" class="tech-icon" /><span>ODBC DAPEK</span></span>
+                <span class="tech-badge"><img src="images/logos/paperless.svg" alt="FSC" class="tech-icon" /><span>Albaranes FSC/PEFC</span></span>
+              </div>
+            
+              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-osid', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Arquitectura, Módulos & Pipeline</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
+            <div class="project-tech-drawer" id="drawer-osid">
+              <div class="drawer-inner">
+                
+                <!-- 1. Pipeline Operativo / Ciclo de Vida -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <h5 data-i18n="projects.pipelineTitle">Pipeline Operativo & Ciclo de Vida</h5>
+                  </div>
+                  <div class="pipeline-track">
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">1</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe1"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe1Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">2</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe2"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe2Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">3</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe3"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe3Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">4</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe4"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe4Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">5</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe5"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe5Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">6</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe6"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe6Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">7</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe7"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe7Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">8</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe8"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe8Sub"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Módulos Funcionales Nucleares -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <h5 data-i18n="projects.modulesTitle">Módulos Funcionales Nucleares</h5>
+                  </div>
+                  <div class="drawer-modules-grid">
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p2Mod1Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p2Mod1Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p2Mod2Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p2Mod2Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p2Mod3Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p2Mod3Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p2Mod4Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p2Mod4Desc"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Arquitectura de Datos & Protocolos -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    <h5 data-i18n="projects.dataArchTitle">Arquitectura de Datos, Protocolos & Integración</h5>
+                  </div>
+                  <div class="drawer-data-grid">
+                    <div class="data-spec-card" data-i18n-html="projects.p2DataMainframe"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p2DataLocal"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p2DataProtocols"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+          <!-- PROYECTO 3: WITRANS -->
+          <article class="project-item" data-category="web">
+            <div class="project-visual">
+              <div class="imac-wrapper">
+                <div class="imac-device" onclick="openLightbox('images/projects/witrans-ui.png', 'WITrans: Interfaz de Gestión de Archivos en Producción')">
+                  <div class="imac-frame">
+                    <div class="imac-bezel-top">
+                      <div class="imac-camera"></div>
+                    </div>
+                    <div class="imac-screen">
+                      <img src="images/projects/witrans-ui.png" alt="WiTrans en iMac" loading="lazy" />
+                      <div class="imac-screen-overlay">
+                        <span class="imac-zoom-pill">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                          <span data-i18n="projects.imacZoom">Ver Pantalla Completa</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="imac-chin">
+                      <div class="imac-chin-badge">
+                        <span class="imac-indicator-dot"></span>
+                        <span class="imac-chin-text" data-i18n="projects.imacStatus">Producción Activa</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="imac-stand"></div>
+                  <div class="imac-base"></div>
+                </div>
+              </div>
+              <div class="imac-caption">
+                <span class="imac-caption-label" data-i18n="projects.imacCaption">🖥️ Interfaz operativa del sistema real</span>
+                <button class="imac-expand-btn" onclick="openLightbox('images/projects/witrans-ui.png', 'WITrans: Interfaz de Gestión de Archivos en Producción')">
+                  <span data-i18n="projects.imacExpand">Ampliar UI</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-top">
+                <span class="badge-cat" data-i18n="projects.p3Cat">Ciberseguridad &middot; Infraestructura On-Premise</span>
+                <span class="status-indicator" data-i18n="projects.statusProd">● En Producción</span>
+              </div>
+              <h3 class="project-name" data-i18n="projects.p3Name">WITrans & WIDroplet &middot; WeTransfer Propietario</h3>
+              <p class="project-pitch" data-i18n="projects.p3Pitch">
+                Solución corporativa on-premise (servidor Node.js + cliente de escritorio en Go/Wails) que sustituye plataformas SaaS externas (WeTransfer, Dropbox), garantizando soberanía de datos y secreto industrial.
+              </p>
+
+              <!-- Miniatura Infografía Arquitectura -->
+              <div class="project-arch-preview" onclick="openLightbox('images/projects/witrans.jpg', 'WITrans & WIDroplet: Plataforma On-Premise de Transferencia Segura')">
+                <div class="arch-thumb-wrap">
+                  <img src="images/projects/witrans.jpg" alt="Lámina de Arquitectura WITrans" loading="lazy" />
+                  <div class="arch-thumb-overlay">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  </div>
+                </div>
+                <div class="arch-thumb-info">
+                  <div class="arch-thumb-tag">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    <span data-i18n="projects.archBadge">Lámina de Arquitectura Técnica</span>
+                  </div>
+                  <h4 class="arch-thumb-title" data-i18n="projects.archTitle">Esquema Técnico & Integración</h4>
+                  <p class="arch-thumb-desc" data-i18n="projects.archDesc">Flujos de datos, modelos DB2 de AS/400, lógica de negocio y componentes.</p>
+                  <span class="arch-thumb-link">
+                    <span data-i18n="projects.archExpand">Ampliar esquema técnico</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </div>
+              </div>
+              
+              <div class="project-kpis">
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p3Kpi1Num">1,8 – 2,5 TB/año</span>
+                  <span class="kpi-lbl" data-i18n="projects.p3Kpi1Lbl">Datos técnicos pesados transferidos</span>
+                </div>
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p3Kpi2Num">15k–24k €/año</span>
+                  <span class="kpi-lbl" data-i18n="projects.p3Kpi2Lbl">Ahorro en suscripciones SaaS</span>
+                </div>
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p3Kpi3Num">0 €</span>
+                  <span class="kpi-lbl" data-i18n="projects.p3Kpi3Lbl">Riesgo o multas por fuga RGPD</span>
+                </div>
+              </div>
+
+              <div class="project-bullets">
+                <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
+                <ul>
+                  <li data-i18n-html="projects.p3Bullet1"><strong>Despliegue On-Premise en Synology NAS:</strong> Control absoluto de ficheros en red interna sin dependencia de nubes públicas, aprovechando redes locales 1Gbps/10Gbps (reducción del 75% en tiempos de subida).</li>
+                  <li data-i18n-html="projects.p3Bullet2"><strong>Persistencia atómica JSON con file locking:</strong> Concurrencia blindada con <code>proper-lockfile</code> a nivel de sistema operativo y respaldos <code>.bak</code> inmediatos sin sobrecoste de motores SQL.</li>
+                  <li data-i18n-html="projects.p3Bullet3"><strong>Seguridad integral:</strong> Autenticación con doble factor (2FA por correo), contraseñas con cifrado AES-256 y enlaces temporales protegidos con UUIDv4.</li>
+                  <li data-i18n-html="projects.p3Bullet4"><strong>Trazabilidad y telemetría GeoIP:</strong> Píxel de tracking en correos, registro instantáneo de IP, Reverse DNS corporativo, país/ciudad y velocidad de descarga.</li>
+                  <li data-i18n-html="projects.p3Bullet5"><strong>Cliente WIDroplet (Go/Wails):</strong> Aplicación nativa y ligera de escritorio con arrastrar y soltar carpetas completas y modo CLI para automatizaciones.</li>
+                </ul>
+              </div>
+
+              <div class="tech-tags">
+                <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="Node.js" class="tech-icon" /><span>Node.js</span></span>
+                <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express</span></span>
+                <span class="tech-badge"><img src="images/logos/go.svg" alt="Go" class="tech-icon" /><span>Go (Golang)</span></span>
+                <span class="tech-badge"><img src="images/logos/wails.svg" alt="Wails" class="tech-icon" /><span>Wails GUI</span></span>
+                <span class="tech-badge"><img src="images/logos/synology.svg" alt="Synology" class="tech-icon" /><span>Synology DSM NAS</span></span>
+                <span class="tech-badge"><img src="images/logos/paperless.svg" alt="2FA" class="tech-icon" /><span>2FA & Smart Zipping</span></span>
+              </div>
+            
+              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-witrans', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Arquitectura, Módulos & Pipeline</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
+            <div class="project-tech-drawer" id="drawer-witrans">
+              <div class="drawer-inner">
+                
+                <!-- 1. Pipeline Operativo / Ciclo de Vida -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <h5 data-i18n="projects.pipelineTitle">Pipeline Operativo & Ciclo de Vida</h5>
+                  </div>
+                  <div class="pipeline-track">
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">1</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p3Pipe1"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p3Pipe1Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">2</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p3Pipe2"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p3Pipe2Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">3</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p3Pipe3"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p3Pipe3Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">4</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p3Pipe4"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p3Pipe4Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">5</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p3Pipe5"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p3Pipe5Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">6</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p3Pipe6"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p3Pipe6Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">7</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p3Pipe7"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p3Pipe7Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">8</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p3Pipe8"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p3Pipe8Sub"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Módulos Funcionales Nucleares -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <h5 data-i18n="projects.modulesTitle">Módulos Funcionales Nucleares</h5>
+                  </div>
+                  <div class="drawer-modules-grid">
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p3Mod1Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p3Mod1Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p3Mod2Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p3Mod2Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p3Mod3Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p3Mod3Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p3Mod4Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p3Mod4Desc"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Arquitectura de Datos & Protocolos -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    <h5 data-i18n="projects.dataArchTitle">Arquitectura de Datos, Protocolos & Integración</h5>
+                  </div>
+                  <div class="drawer-data-grid">
+                    <div class="data-spec-card" data-i18n-html="projects.p3DataMainframe"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p3DataLocal"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p3DataProtocols"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+          <!-- PROYECTO 4: AGENTE BORRAR OTS -->
+          <article class="project-item" data-category="as400 rpa">
+            <div class="project-visual">
+              <div class="imac-wrapper">
+                <div class="imac-device" onclick="openLightbox('images/projects/agente-borrar-ot-ui.png', 'Agente Borrar OTs: Consola de Orquestación y Monitorización')">
+                  <div class="imac-frame">
+                    <div class="imac-bezel-top">
+                      <div class="imac-camera"></div>
+                    </div>
+                    <div class="imac-screen">
+                      <img src="images/projects/agente-borrar-ot-ui.png" alt="Agente Borrar OTs en iMac" loading="lazy" />
+                      <div class="imac-screen-overlay">
+                        <span class="imac-zoom-pill">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                          <span data-i18n="projects.imacZoom">Ver Pantalla Completa</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="imac-chin">
+                      <div class="imac-chin-badge">
+                        <span class="imac-indicator-dot"></span>
+                        <span class="imac-chin-text" data-i18n="projects.imacStatus">Producción Activa</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="imac-stand"></div>
+                  <div class="imac-base"></div>
+                </div>
+              </div>
+              <div class="imac-caption">
+                <span class="imac-caption-label" data-i18n="projects.imacCaption">🖥️ Interfaz operativa del sistema real</span>
+                <button class="imac-expand-btn" onclick="openLightbox('images/projects/agente-borrar-ot-ui.png', 'Agente Borrar OTs: Consola de Orquestación y Monitorización')">
+                  <span data-i18n="projects.imacExpand">Ampliar UI</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-top">
+                <span class="badge-cat" data-i18n="projects.p4Cat">RPA &middot; Automatización Mainframe &middot; MAPI</span>
+                <span class="status-indicator" data-i18n="projects.statusProd247">● En Producción 24/7</span>
+              </div>
+              <h3 class="project-name" data-i18n="projects.p4Name">Agente Borrar OTs &middot; RPA Desatendido AS/400</h3>
+              <p class="project-pitch" data-i18n="projects.p4Pitch">
+                Robot software desatendido desarrollado en PowerShell y la librería nativa de emulación HLLAPI 32-bit que automatiza el ciclo de anulación y purga de Órdenes de Trabajo en el ERP corporativo de AS/400 mediante solicitudes por correo.
+              </p>
+
+              <!-- Miniatura Infografía Arquitectura -->
+              <div class="project-arch-preview" onclick="openLightbox('images/projects/agente_borrar_ots.jpg', 'Agente Borrar OTs: Automatización RPA con AS/400 (IBM i) y Outlook')">
+                <div class="arch-thumb-wrap">
+                  <img src="images/projects/agente_borrar_ots.jpg" alt="Lámina de Arquitectura Agente Borrar OTs" loading="lazy" />
+                  <div class="arch-thumb-overlay">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  </div>
+                </div>
+                <div class="arch-thumb-info">
+                  <div class="arch-thumb-tag">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    <span data-i18n="projects.archBadge">Lámina de Arquitectura Técnica</span>
+                  </div>
+                  <h4 class="arch-thumb-title" data-i18n="projects.archTitle">Esquema Técnico & Integración</h4>
+                  <p class="arch-thumb-desc" data-i18n="projects.archDesc">Flujos de datos, modelos DB2 de AS/400, lógica de negocio y componentes.</p>
+                  <span class="arch-thumb-link">
+                    <span data-i18n="projects.archExpand">Ampliar esquema técnico</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </div>
+              </div>
+              
+              <div class="project-kpis">
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p4Kpi1Num">&lt; 30 seg</span>
+                  <span class="kpi-lbl" data-i18n="projects.p4Kpi1Lbl">Tiempo de ejecución (vs 4-8 h antes)</span>
+                </div>
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p4Kpi2Num">0 errores</span>
+                  <span class="kpi-lbl" data-i18n="projects.p4Kpi2Lbl">Riesgo humano de borrado anulado</span>
+                </div>
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p4Kpi3Num">100% 24/7</span>
+                  <span class="kpi-lbl" data-i18n="projects.p4Kpi3Lbl">Sin dependencia de turnos de IT</span>
+                </div>
+              </div>
+
+              <div class="project-bullets">
+                <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
+                <ul>
+                  <li data-i18n-html="projects.p4Bullet1"><strong>Interacción nativa 5250 vía HLLAPI (pcshll32.dll):</strong> Automatiza la pantalla verde de IBM i emulada con máxima velocidad, gestionando credenciales cifradas con Windows DPAPI.</li>
+                  <li data-i18n-html="projects.p4Bullet2"><strong>Triaje inteligente de correo (Outlook MAPI):</strong> Escaneo continuo cada 60s con regex de OTs y lógica anti-duplicidad para detectar si un técnico de IT ya intervino.</li>
+                  <li data-i18n-html="projects.p4Bullet3"><strong>Sesión aislada multi-pantalla:</strong> Localiza letras de sesión libres (B a H) y opera en segundo plano minimizado sin interferir en los emuladores abiertos de los operarios.</li>
+                  <li data-i18n-html="projects.p4Bullet4"><strong>Borrado inverso y seguro de pliegos:</strong> Verifica el estado 'Activo' de los encargos y realiza la purga en orden inverso con confirmación controlada ('J') antes de anular la OT principal.</li>
+                  <li data-i18n-html="projects.p4Bullet5"><strong>Cierre higiénico y auditoría:</strong> Notificación automática vía ReplyAll manteniendo el hilo y liberando la sesión (6xF3 + Opción 24) para no consumir licencias del mainframe.</li>
+                </ul>
+              </div>
+
+              <div class="tech-tags">
+                <span class="tech-badge"><img src="images/logos/powershell.svg" alt="PowerShell" class="tech-icon" /><span>PowerShell 5.1</span></span>
+                <span class="tech-badge"><img src="images/logos/ibm.svg" alt="IBM i" class="tech-icon" /><span>IBM i PC5250</span></span>
+                <span class="tech-badge"><img src="images/logos/terminal.svg" alt="HLLAPI" class="tech-icon" /><span>HLLAPI 32-bit</span></span>
+                <span class="tech-badge"><img src="images/logos/outlook.svg" alt="Outlook" class="tech-icon" /><span>Outlook MAPI</span></span>
+                <span class="tech-badge"><img src="images/logos/microsoft.svg" alt="Windows DPAPI" class="tech-icon" /><span>Windows DPAPI</span></span>
+              </div>
+            
+              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-agente-borrar-ots', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Arquitectura, Módulos & Pipeline</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
+            <div class="project-tech-drawer" id="drawer-agente-borrar-ots">
+              <div class="drawer-inner">
+                
+                <!-- 1. Pipeline Operativo / Ciclo de Vida -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <h5 data-i18n="projects.pipelineTitle">Pipeline Operativo & Ciclo de Vida</h5>
+                  </div>
+                  <div class="pipeline-track">
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">1</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p4Pipe1"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p4Pipe1Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">2</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p4Pipe2"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p4Pipe2Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">3</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p4Pipe3"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p4Pipe3Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">4</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p4Pipe4"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p4Pipe4Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">5</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p4Pipe5"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p4Pipe5Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">6</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p4Pipe6"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p4Pipe6Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">7</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p4Pipe7"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p4Pipe7Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">8</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p4Pipe8"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p4Pipe8Sub"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Módulos Funcionales Nucleares -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <h5 data-i18n="projects.modulesTitle">Módulos Funcionales Nucleares</h5>
+                  </div>
+                  <div class="drawer-modules-grid">
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p4Mod1Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p4Mod1Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p4Mod2Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p4Mod2Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p4Mod3Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p4Mod3Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p4Mod4Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p4Mod4Desc"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Arquitectura de Datos & Protocolos -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    <h5 data-i18n="projects.dataArchTitle">Arquitectura de Datos, Protocolos & Integración</h5>
+                  </div>
+                  <div class="drawer-data-grid">
+                    <div class="data-spec-card" data-i18n-html="projects.p4DataMainframe"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p4DataLocal"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p4DataProtocols"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+          <!-- PROYECTO 5: VIGILANCIA-APP -->
+          <article class="project-item" data-category="web">
+            <div class="project-visual">
+              <div class="imac-wrapper">
+                <div class="imac-device" onclick="openLightbox('images/projects/vigilancia-ui.png', 'Vigilancia-app: Interfaz de Control de Accesos en Producción')">
+                  <div class="imac-frame">
+                    <div class="imac-bezel-top">
+                      <div class="imac-camera"></div>
+                    </div>
+                    <div class="imac-screen">
+                      <img src="images/projects/vigilancia-ui.png" alt="Vigilancia-app en iMac" loading="lazy" />
+                      <div class="imac-screen-overlay">
+                        <span class="imac-zoom-pill">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                          <span data-i18n="projects.imacZoom">Ver Pantalla Completa</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="imac-chin">
+                      <div class="imac-chin-badge">
+                        <span class="imac-indicator-dot"></span>
+                        <span class="imac-chin-text" data-i18n="projects.imacStatus">Producción Activa</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="imac-stand"></div>
+                  <div class="imac-base"></div>
+                </div>
+              </div>
+              <div class="imac-caption">
+                <span class="imac-caption-label" data-i18n="projects.imacCaption">🖥️ Interfaz operativa del sistema real</span>
+                <button class="imac-expand-btn" onclick="openLightbox('images/projects/vigilancia-ui.png', 'Vigilancia-app: Interfaz de Control de Accesos en Producción')">
+                  <span data-i18n="projects.imacExpand">Ampliar UI</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-top">
+                <span class="badge-cat" data-i18n="projects.p5Cat">Seguridad Física &middot; Control de Accesos &middot; PRL</span>
+                <span class="status-indicator" data-i18n="projects.statusProd">● En Producción</span>
+              </div>
+              <h3 class="project-name" data-i18n="projects.p5Name">Vigilancia-app &middot; Puesto de Control & Accesos</h3>
+              <p class="project-pitch" data-i18n="projects.p5Pitch">
+                Plataforma web unificada de seguridad física, recepción y control de tráfico de vehículos pesados, erradicando una aplicación obsoleta en Visual Basic 6 (Vigilancia_V2) y cuadernos de registro físicos.
+              </p>
+
+              <!-- Miniatura Infografía Arquitectura -->
+              <div class="project-arch-preview" onclick="openLightbox('images/projects/vigilancia.jpg', 'Vigilancia-app: Seguridad Física, Control de Accesos y Gestión de Muelles')">
+                <div class="arch-thumb-wrap">
+                  <img src="images/projects/vigilancia.jpg" alt="Lámina de Arquitectura Vigilancia-app" loading="lazy" />
+                  <div class="arch-thumb-overlay">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  </div>
+                </div>
+                <div class="arch-thumb-info">
+                  <div class="arch-thumb-tag">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    <span data-i18n="projects.archBadge">Lámina de Arquitectura Técnica</span>
+                  </div>
+                  <h4 class="arch-thumb-title" data-i18n="projects.archTitle">Esquema Técnico & Integración</h4>
+                  <p class="arch-thumb-desc" data-i18n="projects.archDesc">Flujos de datos, modelos DB2 de AS/400, lógica de negocio y componentes.</p>
+                  <span class="arch-thumb-link">
+                    <span data-i18n="projects.archExpand">Ampliar esquema técnico</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </div>
+              </div>
+              
+              <div class="project-kpis">
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p5Kpi1Num">30–50 /día</span>
+                  <span class="kpi-lbl" data-i18n="projects.p5Kpi1Lbl">Camiones pesados registrados</span>
+                </div>
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p5Kpi2Num">100% Digital</span>
+                  <span class="kpi-lbl" data-i18n="projects.p5Kpi2Lbl">Control de presencia para evacuación PRL</span>
+                </div>
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p5Kpi3Num">SSO NTLM</span>
+                  <span class="kpi-lbl" data-i18n="projects.p5Kpi3Lbl">Login automático sin contraseñas</span>
+                </div>
+              </div>
+
+              <div class="project-bullets">
+                <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
+                <ul>
+                  <li data-i18n-html="projects.p5Bullet1"><strong>Sustitución de cliente VB6 obsoleto:</strong> Migración a aplicación web ejecutada como servicio Windows resiliente, accesible desde cualquier navegador sin instalación.</li>
+                  <li data-i18n-html="projects.p5Bullet2"><strong>Control en tiempo real de presencia (Dentro/Fuera):</strong> Monitorización instantánea de contratistas y visitantes para cumplimiento estricto de planes de emergencia y evacuación.</li>
+                  <li data-i18n-html="projects.p5Bullet3"><strong>Avisos automáticos a anfitriones:</strong> Notificación instantánea vía correo/SMS al anfitrión en el momento exacto en que su visita se acredita en portería.</li>
+                  <li data-i18n-html="projects.p5Bullet4"><strong>Integración con DIGITEK (MSSQL):</strong> Consulta directa a los cuadrantes laborales de personal de planta y visualización inmediata de la foto corporativa.</li>
+                  <li data-i18n-html="projects.p5Bullet5"><strong>Gestión de centralita, taxis y calidad del dato:</strong> Imputación de costes de transporte por departamento y herramientas de saneamiento y fusión masiva de empresas duplicadas.</li>
+                </ul>
+              </div>
+
+              <div class="tech-tags">
+                <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="Node.js" class="tech-icon" /><span>Node.js</span></span>
+                <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express</span></span>
+                <span class="tech-badge"><img src="images/logos/mysql.svg" alt="MySQL" class="tech-icon" /><span>MySQL</span></span>
+                <span class="tech-badge"><img src="images/logos/sqlserver.svg" alt="MSSQL" class="tech-icon" /><span>MSSQL (DIGITEK)</span></span>
+                <span class="tech-badge"><img src="images/logos/microsoft.svg" alt="Active Directory" class="tech-icon" /><span>Active Directory SSO</span></span>
+                <span class="tech-badge"><img src="images/logos/paperless.svg" alt="Windows Service" class="tech-icon" /><span>Windows Service</span></span>
+              </div>
+            
+              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-vigilancia', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Arquitectura, Módulos & Pipeline</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
+            <div class="project-tech-drawer" id="drawer-vigilancia">
+              <div class="drawer-inner">
+                
+                <!-- 1. Pipeline Operativo / Ciclo de Vida -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <h5 data-i18n="projects.pipelineTitle">Pipeline Operativo & Ciclo de Vida</h5>
+                  </div>
+                  <div class="pipeline-track">
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">1</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p5Pipe1"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p5Pipe1Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">2</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p5Pipe2"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p5Pipe2Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">3</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p5Pipe3"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p5Pipe3Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">4</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p5Pipe4"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p5Pipe4Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">5</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p5Pipe5"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p5Pipe5Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">6</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p5Pipe6"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p5Pipe6Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">7</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p5Pipe7"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p5Pipe7Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">8</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p5Pipe8"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p5Pipe8Sub"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Módulos Funcionales Nucleares -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <h5 data-i18n="projects.modulesTitle">Módulos Funcionales Nucleares</h5>
+                  </div>
+                  <div class="drawer-modules-grid">
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p5Mod1Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p5Mod1Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p5Mod2Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p5Mod2Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p5Mod3Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p5Mod3Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p5Mod4Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p5Mod4Desc"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Arquitectura de Datos & Protocolos -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    <h5 data-i18n="projects.dataArchTitle">Arquitectura de Datos, Protocolos & Integración</h5>
+                  </div>
+                  <div class="drawer-data-grid">
+                    <div class="data-spec-card" data-i18n-html="projects.p5DataMainframe"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p5DataLocal"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p5DataProtocols"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+          <!-- PROYECTO 6: WEBWEDDING -->
+          <article class="project-item" data-category="web">
+            <div class="project-visual">
+              <div class="imac-wrapper">
+                <div class="imac-device" onclick="openLightbox('images/projects/webwedding.jpg', 'WebWedding: Plataforma Full Stack en Producción')">
+                  <div class="imac-frame">
+                    <div class="imac-bezel-top">
+                      <div class="imac-camera"></div>
+                    </div>
+                    <div class="imac-screen">
+                      <img src="images/projects/webwedding.jpg" alt="WebWedding en iMac" loading="lazy" />
+                      <div class="imac-screen-overlay">
+                        <span class="imac-zoom-pill">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                          <span data-i18n="projects.imacZoom">Ver Pantalla Completa</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="imac-chin">
+                      <div class="imac-chin-badge">
+                        <span class="imac-indicator-dot"></span>
+                        <span class="imac-chin-text" data-i18n="projects.imacStatus">Producción Activa</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="imac-stand"></div>
+                  <div class="imac-base"></div>
+                </div>
+              </div>
+              <div class="imac-caption">
+                <span class="imac-caption-label" data-i18n="projects.imacCaption">🖥️ Interfaz operativa del sistema real</span>
+                <a href="https://webwedding.onrender.com/" target="_blank" rel="noopener noreferrer" class="imac-expand-btn" style="text-decoration: none;">
+                  <span data-i18n="projects.p6OpenBtn">Abrir en Vivo ↗</span>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-top">
+                <span class="badge-cat" data-i18n="projects.p6Cat">Web App Full Stack &middot; Eventos</span>
+                <span class="status-indicator" data-i18n="projects.statusRender">● En Producción (Render)</span>
+              </div>
+              <h3 class="project-name" data-i18n="projects.p6Name">WebWedding &middot; Gestión Colaborativa de Eventos</h3>
+              <p class="project-pitch" data-i18n="projects.p6Pitch">
+                Plataforma web completa y pública para la gestión integral de eventos y bodas: confirmaciones RSVP interactivas en tiempo real, mapa de mesas, control de alérgenos, galería fotográfica colaborativa en directo y panel privado de administración.
+              </p>
+
+              <!-- Miniatura Infografía Arquitectura -->
+              <div class="project-arch-preview" onclick="openLightbox('images/projects/webwedding.jpg', 'WebWedding: Plataforma Full Stack en Producción')">
+                <div class="arch-thumb-wrap">
+                  <img src="images/projects/webwedding.jpg" alt="Lámina de Arquitectura WebWedding" loading="lazy" />
+                  <div class="arch-thumb-overlay">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  </div>
+                </div>
+                <div class="arch-thumb-info">
+                  <div class="arch-thumb-tag">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    <span data-i18n="projects.archBadge">Lámina de Arquitectura Técnica</span>
+                  </div>
+                  <h4 class="arch-thumb-title" data-i18n="projects.archTitle">Esquema Técnico & Integración</h4>
+                  <p class="arch-thumb-desc" data-i18n="projects.archDesc">Flujos de datos, modelos DB2 de AS/400, lógica de negocio y componentes.</p>
+                  <span class="arch-thumb-link">
+                    <span data-i18n="projects.archExpand">Ampliar esquema técnico</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </div>
+              </div>
+
+              <div class="project-kpis">
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p6Kpi1Num">100% Live</span>
+                  <span class="kpi-lbl" data-i18n="projects.p6Kpi1Lbl">Desplegado en Render Cloud</span>
+                </div>
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p6Kpi2Num">PostgreSQL</span>
+                  <span class="kpi-lbl" data-i18n="projects.p6Kpi2Lbl">Persistencia relacional</span>
+                </div>
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p6Kpi3Num">En tiempo real</span>
+                  <span class="kpi-lbl" data-i18n="projects.p6Kpi3Lbl">RSVP & Galería multimedia</span>
+                </div>
+              </div>
+              
+              <div class="project-bullets">
+                <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
+                <ul>
+                  <li data-i18n-html="projects.p6Bullet1"><strong>Backend Express & PostgreSQL:</strong> Base de datos relacional para el control granular de invitados, mesas, alérgenos y confirmaciones automáticas.</li>
+                  <li data-i18n-html="projects.p6Bullet2"><strong>Galería colaborativa en tiempo real:</strong> Ingesta controlada de fotos desde dispositivos móviles con validación de tipos MIME y almacenamiento optimizado.</li>
+                  <li data-i18n-html="projects.p6Bullet3"><strong>Despliegue automatizado en la nube:</strong> CI/CD continuo en Render con Node.js y monitorización activa.</li>
+                </ul>
+              </div>
+
+              <div class="project-actions-live">
+                <a href="https://webwedding.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  <span data-i18n="projects.p6LiveBtn">Visitar WebWedding en Vivo</span>
+                </a>
+                <a href="https://github.com/cjjb1/webwedding" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  <img src="images/logos/render.svg" alt="GitHub" style="width: 14px; height: 14px; filter: grayscale(1);" />
+                  <span data-i18n="projects.p6RepoBtn">Repo GitHub</span>
+                </a>
+              </div>
+
+              <div class="tech-tags">
+                <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="Node.js" class="tech-icon" /><span>Node.js</span></span>
+                <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express</span></span>
+                <span class="tech-badge"><img src="images/logos/postgresql.svg" alt="PostgreSQL" class="tech-icon" /><span>PostgreSQL</span></span>
+                <span class="tech-badge"><img src="images/logos/multer.svg" alt="Multer" class="tech-icon" /><span>Multer</span></span>
+                <span class="tech-badge"><img src="images/logos/render.svg" alt="Render" class="tech-icon" /><span>Render Cloud</span></span>
+              </div>
+            
+              <!-- Botón Desplegable Ficha Técnica & Arquitectura -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-webwedding', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Arquitectura, Módulos & Pipeline</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con Ficha Técnica Detallada -->
+            <div class="project-tech-drawer" id="drawer-webwedding">
+              <div class="drawer-inner">
+                
+                <!-- 1. Pipeline Operativo / Ciclo de Vida -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <h5 data-i18n="projects.pipelineTitle">Pipeline Operativo & Ciclo de Vida</h5>
+                  </div>
+                  <div class="pipeline-track">
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">1</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p6Pipe1"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p6Pipe1Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">2</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p6Pipe2"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p6Pipe2Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">3</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p6Pipe3"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p6Pipe3Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">4</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p6Pipe4"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p6Pipe4Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">5</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p6Pipe5"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p6Pipe5Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">6</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p6Pipe6"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p6Pipe6Sub"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Módulos Funcionales Nucleares -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <h5 data-i18n="projects.modulesTitle">Módulos Funcionales Nucleares</h5>
+                  </div>
+                  <div class="drawer-modules-grid">
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p6Mod1Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p6Mod1Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p6Mod2Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p6Mod2Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p6Mod3Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p6Mod3Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p6Mod4Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p6Mod4Desc"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Arquitectura de Datos & Protocolos -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    <h5 data-i18n="projects.dataArchTitle">Arquitectura de Datos, Protocolos & Integración</h5>
+                  </div>
+                  <div class="drawer-data-grid">
+                    <div class="data-spec-card" data-i18n-html="projects.p6DataMainframe"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p6DataLocal"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p6DataProtocols"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stack Tecnológico -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="skills.tag">Competencias</span>
+          <h2 class="section-title" data-i18n="skills.title">Tecnologías, Protocolos & Herramientas</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <div class="cat-icon">⚙️</div>
+            <h3 data-i18n="skills.c1Title">Backend & Servidores</h3>
+            <ul>
+              <li data-i18n-html="skills.c1Item1"><strong>Node.js & Express:</strong> APIs RESTful, middlewares, streaming y microservicios.</li>
+              <li data-i18n-html="skills.c1Item2"><strong>Go (Golang):</strong> Clientes nativos multiplataforma y binarios de alto rendimiento.</li>
+              <li data-i18n-html="skills.c1Item3"><strong>PowerShell 5.1 / 7:</strong> Automatización de sistemas, scripting avanzado y RPA.</li>
+              <li data-i18n-html="skills.c1Item4"><strong>Servicios Windows & Daemons:</strong> Despliegues desatendidos con NSSM, forever y scripts init.d.</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <div class="cat-icon">🏛️</div>
+            <h3 data-i18n="skills.c2Title">Mainframe & Sistemas Críticos</h3>
+            <ul>
+              <li data-i18n-html="skills.c2Item1"><strong>IBM i / AS400:</strong> Consultas ODBC directas sobre esquemas de producción DB2.</li>
+              <li data-i18n-html="skills.c2Item2"><strong>PC5250 & HLLAPI:</strong> Automatización profunda de consola 5250 mediante <code>pcshll32.dll</code>.</li>
+              <li data-i18n-html="skills.c2Item3"><strong>Active Directory / NTLM:</strong> Single Sign-On empresarial transparente para usuarios de red.</li>
+              <li data-i18n-html="skills.c2Item4"><strong>MAPI Outlook:</strong> Triaje robótico de buzones corporativos y respuestas desatendidas.</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <div class="cat-icon">🗄️</div>
+            <h3 data-i18n="skills.c3Title">Bases de Datos & Persistencia</h3>
+            <ul>
+              <li data-i18n-html="skills.c3Item1"><strong>MySQL, MariaDB & PostgreSQL:</strong> Modelado relacional, índices, transacciones y pools.</li>
+              <li data-i18n-html="skills.c3Item2"><strong>Microsoft SQL Server:</strong> Conexión a sistemas externos de RRHH y marcajes (DIGITEK).</li>
+              <li data-i18n-html="skills.c3Item3"><strong>Almacenamiento Atómico:</strong> Persistencia ultraligera en JSON con <code>proper-lockfile</code>.</li>
+              <li data-i18n-html="skills.c3Item4"><strong>ODBC Driver Architecture:</strong> Puentes de integración heterogénea entre SOs.</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <div class="cat-icon">☁️</div>
+            <h3 data-i18n="skills.c4Title">Infraestructura & DevOps</h3>
+            <ul>
+              <li data-i18n-html="skills.c4Item1"><strong>Git & GitHub:</strong> Control de versiones, branching y pipelines CI/CD.</li>
+              <li data-i18n-html="skills.c4Item2"><strong>Render Cloud:</strong> Despliegue de Web Services Node.js y webs escalables.</li>
+              <li data-i18n-html="skills.c4Item3"><strong>Synology DSM NAS:</strong> Servidores de archivos y aplicaciones en red local industrial.</li>
+              <li data-i18n-html="skills.c4Item4"><strong>Ciberseguridad:</strong> Cifrado AES, 2FA, gestión de secretos (DPAPI) y GeoIP.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="section section-dark">
+      <div class="container contact-container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="contact.tag">Contacto Profesional</span>
+          <h2 class="section-title" data-i18n="contact.title">¿Hablamos sobre tu próximo proyecto?</h2>
+          <p class="section-subtitle" data-i18n="contact.subtitle">
+            Disponible para consultoría, modernización de sistemas legacy o desarrollo de plataformas web de alta criticidad.
+          </p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-info-list">
+            <div class="c-item">
+              <span class="c-icon">📧</span>
+              <div>
+                <span class="c-label" data-i18n="contact.emailLabel">Correo Electrónico</span>
+                <a href="mailto:carlosj.juarez@hotmail.com" class="c-val">carlosj.juarez@hotmail.com</a>
+              </div>
+            </div>
+            <div class="c-item">
+              <span class="c-icon" style="display: flex; align-items: center; justify-content: center;">
+                <img src="images/logos/linkedin.svg" alt="LinkedIn" style="width: 26px; height: 26px; border-radius: 4px;" />
+              </span>
+              <div>
+                <span class="c-label" data-i18n="contact.linkedinLabel">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/carlosj-juarez/" target="_blank" rel="noopener noreferrer" class="c-val">linkedin.com/in/carlosj-juarez</a>
+              </div>
+            </div>
+            <div class="c-item">
+              <span class="c-icon">🐙</span>
+              <div>
+                <span class="c-label" data-i18n="contact.githubLabel">GitHub</span>
+                <a href="https://github.com/cjjb1" target="_blank" rel="noopener noreferrer" class="c-val">github.com/cjjb1</a>
+              </div>
+            </div>
+            <div class="c-item">
+              <span class="c-icon">📍</span>
+              <div>
+                <span class="c-label" data-i18n="contact.locLabel">Ubicación</span>
+                <span class="c-val" data-i18n="contact.locVal">Madrid, España (Disponible en remoto / híbrido)</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-cta">
+            <a href="mailto:carlosj.juarez@hotmail.com" class="btn btn-primary btn-lg" data-i18n="contact.sendBtn">
+              Enviar Mensaje Directo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p data-i18n="footer.text">© 2026 Carlos Juárez &middot; Desarrollado con Node.js & Express &middot; Desplegado en Render con GitHub</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/carlosj-juarez/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px;" title="Ver perfil en LinkedIn">
+          <img src="images/logos/linkedin.svg" alt="LinkedIn" style="width: 15px; height: 15px; border-radius: 2px;" />
+          <span data-i18n="hero.linkedin">LinkedIn</span>
+        </a>
+        <a href="https://github.com/cjjb1" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="#hero" data-i18n="footer.backToTop">Subir ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal / Lightbox para ver diagramas e infografías a pantalla completa -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-dialog" onclick="event.stopPropagation()">
+      <div class="lightbox-header">
+        <h4 id="lightbox-title" data-i18n="lightbox.defaultTitle">Infografía de Arquitectura Técnica</h4>
+        <div class="lightbox-controls">
+          <a id="lightbox-download" href="#" target="_blank" class="btn-lightbox-action" title="Abrir imagen original en nueva pestaña">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <span data-i18n="lightbox.openOriginal">Abrir original</span>
+          </a>
+          <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar ventana">✕</button>
+        </div>
+      </div>
+      <div class="lightbox-body">
+        <img id="lightbox-img" src="" alt="Infografía ampliada" />
+      </div>
+    </div>
+  </div>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

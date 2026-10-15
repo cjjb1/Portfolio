@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "node --watch index.js"
+    "dev": "node --watch index.js",
+    "build": "node sync_docs.js",
+    "sync-docs": "node sync_docs.js"
   },
   "dependencies": {
     "express": "^4.21.2"

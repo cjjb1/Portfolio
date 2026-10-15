@@ -148,17 +148,24 @@ function setLanguage(lang) {
     langToggleBtn.setAttribute('aria-label', dict.nav.langAria);
   }
 
-  // Sync URL cleanly without full page refresh
-  const currentPath = window.location.pathname.toLowerCase();
-  if (lang === 'en' && currentPath !== '/en' && currentPath === '/') {
-    window.history.replaceState({ lang: 'en' }, '', '/en' + window.location.search + window.location.hash);
-  } else if (lang === 'es' && currentPath === '/en') {
-    window.history.replaceState({ lang: 'es' }, '', '/' + window.location.search + window.location.hash);
+  // Sync URL cleanly without breaking subpath or root
+  try {
+    const url = new URL(window.location.href);
+    if (lang === 'en') {
+      url.searchParams.set('lang', 'en');
+    } else {
+      url.searchParams.delete('lang');
+    }
+    const cleanSearch = url.searchParams.toString() ? '?' + url.searchParams.toString() : '';
+    window.history.replaceState({ lang }, '', url.pathname + cleanSearch + url.hash);
+  } catch (e) {
+    // Fallback
   }
 }
 
-// Inicializar idioma (URL /en, localStorage o por defecto 'es')
-const pathIsEn = window.location.pathname.toLowerCase().startsWith('/en');
+// Inicializar idioma (URL ?lang=, /en, localStorage o por defecto 'es')
+const pathLower = window.location.pathname.toLowerCase();
+const pathIsEn = pathLower.endsWith('/en') || pathLower.includes('/en/');
 const urlParams = new URLSearchParams(window.location.search);
 const savedLang = localStorage.getItem('portfolio-lang');
 const initialLang = urlParams.get('lang') || (pathIsEn ? 'en' : (savedLang || 'es'));

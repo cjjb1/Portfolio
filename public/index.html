@@ -15,7 +15,8 @@
       if (savedTheme === 'light') {
         document.documentElement.setAttribute('data-theme', 'light');
       }
-      const pathIsEn = window.location.pathname.toLowerCase().startsWith('/en');
+      const pathLower = window.location.pathname.toLowerCase();
+      const pathIsEn = pathLower.includes('/en') || window.location.search.includes('lang=en');
       const savedLang = localStorage.getItem('portfolio-lang');
       if (pathIsEn || savedLang === 'en') {
         document.documentElement.lang = 'en';
