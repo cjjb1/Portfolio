@@ -91,10 +91,17 @@ function setLanguage(lang) {
     const textSpan = btn.querySelector('.btn-drawer-text');
     if (!textSpan) return;
     const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+    const isIvido = btn.id === 'btn-drawer-ivido' || (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes('ivido'));
     if (dict && dict.projects) {
-      textSpan.textContent = isExpanded 
-        ? (dict.projects.drawerCollapse || 'Plegar Ficha Técnica')
-        : (dict.projects.drawerExpand || 'Desplegar Arquitectura, Módulos & Pipeline');
+      if (isIvido) {
+        textSpan.textContent = isExpanded 
+          ? (dict.projects.pIvidoDrawerCollapse || 'Plegar Memoria Técnica')
+          : (dict.projects.pIvidoDrawerBtn || 'Desplegar Memoria Técnica & Arquitectura');
+      } else {
+        textSpan.textContent = isExpanded 
+          ? (dict.projects.drawerCollapse || 'Plegar Ficha Técnica')
+          : (dict.projects.drawerExpand || 'Desplegar Arquitectura, Módulos & Pipeline');
+      }
     }
   });
 
@@ -256,39 +263,10 @@ function closeLightbox() {
   document.body.style.overflow = '';
 }
 
-// 5.1 Modal de Memoria Técnica / Documentación (Leer más...)
-function openDocModal(id) {
-  const modal = document.getElementById(`doc-modal-${id}`);
-  if (!modal) return;
-  modal.classList.add('is-active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeDocModal(id) {
-  const modal = typeof id === 'string' ? document.getElementById(`doc-modal-${id}`) : id;
-  if (!modal) return;
-  modal.classList.remove('is-active');
-  document.body.style.overflow = '';
-}
-
-// Cerrar con la tecla ESC (Lightbox y Doc Modals)
+// Cerrar con la tecla ESC (Lightbox)
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    if (lightbox && lightbox.classList.contains('active')) {
-      closeLightbox();
-    }
-    document.querySelectorAll('.doc-modal.is-active').forEach(modal => {
-      modal.classList.remove('is-active');
-      document.body.style.overflow = '';
-    });
-  }
-});
-
-// Cerrar Doc Modal al hacer click en el backdrop
-document.addEventListener('click', (e) => {
-  if (e.target && e.target.classList && e.target.classList.contains('doc-modal')) {
-    e.target.classList.remove('is-active');
-    document.body.style.overflow = '';
+  if (e.key === 'Escape' && lightbox && lightbox.classList.contains('active')) {
+    closeLightbox();
   }
 });
 
@@ -302,24 +280,40 @@ function toggleTechDrawer(drawerId, btn) {
   const isOpen = drawer.classList.contains('is-open');
   const currentLang = htmlEl.lang === 'en' ? 'en' : 'es';
   const dict = window.I18N && window.I18N[currentLang] ? window.I18N[currentLang].projects : null;
-  const expandText = dict && dict.drawerExpand ? dict.drawerExpand : 'Desplegar Arquitectura, Módulos & Pipeline';
-  const collapseText = dict && dict.drawerCollapse ? dict.drawerCollapse : 'Plegar Ficha Técnica';
+  const isIvido = drawerId === 'drawer-ivido';
+
+  const defaultExpand = isIvido && dict && dict.pIvidoDrawerBtn 
+    ? dict.pIvidoDrawerBtn 
+    : (dict && dict.drawerExpand ? dict.drawerExpand : 'Desplegar Arquitectura, Módulos & Pipeline');
+  const defaultCollapse = isIvido && dict && dict.pIvidoDrawerCollapse 
+    ? dict.pIvidoDrawerCollapse 
+    : (dict && dict.drawerCollapse ? dict.drawerCollapse : 'Plegar Ficha Técnica');
+
+  // Encontrar botones relacionados con este drawer
+  const toggleButtons = document.querySelectorAll(`button[onclick*="'${drawerId}'"], button[onclick*='"${drawerId}"']`);
 
   if (isOpen) {
     drawer.classList.remove('is-open');
-    if (btn) {
-      btn.setAttribute('aria-expanded', 'false');
-      btn.classList.remove('active');
-      const textSpan = btn.querySelector('.btn-drawer-text');
-      if (textSpan) textSpan.textContent = expandText;
-    }
+    toggleButtons.forEach(b => {
+      b.setAttribute('aria-expanded', 'false');
+      b.classList.remove('active', 'is-open');
+      const textSpan = b.querySelector('.btn-drawer-text');
+      if (textSpan) textSpan.textContent = defaultExpand;
+    });
   } else {
     drawer.classList.add('is-open');
-    if (btn) {
-      btn.setAttribute('aria-expanded', 'true');
-      btn.classList.add('active');
-      const textSpan = btn.querySelector('.btn-drawer-text');
-      if (textSpan) textSpan.textContent = collapseText;
+    toggleButtons.forEach(b => {
+      b.setAttribute('aria-expanded', 'true');
+      b.classList.add('active', 'is-open');
+      const textSpan = b.querySelector('.btn-drawer-text');
+      if (textSpan) textSpan.textContent = defaultCollapse;
+    });
+
+    // Si se activa desde el botón del pitch, scroll suave hacia el inicio del cajón
+    if (btn && btn.classList.contains('pitch-read-more')) {
+      setTimeout(() => {
+        drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
     }
   }
 }
