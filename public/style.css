@@ -2226,6 +2226,14 @@ code {
   background: radial-gradient(circle at 50% 20%, rgba(79, 70, 229, 0.08) 0%, transparent 60%);
 }
 
+[data-theme="light"] .hero-section::before {
+  background-image: 
+    radial-gradient(ellipse at 50% 35%, rgba(248, 250, 252, 0.88) 0%, rgba(248, 250, 252, 0.97) 85%),
+    url('images/fondo-hero.png');
+  opacity: 0.28;
+  filter: saturate(1.1) contrast(1.02);
+}
+
 [data-theme="light"] .hero-badge {
   background: rgba(79, 70, 229, 0.08);
   border-color: rgba(79, 70, 229, 0.2);
