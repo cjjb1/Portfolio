@@ -100,7 +100,8 @@ window.I18N = {
     projects: {
       tag: "Casos de Éxito Reales",
       title: "Proyectos Corporativos & de Producción",
-      subtitle: "Sistemas en producción activa diseñados para resolver problemáticas críticas de negocio, con auditorías técnicas, diagramas de arquitectura e infografías completas.",
+      subtitle: "Sistemas en producción activa diseñados para resolver problemáticas críticas de negocio. Selecciona cualquiera de los proyectos para explorar su arquitectura técnica, flujos operativos y memoria técnica detallada.",
+      viewProject: "Ver Proyecto",
       filterAll: "Todos los Proyectos",
       filterAs400: "Integración AS/400 & ERP",
       filterWeb: "Webs Corporativas",
@@ -633,7 +634,8 @@ window.I18N = {
     projects: {
       tag: "Proven Track Record",
       title: "Enterprise & Production Projects",
-      subtitle: "Mission-critical production systems architected to resolve complex business problems, complete with technical audits, architecture schematics, and detailed infographics.",
+      subtitle: "Production-ready enterprise systems designed to solve mission-critical challenges. Select any project to explore its technical architecture, operational flows, and comprehensive technical dossier.",
+      viewProject: "View Project",
       filterAll: "All Projects",
       filterAs400: "AS/400 & ERP Integration",
       filterWeb: "Enterprise Web Apps",

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>OSID · Orquestación Logística & Muelles | Carlos Juárez</title>
+  <meta name="description" content="OSID · Orquestación Logística & Muelles - Arquitectura técnica, diagramas y detalles de implementación en producción por Carlos Juárez.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('portfolio-theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</head>
+<body class="project-page-body">
+
+  <!-- Header / Barra de Navegación -->
+  <header class="header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo" title="Volver al inicio del Portfolio">
+        <span class="logo-mark">&lt;Carlos Juárez/&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#projects" class="btn-nav" style="background: rgba(99, 102, 241, 0.2); font-weight: 600;">← Volver a Proyectos</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">Perfil</a></li>
+        <li><a href="index.html#credentials" data-i18n="nav.credentials">CV & Máster IA</a></li>
+        <li><a href="index.html#metrics" data-i18n="nav.metrics">Impacto</a></li>
+        <li><a href="index.html#skills" data-i18n="nav.stack">Stack</a></li>
+        <li><a href="index.html#contact" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button id="lang-toggle" class="lang-toggle-btn" aria-label="Cambiar idioma a Inglés / Switch to English" title="Alternar idioma (ES / EN)">
+          <span class="lang-code es active" data-lang="es">ES</span>
+          <span class="lang-divider">/</span>
+          <span class="lang-code en" data-lang="en">EN</span>
+        </button>
+        <a href="https://www.linkedin.com/in/carlosj-juarez/" target="_blank" rel="noopener noreferrer" class="theme-toggle-btn" aria-label="Perfil de LinkedIn" title="Ver perfil en LinkedIn">
+          <img src="images/logos/linkedin.svg" alt="LinkedIn" style="width: 18px; height: 18px; display: block;" />
+        </a>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar a modo diurno o nocturno" title="Alternar modo diurno / nocturno">
+          <svg class="theme-icon theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero / Breadcrumb del Proyecto -->
+  <section class="project-page-hero">
+    <div class="container">
+      <nav class="project-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Inicio</a>
+        <span>&rsaquo;</span>
+        <a href="index.html#projects">Proyectos</a>
+        <span>&rsaquo;</span>
+        <span>OSID · Orquestación Logística & Muelles</span>
+      </nav>
+      <a href="index.html#projects" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 8px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span>Volver al Catálogo</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Detalle Completo del Proyecto -->
+  <main class="project-page-main">
+    <div class="container">
+      
+      <!-- Ficha de Proyecto Completa -->
+                <article class="project-item" data-category="as400 web">
+            <div class="project-info">
+              <div class="project-top">
+                <span class="badge-cat" data-i18n="projects.p2Cat">Logística &middot; Gestión de Transporte &middot; ERP</span>
+                <span class="status-indicator" data-i18n="projects.statusProd">● En Producción</span>
+              </div>
+              <h3 class="project-name" data-i18n="projects.p2Name">OSID &middot; Orquestación Logística & Muelles</h3>
+              <p class="project-pitch" data-i18n="projects.p2Pitch">
+                Plataforma web corporativa que centraliza la logística integral de transportes, expediciones y reconciliación de papel en planta, reemplazando la obsoleta aplicación de escritorio WinForms (OSID.exe).
+              </p>
+
+              <!-- Miniaturas Interfaz en Vivo & Lámina Arquitectura -->
+              <div class="project-previews-grid">
+                <div class="project-preview-card" onclick="openLightbox('images/projects/osid-ui.png', 'OSID: Interfaz de Gestión Logística en Producción')">
+                  <div class="preview-thumb-wrap">
+                    <img src="images/projects/osid-ui.png" alt="Interfaz OSID" loading="lazy" />
+                    <div class="preview-thumb-overlay">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    </div>
+                  </div>
+                  <div class="preview-card-info">
+                    <div class="preview-card-tag">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                      <span data-i18n="projects.uiBadge">Captura de Producción</span>
+                    </div>
+                    <h4 class="preview-card-title" data-i18n="projects.uiTitle">Interfaz Operativa del Sistema</h4>
+                    <p class="preview-card-desc" data-i18n="projects.uiDesc">Vista real de la aplicación en producción con datos operativos.</p>
+                    <span class="preview-card-link">
+                      <span data-i18n="projects.uiExpand">Ampliar interfaz</span>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="project-preview-card" onclick="openLightbox('images/projects/osid.jpg', 'OSID: Esquema de Arquitectura Técnica & Orquestación Logística')">
+                  <div class="preview-thumb-wrap is-portrait">
+                    <img src="images/projects/osid.jpg" alt="Lámina de Arquitectura OSID" loading="lazy" />
+                    <div class="preview-thumb-overlay">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    </div>
+                  </div>
+                  <div class="preview-card-info">
+                    <div class="preview-card-tag">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                      <span data-i18n="projects.archBadge">Lámina de Arquitectura Técnica</span>
+                    </div>
+                    <h4 class="preview-card-title" data-i18n="projects.archTitle">Esquema Técnico & Integración</h4>
+                    <p class="preview-card-desc" data-i18n="projects.archDesc">Flujos de datos, modelos DB2, lógica de negocio y componentes.</p>
+                    <span class="preview-card-link">
+                      <span data-i18n="projects.archExpand">Ampliar esquema técnico</span>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="project-kpis">
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p2Kpi1Num">2,4 – 3,6 M€/año</span>
+                  <span class="kpi-lbl" data-i18n="projects.p2Kpi1Lbl">Costes de transporte auditados</span>
+                </div>
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p2Kpi2Num">+85k–120k €/año</span>
+                  <span class="kpi-lbl" data-i18n="projects.p2Kpi2Lbl">Ahorro por bloqueo de sobrecostes</span>
+                </div>
+                <div class="kpi-box">
+                  <span class="kpi-num" data-i18n="projects.p2Kpi3Num">~680 h/año</span>
+                  <span class="kpi-lbl" data-i18n="projects.p2Kpi3Lbl">Horas administrativas liberadas</span>
+                </div>
+              </div>
+
+              <!-- Ficha Técnica Directa (Desplegada) -->
+              <div class="project-tech-specs">
+                <!-- 1. Pipeline Operativo / Ciclo de Vida -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <h5 data-i18n="projects.pipelineTitle">Pipeline Operativo & Ciclo de Vida</h5>
+                  </div>
+                  <div class="pipeline-track">
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">1</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe1"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe1Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">2</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe2"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe2Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">3</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe3"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe3Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">4</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe4"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe4Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">5</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe5"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe5Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">6</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe6"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe6Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">7</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe7"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe7Sub"></span>
+                    </div>
+                    <div class="pipeline-step">
+                      <span class="pipeline-step-badge">8</span>
+                      <span class="pipeline-step-title" data-i18n="projects.p2Pipe8"></span>
+                      <span class="pipeline-step-desc" data-i18n="projects.p2Pipe8Sub"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Módulos Funcionales Nucleares -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <h5 data-i18n="projects.modulesTitle">Módulos Funcionales Nucleares</h5>
+                  </div>
+                  <div class="drawer-modules-grid">
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p2Mod1Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p2Mod1Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p2Mod2Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p2Mod2Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p2Mod3Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p2Mod3Desc"></p>
+                    </div>
+                    <div class="drawer-module-card">
+                      <div class="module-card-top">
+                        <span class="module-dot"></span>
+                        <span class="module-title" data-i18n="projects.p2Mod4Title"></span>
+                      </div>
+                      <p class="module-desc" data-i18n="projects.p2Mod4Desc"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Arquitectura de Datos & Protocolos -->
+                <div class="drawer-section">
+                  <div class="drawer-sec-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    <h5 data-i18n="projects.dataArchTitle">Arquitectura de Datos, Protocolos & Integración</h5>
+                  </div>
+                  <div class="drawer-data-grid">
+                    <div class="data-spec-card" data-i18n-html="projects.p2DataMainframe"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p2DataLocal"></div>
+                    <div class="data-spec-card" data-i18n-html="projects.p2DataProtocols"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Iconos de Aplicaciones (Horizontal, después de Arquitectura de Datos) -->
+              <div class="tech-tags">
+                <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="Node.js" class="tech-icon" /><span>Node.js</span></span>
+                <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express</span></span>
+                <span class="tech-badge"><img src="images/logos/ibm.svg" alt="IBM i" class="tech-icon" /><span>AS400 / IBM i</span></span>
+                <span class="tech-badge"><img src="images/logos/mysql.svg" alt="MySQL" class="tech-icon" /><span>MySQL</span></span>
+                <span class="tech-badge"><img src="images/logos/odbc.svg" alt="ODBC" class="tech-icon" /><span>ODBC AS/400</span></span>
+                <span class="tech-badge"><img src="images/logos/paperless.svg" alt="FSC" class="tech-icon" /><span>Albaranes FSC/PEFC</span></span>
+              </div>
+            
+              <!-- Botón Desplegable de los Aspectos Técnicos -->
+              <div class="project-drawer-action">
+                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-osid', this)" aria-expanded="false">
+                  <span class="btn-drawer-left">
+                    <span class="btn-drawer-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Aspectos Técnicos Clave</span>
+                  </span>
+                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cajón Desplegable con los Aspectos Técnicos Clave -->
+            <div class="project-tech-drawer" id="drawer-osid">
+              <div class="drawer-inner">
+                <div class="project-bullets" style="margin-bottom: 0;">
+                  <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
+                <ul>
+                  <li data-i18n-html="projects.p2Bullet1"><strong>Sincronización bidireccional AS400 / DB2 y MySQL:</strong> Sincroniza órdenes de trabajo, proveedores, imputaciones analíticas de costes y asientos contables en EVA sin desajustes.</li>
+                  <li data-i18n-html="projects.p2Bullet2"><strong>Planificación visual con Drag & Drop:</strong> Tablón dinámico de muelles de carga con cálculo algorítmico de palets teóricos, cubicaje y tarificación en vivo por peso o bulto.</li>
+                  <li data-i18n-html="projects.p2Bullet3"><strong>Auditoría y conformación de fletes en bloque:</strong> Conciliación automática de facturas de transportistas contra tarifas contractuales pactadas, bloqueando cargos no autorizados.</li>
+                  <li data-i18n-html="projects.p2Bullet4"><strong>Control de bobinas y "el bote":</strong> Reconcilia consumos reales vs teóricos en rotativas, recuperando más de 2.000 picos de bobina al año que antes se extraviaban.</li>
+                </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+
+      <!-- Navegación entre proyectos -->
+      <nav class="project-page-nav" aria-label="Navegación entre proyectos">
+        <a href="proyecto-ivido.html" class="project-nav-link" title="Ir a iViDo · Gestión Documental & Contingencia Híbrida">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span><strong>Anterior:</strong> iViDo · Gestión Documental & Contingencia Híbrida</span>
+        </a>
+        <a href="index.html#projects" class="project-nav-link" title="Volver al índice de proyectos">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>Todos los Proyectos</span>
+        </a>
+        <a href="proyecto-witrans.html" class="project-nav-link" title="Ir a WITrans & WIDroplet · WeTransfer Propietario">
+          <span><strong>Siguiente:</strong> WITrans & WIDroplet · WeTransfer Propietario</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </nav>
+
+      <!-- Banner CTA -->
+      <aside class="project-page-cta">
+        <div class="project-page-cta-text">
+          <h4>¿Necesitas una solución similar en tu infraestructura?</h4>
+          <p>Especializado en modernización legacy, conexión IBM i / AS400, backend Node.js resiliente y agentes de IA.</p>
+        </div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <a href="index.html#contact" class="btn btn-primary">Contactar</a>
+          <a href="https://www.linkedin.com/in/carlosj-juarez/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn</a>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Carlos Juárez &middot; Senior AI Full Stack Developer</p>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#projects">Proyectos</a>
+        <a href="index.html#contact">Contacto</a>
+        <a href="https://www.linkedin.com/in/carlosj-juarez/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/cjjb1" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-dialog" onclick="event.stopPropagation()">
+      <div class="lightbox-header">
+        <h4 id="lightbox-title" data-i18n="lightbox.defaultTitle">Infografía de Arquitectura Técnica</h4>
+        <div class="lightbox-controls">
+          <a id="lightbox-download" href="#" target="_blank" class="btn-lightbox-action" title="Abrir imagen original en nueva pestaña">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <span data-i18n="lightbox.openOriginal">Abrir original</span>
+          </a>
+          <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar ventana">✕</button>
+        </div>
+      </div>
+      <div class="lightbox-body">
+        <img id="lightbox-img" src="" alt="Infografía ampliada" />
+      </div>
+    </div>
+  </div>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
