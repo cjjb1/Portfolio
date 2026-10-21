@@ -239,8 +239,9 @@ filterBtns.forEach(btn => {
 
     projectItems.forEach(item => {
       const categories = item.getAttribute('data-category') || '';
+      const isCard = item.classList.contains('project-card');
       if (filter === 'all' || categories.includes(filter)) {
-        item.style.display = 'grid';
+        item.style.display = isCard ? 'flex' : 'grid';
       } else {
         item.style.display = 'none';
       }

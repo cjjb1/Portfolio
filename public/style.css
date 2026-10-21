@@ -879,8 +879,8 @@ code {
   gap: 24px;
 }
 
-.project-card {
-  display: flex !important;
+.project-item.project-card {
+  display: flex;
   flex-direction: column;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
@@ -898,7 +898,7 @@ code {
   cursor: pointer;
 }
 
-.project-card:hover {
+.project-item.project-card:hover {
   transform: translateY(-4px);
   border-color: rgba(99, 102, 241, 0.45);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
@@ -925,12 +925,25 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.35rem;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.project-card-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--accent-primary);
+  stroke-width: 2;
   transition: transform 0.25s ease;
 }
 
 .project-card:hover .project-card-icon {
   transform: scale(1.08);
+  border-color: rgba(99, 102, 241, 0.5);
+  background: rgba(99, 102, 241, 0.2);
+}
+
+.project-card:hover .project-card-icon svg {
+  transform: scale(1.1);
 }
 
 .project-card-meta {
@@ -2697,6 +2710,10 @@ code {
 [data-theme="light"] .project-card-icon {
   background: rgba(79, 70, 229, 0.08);
   border-color: rgba(79, 70, 229, 0.2);
+}
+
+[data-theme="light"] .project-card-icon svg {
+  stroke: #4f46e5;
 }
 
 [data-theme="light"] .project-card-top-badges .badge-cat {
