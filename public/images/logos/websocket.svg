@@ -1,0 +1,7 @@
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+  <title>WebSockets Real-Time</title>
+  <circle cx="12" cy="12" r="11" fill="#ec4899"/>
+  <path d="M12 4v4m0 8v4M4 12h4m8 0h4" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="12" cy="12" r="3" fill="#ffffff"/>
+  <path d="M7 7l3 3m4 4l3 3M17 7l-3 3m-4 4l-3 3" stroke="#fbcfe8" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

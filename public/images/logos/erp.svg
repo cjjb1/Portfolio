@@ -1,0 +1,7 @@
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+  <title>ERP Logistics &amp; Fleet</title>
+  <rect x="2" y="4" width="20" height="16" rx="3" fill="#f59e0b"/>
+  <path d="M5 8h14M5 12h8M5 16h6" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="16" cy="14" r="2.5" fill="#b45309"/>
+  <path d="M15 14h2M16 13v2" stroke="#ffffff" stroke-width="1" stroke-linecap="round"/>
+</svg>
