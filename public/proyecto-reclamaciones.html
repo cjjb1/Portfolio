@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2">
   <script>
     (function() {
       const savedTheme = localStorage.getItem('portfolio-theme');
@@ -93,211 +93,394 @@
     <div class="container">
       
       <!-- Ficha de Proyecto Completa -->
-                <article class="project-item" data-category="as400 web" id="project-reclamaciones">
-            <div class="project-info">
-              <div class="project-top">
-                <span class="badge-cat" data-i18n="projects.p1Cat">Sistemas Críticos &middot; Calidad Industrial</span>
-                <span class="status-indicator" data-i18n="projects.statusProd">● En Producción</span>
-              </div>
-              <h3 class="project-name" data-i18n="projects.p1Name">Reclamaciones &middot; Bobinas de Papel</h3>
-              <p class="project-pitch" data-i18n="projects.p1Pitch">
-                Plataforma web integral que digitaliza y centraliza el ciclo de vida completo de no conformidades sobre materia prima en rotativas, sustituyendo un sistema manual disperso en hojas Excel y macros VBA.
-              </p>
+      <article class="project-item" data-category="as400 web" id="project-reclamaciones">
+        <div class="project-info">
+          <div class="project-top">
+            <span class="badge-cat" data-i18n="projects.p1Cat">Sistemas Críticos &middot; Calidad Industrial</span>
+            <span class="status-indicator" data-i18n="projects.statusProd">● En Producción</span>
+          </div>
+          <h3 class="project-name" data-i18n="projects.p1Name">Reclamaciones &middot; Bobinas de Papel</h3>
+          <p class="project-pitch" data-i18n="projects.p1Pitch">
+            Plataforma web corporativa que centraliza el ciclo de vida íntegro de no conformidades sobre materia prima en rotativas industriales, sustituyendo un sistema manual en Excel. Integra conexión bidireccional en tiempo real con IBM i (AS/400 DB2) vía ODBC, motor dinámico de valoración de mermas y costes por parada, peritaje multimedia y despacho automatizado a proveedores.
+          </p>
 
-              <!-- Miniaturas Interfaz en Vivo & Lámina Arquitectura -->
-              <div class="project-previews-grid">
-                <div class="project-preview-card" onclick="openLightbox('images/projects/reclamaciones-ui.png', 'Reclamaciones: Interfaz de Producción en Vivo')">
-                  <div class="preview-thumb-wrap">
-                    <img src="images/projects/reclamaciones-ui.png" alt="Interfaz Reclamaciones" loading="lazy" />
-                    <div class="preview-thumb-overlay">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-                    </div>
-                  </div>
-                  <div class="preview-card-info">
-                    <div class="preview-card-tag">
-                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                      <span data-i18n="projects.uiBadge">Captura de Producción</span>
-                    </div>
-                    <h4 class="preview-card-title" data-i18n="projects.uiTitle">Interfaz Operativa del Sistema</h4>
-                    <p class="preview-card-desc" data-i18n="projects.uiDesc">Vista real de la aplicación en producción con datos operativos.</p>
-                    <span class="preview-card-link">
-                      <span data-i18n="projects.uiExpand">Ampliar interfaz</span>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-                    </span>
-                  </div>
-                </div>
-
-                <div class="project-preview-card" onclick="openLightbox('images/projects/reclamaciones.jpg', 'Reclamaciones: Esquema de Arquitectura Técnica e Integración')">
-                  <div class="preview-thumb-wrap is-portrait">
-                    <img src="images/projects/reclamaciones.jpg" alt="Lámina de Arquitectura Reclamaciones" loading="lazy" />
-                    <div class="preview-thumb-overlay">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-                    </div>
-                  </div>
-                  <div class="preview-card-info">
-                    <div class="preview-card-tag">
-                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                      <span data-i18n="projects.archBadge">Lámina de Arquitectura Técnica</span>
-                    </div>
-                    <h4 class="preview-card-title" data-i18n="projects.archTitle">Esquema Técnico & Integración</h4>
-                    <p class="preview-card-desc" data-i18n="projects.archDesc">Flujos de datos, modelos DB2, lógica de negocio y componentes.</p>
-                    <span class="preview-card-link">
-                      <span data-i18n="projects.archExpand">Ampliar esquema técnico</span>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </span>
-                  </div>
+          <!-- Miniaturas Interfaz en Vivo & Lámina Arquitectura -->
+          <div class="project-previews-grid">
+            <div class="project-preview-card" onclick="openLightbox('images/projects/reclamaciones-ui.png', 'Reclamaciones: Interfaz de Producción en Vivo')">
+              <div class="preview-thumb-wrap">
+                <img src="images/projects/reclamaciones-ui.png" alt="Interfaz Reclamaciones" loading="lazy" />
+                <div class="preview-thumb-overlay">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
                 </div>
               </div>
-              
-              <div class="project-kpis">
-                <div class="kpi-box">
-                  <span class="kpi-num" data-i18n="projects.p1Kpi1Num">280–300 t/año</span>
-                  <span class="kpi-lbl" data-i18n="projects.p1Kpi1Lbl">Papel defectuoso gestionado</span>
+              <div class="preview-card-info">
+                <div class="preview-card-tag">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                  <span data-i18n="projects.uiBadge">Captura de Producción</span>
                 </div>
-                <div class="kpi-box">
-                  <span class="kpi-num" data-i18n="projects.p1Kpi2Num">+45k–65k €/año</span>
-                  <span class="kpi-lbl" data-i18n="projects.p1Kpi2Lbl">Abonos netos recuperados</span>
-                </div>
-                <div class="kpi-box">
-                  <span class="kpi-num" data-i18n="projects.p1Kpi3Num">-60%</span>
-                  <span class="kpi-lbl" data-i18n="projects.p1Kpi3Lbl">Tiempo medio por expediente</span>
+                <h4 class="preview-card-title" data-i18n="projects.uiTitle">Interfaz Operativa del Sistema</h4>
+                <p class="preview-card-desc" data-i18n="projects.uiDesc">Vista real de la aplicación en producción con datos operativos.</p>
+                <span class="preview-card-link">
+                  <span data-i18n="projects.uiExpand">Ampliar interfaz</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="project-preview-card" onclick="openLightbox('images/projects/reclamaciones.jpg?v=2', 'Reclamaciones: Esquema de Arquitectura Técnica e Integración')">
+              <div class="preview-thumb-wrap is-portrait">
+                <img src="images/projects/reclamaciones.jpg?v=2" alt="Lámina de Arquitectura Reclamaciones" loading="lazy" />
+                <div class="preview-thumb-overlay">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
                 </div>
               </div>
-
-              <!-- Ficha Técnica Directa (Desplegada) -->
-              <div class="project-tech-specs">
-                <!-- 1. Pipeline Operativo / Ciclo de Vida -->
-                <div class="drawer-section">
-                  <div class="drawer-sec-header">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                    <h5 data-i18n="projects.pipelineTitle">Pipeline Operativo & Ciclo de Vida</h5>
-                  </div>
-                  <div class="pipeline-track">
-                    <div class="pipeline-step">
-                      <span class="pipeline-step-badge">1</span>
-                      <span class="pipeline-step-title" data-i18n="projects.p1Pipe1"></span>
-                      <span class="pipeline-step-desc" data-i18n="projects.p1Pipe1Sub"></span>
-                    </div>
-                    <div class="pipeline-step">
-                      <span class="pipeline-step-badge">2</span>
-                      <span class="pipeline-step-title" data-i18n="projects.p1Pipe2"></span>
-                      <span class="pipeline-step-desc" data-i18n="projects.p1Pipe2Sub"></span>
-                    </div>
-                    <div class="pipeline-step">
-                      <span class="pipeline-step-badge">3</span>
-                      <span class="pipeline-step-title" data-i18n="projects.p1Pipe3"></span>
-                      <span class="pipeline-step-desc" data-i18n="projects.p1Pipe3Sub"></span>
-                    </div>
-                    <div class="pipeline-step">
-                      <span class="pipeline-step-badge">4</span>
-                      <span class="pipeline-step-title" data-i18n="projects.p1Pipe4"></span>
-                      <span class="pipeline-step-desc" data-i18n="projects.p1Pipe4Sub"></span>
-                    </div>
-                    <div class="pipeline-step">
-                      <span class="pipeline-step-badge">5</span>
-                      <span class="pipeline-step-title" data-i18n="projects.p1Pipe5"></span>
-                      <span class="pipeline-step-desc" data-i18n="projects.p1Pipe5Sub"></span>
-                    </div>
-                    <div class="pipeline-step">
-                      <span class="pipeline-step-badge">6</span>
-                      <span class="pipeline-step-title" data-i18n="projects.p1Pipe6"></span>
-                      <span class="pipeline-step-desc" data-i18n="projects.p1Pipe6Sub"></span>
-                    </div>
-                  </div>
+              <div class="preview-card-info">
+                <div class="preview-card-tag">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                  <span data-i18n="projects.archBadge">Lámina de Arquitectura Técnica</span>
                 </div>
-
-                <!-- 2. Módulos Funcionales Nucleares -->
-                <div class="drawer-section">
-                  <div class="drawer-sec-header">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-                    <h5 data-i18n="projects.modulesTitle">Módulos Funcionales Nucleares</h5>
-                  </div>
-                  <div class="drawer-modules-grid">
-                    <div class="drawer-module-card">
-                      <div class="module-card-top">
-                        <span class="module-dot"></span>
-                        <span class="module-title" data-i18n="projects.p1Mod1Title"></span>
-                      </div>
-                      <p class="module-desc" data-i18n="projects.p1Mod1Desc"></p>
-                    </div>
-                    <div class="drawer-module-card">
-                      <div class="module-card-top">
-                        <span class="module-dot"></span>
-                        <span class="module-title" data-i18n="projects.p1Mod2Title"></span>
-                      </div>
-                      <p class="module-desc" data-i18n="projects.p1Mod2Desc"></p>
-                    </div>
-                    <div class="drawer-module-card">
-                      <div class="module-card-top">
-                        <span class="module-dot"></span>
-                        <span class="module-title" data-i18n="projects.p1Mod3Title"></span>
-                      </div>
-                      <p class="module-desc" data-i18n="projects.p1Mod3Desc"></p>
-                    </div>
-                    <div class="drawer-module-card">
-                      <div class="module-card-top">
-                        <span class="module-dot"></span>
-                        <span class="module-title" data-i18n="projects.p1Mod4Title"></span>
-                      </div>
-                      <p class="module-desc" data-i18n="projects.p1Mod4Desc"></p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 3. Arquitectura de Datos & Protocolos -->
-                <div class="drawer-section">
-                  <div class="drawer-sec-header">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
-                    <h5 data-i18n="projects.dataArchTitle">Arquitectura de Datos, Protocolos & Integración</h5>
-                  </div>
-                  <div class="drawer-data-grid">
-                    <div class="data-spec-card" data-i18n-html="projects.p1DataMainframe"></div>
-                    <div class="data-spec-card" data-i18n-html="projects.p1DataLocal"></div>
-                    <div class="data-spec-card" data-i18n-html="projects.p1DataProtocols"></div>
-                  </div>
-                </div>
+                <h4 class="preview-card-title" data-i18n="projects.p1ArchTitle">Esquema Técnico & Peritaje Industrial</h4>
+                <p class="preview-card-desc" data-i18n="projects.p1ArchDesc">Topología de 6 servidores, puente DB2 persistente, motor de cálculo de mermas, hub FFmpeg y pasarela WITrans.</p>
+                <span class="preview-card-link">
+                  <span data-i18n="projects.archExpand">Ampliar esquema técnico</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
               </div>
+            </div>
+          </div>
+          
+          <div class="project-kpis">
+            <div class="kpi-box">
+              <span class="kpi-num" data-i18n="projects.p1Kpi1Num">280–300 t/año</span>
+              <span class="kpi-lbl" data-i18n="projects.p1Kpi1Lbl">Papel defectuoso gestionado</span>
+            </div>
+            <div class="kpi-box">
+              <span class="kpi-num" data-i18n="projects.p1Kpi2Num">+45k–65k €/año</span>
+              <span class="kpi-lbl" data-i18n="projects.p1Kpi2Lbl">Abonos netos recuperados</span>
+            </div>
+            <div class="kpi-box">
+              <span class="kpi-num" data-i18n="projects.p1Kpi3Num">-60%</span>
+              <span class="kpi-lbl" data-i18n="projects.p1Kpi3Lbl">Tiempo medio por expediente</span>
+            </div>
+          </div>
 
-              <!-- Iconos de Aplicaciones (Horizontal, después de Arquitectura de Datos) -->
-              <div class="tech-tags">
-                <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="Node.js" class="tech-icon" /><span>Node.js</span></span>
-                <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express</span></span>
-                <span class="tech-badge"><img src="images/logos/ibm.svg" alt="IBM i" class="tech-icon" /><span>AS400 / IBM i DB2</span></span>
-                <span class="tech-badge"><img src="images/logos/odbc.svg" alt="ODBC" class="tech-icon" /><span>ODBC</span></span>
-                <span class="tech-badge"><img src="images/logos/mysql.svg" alt="MySQL" class="tech-icon" /><span>MySQL</span></span>
-                <span class="tech-badge"><img src="images/logos/multer.svg" alt="Multer" class="tech-icon" /><span>Multer</span></span>
-                <span class="tech-badge"><img src="images/logos/paperless.svg" alt="Paperless" class="tech-icon" /><span>Paperless</span></span>
+          <!-- Ficha Técnica Directa (Desplegada) -->
+          <div class="project-tech-specs">
+            <!-- Resumen Ejecutivo / Hero Quote -->
+            <div class="doc-hero-quote" data-i18n-html="projects.docHeroQuoteRec">
+              <strong>Reclamaciones · Bobinas de Papel</strong> es la plataforma web industrial integral en <strong>React 18 + Vite 5 + Node.js (IISNode)</strong> desarrollada para <strong>Walstead Iberia (Rotocobrhi S.A.U.)</strong>. Digitaliza el ciclo de vida completo de no conformidades sobre materia prima en rotativas de impresión, integrando en tiempo real con <strong>IBM AS/400 (DB2)</strong> vía sockets persistentes, automatizando la valoración de paradas mecánicas y despachando expedientes periciales con transcodificación FFmpeg y entrega cifrada vía <strong>WITrans</strong>.
+            </div>
+
+            <!-- 1. Lámina Visual de Arquitectura (Handwritten Notes) -->
+            <div class="doc-section-card">
+              <div class="doc-section-header">
+                <div class="doc-section-title-wrap">
+                  <span style="font-size: 1.2rem;">🎨</span>
+                  <h4 class="doc-section-title" data-i18n="projects.docSec1TitleRec">Lámina Visual de Arquitectura (Handwritten Notes)</h4>
+                </div>
+                <span class="doc-section-tag" data-i18n="projects.docSec1TagRec">Sketchnote Técnico</span>
               </div>
-            
-              <!-- Botón Desplegable de los Aspectos Técnicos -->
-              <div class="project-drawer-action">
-                <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-reclamaciones', this)" aria-expanded="false">
-                  <span class="btn-drawer-left">
-                    <span class="btn-drawer-icon">
-                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                    </span>
-                    <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Aspectos Técnicos Clave</span>
+              <div class="doc-media-wrap" onclick="openLightbox('images/projects/reclamaciones.jpg?v=2', 'Reclamaciones: Lámina de Arquitectura Sketchnote (Handwritten Notes)')">
+                <img src="images/projects/reclamaciones.jpg?v=2" alt="Lámina de Arquitectura Sketchnote de Reclamaciones" loading="lazy" />
+                <div class="doc-media-overlay">
+                  <span class="doc-media-badge">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    <span data-i18n="projects.docSec1ZoomRec">Ampliar lámina a resolución completa</span>
                   </span>
-                  <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </button>
+                </div>
               </div>
+              <p style="font-size: 0.82rem; color: #94a3b8; margin: 0;" data-i18n="projects.docSec1DescRec">
+                Representación visual de la arquitectura técnica, topología de 6 servidores, catálogo de 10 módulos nucleares, fórmulas de parada y pipeline pericial.
+              </p>
             </div>
 
-            <!-- Cajón Desplegable con los Aspectos Técnicos Clave -->
-            <div class="project-tech-drawer" id="drawer-reclamaciones">
-              <div class="drawer-inner">
-                <div class="project-bullets" style="margin-bottom: 0;">
-                  <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
-                <ul>
-                  <li data-i18n-html="projects.p1Bullet1"><strong>Conexión ODBC en tiempo real con AS400 / IBM i (DB2):</strong> Consulta directa al esquema operacional del ERP para validar pedidos, albaranes y bobinas al instante.</li>
-                  <li data-i18n-html="projects.p1Bullet2"><strong>Modelo de datos relacional 1..N:</strong> Un único expediente unifica múltiples máquinas de planta, bobinas afectadas y defectos tipificados con deducción automática de encargos.</li>
-                  <li data-i18n-html="projects.p1Bullet3"><strong>Pipeline multimedia y peritaje:</strong> Generación automática de miniaturas para fotografías y transcodificación con minutaje de vídeos MP4 para sustentar las pruebas frente al proveedor papelero.</li>
-                  <li data-i18n-html="projects.p1Bullet4"><strong>Generador documental en un clic:</strong> Emisión automática de cartas formales de reclamación con anexos referenciados y registro de auditoría.</li>
-                </ul>
+            <!-- 2. Topología de Infraestructura y Servidores -->
+            <div class="doc-section-card">
+              <div class="doc-section-header">
+                <div class="doc-section-title-wrap">
+                  <span style="font-size: 1.2rem;">🏛️</span>
+                  <h4 class="doc-section-title" data-i18n="projects.docSec2TitleRec">Topología de Infraestructura, Conexiones & Servidores</h4>
+                </div>
+                <span class="doc-section-tag" data-i18n="projects.docSec2TagRec">Topología de Red</span>
+              </div>
+              <div class="doc-server-grid">
+                <div class="doc-server-card">
+                  <div class="doc-server-name">🖥️ <span data-i18n="projects.docSrv1NameRec">RCSERVER12 (10.0.3.32) · Servidor de Aplicación</span></div>
+                  <div class="doc-server-role" data-i18n="projects.docSrv1RoleRec">Windows Server / IIS 10 / IISNode & Express · Node.js 18+</div>
+                  <div class="doc-server-desc" data-i18n-html="projects.docSrv1DescRec">Aloja el backend Express vía IISNode, el motor FFmpeg para transcodificación de vídeo, el worker diario <code>cleanupService.js</code> (>24h) y el sandbox seguro de abonos <code>data/abonos/</code>.</div>
+                </div>
+                <div class="doc-server-card">
+                  <div class="doc-server-name">🖥️ <span data-i18n="projects.docSrv2NameRec">RCSERVER13 (10.0.3.33) · Servidor de Integración</span></div>
+                  <div class="doc-server-role" data-i18n="projects.docSrv2RoleRec">PHP Bridge Fast Socket · MySQL 'compras'</div>
+                  <div class="doc-server-desc" data-i18n-html="projects.docSrv2DescRec">Puente ultrarrápido <code>api_bobina.php</code> con socket persistente <code>odbc_pconnect</code> (<100ms) a AS/400 y base de datos relacional MySQL <code>compras</code> (reclamaciones, entidades, máquinas, envíos).</div>
+                </div>
+                <div class="doc-server-card">
+                  <div class="doc-server-name">🏢 <span data-i18n="projects.docSrv3NameRec">RCSERVER03 (10.0.3.42) · Servidor de Facturación</span></div>
+                  <div class="doc-server-role" data-i18n="projects.docSrv3RoleRec">MySQL Server · Base de Datos 'facturacion'</div>
+                  <div class="doc-server-desc" data-i18n-html="projects.docSrv3DescRec">Consulta federada de solo lectura para resolución instantánea de terceros proveedores, CIF/NIF, direcciones y cuentas contables centralizadas.</div>
+                </div>
+                <div class="doc-server-card">
+                  <div class="doc-server-name">⚙️ <span data-i18n="projects.docSrv4NameRec">IBM AS/400 · DB2 Industrial (DISO & EVA)</span></div>
+                  <div class="doc-server-role" data-i18n="projects.docSrv4RoleRec">ERP Industrial de Planta · Esquemas LDATA2 y LEGSV2</div>
+                  <div class="doc-server-desc" data-i18n-html="projects.docSrv4DescRec">Repositorio operacional central de bobinas (<code>BBM001F</code>), pedidos de compra y albaranes de papel (<code>ALB001F</code>) para validación de pesos y proveedores.</div>
+                </div>
+                <div class="doc-server-card">
+                  <div class="doc-server-name">🚀 <span data-i18n="projects.docSrv5NameRec">Pasarela WITrans (10.10.2.145:8080)</span></div>
+                  <div class="doc-server-role" data-i18n="projects.docSrv5RoleRec">Despacho Telemático Cifrado · Token Bearer</div>
+                  <div class="doc-server-desc" data-i18n-html="projects.docSrv5DescRec">Servicio de transferencia masiva multipart con enlace temporal expirable, acuse de recibo y notificación desatendida a proveedores y departamento financiero.</div>
+                </div>
+                <div class="doc-server-card">
+                  <div class="doc-server-name">🔐 <span data-i18n="projects.docSrv6NameRec">Active Directory LDAP (Dominio ROTEDIC)</span></div>
+                  <div class="doc-server-role" data-i18n="projects.docSrv6RoleRec">SSO Windows NTLM · Matriz de Roles permissions.json</div>
+                  <div class="doc-server-desc" data-i18n-html="projects.docSrv6DescRec">Autenticación transparente sin contraseña manual vía cabeceras HTTP de Windows y control de accesos RBAC (admin, editor, compras, operador, pendiente).</div>
                 </div>
               </div>
             </div>
-          </article>
+
+            <!-- 3. Módulos Funcionales Nucleares (10 Módulos Clave) -->
+            <div class="doc-section-card">
+              <div class="doc-section-header">
+                <div class="doc-section-title-wrap">
+                  <span style="font-size: 1.2rem;">📦</span>
+                  <h4 class="doc-section-title" data-i18n="projects.docSec3TitleRec">Módulos Funcionales Nucleares (Catálogo de Módulos)</h4>
+                </div>
+                <span class="doc-section-tag" data-i18n="projects.docSec3TagRec">Arquitectura de Software</span>
+              </div>
+              <div class="doc-modules-grid">
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num">1</span>
+                    <span class="doc-module-file" data-i18n="projects.docMod1FileRec">src/components/ClaimHeader.jsx</span>
+                  </div>
+                  <div class="doc-module-name" data-i18n="projects.docMod1TitleRec">Autonumeración Fiscal & Selector de Año</div>
+                  <p class="doc-module-desc" data-i18n-html="projects.docMod1DescRec">Generación de código correlativo anual <code>YY/NNNNN</code> con selector modal de ejercicio contable, bloqueo <code>readOnly</code> en edición y sincronización multi-ejercicio.</p>
+                </div>
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num">2</span>
+                    <span class="doc-module-file" data-i18n="projects.docMod2FileRec">api_bobina.php</span>
+                  </div>
+                  <div class="doc-module-name" data-i18n="projects.docMod2TitleRec">Puente Industrial AS/400 DB2</div>
+                  <p class="doc-module-desc" data-i18n-html="projects.docMod2DescRec">Conector de latencia ultrabaja (<100ms) vía <code>odbc_pconnect</code> que consulta <code>BBM001F</code> y <code>ALB001F</code> sin overhead de apertura de sesión, autocompletando bobina, albarán y proveedor.</p>
+                </div>
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num">3</span>
+                    <span class="doc-module-file" data-i18n="projects.docMod3FileRec">src/utils/claimCalculations.js</span>
+                  </div>
+                  <div class="doc-module-name" data-i18n="projects.docMod3TitleRec">Motor de Paradas & Tarifas de Rotativa</div>
+                  <p class="doc-module-desc" data-i18n-html="projects.docMod3DescRec">Cálculo en caliente de 1ª parada base, 2ª parada de 35 min con recargos por rotativa (700 a 1.300 €/h) y array serializado JSON para paradas 3ª..N.</p>
+                </div>
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num">4</span>
+                    <span class="doc-module-file" data-i18n="projects.docMod4FileRec">src/components/MaterialSpecs.jsx</span>
+                  </div>
+                  <div class="doc-module-name" data-i18n="projects.docMod4TitleRec">Soporte Dual: Bobinas vs Resmas KBA</div>
+                  <p class="doc-module-desc" data-i18n-html="projects.docMod4DescRec">Manejo desacoplado de papel continuo de rotativa frente a resmas precortadas en máquina plana KBA (cálculo por pliegos en cm, millares y recargo de corte/guillotinado).</p>
+                </div>
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num">5</span>
+                    <span class="doc-module-file" data-i18n="projects.docMod5FileRec">src/components/EUDRCompliance.jsx</span>
+                  </div>
+                  <div class="doc-module-name" data-i18n="projects.docMod5TitleRec">Trazabilidad Ambiental Europea EUDR</div>
+                  <p class="doc-module-desc" data-i18n-html="projects.docMod5DescRec">Integración de normativas contra la deforestación: almacenamiento de Declaración de Diligencia Debida (<code>eudr_dds</code>) y estado de verificación ambiental.</p>
+                </div>
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num">6</span>
+                    <span class="doc-module-file" data-i18n="projects.docMod6FileRec">server/services/ffmpegWorker.js</span>
+                  </div>
+                  <div class="doc-module-name" data-i18n="projects.docMod6TitleRec">Hub Multimedia & Transcodificación FFmpeg</div>
+                  <p class="doc-module-desc" data-i18n-html="projects.docMod6DescRec">Compresión de fotografías en cliente vía HTML5 Canvas y worker asíncrono con FFmpeg para convertir vídeos <code>.avi</code> industriales a <code>.mp4</code> H.264/AAC (-85% peso).</p>
+                </div>
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num">7</span>
+                    <span class="doc-module-file" data-i18n="projects.docMod7FileRec">src/pdf/ClaimReportPDF.jsx</span>
+                  </div>
+                  <div class="doc-module-name" data-i18n="projects.docMod7TitleRec">Informes PDF Multilingües Client-Side</div>
+                  <p class="doc-module-desc" data-i18n-html="projects.docMod7DescRec">Compilación en el navegador con <code>@react-pdf/renderer</code> de Ficha Técnica oficial y Carta de Reclamación con anexos periciales en ES, EN, FR, IT y DE.</p>
+                </div>
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num">8</span>
+                    <span class="doc-module-file" data-i18n="projects.docMod8FileRec">server/services/witransBridge.js</span>
+                  </div>
+                  <div class="doc-module-name" data-i18n="projects.docMod8TitleRec">Despacho Digital Certificado WITrans</div>
+                  <p class="doc-module-desc" data-i18n-html="projects.docMod8DescRec">Subida por streaming cifrado a la pasarela interna con Bearer Token, generación de enlace expirable, acuse de recibo y alerta automática por correo.</p>
+                </div>
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num">9</span>
+                    <span class="doc-module-file" data-i18n="projects.docMod9FileRec">server/controllers/abonosController.js</span>
+                  </div>
+                  <div class="doc-module-name" data-i18n="projects.docMod9TitleRec">Gestión de Abonos & Blindaje Anti-Traversal</div>
+                  <p class="doc-module-desc" data-i18n-html="projects.docMod9DescRec">Custodia de facturas de abono en <code>data/abonos/</code> con validación estricta <code>path.resolve</code> + <code>path.basename</code> y gestión del estado 'NO PROCEDE' (vaciado a 0).</p>
+                </div>
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num">10</span>
+                    <span class="doc-module-file" data-i18n="projects.docMod10FileRec">src/components/VendorDirectory.jsx</span>
+                  </div>
+                  <div class="doc-module-name" data-i18n="projects.docMod10TitleRec">Directorio de Terceros & Exportador Excel</div>
+                  <p class="doc-module-desc" data-i18n-html="projects.docMod10DescRec">Directorio relacional con múltiples direcciones JSON y exportación modular en streaming a libros Excel XLSX de 26 columnas con UTF-8 BOM.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Pipeline Operativo & Ciclo de Vida (7 Fases) -->
+            <div class="doc-section-card">
+              <div class="doc-section-header">
+                <div class="doc-section-title-wrap">
+                  <span style="font-size: 1.2rem;">⚡</span>
+                  <h4 class="doc-section-title" data-i18n="projects.docSec4TitleRec">Pipeline Operativo & Ciclo de Vida de Reclamación</h4>
+                </div>
+                <span class="doc-section-tag" data-i18n="projects.docSec4TagRec">Secuencia & Ciclo de Vida</span>
+              </div>
+              <div class="pipeline-track">
+                <div class="pipeline-step">
+                  <span class="pipeline-step-badge">1</span>
+                  <span class="pipeline-step-title" data-i18n="projects.p1Pipe1">1. Detección & Alta</span>
+                  <span class="pipeline-step-desc" data-i18n="projects.p1Pipe1Sub">Autonumeración fiscal anual YY/NNNNN y datos base del incidente</span>
+                </div>
+                <div class="pipeline-step">
+                  <span class="pipeline-step-badge">2</span>
+                  <span class="pipeline-step-title" data-i18n="projects.p1Pipe2">2. Cruce AS/400 DB2</span>
+                  <span class="pipeline-step-desc" data-i18n="projects.p1Pipe2Sub">Validación de bobina, gramaje, albarán y proveedor en <100ms</span>
+                </div>
+                <div class="pipeline-step">
+                  <span class="pipeline-step-badge">3</span>
+                  <span class="pipeline-step-title" data-i18n="projects.p1Pipe3">3. Paradas & Mermas</span>
+                  <span class="pipeline-step-desc" data-i18n="projects.p1Pipe3Sub">Cálculo económico en caliente de kilos y tarifas según rotativa</span>
+                </div>
+                <div class="pipeline-step">
+                  <span class="pipeline-step-badge">4</span>
+                  <span class="pipeline-step-title" data-i18n="projects.p1Pipe4">4. Evidencias & FFmpeg</span>
+                  <span class="pipeline-step-desc" data-i18n="projects.p1Pipe4Sub">Compresión de fotos Canvas y transcodificación asíncrona de vídeo</span>
+                </div>
+                <div class="pipeline-step">
+                  <span class="pipeline-step-badge">5</span>
+                  <span class="pipeline-step-title" data-i18n="projects.p1Pipe5">5. Informes 5 Idiomas</span>
+                  <span class="pipeline-step-desc" data-i18n="projects.p1Pipe5Sub">Ficha Técnica y Carta Oficial compiladas con @react-pdf</span>
+                </div>
+                <div class="pipeline-step">
+                  <span class="pipeline-step-badge">6</span>
+                  <span class="pipeline-step-title" data-i18n="projects.p1Pipe6">6. Despacho WITrans</span>
+                  <span class="pipeline-step-desc" data-i18n="projects.p1Pipe6Sub">Subida cifrada por token a pasarela con acuse de recibo</span>
+                </div>
+                <div class="pipeline-step">
+                  <span class="pipeline-step-badge">7</span>
+                  <span class="pipeline-step-title" data-i18n="projects.p1Pipe7">7. Liquidación & Abono</span>
+                  <span class="pipeline-step-desc" data-i18n="projects.p1Pipe7Sub">Abono auditado en sandbox o resolución 'NO PROCEDE' a 0</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. Motor de Paradas de Rotativa & Cálculo Económico de Mermas -->
+            <div class="doc-section-card">
+              <div class="doc-section-header">
+                <div class="doc-section-title-wrap">
+                  <span style="font-size: 1.2rem;">📐</span>
+                  <h4 class="doc-section-title" data-i18n="projects.docSec5TitleRec">Motor de Paradas de Rotativa & Cálculo Económico de Mermas</h4>
+                </div>
+                <span class="doc-section-tag" data-i18n="projects.docSec5TagRec">Lógica de Negocio & Tarifas</span>
+              </div>
+              <div class="doc-rules-grid">
+                <div class="doc-rule-card rule-soap">
+                  <div class="doc-rule-header">⚖️ <span data-i18n="projects.docCalcRule1TitleRec">Coste Base de Merma (Bobinas & Plana KBA)</span></div>
+                  <p class="doc-rule-desc" data-i18n-html="projects.docCalcRule1DescRec">Cálculo directo de kilos defectuosos por precio/kg registrado en el albarán del ERP AS/400, o por millares de pliegos y recargo de corte en máquina plana.</p>
+                </div>
+                <div class="doc-rule-card rule-mssql">
+                  <div class="doc-rule-header">⏱️ <span data-i18n="projects.docCalcRule2TitleRec">1ª Parada de Máquina (Tarifa Base)</span></div>
+                  <p class="doc-rule-desc" data-i18n-html="projects.docCalcRule2DescRec">Parada técnica inicial imputable al defecto del papel con tarifa estándar de preparación y arranque de la línea de producción.</p>
+                </div>
+                <div class="doc-rule-card rule-backoff">
+                  <div class="doc-rule-header">⚡ <span data-i18n="projects.docCalcRule3TitleRec">2ª Parada Escalonada según Rotativa (35 min)</span></div>
+                  <p class="doc-rule-desc" data-i18n-html="projects.docCalcRule3DescRec">Tarifa fija de 35 minutos calibrada por modelo: Litho IV/V (<strong>1.300 €/h</strong>), Litho II/VII (<strong>900 €/h</strong>) y M-606/Rotoman (<strong>700 €/h</strong>).</p>
+                </div>
+                <div class="doc-rule-card rule-logs">
+                  <div class="doc-rule-header">🔄 <span data-i18n="projects.docCalcRule4TitleRec">Paradas Adicionales 3ª..N (Colección JSON)</span></div>
+                  <p class="doc-rule-desc" data-i18n-html="projects.docCalcRule4DescRec">Soporte para múltiples paradas recurrentes en turnos continuos, acumuladas con motivo técnico, duración y coste horario específico.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. Reglas Críticas de Seguridad, Hardening & Blindaje Forense -->
+            <div class="doc-section-card">
+              <div class="doc-section-header">
+                <div class="doc-section-title-wrap">
+                  <span style="font-size: 1.2rem;">🛡️</span>
+                  <h4 class="doc-section-title" data-i18n="projects.docSec6TitleRec">Reglas Críticas de Seguridad, Hardening & Blindaje Forense</h4>
+                </div>
+                <span class="doc-section-tag" data-i18n="projects.docSec6TagRec">Gobernanza & Auditoría</span>
+              </div>
+              <div class="doc-rules-grid">
+                <div class="doc-rule-card rule-soap">
+                  <div class="doc-rule-header">🔐 <span data-i18n="projects.docSecRule1TitleRec">NTLM SSO & Matriz RBAC por Roles</span></div>
+                  <p class="doc-rule-desc" data-i18n-html="projects.docSecRule1DescRec">Autenticación transparente Windows integrada con resolución en <code>permissions.json</code> (admin, editor, compras, operador, pendiente).</p>
+                </div>
+                <div class="doc-rule-card rule-mssql">
+                  <div class="doc-rule-header">🛑 <span data-i18n="projects.docSecRule2TitleRec">Blindaje Anti Path-Traversal en Sandbox</span></div>
+                  <p class="doc-rule-desc" data-i18n-html="projects.docSecRule2DescRec">Protección estricta en <code>data/abonos/</code> forzando <code>path.basename</code> y validación con <code>path.resolve</code> para evitar fugas de ficheros en el SO.</p>
+                </div>
+                <div class="doc-rule-card rule-backoff">
+                  <div class="doc-rule-header">🎥 <span data-i18n="projects.docSecRule3TitleRec">Saneamiento de Archivos & Hub FFmpeg</span></div>
+                  <p class="doc-rule-desc" data-i18n-html="projects.docSecRule3DescRec">Filtro estricto por lista blanca MIME, validación de cabeceras binarias y transcodificación aislada en workers de background.</p>
+                </div>
+                <div class="doc-rule-card rule-logs">
+                  <div class="doc-rule-header">🌿 <span data-i18n="projects.docSecRule4TitleRec">Trazabilidad Ambiental EUDR & Auditoría</span></div>
+                  <p class="doc-rule-desc" data-i18n-html="projects.docSecRule4DescRec">Cumplimiento normativo europeo de deforestación y registro cronológico inmutable de aperturas, envíos y modificaciones periciales.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Iconos de Aplicaciones (Horizontal, después de Arquitectura de Datos) -->
+          <div class="tech-tags">
+            <span class="tech-badge"><img src="images/logos/react.svg" alt="React 18" class="tech-icon" /><span>React 18</span></span>
+            <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="Node.js" class="tech-icon" /><span>Node.js 18+</span></span>
+            <span class="tech-badge"><img src="images/logos/express.svg" alt="Express" class="tech-icon" /><span>Express (IISNode)</span></span>
+            <span class="tech-badge"><img src="images/logos/ibm.svg" alt="IBM AS/400 DB2" class="tech-icon" /><span>IBM AS/400 DB2</span></span>
+            <span class="tech-badge"><img src="images/logos/odbc.svg" alt="ODBC" class="tech-icon" /><span>ODBC pconnect</span></span>
+            <span class="tech-badge"><img src="images/logos/mysql.svg" alt="MySQL" class="tech-icon" /><span>MySQL Compras</span></span>
+            <span class="tech-badge"><img src="images/logos/restapi.svg" alt="REST API" class="tech-icon" /><span>FFmpeg Transcode</span></span>
+            <span class="tech-badge"><img src="images/logos/cluster.svg" alt="WITrans" class="tech-icon" /><span>Pasarela WITrans</span></span>
+            <span class="tech-badge"><img src="images/logos/paperless.svg" alt="PDF Multilingüe" class="tech-icon" /><span>React-PDF (5 Idiomas)</span></span>
+          </div>
+        
+          <!-- Botón Desplegable de los Aspectos Técnicos -->
+          <div class="project-drawer-action">
+            <button type="button" class="btn-drawer-toggle" id="btn-drawer-reclamaciones" onclick="toggleTechDrawer('drawer-reclamaciones', this)" aria-expanded="false">
+              <span class="btn-drawer-left">
+                <span class="btn-drawer-icon">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </span>
+                <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Aspectos Técnicos Clave</span>
+              </span>
+              <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cajón Desplegable con los Aspectos Técnicos Clave -->
+        <div class="project-tech-drawer" id="drawer-reclamaciones">
+          <div class="drawer-inner">
+            <div class="project-bullets" style="margin-bottom: 0;">
+              <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
+              <ul>
+                <li data-i18n-html="projects.p1Bullet1"><strong>Puente Industrial Ultrarrápido (&lt;100ms) con AS/400 DB2:</strong> Conexión persistente mediante <code>odbc_pconnect</code> en el servidor de integración que elimina la latencia de handshake, autocompletando bobinas, gramajes, albaranes y proveedores al vuelo.</li>
+                <li data-i18n-html="projects.p1Bullet2"><strong>Motor de Paradas Múltiples y Tarifas Escalonadas de Taller:</strong> Algoritmo de cálculo en caliente que liquida mermas de papel (continuo o resmas KBA) y computa penalizaciones horarias específicas por rotativa: Litho IV/V (1.300 €/h), Litho II/VII (900 €/h) y M-606/Rotoman (700 €/h).</li>
+                <li data-i18n-html="projects.p1Bullet3"><strong>Hub Multimedia &amp; Transcodificación Asíncrona FFmpeg:</strong> Optimización de imágenes en cliente con compresión Canvas y conversión automática de vídeos en formato <code>.avi</code> de cámaras de planta a <code>.mp4</code> (H.264/AAC), logrando reducciones del 75% al 90% en peso sin perder nitidez probatoria.</li>
+                <li data-i18n-html="projects.p1Bullet4"><strong>Emisión Documental Client-Side Multilingüe en 5 Idiomas:</strong> Generación instantánea en navegador mediante <code>@react-pdf/renderer</code> de la Ficha Técnica pericial y la Carta Oficial de Reclamación con anexos fotográficos en español, inglés, francés, italiano y alemán.</li>
+                <li data-i18n-html="projects.p1Bullet5"><strong>Despacho Seguro WITrans &amp; Blindaje Forense de Abonos:</strong> Integración vía API REST con la pasarela corporativa WITrans mediante tokens Bearer para transferencia cifrada de gigabytes periciales, sanitización canónica de rutas contra Path Traversal y estado auditado 'NO PROCEDE'.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
 
                     <!-- PROYECTO 2: FACTURACIÓN - HUB TRANSVERSAL ERP & FISCAL -->
 
@@ -365,7 +548,7 @@
     </div>
   </div>
 
-  <script src="translations.js"></script>
-  <script src="script.js"></script>
+  <script src="translations.js?v=2"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
