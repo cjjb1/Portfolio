@@ -100,7 +100,7 @@ code {
   z-index: 1000;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  background: rgba(3, 16, 29, 0.92);
+  background: rgba(0, 0, 0, 0.85);
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -310,32 +310,39 @@ code {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Hero Section (GoHighLevel Split Layout) */
+/* Hero Section (GoHighLevel Split Layout con Degradado Negro a Azul) */
 .hero-section {
-  padding: 100px 24px 80px;
+  padding: 110px 24px 85px;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at 15% 20%, rgba(24, 139, 246, 0.16) 0%, rgba(3, 16, 29, 0) 60%),
-              radial-gradient(circle at 85% 40%, rgba(12, 202, 255, 0.12) 0%, rgba(3, 16, 29, 0) 55%),
-              var(--bg-body);
+  background: linear-gradient(180deg, 
+    #000000 0%, 
+    #010914 15%, 
+    #011933 35%, 
+    #033669 60%, 
+    #044c92 82%, 
+    #031d38 94%,
+    #03101d 100%
+  );
 }
 
 .hero-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 15%, rgba(24, 139, 246, 0.14) 0%, rgba(3, 16, 29, 0) 70%);
+  background: radial-gradient(circle at 75% 45%, rgba(12, 202, 255, 0.22) 0%, rgba(24, 139, 246, 0.28) 35%, transparent 70%),
+              radial-gradient(circle at 20% 80%, rgba(24, 139, 246, 0.2) 0%, transparent 60%);
   pointer-events: none;
   z-index: 0;
 }
 
 .hero-grid-container {
-  max-width: 1260px;
+  max-width: 1440px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: 0.95fr 1.15fr;
   align-items: center;
-  gap: 48px;
+  gap: 44px;
   position: relative;
   z-index: 1;
 }
@@ -435,19 +442,20 @@ code {
   font-weight: 800;
 }
 
-/* Columna Derecha: Showcase Visual GoHighLevel */
+/* Columna Derecha: Showcase Visual GoHighLevel Ampliado */
 .hero-showcase {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .showcase-glow {
   position: absolute;
-  inset: -15px;
-  background: radial-gradient(circle at 50% 50%, rgba(24, 139, 246, 0.35) 0%, rgba(12, 202, 255, 0.16) 45%, transparent 75%);
-  filter: blur(45px);
+  inset: -25px;
+  background: radial-gradient(circle at 55% 50%, rgba(24, 139, 246, 0.42) 0%, rgba(12, 202, 255, 0.22) 40%, transparent 75%);
+  filter: blur(55px);
   pointer-events: none;
   z-index: 0;
 }
@@ -456,40 +464,43 @@ code {
   position: relative;
   z-index: 1;
   width: 100%;
-  border-radius: 18px;
-  border: 1px solid rgba(24, 139, 246, 0.35);
-  background: #07223d;
-  box-shadow: 0 24px 60px rgba(3, 16, 29, 0.85), 0 0 35px rgba(24, 139, 246, 0.25);
+  border-radius: 20px;
+  border: 1px solid rgba(24, 139, 246, 0.45);
+  background: #03101d;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.9), 0 0 45px rgba(24, 139, 246, 0.32);
   overflow: hidden;
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
 .showcase-frame:hover {
-  transform: translateY(-4px) scale(1.01);
+  transform: translateY(-4px) scale(1.015);
   border-color: #0ccaff;
-  box-shadow: 0 30px 70px rgba(3, 16, 29, 0.95), 0 0 45px rgba(12, 202, 255, 0.35);
+  box-shadow: 0 34px 80px rgba(0, 0, 0, 0.95), 0 0 55px rgba(12, 202, 255, 0.45);
 }
 
 .showcase-img {
   width: 100%;
   height: auto;
+  min-height: 380px;
+  max-height: 560px;
   display: block;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.4s ease;
 }
 
 .showcase-frame:hover .showcase-img {
-  transform: scale(1.02);
+  transform: scale(1.025);
 }
 
-/* Capa de degradado envolvente estilo GoHighLevel */
+/* Capa de degradado envolvente estilo GoHighLevel (desde negro/azul espacial hacia los bordes) */
 .showcase-gradient-overlay {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(3, 16, 29, 0.05) 0%, rgba(3, 16, 29, 0) 50%, rgba(3, 16, 29, 0.75) 88%, #03101d 100%),
-              linear-gradient(90deg, rgba(3, 16, 29, 0.4) 0%, transparent 18%, transparent 82%, rgba(3, 16, 29, 0.4) 100%),
-              linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 40%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(3, 16, 29, 0) 45%, rgba(3, 16, 29, 0.72) 85%, #03101d 100%),
+              linear-gradient(90deg, rgba(0, 0, 0, 0.35) 0%, transparent 15%, transparent 85%, rgba(0, 0, 0, 0.35) 100%),
+              linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, transparent 35%);
 }
 
 /* Floating SaaS Chips estilo GoHighLevel */
@@ -567,7 +578,7 @@ code {
     justify-content: center;
   }
   .hero-showcase {
-    max-width: 580px;
+    max-width: 680px;
     margin: 0 auto;
   }
 }
