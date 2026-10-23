@@ -627,7 +627,7 @@ window.I18N = {
       docRule4Desc: "Registro unificado con Pino mediante rotación por fecha directa (append) y compresión semanal desatendida centralizada en el Master."
     },
     skills: {
-      tag: "Competencias",
+      tag: "Stack Tecnológico",
       title: "Tecnologías, Protocolos & Herramientas",
       c1Title: "Backend & Servidores",
       c1Item1: "<strong>Node.js & Express:</strong> APIs RESTful, middlewares, streaming y microservicios.",

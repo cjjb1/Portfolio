@@ -3372,8 +3372,17 @@ code {
 }
 
 /* ==========================================
-   Technology Logos Infinite Carousel
+   Technology Logos Infinite Carousel (Skills Module)
    ========================================== */
+.skills-carousel-block {
+  margin-top: 4rem;
+  padding-top: 2.75rem;
+  border-top: 1px solid var(--border-subtle);
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
 .tech-carousel-section {
   padding: 3rem 0 2.75rem;
   background: rgba(14, 19, 31, 0.7);
@@ -3482,6 +3491,10 @@ code {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .skills-carousel-block {
+    margin-top: 2.75rem;
+    padding-top: 2rem;
+  }
   .tech-carousel-section {
     padding: 2.5rem 0;
   }
@@ -3508,6 +3521,10 @@ code {
 }
 
 /* Light Mode Overrides for Tech Carousel */
+[data-theme="light"] .skills-carousel-block {
+  border-top-color: #e2e8f0;
+}
+
 [data-theme="light"] .tech-carousel-section {
   background: #f1f5f9;
   border-top-color: #e2e8f0;
