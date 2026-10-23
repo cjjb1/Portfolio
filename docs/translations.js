@@ -655,14 +655,14 @@ window.I18N = {
     },
     contact: {
       tag: "Contacto Profesional",
-      title: "¿Hablamos sobre tu próximo proyecto?",
-      subtitle: "Disponible para consultoría, modernización de sistemas legacy o desarrollo de plataformas web de alta criticidad.",
+      title: "¿Interesado en mi perfil o trayectoria técnica?",
+      subtitle: "Abierto a conversar sobre oportunidades profesionales y posiciones donde aportar experiencia en arquitecturas de misión crítica, integración de sistemas e inteligencia artificial.",
       emailLabel: "Correo Electrónico",
       linkedinLabel: "LinkedIn",
       githubLabel: "GitHub",
       locLabel: "Ubicación",
       locVal: "Madrid, España (Disponible en remoto / híbrido)",
-      sendBtn: "Enviar Mensaje Directo"
+      sendBtn: "Contactar por Correo"
     },
     footer: {
       text: "© 2026 Carlos Juárez · Desarrollado con Node.js & Express · Desplegado en Render con GitHub",
@@ -1326,15 +1326,15 @@ window.I18N = {
       c4Item4: "<strong>Cybersecurity:</strong> AES-256 encryption, 2FA, DPAPI secret management, and GeoIP threat intelligence."
     },
     contact: {
-      tag: "Professional Inquiries",
-      title: "Let's Discuss Your Next Project",
-      subtitle: "Available for technical consulting, legacy system modernization, or building mission-critical web platforms.",
+      tag: "Professional Contact",
+      title: "Interested in my technical background or profile?",
+      subtitle: "Open to discussing career opportunities and senior roles where I can contribute experience in mission-critical architecture, system integration, and applied AI.",
       emailLabel: "Email Address",
       linkedinLabel: "LinkedIn",
       githubLabel: "GitHub",
       locLabel: "Location",
       locVal: "Madrid, Spain (Available Remote / Hybrid)",
-      sendBtn: "Send Direct Message"
+      sendBtn: "Contact via Email"
     },
     footer: {
       text: "© 2026 Carlos Juárez · Built with Node.js & Express · Deployed on Render with GitHub",

@@ -2047,8 +2047,38 @@ code {
 }
 
 .c-icon {
-  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(24, 139, 246, 0.12);
+  border: 1px solid rgba(24, 139, 246, 0.28);
+  color: #188bf6;
   flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.c-item:hover .c-icon {
+  background: rgba(24, 139, 246, 0.22);
+  border-color: #0ccaff;
+  color: #0ccaff;
+  transform: scale(1.05);
+}
+
+.c-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  display: block;
+}
+
+.c-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
 }
 
 .c-label {
@@ -3299,6 +3329,12 @@ code {
 [data-theme="light"] .c-item {
   background: #f8fafc;
   border-color: #e2e8f0;
+}
+
+[data-theme="light"] .c-icon {
+  background: rgba(24, 139, 246, 0.08);
+  border-color: rgba(24, 139, 246, 0.2);
+  color: #188bf6;
 }
 
 [data-theme="light"] .footer {
