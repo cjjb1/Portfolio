@@ -655,8 +655,8 @@ window.I18N = {
     },
     contact: {
       tag: "Contacto Profesional",
-      title: "¿Interesado en mi perfil o trayectoria técnica?",
-      subtitle: "Abierto a conversar sobre oportunidades profesionales y posiciones donde aportar experiencia en arquitecturas de misión crítica, integración de sistemas e inteligencia artificial.",
+      title: "¿Interesado en mi perfil?",
+      subtitle: "Abierto a conversar sobre <strong>oportunidades profesionales</strong> y posiciones donde aportar experiencia en arquitecturas de misión crítica e <strong>inteligencia artificial</strong>.",
       emailLabel: "Correo Electrónico",
       linkedinLabel: "LinkedIn",
       githubLabel: "GitHub",
@@ -1327,8 +1327,8 @@ window.I18N = {
     },
     contact: {
       tag: "Professional Contact",
-      title: "Interested in my technical background or profile?",
-      subtitle: "Open to discussing career opportunities and senior roles where I can contribute experience in mission-critical architecture, system integration, and applied AI.",
+      title: "Interested in my profile?",
+      subtitle: "Open to discussing <strong>career opportunities</strong> and senior roles where I can contribute experience in mission-critical architecture and applied <strong>artificial intelligence</strong>.",
       emailLabel: "Email Address",
       linkedinLabel: "LinkedIn",
       githubLabel: "GitHub",

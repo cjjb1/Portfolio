@@ -739,6 +739,11 @@ code {
   line-height: 1.6;
 }
 
+.section-subtitle strong {
+  color: #188bf6;
+  font-weight: 700;
+}
+
 /* About Section */
 .about-grid {
   max-width: 1040px;
@@ -2068,10 +2073,21 @@ code {
 }
 
 .c-icon svg {
+  display: block;
+}
+
+.c-icon svg.lucide {
   width: 20px;
   height: 20px;
   stroke: currentColor;
-  display: block;
+  fill: none;
+}
+
+.c-icon svg.github-icon {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  stroke: none;
 }
 
 .c-icon img {
@@ -3335,6 +3351,11 @@ code {
   background: rgba(24, 139, 246, 0.08);
   border-color: rgba(24, 139, 246, 0.2);
   color: #188bf6;
+}
+
+[data-theme="light"] .section-subtitle strong {
+  color: #0369a1;
+  font-weight: 700;
 }
 
 [data-theme="light"] .footer {
