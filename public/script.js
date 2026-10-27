@@ -119,7 +119,7 @@ function setLanguage(lang) {
   } else {
     if (heroCvBtn) heroCvBtn.setAttribute('href', 'docs/Carlos_Juarez_CV.pdf');
     if (cvPdfBtn) cvPdfBtn.setAttribute('href', 'docs/Carlos_Juarez_CV.pdf');
-    if (cvDocxBtn) cvDocxBtn.setAttribute('href', 'docs/Carlos_Juarez_CV.docx');
+    if (cvDocxBtn) cvDocxBtn.setAttribute('href', 'docs/Carlos_Juarez.docx');
     if (cvPreviewImg) {
       cvPreviewImg.setAttribute('src', 'images/cv-preview.png');
       cvPreviewImg.setAttribute('alt', 'Curriculum Vitae Carlos Juárez (Español)');
