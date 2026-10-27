@@ -413,10 +413,17 @@ code {
 
 .hero-actions {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.hero-actions-row {
+  display: flex;
+  align-items: center;
   gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 22px;
 }
 
 /* Micro-Trust Bar Estilo GoHighLevel */
@@ -572,6 +579,9 @@ code {
     text-align: center;
   }
   .hero-actions {
+    align-items: center;
+  }
+  .hero-actions-row {
     justify-content: center;
   }
   .hero-trust-bar {

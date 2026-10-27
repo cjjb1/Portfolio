@@ -22,14 +22,16 @@ window.I18N = {
       langTitle: "Alternar idioma (ES / EN)"
     },
     hero: {
-      badge: "Node.js · TypeScript · Go · Python · AS/400 DB2 · GenAI & MCP",
+      badge: "Node.js · TypeScript · Go · Python · GenAI & MCP",
       titleLine1: "Senior AI Full Stack Developer",
       titleLine2: "GenAI & AI Agents",
       subtitle: "Desarrollo <strong>aplicaciones y agentes inteligentes</strong> enfocados en eliminar fricciones operativas y acelerar la productividad del negocio. Conecto la infraestructura <strong>on&#8209;premise</strong> con arquitecturas <strong>cloud seguras</strong> y automatizaciones avanzadas, desarrollando soluciones llave en mano bajo metodología <strong>Spec&#8209;Driven</strong> con impacto directo en el <strong>ahorro de costes</strong>.",
       viewProjects: "Ver Arquitecturas",
       downloadCv: "Descargar CV (PDF)",
       masterBtn: "Máster en IA",
-      linkedin: "LinkedIn"
+      linkedin: "LinkedIn",
+      trustProduction: "100% Producción Real",
+      chipNodeReact: "Node.js + React"
     },
     metrics: {
       m1Val: "+3,6 M€",
@@ -694,14 +696,16 @@ window.I18N = {
       langTitle: "Switch language (ES / EN)"
     },
     hero: {
-      badge: "Node.js · TypeScript · Go · Python · AS/400 DB2 · GenAI & MCP",
+      badge: "Node.js · TypeScript · Go · Python · GenAI & MCP",
       titleLine1: "Senior AI Full Stack Developer",
       titleLine2: "GenAI & AI Agents",
       subtitle: "I develop <strong>intelligent applications and AI agents</strong> focused on eliminating operational friction and accelerating business productivity. I bridge <strong>on&#8209;premise</strong> infrastructure with secure <strong>cloud architectures</strong> and advanced automation, delivering turnkey solutions under <strong>Spec&#8209;Driven</strong> methodology with direct impact on <strong>cost savings</strong>.",
       viewProjects: "View Architectures",
       downloadCv: "Download CV (PDF)",
       masterBtn: "Master's in AI",
-      linkedin: "LinkedIn"
+      linkedin: "LinkedIn",
+      trustProduction: "100% Production Ready",
+      chipNodeReact: "Node.js + React"
     },
     metrics: {
       m1Val: "+€3.6M",
