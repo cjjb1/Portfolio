@@ -1,0 +1,7 @@
+flowchart LR
+  T[("terceros: idTer, Nombre, Nif")] -->|"idTer = id_tercero"| E[("compras.entidades")]
+  E -->|"id_entidad"| C[("compras.entidad_contactos")]
+  T --> V["Vista combinada"]
+  E --> V
+  C --> V
+  V --> D["Selección de destinatarios"]

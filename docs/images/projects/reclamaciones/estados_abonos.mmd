@@ -1,0 +1,7 @@
+flowchart TD
+  E["Expediente con estado e importes"] --> A["Adjuntar 1 a 7 justificantes"]
+  A --> V["Validar PDF o imagen admitida"]
+  V --> G["Copiar a almacenamiento permanente y actualizar BD"]
+  G --> S["Mantener ABONADO / COBRADO; si otro, asignar COBRADO"]
+  S --> N["Intentar notificación a Contabilidad por WITrans"]
+  N --> R["Devolver guardado y resultado de notificación por separado"]

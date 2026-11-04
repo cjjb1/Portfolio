@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="reclamaciones.css?v=1">
   <script>
     (function() {
       const savedTheme = localStorage.getItem('portfolio-theme');
@@ -100,9 +101,7 @@
             <span class="status-indicator" data-i18n="projects.statusProd">● En Producción</span>
           </div>
           <h3 class="project-name" data-i18n="projects.p1Name">Reclamaciones &middot; Bobinas de Papel</h3>
-          <p class="project-pitch" data-i18n="projects.p1Pitch">
-            Plataforma web corporativa que centraliza el ciclo de vida íntegro de no conformidades sobre materia prima en rotativas industriales, sustituyendo un sistema manual en Excel. Integra conexión bidireccional en tiempo real con IBM i (AS/400 DB2) vía ODBC, motor dinámico de valoración de mermas y costes por parada, peritaje multimedia y despacho automatizado a proveedores.
-          </p>
+          <p class="project-pitch" data-i18n="projects.p1Pitch">Plataforma web corporativa para gestionar reclamaciones de calidad sobre bobinas y resmas de papel. Conecta React y Express con MySQL e IBM i (AS/400 DB2) mediante ODBC, con puente PHP de respaldo, y reúne valoración económica, evidencias, documentos y seguimiento del expediente.</p>
 
           <!-- Miniaturas Interfaz en Vivo & Lámina Arquitectura -->
           <div class="project-previews-grid">
@@ -127,9 +126,9 @@
               </div>
             </div>
 
-            <div class="project-preview-card" onclick="openLightbox('images/projects/reclamaciones.jpg?v=2', 'Reclamaciones: Esquema de Arquitectura Técnica e Integración')">
+            <div class="project-preview-card" onclick="openLightbox('images/projects/reclamaciones/arquitectura.png', 'Reclamaciones: Esquema de Arquitectura Técnica e Integración')">
               <div class="preview-thumb-wrap is-portrait">
-                <img src="images/projects/reclamaciones.jpg?v=2" alt="Lámina de Arquitectura Reclamaciones" loading="lazy" />
+                <img src="images/projects/reclamaciones/arquitectura.png" alt="Lámina de Arquitectura Reclamaciones" loading="lazy" />
                 <div class="preview-thumb-overlay">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
                 </div>
@@ -139,8 +138,8 @@
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
                   <span data-i18n="projects.archBadge">Lámina de Arquitectura Técnica</span>
                 </div>
-                <h4 class="preview-card-title" data-i18n="projects.p1ArchTitle">Esquema Técnico & Peritaje Industrial</h4>
-                <p class="preview-card-desc" data-i18n="projects.p1ArchDesc">Topología de 6 servidores, puente DB2 persistente, motor de cálculo de mermas, hub FFmpeg y pasarela WITrans.</p>
+                <h4 class="preview-card-title" data-i18n="projects.p1ArchTitle">Arquitectura de la plataforma</h4>
+                <p class="preview-card-desc" data-i18n="projects.p1ArchDesc">Mapa visual de React, Express, MySQL, integración AS/400 y gestión documental con WITrans.</p>
                 <span class="preview-card-link">
                   <span data-i18n="projects.archExpand">Ampliar esquema técnico</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -149,6 +148,109 @@
             </div>
           </div>
           
+<section class="rec-gallery" aria-labelledby="rec-gallery-title">
+ <div class="rec-intro"><span class="doc-section-tag" data-i18n="reclamaciones.tag">Colección visual · 8 láminas</span>
+ <h2 id="rec-gallery-title" data-i18n="reclamaciones.heading">Reclamaciones, de un vistazo</h2>
+ <p data-i18n="reclamaciones.intro">Explora la arquitectura y el recorrido del expediente: desde la identificación del papel hasta el seguimiento económico. Amplía cada lámina o despliega su diagrama de flujo.</p></div>
+ <nav class="rec-index" aria-label="Índice de láminas"><a href="#lamina-arquitectura"><span>01</span> <span data-i18n="reclamaciones.title0">Arquitectura de la plataforma</span></a><a href="#lamina-flujo"><span>02</span> <span data-i18n="reclamaciones.title1">De la incidencia al abono</span></a><a href="#lamina-calculos_mermas"><span>03</span> <span data-i18n="reclamaciones.title2">Cálculos y mermas</span></a><a href="#lamina-integracion_as400"><span>04</span> <span data-i18n="reclamaciones.title3">Integración con AS/400</span></a><a href="#lamina-datos_contactos"><span>05</span> <span data-i18n="reclamaciones.title4">Datos y contactos</span></a><a href="#lamina-evidencias_witrans"><span>06</span> <span data-i18n="reclamaciones.title5">Evidencias y WITrans</span></a><a href="#lamina-estados_abonos"><span>07</span> <span data-i18n="reclamaciones.title6">Estados y abonos</span></a><a href="#lamina-acceso_permisos"><span>08</span> <span data-i18n="reclamaciones.title7">Acceso y permisos</span></a></nav><div class="rec-grid"><article class="rec-card" id="lamina-arquitectura">
+  <div class="rec-card-heading"><span class="rec-number">01</span><h3 data-i18n="reclamaciones.title0">Arquitectura de la plataforma</h3></div>
+  <a class="rec-image" href="images/projects/reclamaciones/arquitectura.png" data-rec-lightbox>
+    <img src="images/projects/reclamaciones/arquitectura.webp" width="1672" height="941" alt="Arquitectura de la plataforma: lámina visual de Reclamaciones" loading="lazy" decoding="async">
+    <span data-i18n="reclamaciones.expand">Ampliar lámina</span>
+  </a>
+  <p data-i18n="reclamaciones.desc0">React y Express conectan los expedientes con MySQL, DB2 y WITrans.</p>
+  <details><summary data-i18n="reclamaciones.flow">Ver diagrama de flujo</summary>
+    <a class="rec-diagram" href="images/projects/reclamaciones/arquitectura.svg" target="_blank" rel="noopener"><img src="images/projects/reclamaciones/arquitectura.svg" alt="Diagrama de flujo: Arquitectura de la plataforma" loading="lazy"></a>
+    <p class="rec-note" data-i18n="reclamaciones.note0">Relaciones lógicas entre componentes; no representa una topología física de servidores.</p>
+    <a href="images/projects/reclamaciones/arquitectura.mmd" download data-i18n="reclamaciones.editable">Descargar diagrama editable (Mermaid)</a>
+  </details>
+</article><article class="rec-card" id="lamina-flujo">
+  <div class="rec-card-heading"><span class="rec-number">02</span><h3 data-i18n="reclamaciones.title1">De la incidencia al abono</h3></div>
+  <a class="rec-image" href="images/projects/reclamaciones/flujo.png" data-rec-lightbox>
+    <img src="images/projects/reclamaciones/flujo.webp" width="1672" height="941" alt="De la incidencia al abono: lámina visual de Reclamaciones" loading="lazy" decoding="async">
+    <span data-i18n="reclamaciones.expand">Ampliar lámina</span>
+  </a>
+  <p data-i18n="reclamaciones.desc1">Alta, identificación del papel, valoración, documentación, envío y seguimiento.</p>
+  <details><summary data-i18n="reclamaciones.flow">Ver diagrama de flujo</summary>
+    <a class="rec-diagram" href="images/projects/reclamaciones/flujo.svg" target="_blank" rel="noopener"><img src="images/projects/reclamaciones/flujo.svg" alt="Diagrama de flujo: De la incidencia al abono" loading="lazy"></a>
+    <p class="rec-note" data-i18n="reclamaciones.note1">Recorrido orientativo: admite revisión y distintos resultados; no todos los casos llegan al abono.</p>
+    <a href="images/projects/reclamaciones/flujo.mmd" download data-i18n="reclamaciones.editable">Descargar diagrama editable (Mermaid)</a>
+  </details>
+</article><article class="rec-card" id="lamina-calculos_mermas">
+  <div class="rec-card-heading"><span class="rec-number">03</span><h3 data-i18n="reclamaciones.title2">Cálculos y mermas</h3></div>
+  <a class="rec-image" href="images/projects/reclamaciones/calculos_mermas.png" data-rec-lightbox>
+    <img src="images/projects/reclamaciones/calculos_mermas.webp" width="1672" height="941" alt="Cálculos y mermas: lámina visual de Reclamaciones" loading="lazy" decoding="async">
+    <span data-i18n="reclamaciones.expand">Ampliar lámina</span>
+  </a>
+  <p data-i18n="reclamaciones.desc2">Paradas, kilos de papel, reglas por máquina y papelero, e importes pendientes.</p>
+  <details><summary data-i18n="reclamaciones.flow">Ver diagrama de flujo</summary>
+    <a class="rec-diagram" href="images/projects/reclamaciones/calculos_mermas.svg" target="_blank" rel="noopener"><img src="images/projects/reclamaciones/calculos_mermas.svg" alt="Diagrama de flujo: Cálculos y mermas" loading="lazy"></a>
+    <p class="rec-note" data-i18n="reclamaciones.note2">El diagrama sintetiza el motor de backend; existen cálculos adicionales en la interfaz.</p>
+    <a href="images/projects/reclamaciones/calculos_mermas.mmd" download data-i18n="reclamaciones.editable">Descargar diagrama editable (Mermaid)</a>
+  </details>
+</article><article class="rec-card" id="lamina-integracion_as400">
+  <div class="rec-card-heading"><span class="rec-number">04</span><h3 data-i18n="reclamaciones.title3">Integración con AS/400</h3></div>
+  <a class="rec-image" href="images/projects/reclamaciones/integracion_as400.png" data-rec-lightbox>
+    <img src="images/projects/reclamaciones/integracion_as400.webp" width="1672" height="941" alt="Integración con AS/400: lámina visual de Reclamaciones" loading="lazy" decoding="async">
+    <span data-i18n="reclamaciones.expand">Ampliar lámina</span>
+  </a>
+  <p data-i18n="reclamaciones.desc3">Consulta ODBC de bobinas e IFRA con puente PHP de respaldo ante fallos.</p>
+  <details><summary data-i18n="reclamaciones.flow">Ver diagrama de flujo</summary>
+    <a class="rec-diagram" href="images/projects/reclamaciones/integracion_as400.svg" target="_blank" rel="noopener"><img src="images/projects/reclamaciones/integracion_as400.svg" alt="Diagrama de flujo: Integración con AS/400" loading="lazy"></a>
+    <p class="rec-note" data-i18n="reclamaciones.note3">Una consulta ODBC sin resultados no activa por sí sola el respaldo PHP.</p>
+    <a href="images/projects/reclamaciones/integracion_as400.mmd" download data-i18n="reclamaciones.editable">Descargar diagrama editable (Mermaid)</a>
+  </details>
+</article><article class="rec-card" id="lamina-datos_contactos">
+  <div class="rec-card-heading"><span class="rec-number">05</span><h3 data-i18n="reclamaciones.title4">Datos y contactos</h3></div>
+  <a class="rec-image" href="images/projects/reclamaciones/datos_contactos.png" data-rec-lightbox>
+    <img src="images/projects/reclamaciones/datos_contactos.webp" width="1672" height="941" alt="Datos y contactos: lámina visual de Reclamaciones" loading="lazy" decoding="async">
+    <span data-i18n="reclamaciones.expand">Ampliar lámina</span>
+  </a>
+  <p data-i18n="reclamaciones.desc4">Datos maestros de terceros, entidades locales y contactos para los envíos.</p>
+  <details><summary data-i18n="reclamaciones.flow">Ver diagrama de flujo</summary>
+    <a class="rec-diagram" href="images/projects/reclamaciones/datos_contactos.svg" target="_blank" rel="noopener"><img src="images/projects/reclamaciones/datos_contactos.svg" alt="Diagrama de flujo: Datos y contactos" loading="lazy"></a>
+    <p class="rec-note" data-i18n="reclamaciones.note4">El cruce entre conexiones MySQL se realiza en la aplicación.</p>
+    <a href="images/projects/reclamaciones/datos_contactos.mmd" download data-i18n="reclamaciones.editable">Descargar diagrama editable (Mermaid)</a>
+  </details>
+</article><article class="rec-card" id="lamina-evidencias_witrans">
+  <div class="rec-card-heading"><span class="rec-number">06</span><h3 data-i18n="reclamaciones.title5">Evidencias y WITrans</h3></div>
+  <a class="rec-image" href="images/projects/reclamaciones/evidencias_witrans.png" data-rec-lightbox>
+    <img src="images/projects/reclamaciones/evidencias_witrans.webp" width="1672" height="941" alt="Evidencias y WITrans: lámina visual de Reclamaciones" loading="lazy" decoding="async">
+    <span data-i18n="reclamaciones.expand">Ampliar lámina</span>
+  </a>
+  <p data-i18n="reclamaciones.desc5">PDF, fotografías y vídeos reunidos en un paquete con registro de envío.</p>
+  <details><summary data-i18n="reclamaciones.flow">Ver diagrama de flujo</summary>
+    <a class="rec-diagram" href="images/projects/reclamaciones/evidencias_witrans.svg" target="_blank" rel="noopener"><img src="images/projects/reclamaciones/evidencias_witrans.svg" alt="Diagrama de flujo: Evidencias y WITrans" loading="lazy"></a>
+    <p class="rec-note" data-i18n="reclamaciones.note5">Si falla la conversión de vídeo, el envío puede continuar con el archivo original.</p>
+    <a href="images/projects/reclamaciones/evidencias_witrans.mmd" download data-i18n="reclamaciones.editable">Descargar diagrama editable (Mermaid)</a>
+  </details>
+</article><article class="rec-card" id="lamina-estados_abonos">
+  <div class="rec-card-heading"><span class="rec-number">07</span><h3 data-i18n="reclamaciones.title6">Estados y abonos</h3></div>
+  <a class="rec-image" href="images/projects/reclamaciones/estados_abonos.png" data-rec-lightbox>
+    <img src="images/projects/reclamaciones/estados_abonos.webp" width="1672" height="941" alt="Estados y abonos: lámina visual de Reclamaciones" loading="lazy" decoding="async">
+    <span data-i18n="reclamaciones.expand">Ampliar lámina</span>
+  </a>
+  <p data-i18n="reclamaciones.desc6">Resultados del expediente, justificantes y notificación a Contabilidad.</p>
+  <details><summary data-i18n="reclamaciones.flow">Ver diagrama de flujo</summary>
+    <a class="rec-diagram" href="images/projects/reclamaciones/estados_abonos.svg" target="_blank" rel="noopener"><img src="images/projects/reclamaciones/estados_abonos.svg" alt="Diagrama de flujo: Estados y abonos" loading="lazy"></a>
+    <p class="rec-note" data-i18n="reclamaciones.note6">Guardar justificantes y notificar son resultados separados; adjuntar documentos no acredita un cobro bancario.</p>
+    <a href="images/projects/reclamaciones/estados_abonos.mmd" download data-i18n="reclamaciones.editable">Descargar diagrama editable (Mermaid)</a>
+  </details>
+</article><article class="rec-card" id="lamina-acceso_permisos">
+  <div class="rec-card-heading"><span class="rec-number">08</span><h3 data-i18n="reclamaciones.title7">Acceso y permisos</h3></div>
+  <a class="rec-image" href="images/projects/reclamaciones/acceso_permisos.png" data-rec-lightbox>
+    <img src="images/projects/reclamaciones/acceso_permisos.webp" width="1672" height="941" alt="Acceso y permisos: lámina visual de Reclamaciones" loading="lazy" decoding="async">
+    <span data-i18n="reclamaciones.expand">Ampliar lámina</span>
+  </a>
+  <p data-i18n="reclamaciones.desc7">Identidad Windows, autorización local y permisos por acción.</p>
+  <details><summary data-i18n="reclamaciones.flow">Ver diagrama de flujo</summary>
+    <a class="rec-diagram" href="images/projects/reclamaciones/acceso_permisos.svg" target="_blank" rel="noopener"><img src="images/projects/reclamaciones/acceso_permisos.svg" alt="Diagrama de flujo: Acceso y permisos" loading="lazy"></a>
+    <p class="rec-note" data-i18n="reclamaciones.note7">Los usuarios nuevos quedan pendientes de autorización; las acciones revisan permisos específicos.</p>
+    <a href="images/projects/reclamaciones/acceso_permisos.mmd" download data-i18n="reclamaciones.editable">Descargar diagrama editable (Mermaid)</a>
+  </details>
+</article></div>
+ <p class="rec-source" data-i18n="reclamaciones.source">Documentación visual basada en la revisión del código del 3 de noviembre de 2026. Los diagramas representan relaciones y recorridos conceptuales.</p>
+</section>
           <div class="project-kpis">
             <div class="kpi-box">
               <span class="kpi-num" data-i18n="projects.p1Kpi1Num">280–300 t/año</span>
@@ -167,32 +269,7 @@
           <!-- Ficha Técnica Directa (Desplegada) -->
           <div class="project-tech-specs">
             <!-- Resumen Ejecutivo / Hero Quote -->
-            <div class="doc-hero-quote" data-i18n-html="projects.docHeroQuoteRec">
-              <strong>Reclamaciones · Bobinas de Papel</strong> es la plataforma web industrial integral en <strong>React 18 + Vite 5 + Node.js (IISNode)</strong> desarrollada para <strong>Walstead Iberia (Rotocobrhi S.A.U.)</strong>. Digitaliza el ciclo de vida completo de no conformidades sobre materia prima en rotativas de impresión, integrando en tiempo real con <strong>IBM AS/400 (DB2)</strong> vía sockets persistentes, automatizando la valoración de paradas mecánicas y despachando expedientes periciales con transcodificación FFmpeg y entrega cifrada vía <strong>WITrans</strong>.
-            </div>
-
-            <!-- 1. Lámina Visual de Arquitectura (Handwritten Notes) -->
-            <div class="doc-section-card">
-              <div class="doc-section-header">
-                <div class="doc-section-title-wrap">
-                  <span style="font-size: 1.2rem;">🎨</span>
-                  <h4 class="doc-section-title" data-i18n="projects.docSec1TitleRec">Lámina Visual de Arquitectura (Handwritten Notes)</h4>
-                </div>
-                <span class="doc-section-tag" data-i18n="projects.docSec1TagRec">Sketchnote Técnico</span>
-              </div>
-              <div class="doc-media-wrap" onclick="openLightbox('images/projects/reclamaciones.jpg?v=2', 'Reclamaciones: Lámina de Arquitectura Sketchnote (Handwritten Notes)')">
-                <img src="images/projects/reclamaciones.jpg?v=2" alt="Lámina de Arquitectura Sketchnote de Reclamaciones" loading="lazy" />
-                <div class="doc-media-overlay">
-                  <span class="doc-media-badge">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-                    <span data-i18n="projects.docSec1ZoomRec">Ampliar lámina a resolución completa</span>
-                  </span>
-                </div>
-              </div>
-              <p style="font-size: 0.82rem; color: #94a3b8; margin: 0;" data-i18n="projects.docSec1DescRec">
-                Representación visual de la arquitectura técnica, topología de 6 servidores, catálogo de 10 módulos nucleares, fórmulas de parada y pipeline pericial.
-              </p>
-            </div>
+            <div class="doc-hero-quote" data-i18n-html="projects.docHeroQuoteRec"><strong>Reclamaciones · Bobinas de Papel</strong> reúne identificación del material, valoración de paradas y mermas, preparación de evidencias y PDF, envío por WITrans y seguimiento económico. La integración industrial utiliza <strong>ODBC como vía principal</strong> y un puente PHP de respaldo ante fallos.</div>
 
             <!-- 2. Topología de Infraestructura y Servidores -->
             <div class="doc-section-card">
@@ -471,7 +548,7 @@
             <div class="project-bullets" style="margin-bottom: 0;">
               <h4 data-i18n="projects.techAspects">Aspectos Técnicos Clave:</h4>
               <ul>
-                <li data-i18n-html="projects.p1Bullet1"><strong>Puente Industrial Ultrarrápido (&lt;100ms) con AS/400 DB2:</strong> Conexión persistente mediante <code>odbc_pconnect</code> en el servidor de integración que elimina la latencia de handshake, autocompletando bobinas, gramajes, albaranes y proveedores al vuelo.</li>
+                <li data-i18n-html="projects.p1Bullet1"><strong>Integración AS/400 DB2:</strong> consulta de códigos de bobina e IFRA por ODBC, con puente PHP de respaldo ante fallos. Los datos industriales alimentan el formulario y los cálculos.</li>
                 <li data-i18n-html="projects.p1Bullet2"><strong>Motor de Paradas Múltiples y Tarifas Escalonadas de Taller:</strong> Algoritmo de cálculo en caliente que liquida mermas de papel (continuo o resmas KBA) y computa penalizaciones horarias específicas por rotativa: Litho IV/V (1.300 €/h), Litho II/VII (900 €/h) y M-606/Rotoman (700 €/h).</li>
                 <li data-i18n-html="projects.p1Bullet3"><strong>Hub Multimedia &amp; Transcodificación Asíncrona FFmpeg:</strong> Optimización de imágenes en cliente con compresión Canvas y conversión automática de vídeos en formato <code>.avi</code> de cámaras de planta a <code>.mp4</code> (H.264/AAC), logrando reducciones del 75% al 90% en peso sin perder nitidez probatoria.</li>
                 <li data-i18n-html="projects.p1Bullet4"><strong>Emisión Documental Client-Side Multilingüe en 5 Idiomas:</strong> Generación instantánea en navegador mediante <code>@react-pdf/renderer</code> de la Ficha Técnica pericial y la Carta Oficial de Reclamación con anexos fotográficos en español, inglés, francés, italiano y alemán.</li>
@@ -549,6 +626,7 @@
   </div>
 
   <script src="translations.js?v=2"></script>
+  <script src="reclamaciones.js?v=1"></script>
   <script src="script.js?v=2"></script>
 </body>
 </html>

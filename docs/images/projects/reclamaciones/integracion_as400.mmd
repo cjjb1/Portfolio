@@ -1,0 +1,9 @@
+flowchart TD
+  E["Código interno o IFRA"] --> N["Validar números y resolver MTLIN"]
+  N --> O["Consultar por ODBC"]
+  O -->|"Resultado"| R["Datos industriales"]
+  O -->|"Fallo"| H["Puente PHP por HTTP"]
+  H -->|"Resultado"| R
+  H -->|"No disponible"| F["Gestionar error o simulación según entorno"]
+  R --> U["Pedido, formulario y cálculos"]
+  K["Resmas KBA"] --> A["Entrada manual"]

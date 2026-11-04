@@ -1,0 +1,13 @@
+flowchart TD
+  N["NTLM directo"] --> I["Resolver y normalizar identidad"]
+  H["Cabeceras IIS"] --> I
+  I -->|"Sin identidad"| E["401"]
+  I --> P["Leer permissions.json"]
+  P --> C{"Usuario registrado"}
+  C -->|"Sí"| R["Rol y permisos asignados"]
+  C -->|"No"| V["Registrar pendiente con permisos vacíos"]
+  R --> A["auth/me e interfaz"]
+  V --> A
+  A -->|"Sin permisos"| S["Solicitar autorización"]
+  R --> G["Comprobación del permiso requerido en rutas"]
+  G -->|"Falta permiso"| F["403"]

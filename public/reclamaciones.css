@@ -1,0 +1,25 @@
+/* Visual documentation scoped to the Reclamaciones project page. */
+.rec-gallery { margin: 2.5rem 0; min-width: 0; }
+.rec-intro { max-width: 760px; margin-bottom: 1.4rem; }
+.rec-intro h2 { font-size: clamp(1.65rem, 3vw, 2.4rem); line-height: 1.2; margin: 1rem 0; }
+.rec-intro p, .rec-card p { line-height: 1.7; color: var(--text-secondary, #94a3b8); }
+.rec-index { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.5rem 0; }
+.rec-index a { display: inline-flex; gap: .5rem; border: 1px solid var(--border-color, #334155); border-radius: 999px; padding: .5rem .85rem; font-size: .8rem; color: inherit; text-decoration: none; }
+.rec-index a > span:first-child, .rec-number { color: var(--accent, #188bf6); font-family: monospace; }
+.rec-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.rec-card { min-width: 0; padding: 1.25rem; border: 1px solid var(--border-color, #334155); border-radius: 18px; scroll-margin-top: 110px; }
+.rec-card-heading { display: flex; align-items: baseline; gap: .65rem; margin-bottom: 1rem; }
+.rec-card-heading h3 { margin: 0; font-size: 1.1rem; }
+.rec-image { position: relative; display: block; border-radius: 10px; overflow: hidden; background: white; }
+.rec-image img { display: block; width: 100%; height: auto; }
+.rec-image > span { display: block; padding: .55rem; background: #102c42; color: white; text-align: center; font-size: .8rem; }
+.rec-card > p { margin: 1rem 0; font-size: .9rem; }
+.rec-card details { border-top: 1px solid var(--border-color, #334155); padding-top: .9rem; }
+.rec-card summary { cursor: pointer; font-weight: 600; font-size: .9rem; }
+.rec-diagram { display: block; margin-top: 1rem; border-radius: 8px; background: white; overflow: hidden; }
+.rec-diagram img { display: block; width: 100%; height: auto; }
+.rec-card .rec-note, .rec-card details > a:last-child, .rec-source { font-size: .8rem; line-height: 1.6; }
+.rec-source { margin-top: 1.25rem; color: var(--text-secondary, #94a3b8); }
+.rec-index a:hover, .rec-index a:focus-visible { border-color: #188bf6; }
+.rec-gallery a:focus-visible, .rec-gallery summary:focus-visible { outline: 3px solid #188bf6; outline-offset: 4px; }
+@media (max-width: 760px) { .rec-grid { grid-template-columns: 1fr; } .rec-card { padding: 1rem; } }

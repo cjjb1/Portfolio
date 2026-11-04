@@ -1,0 +1,8 @@
+flowchart LR
+  D["Bobinas únicas + máquina + papelero"] --> M["Configurar tiempos y mermas"]
+  M --> P["Calcular paradas"]
+  D --> K["Determinar kilos y precios por bobina"]
+  K --> V["Valorar papel según propiedad e importe informado"]
+  P --> T["Total reclamado"]
+  V --> T
+  T --> S["Saldos: abonado y pendiente"]

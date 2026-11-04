@@ -1,0 +1,13 @@
+flowchart TD
+  A["Alta: año, número, máquina e incidencia"] --> B{"Tipo de material"}
+  B -->|"Bobinas"| C["Buscar código / IFRA en AS/400"]
+  B -->|"Resmas KBA"| D["Introducir datos técnicos manuales"]
+  C --> E["Valorar paradas, mermas y papel"]
+  D --> E
+  E --> F["Guardar / revisar expediente"]
+  F --> G["Preparar PDF y evidencias"]
+  G --> H["Enviar por WITrans y registrar envío"]
+  H --> I["Seguir estados e importes"]
+  I --> J{"Resultado"}
+  J -->|"Si hay abono"| K["Adjuntar justificantes y notificar Contabilidad"]
+  J -->|"Otros resultados"| L["Actualizar seguimiento"]
