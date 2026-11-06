@@ -1,0 +1,9 @@
+flowchart LR
+  F["Fotos + vídeos + otros archivos"] --> C["Cliente: comprimir imágenes"]
+  P["Cliente: generar ficha e informe PDF"] --> U["Multer: temporales"]
+  C --> U
+  U --> V["Servidor: intentar AVI a MP4"]
+  V --> Z["Crear ZIP único"]
+  Z --> W["Enviar a WITrans"]
+  W --> H["Guardar respuesta e histórico"]
+  U --> L["Limpieza de temporales"]

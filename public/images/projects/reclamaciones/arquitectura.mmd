@@ -1,0 +1,15 @@
+flowchart LR
+  U["Usuario corporativo"] --> F["React + Vite"]
+  F <-->|"API REST / archivos"| B["Node.js + Express"]
+  A["Windows: NTLM o cabeceras IIS"] --> B
+  P["Permisos locales"] --> B
+  B <-->|"Sequelize / SQL"| C[("MySQL · compras")]
+  B <-->|"Datos de terceros"| T[("MySQL · facturación / terceros")]
+  B <-->|"ODBC"| D[("IBM AS/400 · DB2")]
+  B <-->|"Respaldo HTTP"| H["Puente PHP"]
+  H <--> D
+  B --> W["WITrans"]
+  F --> PDF["PDF: ficha e informe"]
+  F --> CSV["Exportación CSV para Excel"]
+  B --> M["FFmpeg / temporales / abonos"]
+  B -->|"Avisos WebSocket"| F
