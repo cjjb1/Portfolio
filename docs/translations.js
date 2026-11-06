@@ -6,7 +6,7 @@
 window.I18N = {
   es: {
     meta: {
-      title: "Carlos Juárez | Senior AI Full Stack Developer | GenAI & AI Agents",
+      title: "Carlos Juárez | Senior Full Stack & Agentic AI Engineer",
       desc: "Portfolio profesional de Carlos Juárez - Senior AI Full Stack Developer especializado en GenAI, Agentes Inteligentes, integraciones On-Premise con AS/400 (IBM i) y Cloud."
     },
     nav: {
@@ -23,8 +23,8 @@ window.I18N = {
     },
     hero: {
       badge: "Node.js · TypeScript · Go · Python · GenAI & MCP",
-      titleLine1: "Senior AI Full Stack Developer",
-      titleLine2: "GenAI & AI Agents",
+      titleLine1: "Senior Full Stack &",
+      titleLine2: "Agentic AI Engineer",
       subtitle: "Desarrollo <strong>aplicaciones y agentes inteligentes</strong> enfocados en eliminar fricciones operativas y acelerar la productividad del negocio. Conecto la infraestructura <strong>on&#8209;premise</strong> con arquitecturas <strong>cloud seguras</strong> y automatizaciones avanzadas, desarrollando soluciones llave en mano bajo metodología <strong>Spec&#8209;Driven</strong> con impacto directo en el <strong>ahorro de costes</strong>.",
       viewProjects: "Ver Arquitecturas",
       downloadCv: "Descargar CV (PDF)",
@@ -680,7 +680,7 @@ window.I18N = {
 
   en: {
     meta: {
-      title: "Carlos Juárez | Senior AI Full Stack Developer | GenAI & AI Agents",
+      title: "Carlos Juárez | Senior Full Stack & Agentic AI Engineer",
       desc: "Professional portfolio of Carlos Juárez - Senior AI Full Stack Developer specialized in GenAI, Intelligent Autonomous Agents, On-Premise AS/400 (IBM i) integrations and Cloud architectures."
     },
     nav: {
@@ -697,8 +697,8 @@ window.I18N = {
     },
     hero: {
       badge: "Node.js · TypeScript · Go · Python · GenAI & MCP",
-      titleLine1: "Senior AI Full Stack Developer",
-      titleLine2: "GenAI & AI Agents",
+      titleLine1: "Senior Full Stack &",
+      titleLine2: "Agentic AI Engineer",
       subtitle: "I develop <strong>intelligent applications and AI agents</strong> focused on eliminating operational friction and accelerating business productivity. I bridge <strong>on&#8209;premise</strong> infrastructure with secure <strong>cloud architectures</strong> and advanced automation, delivering turnkey solutions under <strong>Spec&#8209;Driven</strong> methodology with direct impact on <strong>cost savings</strong>.",
       viewProjects: "View Architectures",
       downloadCv: "Download CV (PDF)",
