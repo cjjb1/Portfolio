@@ -137,6 +137,8 @@ window.I18N = {
       demoExpand: "Abrir aplicación en vivo",
       techAspects: "Aspectos Técnicos Clave:",
       statusProd: "● En Producción",
+      participationEndToEnd: "end-to-end",
+      participationCollaborative: "Colaborativo",
       statusProd247: "● En Producción 24/7",
       statusRender: "● En Producción (Render)",
 
@@ -817,6 +819,8 @@ window.I18N = {
       demoExpand: "Open live demo",
       techAspects: "Key Technical Highlights:",
       statusProd: "● In Production",
+      participationEndToEnd: "end-to-end",
+      participationCollaborative: "Collaborative",
       statusProd247: "● In Production 24/7",
       statusRender: "● In Production (Render)",
 

@@ -1455,6 +1455,43 @@ code {
   gap: 12px;
 }
 
+.project-card-badges {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+}
+
+.project-participation {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.73rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #8cecff;
+  background: rgba(103, 232, 249, 0.12);
+  border: 1px solid rgba(103, 232, 249, 0.35);
+  padding: 3px 9px;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+.project-participation::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+[data-theme="light"] .project-participation {
+  color: #075985;
+  background: #e0f7ff;
+  border-color: #9de7f5;
+}
+
 .project-card-footer .status-indicator {
   display: inline-flex;
   align-items: center;
@@ -2841,7 +2878,8 @@ code {
     gap: 8px;
     padding-top: 12px;
   }
-  .project-card-footer .status-indicator {
+  .project-card-footer .status-indicator,
+  .project-card-footer .project-participation {
     font-size: 0.68rem;
     padding: 2px 8px;
   }
