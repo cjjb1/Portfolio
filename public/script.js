@@ -122,15 +122,15 @@ function setLanguage(lang) {
       cvPreviewWrapper.setAttribute('onclick', "openLightbox('images/cv-preview-en.png', 'Professional Curriculum Vitae - Carlos Juárez')");
     }
   } else {
-    if (heroCvBtn) heroCvBtn.setAttribute('href', 'docs/Carlos_Juarez_CV.pdf');
-    if (cvPdfBtn) cvPdfBtn.setAttribute('href', 'docs/Carlos_Juarez_CV.pdf');
+    if (heroCvBtn) heroCvBtn.setAttribute('href', 'docs/Carlos_Juarez_CV.pdf?v=943dfea5');
+    if (cvPdfBtn) cvPdfBtn.setAttribute('href', 'docs/Carlos_Juarez_CV.pdf?v=943dfea5');
     if (cvDocxBtn) cvDocxBtn.setAttribute('href', 'docs/Carlos_Juarez.docx');
     if (cvPreviewImg) {
-      cvPreviewImg.setAttribute('src', 'images/cv-preview.png');
+      cvPreviewImg.setAttribute('src', 'images/cv-preview.png?v=943dfea5');
       cvPreviewImg.setAttribute('alt', 'Curriculum Vitae Carlos Juárez (Español)');
     }
     if (cvPreviewWrapper) {
-      cvPreviewWrapper.setAttribute('onclick', "openLightbox('images/cv-preview.png', 'Curriculum Vitae Profesional - Carlos Juárez')");
+      cvPreviewWrapper.setAttribute('onclick', "openLightbox('images/cv-preview.png?v=943dfea5', 'Curriculum Vitae Profesional - Carlos Juárez')");
     }
   }
 
