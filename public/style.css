@@ -914,6 +914,119 @@ code {
   line-height: 1.5;
 }
 
+.credentials-page .section-credentials {
+  padding: 130px 0 80px;
+  min-height: calc(100vh - 110px);
+}
+
+.credentials-page .section-header {
+  margin-bottom: 40px;
+}
+
+.credentials-page .section-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+}
+
+.credentials-page .section-subtitle {
+  max-width: 840px;
+  font-size: 1rem;
+}
+
+.credentials-page .credentials-grid {
+  max-width: 1280px;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.credentials-page .credential-card {
+  min-width: 0;
+  border-radius: 20px;
+}
+
+.credentials-page .credential-badge-top {
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px 20px;
+}
+
+.credentials-page .cert-preview-wrapper,
+.credentials-page .cv-preview-wrapper {
+  width: 100%;
+  height: clamp(320px, 36vw, 520px);
+  padding: 16px;
+  border: 0;
+  border-bottom: 1px solid var(--border-subtle);
+  font: inherit;
+}
+
+.credentials-page .cert-img,
+.credentials-page .cv-img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.credentials-page .cert-preview-wrapper:focus-visible,
+.credentials-page .cv-preview-wrapper:focus-visible {
+  outline: 3px solid #0ccaff;
+  outline-offset: -3px;
+}
+
+.credentials-page .credential-content {
+  padding: 24px;
+}
+
+.credentials-page .school-logo {
+  font-size: 3rem;
+}
+
+.credentials-page .cert-school {
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.credentials-page .credential-title {
+  font-size: 1.35rem;
+}
+
+.credentials-page .school-name {
+  font-size: 0.9rem;
+}
+
+.credentials-page .credential-actions {
+  gap: 12px;
+  padding-top: 20px;
+}
+
+.credentials-page .credential-actions .btn-sm {
+  padding: 12px 16px;
+  font-size: 0.88rem;
+}
+
+.credentials-page .credential-actions svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 900px) {
+  .credentials-page .credentials-grid {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 480px) {
+  .credentials-page .section-credentials {
+    padding: 110px 0 48px;
+  }
+  .credentials-page .credential-content {
+    padding: 20px 16px;
+  }
+  .credentials-page .credential-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .credentials-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

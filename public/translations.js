@@ -11,7 +11,7 @@ window.I18N = {
     },
     nav: {
       about: "Perfil",
-      credentials: "CV & Máster IA",
+      credentials: "CV - Master IA",
       metrics: "Impacto",
       projects: "Proyectos",
       stack: "Stack",
@@ -71,6 +71,8 @@ window.I18N = {
       linkedinBtn: "Perfil en LinkedIn"
     },
     credentials: {
+      pageTitle: "CV - Master IA | Carlos Juárez",
+      pageDescription: "Curriculum Vitae de Carlos Juárez y certificado del Máster en IA e Innovación. Consulta, amplía y descarga los documentos.",
       tag: "Acreditaciones & Trayectoria",
       title: "Curriculum Vitae & Certificación Oficial en IA",
       subtitle: "Especialización de vanguardia en Inteligencia Artificial Generativa y más de 20 años de experiencia técnica liderando proyectos de misión crítica, infraestructura y desarrollo de software.",
@@ -685,7 +687,7 @@ window.I18N = {
     },
     nav: {
       about: "About",
-      credentials: "CV & AI Master",
+      credentials: "CV - Master IA",
       metrics: "Impact",
       projects: "Projects",
       stack: "Tech Stack",
@@ -745,6 +747,8 @@ window.I18N = {
       linkedinBtn: "LinkedIn Profile"
     },
     credentials: {
+      pageTitle: "CV - Master IA | Carlos Juárez",
+      pageDescription: "Carlos Juárez's Curriculum Vitae and AI and Innovation Master's certificate. View, enlarge and download the documents.",
       tag: "Credentials & Track Record",
       title: "Curriculum Vitae & Official AI Certification",
       subtitle: "Cutting-edge specialization in Generative Artificial Intelligence paired with 20+ years of technical leadership in mission-critical projects, infrastructure, and software engineering.",
