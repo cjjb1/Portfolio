@@ -347,28 +347,13 @@ code {
   z-index: 1;
 }
 
-.hero-workflow {
-  position: relative;
-  z-index: 1;
-  max-width: 1440px;
-  margin: clamp(32px, 5vw, 64px) auto 0;
-}
-
-.hero-workflow a {
+.showcase-link {
   display: block;
-  border-radius: 20px;
-  overflow: hidden;
 }
 
-.hero-workflow a:focus-visible {
+.showcase-link:focus-visible {
   outline: 3px solid var(--accent-primary, #0ccaff);
-  outline-offset: 5px;
-}
-
-.hero-workflow img {
-  display: block;
-  width: 100%;
-  height: auto;
+  outline-offset: -3px;
 }
 
 .hero-content {
@@ -512,16 +497,10 @@ code {
 .showcase-img {
   width: 100%;
   height: auto;
-  min-height: 380px;
-  max-height: 560px;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   transition: transform 0.4s ease;
-}
-
-.showcase-frame:hover .showcase-img {
-  transform: scale(1.025);
 }
 
 /* Capa de degradado envolvente estilo GoHighLevel (desde negro/azul espacial hacia los bordes) */
