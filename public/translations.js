@@ -44,7 +44,7 @@ window.I18N = {
       m4Desc: "Soberanía de datos, Paperless y procesos 24/7"
     },
     carousel: {
-      tag: "Ecosistema Tecnológico · Herramientas & Protocolos"
+      aria: "Galería de tecnologías"
     },
     about: {
       tag: "Perfil Profesional",
@@ -718,7 +718,7 @@ window.I18N = {
       m4Desc: "Data sovereignty, Paperless & 24/7 autonomous workflows"
     },
     carousel: {
-      tag: "Technology Ecosystem · Core Tools & Protocols"
+      aria: "Technology gallery"
     },
     about: {
       tag: "Professional Profile",

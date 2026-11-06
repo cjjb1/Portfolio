@@ -3397,7 +3397,7 @@ code {
 }
 
 .tech-carousel-section {
-  padding: 3rem 0 2.75rem;
+  padding: 3.5rem 0;
   background: rgba(14, 19, 31, 0.7);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
@@ -3437,12 +3437,34 @@ code {
   display: flex;
   width: max-content;
   gap: 1.25rem;
+  padding-right: 1.25rem;
   animation: tech-marquee 65s linear infinite;
   will-change: transform;
 }
 
-.tech-carousel-wrapper:hover .tech-carousel-track {
+.tech-carousel-wrapper:hover .tech-carousel-track,
+.tech-carousel-wrapper:focus-within .tech-carousel-track {
   animation-play-state: paused;
+}
+
+.tech-carousel-wrapper:focus-visible {
+  outline: 2px solid var(--accent-primary, #0ccaff);
+  outline-offset: -2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-carousel-wrapper {
+    overflow-x: auto;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  .tech-carousel-track {
+    animation: none;
+    will-change: auto;
+  }
+  .tech-carousel-item[aria-hidden="true"] {
+    display: none;
+  }
 }
 
 @keyframes tech-marquee {
@@ -3516,6 +3538,7 @@ code {
   }
   .tech-carousel-track {
     gap: 0.95rem;
+    padding-right: 0.95rem;
     animation-duration: 50s;
   }
   .tech-carousel-item {
