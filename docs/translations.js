@@ -15,7 +15,7 @@ window.I18N = {
       metrics: "Impacto",
       projects: "Proyectos",
       stack: "Stack",
-      contact: "Contacto",
+      contact: "Contactos",
       themeAria: "Cambiar a modo diurno o nocturno",
       themeTitle: "Alternar modo diurno / nocturno",
       langAria: "Cambiar idioma a Inglés",
@@ -102,6 +102,8 @@ window.I18N = {
       cvLinkedin: "LinkedIn"
     },
     projects: {
+      pageTitle: "Proyectos | Carlos Juárez",
+      pageDescription: "Proyectos corporativos en producción: arquitecturas, integraciones, automatización e inteligencia artificial.",
       tag: "Casos de Éxito Reales",
       title: "Proyectos Corporativos & de Producción",
       subtitle: "Sistemas en producción activa diseñados para resolver problemáticas críticas de negocio. Selecciona cualquiera de los proyectos para explorar su arquitectura técnica, flujos operativos y memoria técnica detallada.",
@@ -658,6 +660,8 @@ window.I18N = {
       c4Item4: "<strong>Ciberseguridad:</strong> Cifrado AES, 2FA, gestión de secretos (DPAPI) y GeoIP."
     },
     contact: {
+      pageTitle: "Contactos | Carlos Juárez",
+      pageDescription: "Contacta con Carlos Juárez por correo electrónico, LinkedIn o GitHub para conversar sobre oportunidades profesionales.",
       tag: "Contacto Profesional",
       title: "¿Interesado en mi perfil?",
       subtitle: "Abierto a conversar sobre <strong>oportunidades profesionales</strong> y posiciones donde aportar experiencia en arquitecturas de misión crítica e <strong>inteligencia artificial</strong>.",
@@ -778,6 +782,8 @@ window.I18N = {
       cvLinkedin: "LinkedIn"
     },
     projects: {
+      pageTitle: "Projects | Carlos Juárez",
+      pageDescription: "Corporate projects in production: architectures, integrations, automation and artificial intelligence.",
       tag: "Proven Track Record",
       title: "Enterprise & Production Projects",
       subtitle: "Production-ready enterprise systems designed to solve mission-critical challenges. Select any project to explore its technical architecture, operational flows, and comprehensive technical dossier.",
@@ -1334,6 +1340,8 @@ window.I18N = {
       c4Item4: "<strong>Cybersecurity:</strong> AES-256 encryption, 2FA, DPAPI secret management, and GeoIP threat intelligence."
     },
     contact: {
+      pageTitle: "Contact | Carlos Juárez",
+      pageDescription: "Contact Carlos Juárez by email, LinkedIn or GitHub to discuss professional opportunities.",
       tag: "Professional Contact",
       title: "Interested in my profile?",
       subtitle: "Open to discussing <strong>career opportunities</strong> and senior roles where I can contribute experience in mission-critical architecture and applied <strong>artificial intelligence</strong>.",

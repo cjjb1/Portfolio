@@ -53,10 +53,11 @@ function setLanguage(lang) {
   localStorage.setItem('portfolio-lang', lang);
 
   // Meta & Page Title
-  if (document.body.dataset.page === 'credentials') {
-    document.title = dict.credentials.pageTitle;
+  const pageDictionary = dict[document.body.dataset.page];
+  if (pageDictionary && pageDictionary.pageTitle) {
+    document.title = pageDictionary.pageTitle;
     const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute('content', dict.credentials.pageDescription);
+    if (metaDesc) metaDesc.setAttribute('content', pageDictionary.pageDescription);
   } else if (dict.meta) {
     if (dict.meta.title) document.title = dict.meta.title;
     const metaDesc = document.querySelector('meta[name="description"]');

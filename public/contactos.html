@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Contactos | Carlos Juárez</title>
+  <meta name="description" content="Contacta con Carlos Juárez por correo electrónico, LinkedIn o GitHub para conversar sobre oportunidades profesionales." />
+  <link rel="stylesheet" href="style.css?v=8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('portfolio-theme');
+      if (savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+      const pathLower = window.location.pathname.toLowerCase();
+      const pathIsEn = pathLower.includes('/en') || window.location.search.includes('lang=en');
+      const savedLang = localStorage.getItem('portfolio-lang');
+      if (pathIsEn || savedLang === 'en') {
+        document.documentElement.lang = 'en';
+      }
+    })();
+  </script>
+</head>
+<body class="content-page contact-page" data-page="contact">
+
+  <!-- Navegación -->
+  <header class="header">
+    <nav class="nav-container">
+      <a href="index.html#hero" class="logo">
+        <span class="logo-mark">&lt;Carlos Juárez/&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#about" data-i18n="nav.about">Perfil</a></li>
+        <li><a href="credentials.html" data-i18n="nav.credentials">CV - Master IA</a></li>
+        <li><a href="index.html#metrics" data-i18n="nav.metrics">Impacto</a></li>
+        <li><a href="proyectos.html" data-i18n="nav.projects">Proyectos</a></li>
+        <li><a href="index.html#skills" data-i18n="nav.stack">Stack</a></li>
+        <li><a href="contactos.html" aria-current="page" class="btn-nav" data-i18n="nav.contact">Contactos</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button id="lang-toggle" class="lang-toggle-btn" aria-label="Cambiar idioma a Inglés / Switch to English" title="Alternar idioma (ES / EN)">
+          <span class="lang-code es active" data-lang="es">ES</span>
+          <span class="lang-divider">/</span>
+          <span class="lang-code en" data-lang="en">EN</span>
+        </button>
+        <a href="https://www.linkedin.com/in/carlosj-juarez/" target="_blank" rel="noopener noreferrer" class="theme-toggle-btn" aria-label="Perfil de LinkedIn" title="Ver perfil en LinkedIn">
+          <img src="images/logos/linkedin.svg" alt="LinkedIn" style="width: 18px; height: 18px; display: block;" />
+        </a>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar a modo diurno o nocturno" title="Alternar modo diurno / nocturno">
+          <svg class="theme-icon theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Contacto -->
+    <section id="contact" class="section section-dark">
+      <div class="container contact-container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="contact.tag">Contacto Profesional</span>
+          <h1 class="section-title" data-i18n="contact.title">¿Interesado en mi perfil?</h1>
+          <p class="section-subtitle" data-i18n-html="contact.subtitle">
+            Abierto a conversar sobre <strong>oportunidades profesionales</strong> y posiciones donde aportar experiencia en arquitecturas de misión crítica e <strong>inteligencia artificial</strong>.
+          </p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-info-list">
+            <div class="c-item">
+              <span class="c-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </span>
+              <div>
+                <span class="c-label" data-i18n="contact.emailLabel">Correo Electrónico</span>
+                <a href="mailto:carlosj.juarez@hotmail.com" class="c-val">carlosj.juarez@hotmail.com</a>
+              </div>
+            </div>
+            <div class="c-item">
+              <span class="c-icon" aria-hidden="true">
+                <img src="images/logos/linkedin.svg" alt="LinkedIn" style="width: 22px; height: 22px; border-radius: 4px;" />
+              </span>
+              <div>
+                <span class="c-label" data-i18n="contact.linkedinLabel">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/carlosj-juarez/" target="_blank" rel="noopener noreferrer" class="c-val">linkedin.com/in/carlosj-juarez</a>
+              </div>
+            </div>
+            <div class="c-item">
+              <span class="c-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" class="github-icon" aria-hidden="true">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                </svg>
+              </span>
+              <div>
+                <span class="c-label" data-i18n="contact.githubLabel">GitHub</span>
+                <a href="https://github.com/cjjb1" target="_blank" rel="noopener noreferrer" class="c-val">github.com/cjjb1</a>
+              </div>
+            </div>
+            <div class="c-item">
+              <span class="c-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin">
+                  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <div>
+                <span class="c-label" data-i18n="contact.locLabel">Ubicación</span>
+                <span class="c-val" data-i18n="contact.locVal">Madrid, España (Disponible en remoto / híbrido)</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-cta">
+            <a href="mailto:carlosj.juarez@hotmail.com" class="btn btn-primary btn-lg" data-i18n="contact.sendBtn">
+              Contactar por Correo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p data-i18n="footer.text">© 2026 Carlos Juárez &middot; Desarrollado con Node.js & Express &middot; Desplegado en Render con GitHub</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/carlosj-juarez/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px;" title="Ver perfil en LinkedIn">
+          <img src="images/logos/linkedin.svg" alt="LinkedIn" style="width: 15px; height: 15px; border-radius: 2px;" />
+          <span data-i18n="hero.linkedin">LinkedIn</span>
+        </a>
+        <a href="https://github.com/cjjb1" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="#contact" data-i18n="footer.backToTop">Subir ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal / Lightbox para ver diagramas e infografías a pantalla completa -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-dialog" onclick="event.stopPropagation()">
+      <div class="lightbox-header">
+        <h4 id="lightbox-title" data-i18n="lightbox.defaultTitle">Infografía de Arquitectura Técnica</h4>
+        <div class="lightbox-controls">
+          <a id="lightbox-download" href="#" target="_blank" class="btn-lightbox-action" title="Abrir imagen original en nueva pestaña">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <span data-i18n="lightbox.openOriginal">Abrir original</span>
+          </a>
+          <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar ventana">✕</button>
+        </div>
+      </div>
+      <div class="lightbox-body">
+        <img id="lightbox-img" src="" alt="Infografía ampliada" />
+      </div>
+    </div>
+  </div>
+
+  <script src="translations.js?v=4"></script>
+  <script src="script.js?v=4"></script>
+</body>
+</html>
