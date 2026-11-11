@@ -110,7 +110,7 @@ window.I18N = {
       title: "Proyectos Corporativos & de Producción",
       subtitle: "Sistemas en producción activa diseñados para resolver problemáticas críticas de negocio. Selecciona cualquiera de los proyectos para explorar su arquitectura técnica, flujos operativos y memoria técnica detallada.",
       viewProject: "Ver Proyecto",
-      filterAll: "Todos los Proyectos",
+      filterAll: "Todos los proyectos",
       filterEndToEnd: "End-to-End",
       filterCollaborative: "Colaborativos",
       zoomBtn: "Ampliar Infografía Técnica",
