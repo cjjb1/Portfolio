@@ -98,6 +98,7 @@ window.I18N = {
       cvH3Label: "AVIS Budget Group & Indra Sistemas (1998 - 2008):",
       cvH3Desc: "IT Infrastructure & Cybersecurity Manager (Grandes cuentas, OTAN)",
       cvDownloadPdf: "Descargar CV (PDF)",
+      cvDownloadEn: "CV en Inglés (PDF)",
       cvDownloadDocx: "Descargar (DOCX)",
       cvLinkedin: "LinkedIn"
     },
@@ -780,6 +781,7 @@ window.I18N = {
       cvH3Label: "AVIS Budget Group & Indra Sistemas (1998 - 2008):",
       cvH3Desc: "IT Infrastructure & Cybersecurity Manager (Enterprise Accounts, NATO)",
       cvDownloadPdf: "Download CV (PDF)",
+      cvDownloadEn: "Spanish CV (PDF)",
       cvDownloadDocx: "Download (DOCX)",
       cvLinkedin: "LinkedIn"
     },

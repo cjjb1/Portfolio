@@ -106,24 +106,27 @@ function setLanguage(lang) {
   // Dynamic CV Links & Previews (ES vs EN)
   const heroCvBtn = document.getElementById('hero-cv-btn');
   const cvPdfBtn = document.getElementById('cv-pdf-btn');
+  const cvEnBtn = document.getElementById('cv-en-btn');
   const cvDocxBtn = document.getElementById('cv-docx-btn');
   const cvPreviewImg = document.getElementById('cv-preview-img');
   const cvPreviewWrapper = document.getElementById('cv-preview-wrapper');
 
   if (lang === 'en') {
-    if (heroCvBtn) heroCvBtn.setAttribute('href', 'docs/Carlos_Juarez_CV_EN.pdf');
-    if (cvPdfBtn) cvPdfBtn.setAttribute('href', 'docs/Carlos_Juarez_CV_EN.pdf');
-    if (cvDocxBtn) cvDocxBtn.setAttribute('href', 'docs/Carlos_Juarez_CV_EN.docx');
+    if (heroCvBtn) heroCvBtn.setAttribute('href', 'docs/Carlos_Juarez_en.pdf?v=7eff3adc');
+    if (cvPdfBtn) cvPdfBtn.setAttribute('href', 'docs/Carlos_Juarez_en.pdf?v=7eff3adc');
+    if (cvEnBtn) cvEnBtn.setAttribute('href', 'docs/Carlos_Juarez_CV.pdf?v=943dfea5');
+    if (cvDocxBtn) cvDocxBtn.setAttribute('href', 'docs/Carlos_Juarez_en.docx');
     if (cvPreviewImg) {
-      cvPreviewImg.setAttribute('src', 'images/cv-preview-en.png');
+      cvPreviewImg.setAttribute('src', 'images/cv-preview-en.png?v=7eff3adc');
       cvPreviewImg.setAttribute('alt', 'Curriculum Vitae Carlos Juárez (English)');
     }
     if (cvPreviewWrapper) {
-      cvPreviewWrapper.setAttribute('onclick', "openLightbox('images/cv-preview-en.png', 'Professional Curriculum Vitae - Carlos Juárez')");
+      cvPreviewWrapper.setAttribute('onclick', "openLightbox('images/cv-preview-en.png?v=7eff3adc', 'Professional Curriculum Vitae - Carlos Juárez')");
     }
   } else {
     if (heroCvBtn) heroCvBtn.setAttribute('href', 'docs/Carlos_Juarez_CV.pdf?v=943dfea5');
     if (cvPdfBtn) cvPdfBtn.setAttribute('href', 'docs/Carlos_Juarez_CV.pdf?v=943dfea5');
+    if (cvEnBtn) cvEnBtn.setAttribute('href', 'docs/Carlos_Juarez_en.pdf?v=7eff3adc');
     if (cvDocxBtn) cvDocxBtn.setAttribute('href', 'docs/Carlos_Juarez.docx');
     if (cvPreviewImg) {
       cvPreviewImg.setAttribute('src', 'images/cv-preview.png?v=943dfea5');
