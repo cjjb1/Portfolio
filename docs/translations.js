@@ -48,7 +48,8 @@ window.I18N = {
     },
     about: {
       tag: "Perfil Profesional",
-      title: "Desarrollo de Software & IA para la Automatización Empresarial",
+      titleHighlight: "Desarrollo de Software & IA",
+      titleSuffix: "para la Automatización Empresarial",
       p1: "Soy <strong>Senior Full Stack &amp; Agentic AI Engineer</strong>, especializado en el diseño, desarrollo e implantación de <strong>aplicaciones corporativas end-to-end y agentes de inteligencia artificial</strong> que automatizan procesos, integran sistemas y optimizan las operaciones empresariales.",
       p2: "Combino una amplia trayectoria en <strong>desarrollo de software, arquitectura de sistemas, infraestructura IT y ciberseguridad</strong> con tecnologías modernas de IA generativa y automatización inteligente.",
       p3: "Mi enfoque abarca todo el ciclo de vida del proyecto: <strong>análisis de necesidades, diseño de arquitectura, desarrollo, integración y despliegue en producción</strong>, transformando procesos manuales y sistemas tradicionales en soluciones modernas, seguras, escalables y adaptadas a las necesidades reales del negocio.",
@@ -737,7 +738,8 @@ window.I18N = {
     },
     about: {
       tag: "Professional Profile",
-      title: "Software Development & AI for Business Automation",
+      titleHighlight: "Software Development & AI",
+      titleSuffix: "for Business Automation",
       p1: "I am a <strong>Senior Full Stack &amp; Agentic AI Engineer</strong> specializing in the design, development and deployment of <strong>end-to-end enterprise applications and AI agents</strong> that automate processes, integrate systems and improve business operations.",
       p2: "I combine extensive experience in <strong>software development, systems architecture, IT infrastructure and cybersecurity</strong> with modern generative AI and intelligent automation technologies.",
       p3: "My work covers the full project lifecycle: <strong>requirements analysis, architecture design, development, integration and production deployment</strong>. I turn manual processes and legacy systems into modern, secure and scalable solutions tailored to business needs.",
