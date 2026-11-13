@@ -416,7 +416,7 @@ window.I18N = {
       // Project 2: OSID
       p2Cat: "Logística · Gestión de Transporte · ERP",
       p2Name: "OSID · Orquestación Logística & Muelles",
-      p2Pitch: "Plataforma web corporativa que centraliza la logística integral de transportes, expediciones y reconciliación de papel en planta, reemplazando la obsoleta aplicación de escritorio WinForms (OSID.exe).",
+      p2Pitch: "Plataforma web corporativa que <strong>centraliza la logística integral de transportes, expediciones</strong> y reconciliación de papel en planta, reemplazando la obsoleta aplicación de escritorio WinForms (OSID.exe).",
       p2Kpi1Num: "2,4 – 3,6 M€/año",
       p2Kpi1Lbl: "Costes de transporte auditados",
       p2Kpi2Num: "+85k–120k €/año",
@@ -1105,7 +1105,7 @@ window.I18N = {
       // Project 2: OSID
       p2Cat: "Logistics · Freight Management · ERP",
       p2Name: "OSID · Logistics Orchestration & Loading Docks",
-      p2Pitch: "Corporate web platform centralizing end-to-end transportation logistics, shipments, and plant paper reel reconciliation, fully replacing an obsolete WinForms desktop application (OSID.exe).",
+      p2Pitch: "Corporate web platform that <strong>centralizes end-to-end transport logistics and shipments</strong> and handles paper reconciliation at the plant, replacing the obsolete WinForms desktop application (OSID.exe).",
       p2Kpi1Num: "€2.4 – €3.6M/yr",
       p2Kpi1Lbl: "Audited transportation spend",
       p2Kpi2Num: "+€85k–120k/yr",
