@@ -8,6 +8,7 @@
   --border-focus: #188bf6;
   
   --text-primary: #ffffff;
+  --text-emphasis: #188bf6;
   --text-secondary: #cbd5e0;
   --text-muted: #8d9dae;
   
@@ -23,6 +24,11 @@
   --font-sans: 'Poppins', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+strong,
+b {
+  color: var(--text-emphasis);
 }
 
 * {
@@ -416,10 +422,6 @@ code {
   text-align: left;
 }
 
-.hero-subtitle strong {
-  color: var(--text-primary);
-}
-
 .hero-actions {
   display: flex;
   flex-direction: column;
@@ -753,7 +755,6 @@ code {
 }
 
 .section-subtitle strong {
-  color: #188bf6;
   font-weight: 700;
 }
 
@@ -768,10 +769,6 @@ code {
   line-height: 1.75;
   color: var(--text-secondary);
   margin-bottom: 22px;
-}
-
-.about-text strong {
-  color: var(--text-primary);
 }
 
 .about-highlights {
@@ -2096,10 +2093,6 @@ code {
   font-weight: bold;
 }
 
-.project-bullets li strong {
-  color: var(--text-primary);
-}
-
 .project-actions-live {
   display: flex;
   gap: 12px;
@@ -2224,7 +2217,6 @@ code {
 }
 
 .skill-category li strong {
-  color: var(--text-primary);
   display: block;
   margin-bottom: 2px;
 }
@@ -3124,6 +3116,7 @@ code {
    MODO DIURNO / LIGHT THEME
    ========================================= */
 [data-theme="light"] {
+  --text-emphasis: #0369a1;
   --bg-main: #f8fafc;
   --bg-surface: #ffffff;
   --bg-card: #ffffff;
@@ -3567,11 +3560,6 @@ code {
   background: rgba(24, 139, 246, 0.08);
   border-color: rgba(24, 139, 246, 0.2);
   color: #188bf6;
-}
-
-[data-theme="light"] .section-subtitle strong {
-  color: #0369a1;
-  font-weight: 700;
 }
 
 [data-theme="light"] .footer {
@@ -4079,7 +4067,6 @@ code {
 }
 
 .data-spec-card strong {
-  color: var(--text-primary);
   margin-right: 4px;
 }
 
@@ -4356,10 +4343,6 @@ code {
   font-size: 0.96rem;
   line-height: 1.6;
   color: #e2e8f0;
-}
-
-.doc-hero-quote strong {
-  color: #ffffff;
 }
 
 .doc-hero-quote code {
@@ -4776,10 +4759,6 @@ code {
   background: #f1f5f9;
   color: #334155;
   border-left-color: #0369a1;
-}
-
-[data-theme="light"] .doc-hero-quote strong {
-  color: #0f172a;
 }
 
 [data-theme="light"] .doc-section-card {
