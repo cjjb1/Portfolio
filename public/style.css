@@ -820,8 +820,18 @@ code {
   margin-bottom: 0;
 }
 
-.about-text .about-objective {
-  margin: 28px 0 0;
+.about-objective {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.about-objective h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.about-objective p {
+  margin-bottom: 0;
 }
 
 /* Profile Card Aside */
