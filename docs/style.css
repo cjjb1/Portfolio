@@ -834,6 +834,10 @@ code {
   margin-bottom: 0;
 }
 
+.about-objective .btn {
+  margin-top: 20px;
+}
+
 /* Profile Card Aside */
 .profile-card {
   background: var(--bg-card);
