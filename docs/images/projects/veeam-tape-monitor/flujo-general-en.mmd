@@ -1,0 +1,28 @@
+%%{init: {"theme":"dark", "flowchart":{"curve":"stepBefore"}}}%%
+flowchart TD
+    UI(["React dashboard"])
+    API["Fastify service · Node.js"]
+    UI -->|REST API| API
+    API -->|SSE notifications| UI
+    LIVE["Live monitoring"]
+    LIVEIN["Veeam logs"]
+    LIVEOUT["Incremental reading and parser"]
+    API --> LIVE --> LIVEIN --> LIVEOUT
+    ZIP["Archive import"]
+    ZIPIN["ZIP package"]
+    ZIPOUT["Validation and parser"]
+    API --> ZIP --> ZIPIN --> ZIPOUT
+    QUERY["Veeam queries"]
+    QUERYIN["Catalog and tasks"]
+    QUERYOUT["Veeam PowerShell module"]
+    API --> QUERY --> QUERYIN --> QUERYOUT
+    OPS["Media operations"]
+    OPSIN["Authorized account"]
+    OPSOUT["PowerShell actions and tracking"]
+    API --> OPS --> OPSIN --> OPSOUT
+    DB[("Local SQLite · Live events and archives use separate scopes")]
+    VEEAM[("Veeam Backup & Replication · Catalog, sessions and operations")]
+    LIVEOUT --> DB
+    ZIPOUT --> DB
+    QUERYOUT --> VEEAM
+    OPSOUT --> VEEAM

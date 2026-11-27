@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="632" viewBox="0 0 1280 632" role="img" lang="es" aria-labelledby="title desc">
+  <title id="title">Diagrama general de flujo</title>
+  <desc id="desc">Flujo lógico del monitor. Las ramas representan diagnóstico en directo, consultas a Veeam, históricos ZIP y operaciones autorizadas.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 10" refX="7" refY="5" markerWidth="5" markerHeight="6" orient="auto">
+      <path d="M0 0 8 5 0 10z" fill="#68b9ff"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="632" rx="12" fill="#202020"/>
+  <g fill="#eeeeee" font-family="Inter, Segoe UI, Arial, sans-serif">
+    <rect x="479" y="27" width="322" height="45" rx="23" fill="#242424" stroke="#8f8f8f"/><text x="640" y="54.5" text-anchor="middle" font-size="16">Panel React</text>
+    <path d="M552 73v59" fill="none" stroke="#9b9b9b" stroke-width="1.45" marker-end="url(#arrow)"/>
+    <path d="M723 132V73" fill="none" stroke="#9b9b9b" stroke-width="1.45" marker-end="url(#arrow)"/>
+    <text x="501" y="108" text-anchor="middle" font-size="14">API REST</text>
+    <text x="799" y="108" text-anchor="middle" font-size="14">Avisos SSE</text>
+    <rect x="479" y="134" width="322" height="48" rx="3" fill="#242424" stroke="#8f8f8f"/><text x="640" y="163" text-anchor="middle" font-size="16">Servicio Fastify · Node.js</text>
+    <path d="M640 183v15H172v18" fill="none" stroke="#9b9b9b" stroke-width="1.45" marker-end="url(#arrow)"/>
+    <path d="M640 198H484v18" fill="none" stroke="#9b9b9b" stroke-width="1.45" marker-end="url(#arrow)"/>
+    <path d="M640 198H796v18" fill="none" stroke="#9b9b9b" stroke-width="1.45" marker-end="url(#arrow)"/>
+    <path d="M640 198h468v18" fill="none" stroke="#9b9b9b" stroke-width="1.45" marker-end="url(#arrow)"/>
+    <rect x="43" y="218" width="258" height="42" rx="3" fill="#292929" stroke="#595959"/><text x="172" y="244" text-anchor="middle" font-size="16">Monitorización en directo</text>
+    <path d="M172 260v42" fill="none" stroke="#9b9b9b" stroke-width="1.45" marker-end="url(#arrow)"/>
+    <rect x="43" y="304" width="258" height="52" rx="3" fill="#242424" stroke="#8f8f8f"/><text x="172" y="335" text-anchor="middle" font-size="16">Logs de Veeam</text>
+    <path d="M172 356v46" fill="none" stroke="#9b9b9b" stroke-width="1.45" marker-end="url(#arrow)"/>
+    <rect x="43" y="404" width="258" height="56" rx="3" fill="#242424" stroke="#8f8f8f"/><text x="172" y="437" text-anchor="middle" font-size="15">Lectura incremental y parser</text>
+    <g transform="translate(-312 0)">
+    <rect x="667" y="218" width="258" height="42" rx="3" fill="#292929" stroke="#595959"/><text x="796" y="244" text-anchor="middle" font-size="16">Importación histórica</text>
+    <path d="M796 260v42" fill="none" stroke="#9b9b9b" stroke-width="1.45" marker-end="url(#arrow)"/>
+    <rect x="667" y="304" width="258" height="52" rx="3" fill="#242424" stroke="#8f8f8f"/><text x="796" y="335" text-anchor="middle" font-size="16">Paquete ZIP</text>
+    <path d="M796 356v46" fill="none" stroke="#9b9b9b" stroke-width="1.45" marker-end="url(#arrow)"/>
+    <rect x="667" y="404" width="258" height="56" rx="3" fill="#242424" stroke="#8f8f8f"/><text x="796" y="437" text-anchor="middle" font-size="15">Validación y parser</text>
+    </g>
+    <g transform="translate(312 0)">
+    <rect x="355" y="218" width="258" height="42" rx="3" fill="#292929" stroke="#595959"/><text x="484" y="244" text-anchor="middle" font-size="16">Consulta a Veeam</text>
+    <path d="M484 260v42" fill="none" stroke="#9b9b9b" stroke-width="1.45" marker-end="url(#arrow)"/>
+    <rect x="355" y="304" width="258" height="52" rx="3" fill="#242424" stroke="#8f8f8f"/><text x="484" y="335" text-anchor="middle" font-size="16">Catálogo y tareas</text>
+    <path d="M484 356v46" fill="none" stroke="#9b9b9b" stroke-width="1.45" marker-end="url(#arrow)"/>
+    <rect x="355" y="404" width="258" height="56" rx="3" fill="#242424" stroke="#8f8f8f"/><text x="484" y="437" text-anchor="middle" font-size="15">Módulo PowerShell de Veeam</text>
+    </g>
+    <rect x="979" y="218" width="258" height="42" rx="3" fill="#292929" stroke="#595959"/><text x="1108" y="244" text-anchor="middle" font-size="16">Operaciones de medios</text>
+    <path d="M1108 260v42" fill="none" stroke="#9b9b9b" stroke-width="1.45" marker-end="url(#arrow)"/>
+    <rect x="979" y="304" width="258" height="52" rx="3" fill="#242424" stroke="#8f8f8f"/><text x="1108" y="335" text-anchor="middle" font-size="16">Cuenta autorizada</text>
+    <path d="M1108 356v46" fill="none" stroke="#9b9b9b" stroke-width="1.45" marker-end="url(#arrow)"/>
+    <rect x="979" y="404" width="258" height="56" rx="3" fill="#242424" stroke="#8f8f8f"/><text x="1108" y="437" text-anchor="middle" font-size="15">Acciones PowerShell y seguimiento</text>
+    <path d="M172 461v49h156v20" fill="none" stroke="#9b9b9b" stroke-width="1.45" marker-end="url(#arrow)"/>
+    <path d="M484 461v69" fill="none" stroke="#9b9b9b" stroke-width="1.45" marker-end="url(#arrow)"/>
+    <path d="M796 461v26h208v43" fill="none" stroke="#9b9b9b" stroke-width="1.45" marker-end="url(#arrow)"/>
+    <path d="M1108 461v69" fill="none" stroke="#9b9b9b" stroke-width="1.45" marker-end="url(#arrow)"/>
+    <rect x="71" y="531" width="759" height="72" rx="18" fill="#272727" stroke="#8f8f8f"/><text x="450.5" y="562" text-anchor="middle" font-size="16">SQLite local</text><text x="450.5" y="582" text-anchor="middle" font-size="16">Eventos en directo e históricos en ámbitos separados</text>
+    <rect x="864" y="531" width="373" height="72" rx="13" fill="#272727" stroke="#8f8f8f"/><text x="1050.5" y="562" text-anchor="middle" font-size="16">Veeam Backup &amp; Replication</text><text x="1050.5" y="582" text-anchor="middle" font-size="16">Catálogo, sesiones y operaciones</text>
+  </g>
+</svg>

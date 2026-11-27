@@ -1,4 +1,7 @@
 window.I18N.es.veeam = {
+  "flowTitle": "Diagrama general de flujo",
+  "flowDesc": "El panel React intercambia datos con Fastify mediante REST y SSE. El servicio reúne la lectura de logs, las consultas a Veeam, los históricos ZIP y las operaciones autorizadas.",
+  "flowExpand": "Ampliar diagrama de flujo",
   "pageTitle": "Veeam Tape Monitor | Carlos Juárez",
   "pageDescription": "Veeam Tape Monitor, panel end-to-end para diagnóstico, seguimiento y gestión de copias en cinta con Veeam Backup & Replication.",
   "cat": "Infraestructura · Copias de seguridad",
@@ -52,6 +55,9 @@ window.I18N.es.veeam = {
 };
 
 window.I18N.en.veeam = {
+  "flowTitle": "System flow diagram",
+  "flowDesc": "React communicates with Fastify through REST and SSE. The service combines log ingestion, Veeam queries, ZIP archives and authorized operations.",
+  "flowExpand": "Enlarge flow diagram",
   "pageTitle": "Veeam Tape Monitor | Carlos Juárez",
   "pageDescription": "Veeam Tape Monitor, an end-to-end dashboard for diagnosing, tracking and managing Veeam Backup & Replication tape backups.",
   "cat": "Infrastructure · Backup",

@@ -47,6 +47,19 @@ WinSW hosts one monitor instance on Windows Server. Authenticated local access a
 
 The portfolio screenshot shows a running job, the last accepted cartridge and overall progress. The chart in the visual collection uses an illustrative series.
 
+## System flow
+
+[View flow diagram](flujo-general-en.svg) · [Download Mermaid](flujo-general-en.mmd)
+
+| Module | Purpose |
+| --- | --- |
+| Tape wait diagnostics | Compares requested and observed Media Sets and shows the evidence. |
+| Copy progress | Shows the latest readings and progress over a session. |
+| Tape selection and rotation | Checks the current wait, scheduling and cartridge eligibility. |
+| Media catalog | Brings together libraries, drives, cartridges and pools. |
+| ZIP archives | Validates and opens archives in a separate scope from live data. |
+| Media operations | Records authorized actions and tracks their outcome. |
+
 ## Editable diagrams
 
 - [Monitor architecture](arquitectura-en.mmd)

@@ -47,6 +47,19 @@ WinSW aloja una instancia del monitor en Windows Server. El acceso local autenti
 
 La captura del portfolio muestra un trabajo en ejecución, el último cartucho aceptado y el avance global. El gráfico de la colección muestra una serie ilustrativa.
 
+## Flujo general
+
+[Ver diagrama general](flujo-general-es.svg) · [Descargar Mermaid](flujo-general-es.mmd)
+
+| Módulo | Función |
+| --- | --- |
+| Diagnóstico de esperas | Confronta el Media Set solicitado con el observado y muestra la evidencia. |
+| Progreso de copia | Presenta las últimas lecturas y su evolución por sesión. |
+| Selección y rotación | Cruza la espera, la programación y la elegibilidad del cartucho. |
+| Catálogo de medios | Reúne bibliotecas, unidades, cartuchos y pools. |
+| Históricos ZIP | Valida y abre históricos en un ámbito separado del directo. |
+| Operaciones de medios | Registra acciones autorizadas y consulta su resultado. |
+
 ## Diagramas editables
 
 - [Arquitectura del monitor](arquitectura-es.mmd)

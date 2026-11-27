@@ -1,0 +1,28 @@
+%%{init: {"theme":"dark", "flowchart":{"curve":"stepBefore"}}}%%
+flowchart TD
+    UI(["Panel React"])
+    API["Servicio Fastify · Node.js"]
+    UI -->|API REST| API
+    API -->|Avisos SSE| UI
+    LIVE["Monitorización en directo"]
+    LIVEIN["Logs de Veeam"]
+    LIVEOUT["Lectura incremental y parser"]
+    API --> LIVE --> LIVEIN --> LIVEOUT
+    ZIP["Importación histórica"]
+    ZIPIN["Paquete ZIP"]
+    ZIPOUT["Validación y parser"]
+    API --> ZIP --> ZIPIN --> ZIPOUT
+    QUERY["Consulta a Veeam"]
+    QUERYIN["Catálogo y tareas"]
+    QUERYOUT["Módulo PowerShell de Veeam"]
+    API --> QUERY --> QUERYIN --> QUERYOUT
+    OPS["Operaciones de medios"]
+    OPSIN["Cuenta autorizada"]
+    OPSOUT["Acciones PowerShell y seguimiento"]
+    API --> OPS --> OPSIN --> OPSOUT
+    DB[("SQLite local · Eventos en directo e históricos en ámbitos separados")]
+    VEEAM[("Veeam Backup & Replication · Catálogo, sesiones y operaciones")]
+    LIVEOUT --> DB
+    ZIPOUT --> DB
+    QUERYOUT --> VEEAM
+    OPSOUT --> VEEAM
