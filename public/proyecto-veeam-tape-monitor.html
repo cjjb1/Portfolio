@@ -262,54 +262,295 @@
             <p class="rec-source" data-i18n="veeam.source">Documentación del portfolio basada en el código y las pruebas del proyecto. El gráfico de progreso de la colección usa datos ilustrativos.</p>
           </section>
 
-          <section class="rec-gallery" aria-labelledby="veeam-flow-title">
-            <div class="rec-intro">
-              <h2 id="veeam-flow-title" data-i18n="veeam.flowTitle">Diagrama general de flujo</h2>
-              <p data-i18n="veeam.flowDesc">El panel React intercambia datos con Fastify mediante REST y SSE. El servicio reúne la lectura de logs, las consultas a Veeam, los históricos ZIP y las operaciones autorizadas.</p>
+          <div class="project-kpis">
+            <div class="kpi-box">
+              <span class="kpi-num">2</span>
+              <span class="kpi-lbl" data-i18n="veeam.sourcesLabel">Fuentes de datos de Veeam</span>
             </div>
-            <a class="rec-image" href="images/projects/veeam-tape-monitor/flujo-general-es.svg" data-veeam-lightbox="veeam.flowTitle" data-veeam-asset="flujo-general||svg" aria-labelledby="veeam-flow-expand veeam-flow-title">
-              <img src="images/projects/veeam-tape-monitor/flujo-general-es.svg" width="1280" height="632" alt="" loading="lazy" decoding="async" data-veeam-asset="flujo-general||svg">
-              <span id="veeam-flow-expand" data-i18n="veeam.flowExpand">Ampliar diagrama de flujo</span>
-            </a>
-            <p class="rec-source"><a href="images/projects/veeam-tape-monitor/flujo-general-es.mmd" data-veeam-asset="flujo-general||mmd" download data-i18n="veeam.editable">Descargar diagrama editable (Mermaid)</a></p>
+            <div class="kpi-box">
+              <span class="kpi-num">6</span>
+              <span class="kpi-lbl" data-i18n="veeam.opsLabel">Operaciones de medios</span>
+            </div>
+            <div class="kpi-box">
+              <span class="kpi-num" data-i18n="veeam.scopes">Directo y ZIP</span>
+              <span class="kpi-lbl" data-i18n="veeam.viewsLabel">Ámbitos de diagnóstico</span>
+            </div>
+          </div>
+
+          <section class="project-tech-specs" aria-labelledby="veeam-doc-title">
+            <h2 id="veeam-doc-title" data-i18n="veeam.doc">Documentación técnica</h2>
+            <p class="doc-hero-quote" data-i18n-html="veeam.overview"><strong>Veeam Tape Monitor</strong> permite al operador ver qué cartucho pide el trabajo, por qué se ha rechazado el medio montado y qué evidencia respalda el diagnóstico. Combina <strong>logs y catálogo de Veeam</strong> para seguir el progreso de las copias, preparar la rotación y consultar históricos.</p>
+
+            <section class="doc-section-card">
+              <div class="doc-section-header">
+                <div class="doc-section-title-wrap">
+                  <span aria-hidden="true">🏛️</span>
+                  <h3 class="doc-section-title" data-i18n="veeam.topology">Topología de infraestructura y conexiones</h3>
+                </div>
+                <span class="doc-section-tag" data-i18n="veeam.topologyTag">Arquitectura de integración</span>
+              </div>
+              <div class="doc-server-grid">
+                <div class="doc-server-card">
+                  <div class="doc-server-name"><span aria-hidden="true">🖥️</span> <span data-i18n="veeam.infra0Name">Panel web</span></div>
+                  <div class="doc-server-role" data-i18n="veeam.infra0Role">React · TypeScript · Vite</div>
+                  <div class="doc-server-desc" data-i18n="veeam.infra0Desc">Reúne diagnóstico, progreso, calendario, inventario e históricos. Consulta la API REST y actualiza las vistas al recibir avisos SSE.</div>
+                </div>
+                <div class="doc-server-card">
+                  <div class="doc-server-name"><span aria-hidden="true">⚙️</span> <span data-i18n="veeam.infra1Name">Servicio de aplicación</span></div>
+                  <div class="doc-server-role" data-i18n="veeam.infra1Role">Windows Server · WinSW · Fastify</div>
+                  <div class="doc-server-desc" data-i18n="veeam.infra1Desc">Aloja el panel y la API. Coordina la lectura de logs, las consultas al catálogo y el seguimiento de operaciones.</div>
+                </div>
+                <div class="doc-server-card">
+                  <div class="doc-server-name"><span aria-hidden="true">💽</span> <span data-i18n="veeam.infra2Name">Veeam Backup & Replication</span></div>
+                  <div class="doc-server-role" data-i18n="veeam.infra2Role">Logs de trabajo · PowerShell de Veeam</div>
+                  <div class="doc-server-desc" data-i18n="veeam.infra2Desc">Los logs aportan estados y evidencias de sesión. El módulo PowerShell conecta con trabajos, tareas, catálogo y acciones de medios autorizadas.</div>
+                </div>
+                <div class="doc-server-card">
+                  <div class="doc-server-name"><span aria-hidden="true">🗃️</span> <span data-i18n="veeam.infra3Name">Almacenamiento local</span></div>
+                  <div class="doc-server-role" data-i18n="veeam.infra3Role">SQLite en modo WAL</div>
+                  <div class="doc-server-desc" data-i18n="veeam.infra3Desc">Conserva eventos, puntos de lectura, muestras de progreso y operaciones. Cada ZIP importado tiene su propio ámbito de consulta.</div>
+                </div>
+              </div>
+            </section>
+
+            <section class="doc-section-card">
+              <div class="doc-section-header">
+                <div class="doc-section-title-wrap">
+                  <span aria-hidden="true">📦</span>
+                  <h3 class="doc-section-title" data-i18n="veeam.modules">Catálogo de módulos funcionales</h3>
+                </div>
+                <span class="doc-section-tag" data-i18n="veeam.modulesTag">Arquitectura de software</span>
+              </div>
+              <div class="doc-modules-grid">
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num" aria-hidden="true">1</span>
+                    <code class="doc-module-file">src/web/main.tsx</code>
+                  </div>
+                  <h4 class="doc-module-name" data-i18n="veeam.module0Name">Panel de diagnóstico y progreso</h4>
+                  <p class="doc-module-desc" data-i18n="veeam.module0Desc">Muestra el estado del trabajo, las esperas, el motivo de rechazo y la evolución de la copia.</p>
+                </div>
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num" aria-hidden="true">2</span>
+                    <code class="doc-module-file">src/server/monitor.ts</code>
+                  </div>
+                  <h4 class="doc-module-name" data-i18n="veeam.module1Name">Lectura incremental de logs</h4>
+                  <p class="doc-module-desc" data-i18n="veeam.module1Desc">Continúa desde los puntos de lectura guardados y detecta rotaciones o truncados durante el sondeo.</p>
+                </div>
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num" aria-hidden="true">3</span>
+                    <code class="doc-module-file">src/server/diagnosis.ts</code>
+                  </div>
+                  <h4 class="doc-module-name" data-i18n="veeam.module2Name">Reconstrucción de sesiones</h4>
+                  <p class="doc-module-desc" data-i18n="veeam.module2Desc">Agrupa eventos por sesión, distingue las esperas vigentes y conserva la evidencia de cada conclusión.</p>
+                </div>
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num" aria-hidden="true">4</span>
+                    <code class="doc-module-file">src/server/catalog.ts</code>
+                  </div>
+                  <h4 class="doc-module-name" data-i18n="veeam.module3Name">Catálogo y recomendación</h4>
+                  <p class="doc-module-desc" data-i18n="veeam.module3Desc">Consulta Veeam y comprueba si un cartucho es elegible para la espera activa.</p>
+                </div>
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num" aria-hidden="true">5</span>
+                    <code class="doc-module-file">src/web/tape-calendar.tsx</code>
+                  </div>
+                  <h4 class="doc-module-name" data-i18n="veeam.module4Name">Calendario de rotación</h4>
+                  <p class="doc-module-desc" data-i18n="veeam.module4Desc">Muestra el calendario operativo y señala el último viernes del mes para la cinta mensual.</p>
+                </div>
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num" aria-hidden="true">6</span>
+                    <code class="doc-module-file">src/server/archive.ts</code>
+                  </div>
+                  <h4 class="doc-module-name" data-i18n="veeam.module5Name">Importación de históricos ZIP</h4>
+                  <p class="doc-module-desc" data-i18n="veeam.module5Desc">Valida el paquete, evita duplicados y conserva sus eventos en un ámbito de consulta propio.</p>
+                </div>
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num" aria-hidden="true">7</span>
+                    <code class="doc-module-file">src/server/media-operations.ts</code>
+                  </div>
+                  <h4 class="doc-module-name" data-i18n="veeam.module6Name">Operaciones de medios</h4>
+                  <p class="doc-module-desc" data-i18n="veeam.module6Desc">Registra la acción solicitada, su ejecución en Veeam y el resultado de la sesión.</p>
+                </div>
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num" aria-hidden="true">8</span>
+                    <code class="doc-module-file">src/server/api.ts</code>
+                  </div>
+                  <h4 class="doc-module-name" data-i18n="veeam.module7Name">API REST y eventos SSE</h4>
+                  <p class="doc-module-desc" data-i18n="veeam.module7Desc">Expone las vistas del monitor y avisa al navegador cuando cambian los datos.</p>
+                </div>
+                <div class="doc-module-card">
+                  <div class="doc-module-top">
+                    <span class="doc-module-num" aria-hidden="true">9</span>
+                    <code class="doc-module-file">src/server/store.ts</code>
+                  </div>
+                  <h4 class="doc-module-name" data-i18n="veeam.module8Name">Persistencia y evidencias</h4>
+                  <p class="doc-module-desc" data-i18n="veeam.module8Desc">Guarda eventos, checkpoints e históricos en SQLite para poder reanudar la lectura y consultar su origen.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="doc-section-card">
+              <div class="doc-section-header">
+                <div class="doc-section-title-wrap">
+                  <span aria-hidden="true">⚡</span>
+                  <h3 class="doc-section-title" data-i18n="veeam.pipeline">Flujo operativo de diagnóstico</h3>
+                </div>
+                <span class="doc-section-tag" data-i18n="veeam.pipelineTag">Ciclo de vida</span>
+              </div>
+              <div class="pipeline-track">
+                <div class="pipeline-step">
+                  <span class="pipeline-step-badge" aria-hidden="true">1</span>
+                  <span class="pipeline-step-title" data-i18n="veeam.step0Name">Leer los logs</span>
+                  <span class="pipeline-step-desc" data-i18n="veeam.step0Desc">Recupera las líneas nuevas desde el último punto de lectura.</span>
+                </div>
+                <div class="pipeline-step">
+                  <span class="pipeline-step-badge" aria-hidden="true">2</span>
+                  <span class="pipeline-step-title" data-i18n="veeam.step1Name">Registrar eventos</span>
+                  <span class="pipeline-step-desc" data-i18n="veeam.step1Desc">Interpreta las líneas y conserva la evidencia original.</span>
+                </div>
+                <div class="pipeline-step">
+                  <span class="pipeline-step-badge" aria-hidden="true">3</span>
+                  <span class="pipeline-step-title" data-i18n="veeam.step2Name">Reconstruir la sesión</span>
+                  <span class="pipeline-step-desc" data-i18n="veeam.step2Desc">Determina el estado y agrupa las solicitudes de cinta.</span>
+                </div>
+                <div class="pipeline-step">
+                  <span class="pipeline-step-badge" aria-hidden="true">4</span>
+                  <span class="pipeline-step-title" data-i18n="veeam.step3Name">Contrastar con el catálogo</span>
+                  <span class="pipeline-step-desc" data-i18n="veeam.step3Desc">Comprueba la elegibilidad cuando hay una espera vigente.</span>
+                </div>
+                <div class="pipeline-step">
+                  <span class="pipeline-step-badge" aria-hidden="true">5</span>
+                  <span class="pipeline-step-title" data-i18n="veeam.step4Name">Actualizar el panel</span>
+                  <span class="pipeline-step-desc" data-i18n="veeam.step4Desc">Notifica el cambio por SSE y el panel consulta el estado.</span>
+                </div>
+              </div>
+              <h4 class="doc-section-title" id="veeam-flow-title" data-i18n="veeam.flowTitle">Diagrama general de flujo</h4>
+              <p data-i18n="veeam.flowDesc">El panel React intercambia datos con Fastify mediante REST y SSE. El servicio reúne la lectura de logs, las consultas a Veeam, los históricos ZIP y las operaciones autorizadas.</p>
+              <a class="rec-image" href="images/projects/veeam-tape-monitor/flujo-general-es.svg" data-veeam-lightbox="veeam.flowTitle" data-veeam-asset="flujo-general||svg" aria-labelledby="veeam-flow-expand veeam-flow-title">
+                <img src="images/projects/veeam-tape-monitor/flujo-general-es.svg" width="1280" height="632" alt="" loading="lazy" decoding="async" data-veeam-asset="flujo-general||svg">
+                <span id="veeam-flow-expand" data-i18n="veeam.flowExpand">Ampliar diagrama de flujo</span>
+              </a>
+              <div><a class="btn btn-secondary btn-sm" href="images/projects/veeam-tape-monitor/flujo-general-es.mmd" data-veeam-asset="flujo-general||mmd" download data-i18n="veeam.editable">Descargar diagrama editable (Mermaid)</a></div>
+            </section>
+
+            <section class="doc-section-card">
+              <div class="doc-section-header">
+                <div class="doc-section-title-wrap">
+                  <span aria-hidden="true">🎯</span>
+                  <h3 class="doc-section-title" data-i18n="veeam.rulesTitle">Reglas de diagnóstico y selección</h3>
+                </div>
+                <span class="doc-section-tag" data-i18n="veeam.rulesTitleTag">Lógica operativa</span>
+              </div>
+              <div class="doc-rules-grid">
+                <div class="doc-rule-card rule-soap">
+                  <h4 class="doc-rule-header"><span aria-hidden="true">🔎</span> <span data-i18n="veeam.rule0Name">Confianza del diagnóstico</span></h4>
+                  <p class="doc-rule-desc" data-i18n="veeam.rule0Desc">Distingue una aceptación o rechazo explícitos, una inferencia por contexto y un caso con evidencia insuficiente.</p>
+                </div>
+                <div class="doc-rule-card rule-mssql">
+                  <h4 class="doc-rule-header"><span aria-hidden="true">🎞️</span> <span data-i18n="veeam.rule1Name">Elegibilidad del cartucho</span></h4>
+                  <p class="doc-rule-desc" data-i18n="veeam.rule1Desc">Cruza biblioteca, pool y Media Set y revisa ubicación, capacidad, retención y protección.</p>
+                </div>
+                <div class="doc-rule-card rule-backoff">
+                  <h4 class="doc-rule-header"><span aria-hidden="true">⏱️</span> <span data-i18n="veeam.rule2Name">Vigencia de la espera</span></h4>
+                  <p class="doc-rule-desc" data-i18n="veeam.rule2Desc">Retira la recomendación al cerrar la espera, cambiar de sesión o caducar la lectura del catálogo.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="doc-section-card">
+              <div class="doc-section-header">
+                <div class="doc-section-title-wrap">
+                  <span aria-hidden="true">🔒</span>
+                  <h3 class="doc-section-title" data-i18n="veeam.security">Acceso, integridad y trazabilidad</h3>
+                </div>
+                <span class="doc-section-tag" data-i18n="veeam.securityTag">Seguridad y operación</span>
+              </div>
+              <div class="doc-rules-grid">
+                <div class="doc-rule-card rule-soap">
+                  <h4 class="doc-rule-header"><span aria-hidden="true">🔐</span> <span data-i18n="veeam.security0Name">Accesos diferenciados</span></h4>
+                  <p class="doc-rule-desc" data-i18n="veeam.security0Desc">El acceso local y el HTTPS privado opcional requieren autenticación. Solo la cuenta autorizada puede operar sobre medios.</p>
+                </div>
+                <div class="doc-rule-card rule-mssql">
+                  <h4 class="doc-rule-header"><span aria-hidden="true">📦</span> <span data-i18n="veeam.security1Name">Validación y ámbito de los ZIP</span></h4>
+                  <p class="doc-rule-desc" data-i18n="veeam.security1Desc">Comprueba rutas, límites e integridad del paquete, y conserva sus eventos separados de los datos en directo.</p>
+                </div>
+                <div class="doc-rule-card rule-backoff">
+                  <h4 class="doc-rule-header"><span aria-hidden="true">🧾</span> <span data-i18n="veeam.security2Name">Registro de operaciones</span></h4>
+                  <p class="doc-rule-desc" data-i18n="veeam.security2Desc">Conserva la solicitud y el resultado. Si no se confirma la ejecución, la operación queda indeterminada para revisión.</p>
+                </div>
+              </div>
+            </section>
+
+            <div>
+              <a class="btn btn-secondary btn-sm" href="images/projects/veeam-tape-monitor/documentacion-es.md" download data-i18n="veeam.docDownload" data-veeam-asset="documentacion||md">Descargar documentación (Markdown)</a>
+            </div>
           </section>
 
-          <section class="rec-gallery" aria-labelledby="veeam-doc-title">
-            <div class="rec-intro">
-              <h2 id="veeam-doc-title" data-i18n="veeam.doc">Documentación técnica</h2>
-              <a href="images/projects/veeam-tape-monitor/documentacion-es.md" download data-i18n="veeam.docDownload" data-veeam-asset="documentacion||md">Descargar documentación (Markdown)</a>
+          <div class="tech-tags" aria-label="Tecnologías utilizadas" data-i18n-aria="veeam.stack">
+            <span class="tech-badge"><img src="images/logos/react.svg" alt="" class="tech-icon" loading="lazy"><span>React</span></span>
+            <span class="tech-badge"><img src="images/logos/typescript.svg" alt="" class="tech-icon" loading="lazy"><span>TypeScript</span></span>
+            <span class="tech-badge"><span>Vite</span></span>
+            <span class="tech-badge"><img src="images/logos/nodejs.svg" alt="" class="tech-icon" loading="lazy"><span>Node.js</span></span>
+            <span class="tech-badge"><span>Fastify</span></span>
+            <span class="tech-badge"><span>SQLite</span></span>
+            <span class="tech-badge"><img src="images/logos/powershell.svg" alt="" class="tech-icon" loading="lazy"><span>PowerShell</span></span>
+            <span class="tech-badge"><img src="images/logos/restapi.svg" alt="" class="tech-icon" loading="lazy"><span>REST · SSE</span></span>
+            <span class="tech-badge"><span>Zod</span></span>
+            <span class="tech-badge"><span>Vitest</span></span>
+            <span class="tech-badge"><img src="images/logos/microsoft.svg" alt="" class="tech-icon" loading="lazy"><span>WinSW</span></span>
+          </div>
+
+          <div class="project-drawer-action">
+            <button type="button" class="btn-drawer-toggle" onclick="toggleTechDrawer('drawer-veeam', this)" aria-expanded="false" aria-controls="drawer-veeam">
+              <span class="btn-drawer-left">
+                <span class="btn-drawer-icon">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>
+                </span>
+                <span class="btn-drawer-text" data-i18n="projects.drawerExpand">Desplegar Aspectos Técnicos Clave</span>
+              </span>
+              <svg class="btn-drawer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="project-tech-drawer" id="drawer-veeam">
+          <div class="drawer-inner">
+            <div class="project-bullets">
+              <h3 data-i18n="projects.techAspects">Aspectos Técnicos Clave</h3>
+              <ul>
+                <li data-i18n-html="veeam.bullet0"><strong>Lectura incremental y evidencia:</strong> los eventos conservan archivo, hora y línea original para explicar la espera.</li>
+                <li data-i18n-html="veeam.bullet1"><strong>Progreso y recomendaciones:</strong> las muestras de Veeam alimentan el gráfico y el catálogo valida los cartuchos elegibles.</li>
+                <li data-i18n-html="veeam.bullet2"><strong>Operaciones sobre medios:</strong> inventario, catalogación, verificación, importación, exportación y renombrado con seguimiento.</li>
+              </ul>
             </div>
-            <div class="rec-grid">
-              <section class="doc-section-card">
-                <h3 class="doc-section-title" data-i18n="veeam.sectionContext">Necesidad operativa</h3>
-                <p data-i18n="veeam.context">Durante una espera de cinta, el operador necesita saber qué cartucho solicita el trabajo, por qué se ha rechazado el que está montado y qué evidencia respalda el diagnóstico. El panel añade esa vista a la operación diaria de Veeam, junto con los históricos y la preparación del siguiente ciclo.</p>
-              </section>
-              <section class="doc-section-card">
-                <h3 class="doc-section-title" data-i18n="veeam.sectionIntegration">Integración y flujo de datos</h3>
-                <p data-i18n="veeam.integration">El monitor lee los logs de forma incremental, guarda eventos y puntos de lectura en SQLite y reconstruye sesiones y solicitudes. El módulo PowerShell de Veeam aporta catálogo, trabajos, tareas y progreso. Fastify publica la API REST y usa SSE para avisar al panel React cuando hay cambios.</p>
-              </section>
-              <section class="doc-section-card">
-                <h3 class="doc-section-title" data-i18n="veeam.sectionRules">Evidencia y reglas de decisión</h3>
-                <p data-i18n="veeam.rules">El diagnóstico conserva la línea original y distingue entre un rechazo explícito y una generación inferida. La recomendación requiere una espera vigente y un medio libre que cumpla las reglas de biblioteca, pool, capacidad y protección. Al abrir un ZIP, la evidencia se consulta dentro de su propio histórico.</p>
-              </section>
-              <section class="doc-section-card">
-                <h3 class="doc-section-title" data-i18n="veeam.sectionDeploy">Operación y despliegue</h3>
-                <p data-i18n="veeam.deploy">WinSW aloja el servicio en Windows Server con almacenamiento SQLite local. El servicio autentica el acceso local y el HTTPS privado opcional. Las operaciones de medios requieren permisos específicos, se registran y conservan su estado para consultar el resultado.</p>
-              </section>
-              <section class="doc-section-card">
-                <h3 class="doc-section-title" data-i18n="veeam.stack">Tecnologías utilizadas</h3>
-                <p>React · TypeScript · Vite · Node.js · Fastify · SQLite · PowerShell · Zod · Vitest · WinSW</p>
-              </section>
-            </div>
-          </section>
+          </div>
         </div>
       </article>
 
       <nav class="project-page-nav" data-i18n-aria="veeam.catalogNav" aria-label="Navegación entre proyectos">
-        <a href="proyecto-vigilancia.html" class="project-nav-link"><span><strong data-i18n="veeam.previous">Anterior</strong> · Vigilancia-app</span></a>
-        <a href="proyectos.html" class="project-nav-link" data-i18n="projects.filterAll">Todos los proyectos</a>
-        <a href="proyecto-reclamaciones.html" class="project-nav-link"><span><strong data-i18n="veeam.next">Siguiente</strong> · <span data-i18n="projects.p1Name">Reclamaciones · Bobinas de Papel</span></span></a>
+        <a href="proyecto-vigilancia.html" class="project-nav-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5m7-7-7 7 7 7"/></svg><span><strong data-i18n="veeam.previous">Anterior</strong> · Vigilancia-app</span></a>
+        <a href="proyectos.html" class="project-nav-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3h7v7H3zm11 0h7v7h-7zM3 14h7v7H3zm11 0h7v7h-7z"/></svg><span data-i18n="projects.filterAll">Todos los proyectos</span></a>
+        <a href="proyecto-reclamaciones.html" class="project-nav-link"><span><strong data-i18n="veeam.next">Siguiente</strong> · <span data-i18n="projects.p1Name">Reclamaciones · Bobinas de Papel</span></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
       </nav>
+
+      <aside class="project-page-cta">
+        <div class="project-page-cta-text">
+          <h4 data-i18n="veeam.ctaTitle">¿Necesitas una solución similar en tu infraestructura?</h4>
+          <p data-i18n="veeam.ctaDesc">Desarrollo de paneles operativos, integraciones de sistemas y automatización de procesos.</p>
+        </div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <a href="contactos.html" class="btn btn-primary" data-i18n="veeam.ctaContact">Contactar</a>
+          <a href="https://www.linkedin.com/in/carlosj-juarez/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn</a>
+        </div>
+      </aside>
     </div>
   </main>
 
@@ -347,7 +588,7 @@
   </div>
 
   <script src="translations.js?v=20"></script>
-  <script src="veeam-tape-monitor.js?v=2"></script>
+  <script src="veeam-tape-monitor.js?v=3"></script>
   <script src="script.js?v=6"></script>
 </body>
 </html>
