@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" lang="en" aria-labelledby="title">
+<title id="title">Catalog, drives and tapes</title>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#092721"/><stop offset="1" stop-color="#0c332e"/></linearGradient></defs>
+<rect width="1280" height="720" fill="url(#bg)"/>
+<path d="M64 84H1216M64 661H1216" stroke="#397968"/>
+<g font-family="Inter, Segoe UI, sans-serif">
+<text x="64" y="62" font-size="22" fill="#74ecc1" font-weight="700"><tspan x="64" dy="0">VEEAM TAPE MONITOR</tspan></text>
+<text x="64" y="158" font-size="52" fill="#eefff5" font-weight="750"><tspan x="64" dy="0">Catalog, drives and tapes</tspan></text>
+<text x="64" y="218" font-size="23" fill="#c5e4d8" font-weight="500"><tspan x="64" dy="0">The Media view brings together libraries, drives, tapes and pools, including</tspan><tspan x="64" dy="28.75">location and capacity where available.</tspan></text>
+<g transform="translate(1030 106) scale(1.65)" stroke="#74ecc1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"><rect x="8" y="17" width="62" height="46" rx="7"/><circle cx="26" cy="37" r="8"/><circle cx="52" cy="37" r="8"/><path d="M20 55h36"/></g>
+<rect x="64" y="306" width="564" height="142" rx="18" fill="#103b34" stroke="#397968"/>
+<rect x="91" y="334" width="34" height="5" rx="2" fill="#74ecc1"/>
+<text x="91" y="377" font-size="29" fill="#e2fbed" font-weight="650"><tspan x="91" dy="0">Tape library</tspan></text>
+<rect x="652" y="306" width="564" height="142" rx="18" fill="#103b34" stroke="#397968"/>
+<rect x="679" y="334" width="34" height="5" rx="2" fill="#74ecc1"/>
+<text x="679" y="377" font-size="29" fill="#e2fbed" font-weight="650"><tspan x="679" dy="0">Drives and tapes</tspan></text>
+<rect x="64" y="472" width="564" height="142" rx="18" fill="#103b34" stroke="#397968"/>
+<rect x="91" y="500" width="34" height="5" rx="2" fill="#74ecc1"/>
+<text x="91" y="543" font-size="29" fill="#e2fbed" font-weight="650"><tspan x="91" dy="0">Pools and Media Sets</tspan></text>
+<rect x="652" y="472" width="564" height="142" rx="18" fill="#103b34" stroke="#397968"/>
+<rect x="679" y="500" width="34" height="5" rx="2" fill="#74ecc1"/>
+<text x="679" y="543" font-size="29" fill="#e2fbed" font-weight="650"><tspan x="679" dy="0">Media view</tspan></text>
+</g>
+</svg>

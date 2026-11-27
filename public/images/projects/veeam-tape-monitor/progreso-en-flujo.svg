@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" lang="en" aria-labelledby="title">
+<title id="title">Copy progress</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#087357"/></marker></defs>
+<rect width="960" height="320" fill="#eef6f3"/>
+<g font-family="Inter, Segoe UI, sans-serif">
+<text x="30" y="48" font-size="29" fill="#12352d" font-weight="700"><tspan x="30" dy="0">Copy progress</tspan></text>
+<path d="M228 176 H246 V176 H259" fill="none" stroke="#087357" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M462 176 H480 V176 H493" fill="none" stroke="#087357" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M696 176 H714 V176 H727" fill="none" stroke="#087357" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="30" y="140" width="198" height="72" rx="12" fill="#ffffff" stroke="#92b6a9"/><text x="45" y="168" font-size="17" fill="#094838" font-weight="650"><tspan x="45" dy="0">Tape session</tspan></text>
+<rect x="264" y="140" width="198" height="72" rx="12" fill="#ffffff" stroke="#92b6a9"/><text x="279" y="168" font-size="17" fill="#094838" font-weight="650"><tspan x="279" dy="0">Read progress in</tspan><tspan x="279" dy="21.25">Veeam</tspan></text>
+<rect x="498" y="140" width="198" height="72" rx="12" fill="#ffffff" stroke="#92b6a9"/><text x="513" y="168" font-size="17" fill="#094838" font-weight="650"><tspan x="513" dy="0">Store samples</tspan></text>
+<rect x="732" y="140" width="198" height="72" rx="12" fill="#ffffff" stroke="#92b6a9"/><text x="747" y="168" font-size="17" fill="#094838" font-weight="650"><tspan x="747" dy="0">Plot the progress</tspan><tspan x="747" dy="21.25">trend</tspan></text>
+</g>
+</svg>

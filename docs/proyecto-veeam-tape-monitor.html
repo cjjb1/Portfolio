@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Veeam Tape Monitor | Carlos Juárez</title>
+  <meta name="description" content="Veeam Tape Monitor, panel end-to-end para diagnóstico, seguimiento y gestión de copias en cinta con Veeam Backup & Replication.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=13">
+  <link rel="stylesheet" href="reclamaciones.css?v=1">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('portfolio-theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</head>
+<body class="project-page-body" data-page="veeam">
+
+  <!-- Header / Barra de Navegación -->
+  <header class="header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo" data-i18n-title="veeam.home" title="Inicio">
+        <span class="logo-mark">&lt;Carlos Juárez/&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="proyectos.html" class="btn-nav" style="background: rgba(24, 139, 246, 0.2); font-weight: 600;"><span data-i18n="veeam.back">Volver al catálogo</span></a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">Perfil</a></li>
+        <li><a href="credentials.html" data-i18n="nav.credentials">CV - Master IA</a></li>
+        <li><a href="index.html#metrics" data-i18n="nav.metrics">Impacto</a></li>
+        <li><a href="index.html#skills" data-i18n="nav.stack">Stack</a></li>
+        <li><a href="contactos.html" data-i18n="nav.contact">Contactos</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button id="lang-toggle" class="lang-toggle-btn" aria-label="Cambiar idioma a Inglés / Switch to English" title="Alternar idioma (ES / EN)">
+          <span class="lang-code es active" data-lang="es">ES</span>
+          <span class="lang-divider">/</span>
+          <span class="lang-code en" data-lang="en">EN</span>
+        </button>
+        <a href="https://www.linkedin.com/in/carlosj-juarez/" target="_blank" rel="noopener noreferrer" class="theme-toggle-btn" aria-label="Perfil de LinkedIn" title="Ver perfil en LinkedIn">
+          <img src="images/logos/linkedin.svg" alt="LinkedIn" style="width: 18px; height: 18px; display: block;" />
+        </a>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar a modo diurno o nocturno" title="Alternar modo diurno / nocturno">
+          <svg class="theme-icon theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="project-page-hero">
+    <div class="container">
+      <nav class="project-breadcrumb" aria-label="Ruta de navegación">
+        <a href="index.html" data-i18n="veeam.home">Inicio</a>
+        <span aria-hidden="true">&rsaquo;</span>
+        <a href="proyectos.html" data-i18n="nav.projects">Proyectos</a>
+        <span aria-hidden="true">&rsaquo;</span>
+        <span aria-current="page">Veeam Tape Monitor</span>
+      </nav>
+      <a href="proyectos.html" class="btn btn-secondary btn-sm" data-i18n="veeam.back">Volver al catálogo</a>
+    </div>
+  </section>
+
+  <main class="project-page-main">
+    <div class="container">
+      <article class="project-item" id="project-veeam-tape-monitor">
+        <div class="project-info">
+          <div class="project-top">
+            <span class="badge-cat" data-i18n="veeam.cat">Infraestructura · Copias de seguridad</span>
+            <span class="status-indicator" data-i18n="veeam.status">Aplicación interna</span>
+            <span class="project-participation" data-i18n="projects.participationEndToEnd">end-to-end</span>
+          </div>
+          <h1 class="project-name">Veeam Tape Monitor</h1>
+          <p class="project-pitch" data-i18n-html="veeam.pitch">Panel web interno que amplía la visión operativa de <strong>Veeam Backup &amp; Replication</strong>. Integra los logs y el catálogo de Veeam en una <strong>API propia</strong> para explicar esperas, seguir el progreso de las copias, preparar rotaciones y gestionar medios de cinta.</p>
+
+          <div class="project-previews-grid">
+            <a class="project-preview-card" href="images/projects/veeam-tape-monitor/panel.png" data-veeam-lightbox="veeam.preview" >
+              <div class="preview-thumb-wrap"><img src="images/projects/veeam-tape-monitor/panel.png" alt="" width="1473" height="896" ></div>
+              <div class="preview-card-info">
+                <h3 class="preview-card-title" data-i18n="veeam.preview">Interfaz operativa</h3>
+                <p class="preview-card-desc" data-i18n="veeam.previewDesc">Vista del trabajo en ejecución, el último cartucho aceptado, el calendario y el progreso de la copia.</p>
+                <span class="preview-card-link"><span data-i18n="projects.uiExpand">Ampliar interfaz</span></span>
+              </div>
+            </a>
+            <a class="project-preview-card" href="images/projects/veeam-tape-monitor/arquitectura-es-lamina.svg" data-veeam-lightbox="veeam.arch" data-veeam-asset="arquitectura|-lamina|svg">
+              <div class="preview-thumb-wrap"><img src="images/projects/veeam-tape-monitor/arquitectura-es-lamina.svg" alt="" width="1280" height="720" data-veeam-asset="arquitectura|-lamina|svg"></div>
+              <div class="preview-card-info">
+                <h3 class="preview-card-title" data-i18n="veeam.arch">Arquitectura técnica</h3>
+                <p class="preview-card-desc" data-i18n="veeam.archDesc">Recorrido desde los logs y el catálogo de Veeam hasta el panel web.</p>
+                <span class="preview-card-link"><span data-i18n="veeam.expand">Ampliar lámina</span></span>
+              </div>
+            </a>
+          </div>
+
+          <section class="rec-gallery" aria-labelledby="veeam-gallery-title">
+            <div class="rec-intro">
+              <h2 id="veeam-gallery-title" data-i18n="veeam.gallery">Colección visual</h2>
+              <p data-i18n="veeam.galleryIntro">Explora el flujo de datos, el diagnóstico, la gestión de cartuchos y el despliegue. Cada lámina incluye un diagrama de flujo editable.</p>
+            </div>
+            <nav class="rec-index" data-i18n-aria="veeam.sheetsIndex" aria-label="Índice de láminas">
+              <a href="#lamina-arquitectura" data-i18n="veeam.title-arquitectura">Arquitectura del monitor</a>
+              <a href="#lamina-diagnostico" data-i18n="veeam.title-diagnostico">Diagnóstico de esperas</a>
+              <a href="#lamina-progreso" data-i18n="veeam.title-progreso">Seguimiento de la copia</a>
+              <a href="#lamina-medios" data-i18n="veeam.title-medios">Catálogo, unidades y cintas</a>
+              <a href="#lamina-seleccion" data-i18n="veeam.title-seleccion">Selección y rotación de cintas</a>
+              <a href="#lamina-historico" data-i18n="veeam.title-historico">Históricos ZIP y evidencia</a>
+              <a href="#lamina-operaciones" data-i18n="veeam.title-operaciones">Operaciones de medios</a>
+              <a href="#lamina-despliegue" data-i18n="veeam.title-despliegue">Despliegue y acceso</a>
+            </nav>
+            <div class="rec-grid">
+              <article class="rec-card" id="lamina-arquitectura">
+                <div class="rec-card-heading"><h3 id="title-arquitectura" data-i18n="veeam.title-arquitectura">Arquitectura del monitor</h3></div>
+                <a class="rec-image" href="images/projects/veeam-tape-monitor/arquitectura-es-lamina.svg" data-veeam-lightbox="veeam.title-arquitectura" data-veeam-asset="arquitectura|-lamina|svg" aria-labelledby="expand-arquitectura title-arquitectura">
+                  <img src="images/projects/veeam-tape-monitor/arquitectura-es-lamina.svg" alt="" width="1280" height="720" loading="lazy" decoding="async" data-veeam-asset="arquitectura|-lamina|svg">
+                  <span id="expand-arquitectura" data-i18n="veeam.expand">Ampliar lámina</span>
+                </a>
+                <p id="label-arquitectura" data-i18n="veeam.desc-arquitectura">Dos fuentes alimentan el diagnóstico y el catálogo. El panel recibe las vistas mediante REST y las actualizaciones mediante SSE.</p>
+                <details>
+                  <summary data-i18n="veeam.flow">Ver diagrama de flujo</summary>
+                  <a class="rec-diagram" href="images/projects/veeam-tape-monitor/arquitectura-es-flujo.svg" target="_blank" rel="noopener" data-veeam-asset="arquitectura|-flujo|svg" aria-labelledby="label-arquitectura">
+                    <img src="images/projects/veeam-tape-monitor/arquitectura-es-flujo.svg" alt="" width="960" height="320" loading="lazy" decoding="async" data-veeam-asset="arquitectura|-flujo|svg">
+                  </a>
+                  <a href="images/projects/veeam-tape-monitor/arquitectura-es.mmd" download data-i18n="veeam.editable" data-veeam-asset="arquitectura||mmd">Descargar diagrama editable (Mermaid)</a>
+                </details>
+              </article>
+              <article class="rec-card" id="lamina-diagnostico">
+                <div class="rec-card-heading"><h3 id="title-diagnostico" data-i18n="veeam.title-diagnostico">Diagnóstico de esperas</h3></div>
+                <a class="rec-image" href="images/projects/veeam-tape-monitor/diagnostico-es-lamina.svg" data-veeam-lightbox="veeam.title-diagnostico" data-veeam-asset="diagnostico|-lamina|svg" aria-labelledby="expand-diagnostico title-diagnostico">
+                  <img src="images/projects/veeam-tape-monitor/diagnostico-es-lamina.svg" alt="" width="1280" height="720" loading="lazy" decoding="async" data-veeam-asset="diagnostico|-lamina|svg">
+                  <span id="expand-diagnostico" data-i18n="veeam.expand">Ampliar lámina</span>
+                </a>
+                <p id="label-diagnostico" data-i18n="veeam.desc-diagnostico">El monitor agrupa señales por sesión y muestra qué tipo de Media Set pidió Veeam, cuál observó y qué evidencia sustenta la conclusión.</p>
+                <details>
+                  <summary data-i18n="veeam.flow">Ver diagrama de flujo</summary>
+                  <a class="rec-diagram" href="images/projects/veeam-tape-monitor/diagnostico-es-flujo.svg" target="_blank" rel="noopener" data-veeam-asset="diagnostico|-flujo|svg" aria-labelledby="label-diagnostico">
+                    <img src="images/projects/veeam-tape-monitor/diagnostico-es-flujo.svg" alt="" width="960" height="320" loading="lazy" decoding="async" data-veeam-asset="diagnostico|-flujo|svg">
+                  </a>
+                  <a href="images/projects/veeam-tape-monitor/diagnostico-es.mmd" download data-i18n="veeam.editable" data-veeam-asset="diagnostico||mmd">Descargar diagrama editable (Mermaid)</a>
+                </details>
+              </article>
+              <article class="rec-card" id="lamina-progreso">
+                <div class="rec-card-heading"><h3 id="title-progreso" data-i18n="veeam.title-progreso">Seguimiento de la copia</h3></div>
+                <a class="rec-image" href="images/projects/veeam-tape-monitor/progreso-es-lamina.svg" data-veeam-lightbox="veeam.title-progreso" data-veeam-asset="progreso|-lamina|svg" aria-labelledby="expand-progreso title-progreso">
+                  <img src="images/projects/veeam-tape-monitor/progreso-es-lamina.svg" alt="" width="1280" height="720" loading="lazy" decoding="async" data-veeam-asset="progreso|-lamina|svg">
+                  <span id="expand-progreso" data-i18n="veeam.expand">Ampliar lámina</span>
+                </a>
+                <p id="label-progreso" data-i18n="veeam.desc-progreso">Las lecturas del catálogo alimentan la evolución del porcentaje, con el momento de la última consulta.</p>
+                <details>
+                  <summary data-i18n="veeam.flow">Ver diagrama de flujo</summary>
+                  <a class="rec-diagram" href="images/projects/veeam-tape-monitor/progreso-es-flujo.svg" target="_blank" rel="noopener" data-veeam-asset="progreso|-flujo|svg" aria-labelledby="label-progreso">
+                    <img src="images/projects/veeam-tape-monitor/progreso-es-flujo.svg" alt="" width="960" height="320" loading="lazy" decoding="async" data-veeam-asset="progreso|-flujo|svg">
+                  </a>
+                  <a href="images/projects/veeam-tape-monitor/progreso-es.mmd" download data-i18n="veeam.editable" data-veeam-asset="progreso||mmd">Descargar diagrama editable (Mermaid)</a>
+                </details>
+              </article>
+              <article class="rec-card" id="lamina-medios">
+                <div class="rec-card-heading"><h3 id="title-medios" data-i18n="veeam.title-medios">Catálogo, unidades y cintas</h3></div>
+                <a class="rec-image" href="images/projects/veeam-tape-monitor/medios-es-lamina.svg" data-veeam-lightbox="veeam.title-medios" data-veeam-asset="medios|-lamina|svg" aria-labelledby="expand-medios title-medios">
+                  <img src="images/projects/veeam-tape-monitor/medios-es-lamina.svg" alt="" width="1280" height="720" loading="lazy" decoding="async" data-veeam-asset="medios|-lamina|svg">
+                  <span id="expand-medios" data-i18n="veeam.expand">Ampliar lámina</span>
+                </a>
+                <p id="label-medios" data-i18n="veeam.desc-medios">La vista de Medios reúne bibliotecas, unidades, cartuchos y pools, con información de ubicación y capacidad cuando está disponible.</p>
+                <details>
+                  <summary data-i18n="veeam.flow">Ver diagrama de flujo</summary>
+                  <a class="rec-diagram" href="images/projects/veeam-tape-monitor/medios-es-flujo.svg" target="_blank" rel="noopener" data-veeam-asset="medios|-flujo|svg" aria-labelledby="label-medios">
+                    <img src="images/projects/veeam-tape-monitor/medios-es-flujo.svg" alt="" width="960" height="320" loading="lazy" decoding="async" data-veeam-asset="medios|-flujo|svg">
+                  </a>
+                  <a href="images/projects/veeam-tape-monitor/medios-es.mmd" download data-i18n="veeam.editable" data-veeam-asset="medios||mmd">Descargar diagrama editable (Mermaid)</a>
+                </details>
+              </article>
+              <article class="rec-card" id="lamina-seleccion">
+                <div class="rec-card-heading"><h3 id="title-seleccion" data-i18n="veeam.title-seleccion">Selección y rotación de cintas</h3></div>
+                <a class="rec-image" href="images/projects/veeam-tape-monitor/seleccion-es-lamina.svg" data-veeam-lightbox="veeam.title-seleccion" data-veeam-asset="seleccion|-lamina|svg" aria-labelledby="expand-seleccion title-seleccion">
+                  <img src="images/projects/veeam-tape-monitor/seleccion-es-lamina.svg" alt="" width="1280" height="720" loading="lazy" decoding="async" data-veeam-asset="seleccion|-lamina|svg">
+                  <span id="expand-seleccion" data-i18n="veeam.expand">Ampliar lámina</span>
+                </a>
+                <p id="label-seleccion" data-i18n="veeam.desc-seleccion">La preparación diaria consulta la programación y las cintas asignadas. Durante una espera, la recomendación exige una solicitud vigente y un cartucho elegible.</p>
+                <details>
+                  <summary data-i18n="veeam.flow">Ver diagrama de flujo</summary>
+                  <a class="rec-diagram" href="images/projects/veeam-tape-monitor/seleccion-es-flujo.svg" target="_blank" rel="noopener" data-veeam-asset="seleccion|-flujo|svg" aria-labelledby="label-seleccion">
+                    <img src="images/projects/veeam-tape-monitor/seleccion-es-flujo.svg" alt="" width="960" height="320" loading="lazy" decoding="async" data-veeam-asset="seleccion|-flujo|svg">
+                  </a>
+                  <a href="images/projects/veeam-tape-monitor/seleccion-es.mmd" download data-i18n="veeam.editable" data-veeam-asset="seleccion||mmd">Descargar diagrama editable (Mermaid)</a>
+                </details>
+              </article>
+              <article class="rec-card" id="lamina-historico">
+                <div class="rec-card-heading"><h3 id="title-historico" data-i18n="veeam.title-historico">Históricos ZIP y evidencia</h3></div>
+                <a class="rec-image" href="images/projects/veeam-tape-monitor/historico-es-lamina.svg" data-veeam-lightbox="veeam.title-historico" data-veeam-asset="historico|-lamina|svg" aria-labelledby="expand-historico title-historico">
+                  <img src="images/projects/veeam-tape-monitor/historico-es-lamina.svg" alt="" width="1280" height="720" loading="lazy" decoding="async" data-veeam-asset="historico|-lamina|svg">
+                  <span id="expand-historico" data-i18n="veeam.expand">Ampliar lámina</span>
+                </a>
+                <p id="label-historico" data-i18n="veeam.desc-historico">Cada paquete ZIP se valida y se procesa en un ámbito independiente de la monitorización en directo.</p>
+                <details>
+                  <summary data-i18n="veeam.flow">Ver diagrama de flujo</summary>
+                  <a class="rec-diagram" href="images/projects/veeam-tape-monitor/historico-es-flujo.svg" target="_blank" rel="noopener" data-veeam-asset="historico|-flujo|svg" aria-labelledby="label-historico">
+                    <img src="images/projects/veeam-tape-monitor/historico-es-flujo.svg" alt="" width="960" height="320" loading="lazy" decoding="async" data-veeam-asset="historico|-flujo|svg">
+                  </a>
+                  <a href="images/projects/veeam-tape-monitor/historico-es.mmd" download data-i18n="veeam.editable" data-veeam-asset="historico||mmd">Descargar diagrama editable (Mermaid)</a>
+                </details>
+              </article>
+              <article class="rec-card" id="lamina-operaciones">
+                <div class="rec-card-heading"><h3 id="title-operaciones" data-i18n="veeam.title-operaciones">Operaciones de medios</h3></div>
+                <a class="rec-image" href="images/projects/veeam-tape-monitor/operaciones-es-lamina.svg" data-veeam-lightbox="veeam.title-operaciones" data-veeam-asset="operaciones|-lamina|svg" aria-labelledby="expand-operaciones title-operaciones">
+                  <img src="images/projects/veeam-tape-monitor/operaciones-es-lamina.svg" alt="" width="1280" height="720" loading="lazy" decoding="async" data-veeam-asset="operaciones|-lamina|svg">
+                  <span id="expand-operaciones" data-i18n="veeam.expand">Ampliar lámina</span>
+                </a>
+                <p id="label-operaciones" data-i18n="veeam.desc-operaciones">El administrador puede solicitar inventario, catalogación, verificación, importación, exportación o renombrado y seguir el resultado en el panel.</p>
+                <details>
+                  <summary data-i18n="veeam.flow">Ver diagrama de flujo</summary>
+                  <a class="rec-diagram" href="images/projects/veeam-tape-monitor/operaciones-es-flujo.svg" target="_blank" rel="noopener" data-veeam-asset="operaciones|-flujo|svg" aria-labelledby="label-operaciones">
+                    <img src="images/projects/veeam-tape-monitor/operaciones-es-flujo.svg" alt="" width="960" height="320" loading="lazy" decoding="async" data-veeam-asset="operaciones|-flujo|svg">
+                  </a>
+                  <a href="images/projects/veeam-tape-monitor/operaciones-es.mmd" download data-i18n="veeam.editable" data-veeam-asset="operaciones||mmd">Descargar diagrama editable (Mermaid)</a>
+                </details>
+              </article>
+              <article class="rec-card" id="lamina-despliegue">
+                <div class="rec-card-heading"><h3 id="title-despliegue" data-i18n="veeam.title-despliegue">Despliegue y acceso</h3></div>
+                <a class="rec-image" href="images/projects/veeam-tape-monitor/despliegue-es-lamina.svg" data-veeam-lightbox="veeam.title-despliegue" data-veeam-asset="despliegue|-lamina|svg" aria-labelledby="expand-despliegue title-despliegue">
+                  <img src="images/projects/veeam-tape-monitor/despliegue-es-lamina.svg" alt="" width="1280" height="720" loading="lazy" decoding="async" data-veeam-asset="despliegue|-lamina|svg">
+                  <span id="expand-despliegue" data-i18n="veeam.expand">Ampliar lámina</span>
+                </a>
+                <p id="label-despliegue" data-i18n="veeam.desc-despliegue">Un servicio WinSW ejecuta el monitor en Windows Server. El acceso autenticado puede habilitarse mediante HTTPS en la red privada.</p>
+                <details>
+                  <summary data-i18n="veeam.flow">Ver diagrama de flujo</summary>
+                  <a class="rec-diagram" href="images/projects/veeam-tape-monitor/despliegue-es-flujo.svg" target="_blank" rel="noopener" data-veeam-asset="despliegue|-flujo|svg" aria-labelledby="label-despliegue">
+                    <img src="images/projects/veeam-tape-monitor/despliegue-es-flujo.svg" alt="" width="960" height="320" loading="lazy" decoding="async" data-veeam-asset="despliegue|-flujo|svg">
+                  </a>
+                  <a href="images/projects/veeam-tape-monitor/despliegue-es.mmd" download data-i18n="veeam.editable" data-veeam-asset="despliegue||mmd">Descargar diagrama editable (Mermaid)</a>
+                </details>
+              </article>
+            </div>
+            <p class="rec-source" data-i18n="veeam.source">Documentación del portfolio basada en el código y las pruebas del proyecto. El gráfico de progreso de la colección usa datos ilustrativos.</p>
+          </section>
+
+          <section class="rec-gallery" aria-labelledby="veeam-doc-title">
+            <div class="rec-intro">
+              <h2 id="veeam-doc-title" data-i18n="veeam.doc">Documentación técnica</h2>
+              <a href="images/projects/veeam-tape-monitor/documentacion-es.md" download data-i18n="veeam.docDownload" data-veeam-asset="documentacion||md">Descargar documentación (Markdown)</a>
+            </div>
+            <div class="rec-grid">
+              <section class="doc-section-card">
+                <h3 class="doc-section-title" data-i18n="veeam.sectionContext">Necesidad operativa</h3>
+                <p data-i18n="veeam.context">Durante una espera de cinta, el operador necesita saber qué cartucho solicita el trabajo, por qué se ha rechazado el que está montado y qué evidencia respalda el diagnóstico. El panel añade esa vista a la operación diaria de Veeam, junto con los históricos y la preparación del siguiente ciclo.</p>
+              </section>
+              <section class="doc-section-card">
+                <h3 class="doc-section-title" data-i18n="veeam.sectionIntegration">Integración y flujo de datos</h3>
+                <p data-i18n="veeam.integration">El monitor lee los logs de forma incremental, guarda eventos y puntos de lectura en SQLite y reconstruye sesiones y solicitudes. El módulo PowerShell de Veeam aporta catálogo, trabajos, tareas y progreso. Fastify publica la API REST y usa SSE para avisar al panel React cuando hay cambios.</p>
+              </section>
+              <section class="doc-section-card">
+                <h3 class="doc-section-title" data-i18n="veeam.sectionRules">Evidencia y reglas de decisión</h3>
+                <p data-i18n="veeam.rules">El diagnóstico conserva la línea original y distingue entre un rechazo explícito y una generación inferida. La recomendación requiere una espera vigente y un medio libre que cumpla las reglas de biblioteca, pool, capacidad y protección. Al abrir un ZIP, la evidencia se consulta dentro de su propio histórico.</p>
+              </section>
+              <section class="doc-section-card">
+                <h3 class="doc-section-title" data-i18n="veeam.sectionDeploy">Operación y despliegue</h3>
+                <p data-i18n="veeam.deploy">WinSW aloja el servicio en Windows Server con almacenamiento SQLite local. El servicio autentica el acceso local y el HTTPS privado opcional. Las operaciones de medios requieren permisos específicos, se registran y conservan su estado para consultar el resultado.</p>
+              </section>
+              <section class="doc-section-card">
+                <h3 class="doc-section-title" data-i18n="veeam.stack">Tecnologías utilizadas</h3>
+                <p>React · TypeScript · Vite · Node.js · Fastify · SQLite · PowerShell · Zod · Vitest · WinSW</p>
+              </section>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <nav class="project-page-nav" data-i18n-aria="veeam.catalogNav" aria-label="Navegación entre proyectos">
+        <a href="proyecto-vigilancia.html" class="project-nav-link"><span><strong data-i18n="veeam.previous">Anterior</strong> · Vigilancia-app</span></a>
+        <a href="proyectos.html" class="project-nav-link" data-i18n="projects.filterAll">Todos los proyectos</a>
+        <a href="proyecto-reclamaciones.html" class="project-nav-link"><span><strong data-i18n="veeam.next">Siguiente</strong> · <span data-i18n="projects.p1Name">Reclamaciones · Bobinas de Papel</span></span></a>
+      </nav>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Carlos Juárez &middot; Senior AI Full Stack Developer</p>
+      <div class="footer-links">
+        <a href="index.html" data-i18n="veeam.home">Inicio</a>
+        <a href="proyectos.html" data-i18n="nav.projects">Proyectos</a>
+        <a href="contactos.html" data-i18n="veeam.contact">Contacto</a>
+        <a href="https://www.linkedin.com/in/carlosj-juarez/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/cjjb1" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" onclick="event.stopPropagation()">
+      <div class="lightbox-header">
+        <h4 id="lightbox-title" data-i18n="lightbox.defaultTitle">Infografía de Arquitectura Técnica</h4>
+        <div class="lightbox-controls">
+          <a id="lightbox-download" href="#" target="_blank" class="btn-lightbox-action" data-i18n-title="lightbox.openOriginal" title="Abrir original" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <span data-i18n="lightbox.openOriginal">Abrir original</span>
+          </a>
+          <button class="lightbox-close" onclick="closeLightbox()" data-i18n-aria="veeam.close" aria-label="Cerrar imagen">✕</button>
+        </div>
+      </div>
+      <div class="lightbox-body">
+        <img id="lightbox-img" src="" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <script src="translations.js?v=20"></script>
+  <script src="veeam-tape-monitor.js?v=1"></script>
+  <script src="script.js?v=6"></script>
+</body>
+</html>

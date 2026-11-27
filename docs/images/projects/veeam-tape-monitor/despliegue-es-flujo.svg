@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" lang="es" aria-labelledby="title">
+<title id="title">Despliegue y acceso</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#087357"/></marker></defs>
+<rect width="960" height="320" fill="#eef6f3"/>
+<g font-family="Inter, Segoe UI, sans-serif">
+<text x="30" y="48" font-size="29" fill="#12352d" font-weight="700"><tspan x="30" dy="0">Despliegue y acceso</tspan></text>
+<path d="M284 178 H311 V178 H333" fill="none" stroke="#087357" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M582 178 H609 V120 H631" fill="none" stroke="#087357" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M582 178 H609 V236 H631" fill="none" stroke="#087357" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="40" y="142" width="244" height="72" rx="12" fill="#ffffff" stroke="#92b6a9"/><text x="55" y="170" font-size="17" fill="#094838" font-weight="650"><tspan x="55" dy="0">Servicio en Windows</tspan><tspan x="55" dy="21.25">Server</tspan></text>
+<rect x="338" y="142" width="244" height="72" rx="12" fill="#ffffff" stroke="#92b6a9"/><text x="353" y="170" font-size="17" fill="#094838" font-weight="650"><tspan x="353" dy="0">Monitor y SQLite local</tspan></text>
+<rect x="636" y="84" width="244" height="72" rx="12" fill="#ffffff" stroke="#92b6a9"/><text x="651" y="112" font-size="17" fill="#094838" font-weight="650"><tspan x="651" dy="0">Acceso local autenticado</tspan></text>
+<rect x="636" y="200" width="244" height="72" rx="12" fill="#ffffff" stroke="#92b6a9"/><text x="651" y="228" font-size="17" fill="#094838" font-weight="650"><tspan x="651" dy="0">HTTPS privado opcional</tspan></text>
+</g>
+</svg>

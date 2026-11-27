@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" lang="es" aria-labelledby="title">
+<title id="title">Seguimiento de la copia</title>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#092721"/><stop offset="1" stop-color="#0c332e"/></linearGradient></defs>
+<rect width="1280" height="720" fill="url(#bg)"/>
+<path d="M64 84H1216M64 661H1216" stroke="#397968"/>
+<g font-family="Inter, Segoe UI, sans-serif">
+<text x="64" y="62" font-size="22" fill="#74ecc1" font-weight="700"><tspan x="64" dy="0">VEEAM TAPE MONITOR</tspan></text>
+<text x="64" y="158" font-size="52" fill="#eefff5" font-weight="750"><tspan x="64" dy="0">Seguimiento de la copia</tspan></text>
+<text x="64" y="218" font-size="23" fill="#c5e4d8" font-weight="500"><tspan x="64" dy="0">Las lecturas del catálogo alimentan la evolución del porcentaje, con el momento de</tspan><tspan x="64" dy="28.75">la última consulta.</tspan></text>
+<rect x="64" y="282" width="1152" height="358" rx="20" fill="#103b34" stroke="#397968"/>
+<text x="100" y="330" font-size="25" fill="#d9fae9" font-weight="700"><tspan x="100" dy="0">Avance de la sesión · Ejemplo ilustrativo</tspan></text>
+<path d="M165 563H1128" stroke="#397968"/><text x="100" y="569" font-size="17" fill="#b3d3c6" font-weight="500"><tspan x="100" dy="0">0%</tspan></text>
+<path d="M165 514.25H1128" stroke="#397968"/><text x="100" y="520.25" font-size="17" fill="#b3d3c6" font-weight="500"><tspan x="100" dy="0">25%</tspan></text>
+<path d="M165 465.5H1128" stroke="#397968"/><text x="100" y="471.5" font-size="17" fill="#b3d3c6" font-weight="500"><tspan x="100" dy="0">50%</tspan></text>
+<path d="M165 416.75H1128" stroke="#397968"/><text x="100" y="422.75" font-size="17" fill="#b3d3c6" font-weight="500"><tspan x="100" dy="0">75%</tspan></text>
+<path d="M165 368H1128" stroke="#397968"/><text x="100" y="374" font-size="17" fill="#b3d3c6" font-weight="500"><tspan x="100" dy="0">100%</tspan></text>
+<polyline points="170,539.6 407,516.2 644,479.15 881,444.05 1118,410.9" fill="none" stroke="#74ecc1" stroke-width="5" stroke-linejoin="round"/>
+<circle cx="170" cy="539.6" r="6" fill="#74ecc1"/><text x="162" y="597" font-size="17" fill="#b3d3c6" font-weight="500"><tspan x="162" dy="0">0 min</tspan></text>
+<circle cx="407" cy="516.2" r="6" fill="#74ecc1"/><text x="399" y="597" font-size="17" fill="#b3d3c6" font-weight="500"><tspan x="399" dy="0">15 min</tspan></text>
+<circle cx="644" cy="479.15" r="6" fill="#74ecc1"/><text x="636" y="597" font-size="17" fill="#b3d3c6" font-weight="500"><tspan x="636" dy="0">30 min</tspan></text>
+<circle cx="881" cy="444.05" r="6" fill="#74ecc1"/><text x="873" y="597" font-size="17" fill="#b3d3c6" font-weight="500"><tspan x="873" dy="0">45 min</tspan></text>
+<circle cx="1118" cy="410.9" r="6" fill="#74ecc1"/><text x="1110" y="597" font-size="17" fill="#b3d3c6" font-weight="500"><tspan x="1110" dy="0">60 min</tspan></text>
+</g>
+</svg>

@@ -1,0 +1,8 @@
+flowchart LR
+    N0["Receive a ZIP archive"]
+    N1["Validate entries and limits"]
+    N2["Parse logs and deduplicate"]
+    N3["Open an isolated archive"]
+    N0 --> N1
+    N1 --> N2
+    N2 --> N3
